@@ -16,7 +16,7 @@ public static final String Header_Section_News = "/html/body/app-root/app-layout
 public static final String Bouton_Supprimer_News = "/html/body/app-root/app-layout/div/section/div/acc-connect-news-container/header/div[2]/acc-add-delete-actions/i[1]";
 public static final String Bouton_Validation_Suppression_News = "/html/body/ngb-modal-window/div/div/acc-confirmation-modal/div[3]/button[1]";
 public static final String Champ_Input_Titre_News_Existante = "title";
-public static final String Champ_Input_Contenu_News_Existante = "input-customized";
+public static final String Champ_Input_Contenu_News_Existante = "/html/body/app-root/app-layout/div/section/div/acc-connect-news-container/div/div/div/div/acc-connect-news-form/form/div/section/div[2]/div[2]/div/acc-mention-per-timelines/quill-editor/div/div[1]";
 public static final String Bouton_Sauvegrade_News = "/html/body/app-root/app-layout/div/section/div/acc-connect-news-container/div/div/div/div/acc-connect-news-form/form/acc-update-revert-actions/i[2]";
 
 }

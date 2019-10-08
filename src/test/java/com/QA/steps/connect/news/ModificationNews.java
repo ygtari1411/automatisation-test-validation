@@ -9,6 +9,7 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+
 public class ModificationNews {
 
     private final WebDriver driver = GenerateurDriver.driver;
@@ -18,31 +19,31 @@ public class ModificationNews {
     @When("l'utilisateur modifie une News")
     public String[] lUtilisateurModifieUneNews() throws InterruptedException {
 
-        String s1 = driver.findElement(By.id(NewsLocators.Champ_Input_Titre_News_Existante)).getText();
-        String s2 = driver.findElement(By.id(NewsLocators.Champ_Input_Contenu_News_Existante)).getText();
+        String s1 = driver.findElement(By.id(NewsLocators.Champ_Input_Titre_News_Existante)).getAttribute("value");
+        String s2 = driver.findElement(By.xpath(NewsLocators.Champ_Input_Contenu_News_Existante)).getText();
         driver.findElement(By.id(NewsLocators.Champ_Input_Titre_News_Existante)).clear();
         driver.findElement(By.id(NewsLocators.Champ_Input_Titre_News_Existante)).sendKeys("Titre News modifié");
-        driver.findElement(By.id(NewsLocators.Champ_Input_Contenu_News_Existante)).clear();
-        driver.findElement(By.id(NewsLocators.Champ_Input_Contenu_News_Existante)).sendKeys("Contenu News modifié");
+        driver.findElement(By.xpath(NewsLocators.Champ_Input_Contenu_News_Existante)).clear();
+        driver.findElement(By.xpath(NewsLocators.Champ_Input_Contenu_News_Existante)).sendKeys("Contenu News modifié");
         arr[0] = s1;
         arr[1] = s2;
         driver.findElement(By.xpath(NewsLocators.Bouton_Sauvegrade_News)).click();
-        action.pause(driver,3000);
-        driver.navigate().refresh();
+        action.pause(driver, 3000);
         return arr;
+
     }
 
     @Then("verifier que la modification a été enregistrée")
     public void verifierQueLaModificationAÉtéEnregistrée() throws InterruptedException {
 
-        action.pause(driver,1000);
-        Assert.assertNotEquals(arr[0],driver.findElement(By.id(NewsLocators.Champ_Input_Titre_News_Existante)).getText());
-        action.pause(driver,500);
-        Assert.assertEquals("Titre News modifié",driver.findElement(By.id(NewsLocators.Champ_Input_Titre_News_Existante)).getText());
-        action.pause(driver,500);
-        Assert.assertNotEquals(arr[1],driver.findElement(By.id(NewsLocators.Champ_Input_Contenu_News_Existante)).getText());
-        action.pause(driver,500);
-        Assert.assertEquals("Contenu News modifié",driver.findElement(By.id(NewsLocators.Champ_Input_Contenu_News_Existante)).getText());
+        driver.navigate().refresh();
+        Assert.assertNotEquals(arr[0], driver.findElement(By.id(NewsLocators.Champ_Input_Titre_News_Existante)).getAttribute("value"));
+        action.pause(driver, 500);
+        Assert.assertEquals("Titre News modifié", driver.findElement(By.id(NewsLocators.Champ_Input_Titre_News_Existante)).getAttribute("value"));
+        action.pause(driver, 500);
+        Assert.assertNotEquals(arr[1], driver.findElement(By.xpath(NewsLocators.Champ_Input_Contenu_News_Existante)).getText());
+        action.pause(driver, 500);
+        Assert.assertEquals("Contenu News modifié", driver.findElement(By.xpath(NewsLocators.Champ_Input_Contenu_News_Existante)).getText());
 
     }
 }

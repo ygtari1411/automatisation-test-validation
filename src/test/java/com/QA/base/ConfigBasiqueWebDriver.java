@@ -1,23 +1,18 @@
 package com.QA.base;
 
 
-import cucumber.runtime.java.guice.ScenarioScoped;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.rules.MethodRule;
-import org.junit.runners.model.FrameworkMethod;
-import org.junit.runners.model.Statement;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.ie.InternetExplorerOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-
-import java.io.File;
-import java.io.FileOutputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
@@ -49,6 +44,8 @@ public class ConfigBasiqueWebDriver {
         optionsC.addArguments("--disable-dev-shm-usage");
         optionsC.addArguments("--disable-browser-side-navigation");
         optionsC.addArguments("--disable-gpu");
+
+
 
 
         if (System.getProperty("RemoteInDocker").equalsIgnoreCase("true")) {
@@ -129,6 +126,7 @@ public class ConfigBasiqueWebDriver {
                     logger.info("Lancement d'un navigateur Internet Explorer pour les tests");
                     System.setProperty("webdriver.ie.driver", streams.readers().getProperty("IeDriverPath"));
                     driver = new InternetExplorerDriver();
+                    break;
 
                 default:
                     logger.info("Le choix du navigateur local n'est pas bien configuré");
@@ -145,8 +143,8 @@ public class ConfigBasiqueWebDriver {
 
             System.out.println("Le navigateur est introuvable");
 
-
         }
+
         return driver;
     }
 

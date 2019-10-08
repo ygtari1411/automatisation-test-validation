@@ -3,6 +3,7 @@ package com.QA.steps;
 import com.QA.base.streams;
 import com.QA.locators.CommonLocators;
 import com.QA.locators.NewsLocators;
+import com.QA.locators.ReferentielsLocators;
 import com.QA.utilités.XMLUtilities;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -29,7 +30,6 @@ public class EtapesCommunes {
     public void leNavigateurEstOuvertEtLaPageDAcceuilEstAffichée() {
 
         driver.get(reader.getProperty("testsiteurl"));
-
     }
 
     @And("l'utilisateur {string} est connecté")
@@ -45,17 +45,16 @@ public class EtapesCommunes {
     }
 
     @When("l'utilisateur clique sur espace-RH")
-    public void lUtilisateurCliqueSurEspaceRH() {
+    public void lUtilisateurCliqueSurEspaceRH() throws InterruptedException {
 
         driver.findElement(By.xpath(CommonLocators.Bouton_Role_RH)).click();
+        action.pause(driver, 200);
+        driver.findElement(By.xpath(CommonLocators.Bouton_Menu_Etendu)).click();
 
     }
 
     @And("l'utilisateur clique sur le module Connect")
     public void lUtilisateurCliqueSurLeModuleConnect() throws InterruptedException {
-
-        driver.findElement(By.xpath(CommonLocators.Bouton_Menu_Etendu)).click();
-        action.pause(driver, 200);
 
         driver.findElement(By.xpath(CommonLocators.Bouton_Module_Connect)).click();
         action.pause(driver, 200);
@@ -68,6 +67,22 @@ public class EtapesCommunes {
         driver.findElement(By.xpath(NewsLocators.Bouton_Module_News)).click();
         action.pause(driver, 200);
 
+    }
+
+    @And("l'utilisateur clique sur le module coreRH")
+    public void lUtilisateurCliqueSurLeModuleCoreRH() throws InterruptedException {
+
+        driver.findElement(By.xpath(CommonLocators.Bouton_Module_CoreRH)).click();
+        action.pause(driver, 200);
+
+    }
+
+
+    @And("l'utilisateur clique sur Référentiels")
+    public void lUtilisateurCliqueSurRéférentiels() throws InterruptedException {
+
+        driver.findElement(By.xpath(ReferentielsLocators.Bouton_Module_Referentiels)).click();
+        action.pause(driver, 200);
     }
 }
 

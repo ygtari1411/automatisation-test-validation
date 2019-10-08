@@ -26,8 +26,6 @@ public class GenerateurDriver {
         }
         logger.info("Début scénario " + scenario.getName());
 
-
-
     }
 
     @After
@@ -40,7 +38,5 @@ public class GenerateurDriver {
         driver.manage().deleteAllCookies();
         driver.navigate().refresh();
     }
-
-
 
 }
