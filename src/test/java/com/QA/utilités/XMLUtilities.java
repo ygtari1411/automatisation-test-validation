@@ -11,9 +11,8 @@ import org.xml.sax.helpers.DefaultHandler;
 
 public class XMLUtilities {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args)  {
         XMLUtilities utilities = new XMLUtilities();
-        //System.out.println(utilities.findUser("ilyes.ghomri@advyteam.com"));
 
     }
 
@@ -131,7 +130,6 @@ public class XMLUtilities {
 
         @Override
         public String toString() {
-            // TODO Auto-generated method stub
             return "User[username = " + username + "; password = " + password + "]";
         }
 

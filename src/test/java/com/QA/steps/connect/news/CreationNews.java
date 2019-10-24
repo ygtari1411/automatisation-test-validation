@@ -17,7 +17,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import javax.mail.internet.NewsAddress;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -69,6 +68,7 @@ public class CreationNews {
 
     @And("^L'utilisateur clique sur sauvegarder$")
     public void lUtilisateurCliqueSurSauvegarder() throws InterruptedException {
+
         action.pause(driver, 500);
         driver.findElement(By.xpath(NewsLocators.Bouton_Sauvegarde_Creation_News)).click();
 
