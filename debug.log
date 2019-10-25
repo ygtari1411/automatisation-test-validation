@@ -1,3 +1,0 @@
-[0925/144634.910:ERROR:file_io_win.cc(161)] CreateFile C:\Users\wboufade\AppData\Local\Temp\scoped_dir8232_2139450248\Crashpad\settings.dat: Le chemin d’accès spécifié est introuvable. (0x3)
-[0925/144634.911:ERROR:file_io_win.cc(170)] CreateFile C:\Users\wboufade\AppData\Local\Temp\scoped_dir8232_2139450248\Crashpad\reports\673e1797-5341-4983-9311-72c6f193b2b2.dmp: Le chemin d’accès spécifié est introuvable. (0x3)
-[0925/144634.911:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
