@@ -23,16 +23,6 @@ public class CréationSociété {
     private ActionsCommunes action = new ActionsCommunes();
 
 
-    @Then("vérifier l'affichage correct des rubriques")
-    public void vérifierLAffichageCorrectDesRubriques() {
-
-        Assert.assertTrue(driver.findElement(By.xpath(ReferentielsLocators.Bouton_Rubrique_Société)).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.xpath(ReferentielsLocators.Bouton_Rubrique_Etablissemnt)).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.xpath(ReferentielsLocators.Bouton_Rubrique_Entité_Organisationnelle)).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.xpath(ReferentielsLocators.Bouton_Rubrique_Emplois)).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.xpath(ReferentielsLocators.Bouton_Rubrique_Postes)).isDisplayed());
-
-    }
 
     @When("l'utilisateur clique sur ajouter entreprise")
     public void lUtilisateurCliqueSurAjouterEntreprise() throws InterruptedException {

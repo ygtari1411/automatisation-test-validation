@@ -1,6 +1,6 @@
 # Auteur: wboufade
-# Feature:
-# Scénario: Création nouvelle news
+# Feature: Référentiels
+# Scénario: Création Etablissement
 # Date de création: 09/10/2019
 
 

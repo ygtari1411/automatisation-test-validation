@@ -7,9 +7,14 @@ import com.QA.locators.ReferentielsLocators;
 import com.QA.utilités.XMLUtilities;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 import java.util.Properties;
@@ -83,6 +88,19 @@ public class EtapesCommunes {
 
         driver.findElement(By.xpath(ReferentielsLocators.Bouton_Module_Referentiels)).click();
         action.pause(driver, 200);
+    }
+
+    @Then("vérifier l'affichage correct des rubriques")
+    public void vérifierLAffichageCorrectDesRubriques() {
+
+        WebElement modules = (new WebDriverWait(driver, 5))
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(ReferentielsLocators.Bouton_Rubrique_Société)));
+        Assert.assertTrue(driver.findElement(By.xpath(ReferentielsLocators.Bouton_Rubrique_Société)).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath(ReferentielsLocators.Bouton_Rubrique_Etablissemnt)).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath(ReferentielsLocators.Bouton_Rubrique_Entité_Organisationnelle)).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath(ReferentielsLocators.Bouton_Rubrique_Emplois)).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath(ReferentielsLocators.Bouton_Rubrique_Postes)).isDisplayed());
+
     }
 }
 

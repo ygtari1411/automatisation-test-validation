@@ -73,6 +73,27 @@ public class ReferentielsLocators {
     public static final String Champs_Code_Etablissement = "/html/body/app-root/app-layout/div/section/div/acc-referential/div/div/acc-core-rh-referential-establishment-container/div/acc-core-rh-referential-establishment-form/form/acc-core-rh-referential-establishment-identification-form/section/div[2]/div/div[1]/input";
     public static final String Champs_Input_Société_Rattachement_Etablissement = "//*[@id=\"popup\"]/div/section[3]/div[2]/div[1]/acc-select-list/ng-select/div/input";
     public static final String Champs_Société_Rattachement_Etablissement = "//*[@id=\"popup\"]/div/section[3]/div[2]/div[1]/acc-select-list/ng-select/div/div[2]/span/span";
-
+    public static final String Bouton_Ajout_Entité_Organisationnelle = "/html/body/app-root/app-layout/div/section/div/acc-referential/div/div/acc-core-rh-referential-organizationalentity-container/header/div/acc-core-rh-referential-add-delete-actions/i[2]";
+    public static final String Champs_Input_Code_Entité_Organisationnelle = "//*[@id=\"popup\"]/div/section/div[2]/div[1]/input";
+    public static final String Champs_Input_Libellé_Entité_Organisationnelle = "//*[@id=\"popup\"]/div/section/div[2]/div[2]/input";
+    public static final String Champs_Input_Date_Effet_Entité_Organisationnelle = "//*[@id=\"popup\"]/div/section/div[3]/div[1]/acc-date-picker/my-date-picker/div/div/input";
+    public static final String Bouton_Liste_Déroulante_Statut_Entité_Organisationnelle = "//*[@id=\"popup\"]/div/section/div[3]/div[2]/acc-select-cr/ng-select/div/div[2]/span";
+    public static final String Option1_Liste_Déroulante_Statut_Entité_Organisationnelle = "//*[@id=\"popup\"]/div/section/div[3]/div[2]/acc-select-cr/ng-select/div/ul/li[1]";
+    public static final String Bouton_Liste_Déroulante_Société_Rattachement_Entité_Organisationnelle = "//*[@id=\"popup\"]/div/section/div[4]/div[1]/acc-select-list/ng-select/div/div[2]/span";
+    public static final String Option1_Liste_Déroulante_Société_Rattachement_Entité_Organisationnelle = "//*[@id=\"popup\"]/div/section/div[4]/div[1]/acc-select-list/ng-select/div/ul/li[1]";
+    public static final String Bouton_Liste_Déroulante_Type_Entité_Organisationnelle = "//*[@id=\"popup\"]/div/section/div[4]/div[2]/acc-select-cr/ng-select/div/div[2]/span";
+    public static final String Option1_Liste_Déroulante_Type_Entité_Organisationnelle = "//*[@id=\"popup\"]/div/section/div[4]/div[2]/acc-select-cr/ng-select/div/ul/li[1]";
+    public static final String Bouton_Validation_Création_EO = "//*[@id=\"popup\"]/div/div/button[2]";
+    public static final String Champs_Input_Adresse_Entité_Organisationnelle = "//*[@id=\"organizationalEntityForm\"]/acc-core-rh-referential-organizational-entity-form/form/core-rh-referential-organizational-entity-address-form/div/section/div[2]/div[1]/textarea";
+    public static final String Bouton_Liste_Déroulante_Pays_Entité_Organisationnelle = "//*[@id=\"organizationalEntityForm\"]/acc-core-rh-referential-organizational-entity-form/form/core-rh-referential-organizational-entity-address-form/div/section/div[2]/div[2]/acc-select-cr/ng-select/div/div[2]/span";
+    public static final String Option1_Liste_Déroulante_Pays_Entité_Organisationnlle = "//*[@id=\"organizationalEntityForm\"]/acc-core-rh-referential-organizational-entity-form/form/core-rh-referential-organizational-entity-address-form/div/section/div[2]/div[2]/acc-select-cr/ng-select/div/ul/li[1]";
+    public static final String Bouton_Liste_Déroulante_Ville_Entité_Organisationnelle = "//*[@id=\"organizationalEntityForm\"]/acc-core-rh-referential-organizational-entity-form/form/core-rh-referential-organizational-entity-address-form/div/section/div[2]/div[3]/acc-select-cr/ng-select/div/div[2]/span";
+    public static final String Option23_Liste_Déroulante_Ville_Entité_Organisationnelle = "//*[@id=\"organizationalEntityForm\"]/acc-core-rh-referential-organizational-entity-form/form/core-rh-referential-organizational-entity-address-form/div/section/div[2]/div[3]/acc-select-cr/ng-select/div/ul/li[23]";
+    public static final String Bouton_Liste_Déroulante_Code_Postal_Entité_Organisationnelle = "//*[@id=\"organizationalEntityForm\"]/acc-core-rh-referential-organizational-entity-form/form/core-rh-referential-organizational-entity-address-form/div/section/div[2]/div[4]/acc-select-cr/ng-select/div/div[2]/span";
+    public static final String Option1_Liste_Déroulante_Code_Postal_Entité_Organisationnelle = "//*[@id=\"organizationalEntityForm\"]/acc-core-rh-referential-organizational-entity-form/form/core-rh-referential-organizational-entity-address-form/div/section/div[2]/div[4]/acc-select-cr/ng-select/div/ul/li[1]";
+    public static final String Champs_Input_Adresse_Mail_Entité_Organisationnelle = "//*[@id=\"organizationalEntityForm\"]/acc-core-rh-referential-organizational-entity-form/form/core-rh-referential-organizational-entity-address-form/div/section/div[3]/div/input";
+    public static final String Bouton_Enregistrer_Modification_Entité_Organisationnelle = "//*[@id=\"organizationalEntityForm\"]/acc-core-rh-referential-organizational-entity-form/form/acc-core-rh-referential-update-revert-actions/i[2]";
+    public static final String Champs_Input_Recherche_Entité_Organisationnelle = "/html/body/app-root/app-layout/div/section/div/acc-referential/div/div/acc-core-rh-referential-organizationalentity-container/header/acc-filter/div/div/input";
+    public static final String Champs_Input_Libellé_Entité_Organisationnelle_Existante = "//*[@id=\"organizationalEntityForm\"]/acc-core-rh-referential-organizational-entity-form/form/acc-core-rh-referential-organizational-entity-identification-form/div/section/div[2]/div[2]/input";
 
 }

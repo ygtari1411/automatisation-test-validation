@@ -6,7 +6,7 @@ public static final String Bouton_Module_News = "/html/body/app-root/app-layout/
 public static final String Bouton_Ajout_News = "/html/body/app-root/app-layout/div/section/div/acc-connect-news-container/header/div[2]/acc-add-delete-actions/i[2]";
 public static final String Titre_Modal_News = "//*[@id=\"popup\"]/header";
 public static final String Champ_Input_Titre_News = "//*[@id=\"popup\"]/div/section/div[2]/div[1]/input";
-public static final String Champ_Input_Texte_News = "//*[@id=\"popup\"]/div/section/div[2]/div[2]/div/textarea";
+public static final String Champ_Input_Texte_News = "//*[@id=\"popup\"]/div/section/div[2]/div[2]/div/div/acc-mention-per-timelines/quill-editor/div/div[1]";
 public static final String Champ_Input_Date_Debut_News = "//*[@id=\"popup\"]/div/section/div[2]/div[3]/div[1]/acc-date-picker[1]/my-date-picker/div/div[1]/input";
 public static final String Upload_Image_News = "logo-edit";
 public static final String Bouton_Validation_Upload_Image = "/html/body/app-root/app-layout/div/section/div/acc-connect-news-container/div/div/div/acc-connect-news-popup-add/app-cropper-modal/div/div/div/div[3]/button[2]";

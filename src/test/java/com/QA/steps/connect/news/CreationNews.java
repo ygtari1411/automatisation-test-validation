@@ -6,7 +6,6 @@ import com.QA.locators.NewsLocators;
 import com.QA.steps.ActionsCommunes;
 import com.QA.steps.GenerateurDriver;
 import cucumber.api.java.en.And;
-import com.QA.base.streams;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
@@ -25,12 +24,7 @@ import java.util.*;
 public class CreationNews {
 
     private final WebDriver driver = GenerateurDriver.driver;
-    private static final Properties reader;
     private ActionsCommunes action = new ActionsCommunes();
-
-    static {
-        reader = streams.readers();
-    }
 
 
     @And("^L'utilisateur clique sur  ajouter News$")
@@ -81,7 +75,6 @@ public class CreationNews {
         action.pause(driver, 100);
         WebElement modules = (new WebDriverWait(driver, 10))
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath(CommonLocators.Notification_Action_Reussie)));
-
         String s = modules.findElement(By.xpath(NewsLocators.Premier_Element_Liste_News)).getText();
         Assert.assertEquals("Test auto News", s);
         action.pause(driver, 80);
