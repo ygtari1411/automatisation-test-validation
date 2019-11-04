@@ -25,48 +25,48 @@ Feature: Référentiels
 
     # Etape 3 : Ajout d'un nouvel emploi
     When l'utilisateur clique pour ajouter un emploi
-    And l'utlisateur saisi le code "SOCEMP1"
+    And l'utlisateur saisi le code "SOCEMP01"
     And l'utlisateur saisi le libelle "Emploi 1"
     And l'utlisateur saisi la date d'effet "01/01/2019"
     And l'utlisateur selectionne le statut "Actif"
-    And l'utilisateur clique sur le bouton Enregistrer
+    And l'utilisateur clique sur le bouton Enregistrer_Emploi
 
     # Etape 4 : Ajout d'une compétence
-    When l'utilisateur clique sur l onglet Exigences
-    And l'utilisateur clique sur Ajouter competence
-    And l'utilisateur selectionne la competence "validation"
-    And l'utilisateur selectionne le niveau "Confirmé"
-    And l'utilisateur selectionne l importance1 "Requise"
-    And l'utilisateur clique sur le bouton Valider competence
+    When l'utilisateur clique sur l onglet Exigences_Emploi
+    And l'utilisateur clique sur Ajouter competence_Emploi
+    And l'utilisateur selectionne la competence_Emploi "validation"
+    And l'utilisateur selectionne le niveau_Emploi "Confirmé"
+    And l'utilisateur selectionne l importance1_Emploi "Requise"
+    And l'utilisateur clique sur le bouton Valider competence_Emploi
 
     # Etape 5 : Ajout d'une langue
-    When l'utlisateur clique sur Ajouter langue
-    And l'utilisateur selectionne la langue "Français"
-    And l'utilisateur selectionne le niveau "Avancé"
-    And l'utilisateur l importance2 "Requise"
-    And l'utilisateur clique sur le bouton Valider langue
+    When l'utlisateur clique sur Ajouter langue_Emploi
+    And l'utilisateur selectionne la langue_Emploi "Français"
+    And l'utilisateur selectionne le niveau_Emploi "Avancé"
+    And l'utilisateur l importance2_Emploi "Requise"
+    And l'utilisateur clique sur le bouton Valider langue_Emploi
 
     # Etape 6 : Ajout d'une habilitation
-    When l'utlisateur clique sur Ajouter habilitation
-    And l'utilisateur selectionne le type "Permis de conduire"
-    And l'utilisateur selectionne le modele "Permis de conduire : Type A"
-    And l'utilisateur selectionne l importance3 "Préféré(e)"
-    And l'utilisateur clique sur le bouton Valider habilitation
+    When l'utlisateur clique sur Ajouter habilitation_Emploi
+    And l'utilisateur selectionne le type_Emploi "Permis de conduire"
+    And l'utilisateur selectionne le modele_Emploi "Permis de conduire : Type A"
+    And l'utilisateur selectionne l importance3_Emploi "Préféré(e)"
+    And l'utilisateur clique sur le bouton Valider habilitation_Emploi
 
      # Etape 7 : Ajout d'un diplôme
-    When l'utlisateur clique sur Ajouter diplome
-    And l'utilisateur selectionne le diplome "Ingénieur"
-    And l'utilisateur selectionne la discipline "Informatique"
-    And l'utilisateur selectionne l importance4 "Préféré(e)"
-    And l'utilisateur clique sur le bouton Valider diplome
+    When l'utlisateur clique sur Ajouter diplome_Emploi
+    And l'utilisateur selectionne le diplome_Emploi "Ingénieur"
+    And l'utilisateur selectionne la discipline_Emploi "Informatique"
+    And l'utilisateur selectionne l importance4_Emploi "Préféré(e)"
+    And l'utilisateur clique sur le bouton Valider diplome_Emploi
 
      # Etape 8 : Ajout d'une expérience professionnelle
-    When l'utlisateur clique sur Ajouter experience
-    And l'utilisateur saisi l emploi "Ingénieur de test junior"
-    And l'utilisateur selectionne le secteur "Service"
-    And l'utilisateur saisi les annees d experience "2"
-    And l'utilisateur selectionne l importance5 "Requise"
-    And l'utilisateur clique sur le bouton Valider annees experience
+    When l'utlisateur clique sur Ajouter experience_Emploi
+    And l'utilisateur saisi l emploi_Emploi "Ingénieur de test junior"
+    And l'utilisateur selectionne le secteur_Emploi "Service"
+    And l'utilisateur saisi les annees d experience_Emploi "2"
+    And l'utilisateur selectionne l importance5_Emploi "Requise"
+    And l'utilisateur clique sur le bouton Valider annees experience_Emploi
 
 
     # Etape 9 : Validation finale
