@@ -1,6 +1,6 @@
 # Auteur: wboufade
 # Feature: Référentiels
-# Scénario: Création Entité Orgaisationnelle
+# Scénario: Création Entité orgaisationnelle
 # Date de création: 25/10/2019
 
 
@@ -11,7 +11,7 @@
 
 Feature: Référentiels
 
-  Scenario: Création Entité Organisationnelle
+  Scenario: Création Entité organisationnelle
 
     Given le navigateur est ouvert et la page d'acceuil est affichée
     And l'utilisateur "resp-RH@mail.com" est connecté

@@ -1,4 +1,4 @@
-# Auteur : syrineLakhdhar
+# Auteur : syrine Lakhdhar
 # Feature : News
 # Scénario : Tag collaborateur dans un commentaire sur une news
 # Date de création : 01/11/2019
