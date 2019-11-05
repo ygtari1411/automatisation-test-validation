@@ -12,18 +12,18 @@
   Feature: Recrutement
    Scenario: Demande de recrutement par manager avec validation
       
-     #001_Connexion manager
+     #Etape 001: Connexion manager
     Given   le navigateur est ouvert et la page d'acceuil est affichée
       And   l'utilisateur "yasushitakagi.cm@gmail.com" est connecté
      Then   le nom de l'utilisateur "Yasushi TAKAGI" est affiche en haut a gauche
 
-     #002_Acceder  à la page Demandes de recrutement espace manager
+     #Etape 002: Acceder  à la page Demandes de recrutement espace manager
      When   l utlisateur clique sur l icone mon equipe
       And   wait (valeur)
      When   l'utilisateur clique sur l icone demande de recrutement
       And   wait (valeur)
 
-     #003_Lancer la demande de recrutement par le manager
+     #Etape 003: Lancer la demande de recrutement par le manager
      When   l utilisateur clique sur le bouton ajouter une demande
       And   wait (valeur)
       And   l utilisateur remplie le champs intitulé "Test automatique"
@@ -51,7 +51,7 @@
      When   l utilisateur clique sur le bouton envoyer
       And   wait (valeur)
 
-     #004_Verification de la demande lancee par le manager par lui meme
+     #Etape 004: Verification de la demande lancee par le manager par lui meme
      Then   verifier que le premier libelle dans la liste "Test automatique"
       And   verifier que la premiere date de creation dans la liste aujourd hui
       And   verifier que le premier status dans la liste 'Orange' et l intitule "En cours"
@@ -68,22 +68,22 @@
       And   verifier que le premier commentaire dans le tableau est vide
      When   l utilisateur clique sur le bouton fermer
 
-     #005_Deconnexion
+     #Etape 005: Deconnexion
       And   l utilisateur clique sur le bouton Configuration
       And   l'utilisateur clique sur le bouton Déconnexion
       And   wait (valeur)
      Then   la page de connexion est affiche
 
-     #006_Connexion avec le profil RH
+     #Etape 006: Connexion avec le profil RH
      When   l'utilisateur "nanakomatsu.CM@gmail.com" est connecté
      Then   le nom de l'utilisateur "Nana Komatsu" est affiche en haut a gauche
 
-     #007_Acceder au menu recrutement par le profil RH
+     #Etape 007: Acceder au menu recrutement par le profil RH
      When   l'utilisateur clique sur espace-RH
       And   l'utilisateur clique sur le module Talent
       And   l utilisateur clique sur le sous module Recrutement
 
-     #008_Verification de la demande de recrutement lancee par le manager par le profil RH
+     #Etape 008: Verification de la demande de recrutement lancee par le manager par le profil RH
      Then   verifier que le premier libelle dans la liste "Test automatique"
       And   verifier que la premiere date de creation dans la liste aujourd hui
       And   verifier que le premier status dans la liste 'Orange' et l intitule "En cours"
@@ -104,22 +104,22 @@
      When   l utilisateur clique sur le bouton fermer
 
 
-     #009_Déconnexion
+     #Etape 009: Déconnexion
       And   l utilisateur clique sur le bouton Configuration
       And   l'utilisateur clique sur le bouton Déconnexion
       And   wait (valeur)
      Then   la page de connexion est affiche
      
-     #010_Connexion avec le profil N+1 du manager
+     #Etape 010: Connexion avec le profil N+1 du manager
      When   l'utilisateur "nobuoterashima.cm@gmail.com" est connecté
      Then   le nom de l'utilisateur "Nobuo TERASHIMA" est affiche en haut a gauche
 
 
-     #011_Acceder au menu recrutement avec le profil N+1
+     #Etape 011: Acceder au menu recrutement avec le profil N+1
       And   l utilisateur recoit une notification de demande de validation
      When   l utilisateur clique sur la notification
 
-     #012_Verification de la demande de recrutement par N+1
+     #Etape 012: Verification de la demande de recrutement par N+1
       And   l utilisateur clique sur a valider
       And   wait (valeur)
      Then   verifier que le premier libelle dans la liste "Test automatique"
@@ -156,29 +156,29 @@
       And   verifier que le budget est "24000"
       And   verifier que le montant "500" s affiche a droite
 
-     #013_Validation de la demande de recrutement par N+1
+     #Etape 013: Validation de la demande de recrutement par N+1
      When   l utilisateur saisie "Validation N+1" dans le champs commentaire
       And   l utilisateur choisie l option valider dans la liste actions
       And   l utilisateur clique sur envoyer
       And   wait (valeur)
      Then   verifier le permier libellé n est pas "Test automatique"
 
-     #014_Déconnexion
+     #Etape 014: Déconnexion
      When   l utilisateur clique sur le bouton Configuration
       And   l'utilisateur clique sur le bouton Déconnexion
       And   wait (valeur)
      Then   la page de connexion est affiche
 
-     #015_Connexion avec le profil RH
+     #Etape 015: Connexion avec le profil RH
      When   l'utilisateur "nanakomatsu.CM@gmail.com" est connecté
      Then   le nom de l'utilisateur "Nana Komatsu" est affiche en haut a gauche
 
-     #016_Acceder au menu recrutement par le profil RH
+     #Etape 016: Acceder au menu recrutement par le profil RH
      When   l'utilisateur clique sur espace-RH
       And   l'utilisateur clique sur le module Talent
       And   l utilisateur clique sur le sous module Recrutement
 
-     #017_Vérification de la demande de recrutement par le role RH
+     #Etape 017: Vérification de la demande de recrutement par le role RH
      Then   verifier que le premier libelle dans la liste "Test automatique"
       And   verifier que la premiere date de creation dans la liste aujourd hui
       And   verifier que le premier status dans la liste 'Orange' et l intitule "En cours"
@@ -202,21 +202,21 @@
       And   verifier que le second commentaire dans le tableau est vide
      When   l utilisateur clique sur le bouton fermer
 
-     #018_Déconnexion
+     #Etape 018: Déconnexion
       And   l utilisateur clique sur le bouton Configuration
       And   l'utilisateur clique sur le bouton Déconnexion
       And   wait (valeur)
      Then   la page de connexion est affiche
 
-     #019_Connexion avec le profil N+2
+     #Etape 019: Connexion avec le profil N+2
      When   l'utilisateur "renhonjo.cm@gmail.com" est connecté
      Then   le nom de l'utilisateur est affiché en haut à gauche
 
-     #020_Acceder au menu recrutement avec le profil N+2
+     #Etape 020: Acceder au menu recrutement avec le profil N+2
       And   l utilisateur recoit une notification de demande de validation
      When   l utilisateur clique sur la notification
 
-    #021_Verification de la demande de recrutement par N+2
+    #Etape 021: Verification de la demande de recrutement par N+2
       And   l utilisateur clique sur a valider
      Then   verifier que le premier libelle dans la liste "Test automatique"
       And   verifier que la premiere date de creation dans la liste aujourd hui
@@ -243,28 +243,28 @@
       And   verifier que le budget est "24000"
       And   verifier que le montant "500" s affiche a droite
 
-    #022_Validation de la demande de recrutement par N+2
+    #Etape 022: Validation de la demande de recrutement par N+2
      When   l utilisateur saisie "Validation N+2" dans le champs commentaire
       And   l utilisateur choisie l option Valider dans la liste Actions
       And   l utilisateur clique sur Envoyer
       And   wait (valeur)
      Then   verifier le permier libellé n est pas Test automatique
 
-     #023_Déconnexion
+     #Etape 023: Déconnexion
       And   l utilisateur clique sur le bouton Configuration
       And   l'utilisateur clique sur le bouton Déconnexion
       And   wait (valeur)
      Then   la page de connexion est affiche
 
-     #024_Connexion avec le profil RH_Recruitment
+     #Etape 024: Connexion avec le profil RH_Recruitment
      When   l'utilisateur "hrrecruitment@yopmail.com" est connecté
      Then   le nom de l'utilisateur est affiché en haut à gauche
 
-     #025_Acceder au menu recrutement avec le profil N+2
+     #Etape 025: Acceder au menu recrutement avec le profil N+2
      When    l'utilisateur clique sur espace-RH
       And    l utilisateur clique sur la notification de demande de validation
 
-     #026_Vérification et de la demande de recrutement par le rôle RH_Recruitment
+     #Etape 026: Vérification et de la demande de recrutement par le rôle RH_Recruitment
       And    l utilisateur clique sur a valider
       And    wait (valeur)
      Then    verifier que le premier libelle dans la liste "Test automatique"
@@ -319,7 +319,7 @@
       And    verifier que le budget est "24000"
       And    verifier que le montant "500" s affiche a droite
 
-     #027_Validation de la demande de recrutement par le rôle RH_Recruitment
+     #Etape 027: Validation de la demande de recrutement par le rôle RH_Recruitment
      When    l utilisateur saisie "Validation Role RH_Recruitment" dans le champs commentaire
       And    l utilisateur choisie l option Valider dans la liste Actions
       And    l utilisateur clique sur Envoyer
@@ -348,17 +348,17 @@
       And    verifier que le quatrieme validateur est Role_admin
      When    l utilisateur clique sur le bouton fermer
 
-     #028_Déconnexion
+     #Etape 028: Déconnexion
       And   l utilisateur clique sur le bouton Configuration
       And   l'utilisateur clique sur le bouton Déconnexion
       And   wait (valeur)
      Then   la page de connexion est affiche
 
-     #029_Connexion avec le profil Role_Admin
+     #Etape 029: Connexion avec le profil Role_Admin
      When   l'utilisateur "KyosukeTAKAKURA1@yopmail.com" est connecté
      Then   le nom de l'utilisateur est affiché en haut à gauche
 
-     #030_Verification et validation de la demande de recrutement par le rôle RH_Admin
+     #Etape 030: Verification et validation de la demande de recrutement par le rôle RH_Admin
      When    l'utilisateur clique sur espace-RH
       And    l utilisateur clique sur la notification de demande de validation
       And    l utilisateur clique sur a valider
@@ -459,17 +459,17 @@
       And    verifier que le quatrieme commentaire est "Validation Role RH_Admin"
      When    l utilisateur clique sur le bouton fermer
 
-      #031_Déconnexion
+      #Etape 031: Déconnexion
       And   l utilisateur clique sur le bouton Configuration
       And   l'utilisateur clique sur le bouton Déconnexion
       And   wait (valeur)
      Then   la page de connexion est affiche
 
-     #032_Connexion avec le profil manager
+     #Etape 032: Connexion avec le profil manager
      When   l'utilisateur "yasushitakagi.cm@gmail.com" est connecté
      Then   le nom de l'utilisateur est affiché en haut à gauche
 
-     #033_Vérification de la reception de la notification de validation RH par le manager
+     #Etape 033: Vérification de la reception de la notification de validation RH par le manager
       And   l utilisateur clique sur la notification de validation de la demande de recrutement
      Then   verifier que le premier libelle dans la liste "Test automatique"
       And   verifier que la premiere date de creation dans la liste aujourd hui
