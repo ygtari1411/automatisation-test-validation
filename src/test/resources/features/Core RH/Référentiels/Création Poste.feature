@@ -73,4 +73,4 @@ Feature: Référentiels
 
     # Etape 9 : Validation finale
     And l'utilisateur clique sur le bouton Enregistrer_Poste
-    Then vérifier la sauvegarde correcte du poste
+    Then vérifier la sauvegarde correcte des donnees
