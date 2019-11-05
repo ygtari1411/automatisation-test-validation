@@ -24,40 +24,43 @@
       And   wait (valeur)
 
      #Etape 003: Lancer la demande de recrutement par le manager
-     When   l utilisateur clique sur le bouton ajouter une demande
+        #Bouton ajouter une demande en haut a gauche#
+     When   le manager clique pour ajouter une demande_rec
       And   wait (valeur)
-      And   l utilisateur remplie le champs intitulé "Test automatique"
-      And   l utilisateur remplie le champs effectif à couvrir "2"
-      And   l utilisateur choisit l option "Interne" et l option "Externe" dans la liste cible
-      And   l utilisateur choisit l option "Ariana" dans la liste lieu
-      And   l utilisateur choisit l option "CDI" dans la liste contrat
-      And   l utilisateur choisit l option "CM Chief RH" dans la liste emploie associe
-      And   l utilisateur choisit l option "CM Collaborateur Buisness Partner" dans la liste poste associe
-      And   l utilisateur remplie le champs mission "Mission Test automatique"
-      And   l utilisateur remplie le champs profil atouts "Profil Test automatique"
-      And   l utilisateur remplie le champs justification de la demande "Justification Test automatique"
-      And   l utilisateur clique sur ajouter des fichiers
-      And   l utlisateur ajoute un fichier
-      And   l utilisateur choisit l option "Dinar tunisien" dans la liste devise
-      And   l utilisateur remplie le champs salaire "2000"
-     Then   verifier que le salaire annuel est "2000"
-     When   l utilisateur remplie le champs bonus "1000"
-     Then   verifier que le salaire annuel est "22000"
-     When   l utilisateur remplie le champs autres "1500"
-     Then   verifier que le salaire annuel est "23500"
-     When   l utlisateur coche budgetise
-     And    l utlisateur saisie budget "24000"
-     Then   verifier que le montant "500" s affiche a droite
-     When   l utilisateur clique sur le bouton envoyer
+      And   le manager saisi l'intitule_demande_rec "Test automatique"
+      And   le manager saisi effectif_a_couvrir_demande_rec "2"
+      And   le manager selectionne la cible_demande_rec "Interne" et "Externe"
+      And   le manager selectionne le lieu_demande_rec "Ariana"
+      And   le manager selectionne le contrat_demande_rec "CDI"
+      And   le manager selectionne l emploie_associe_demande_rec "CM Chief RH"
+      And   le manager selectionne le poste_associe_demande_rec "CM Collaborateur Buisness Partner"
+      And   le manager saisi la mission_demande_rec "Mission Test automatique"
+      And   le manager saisi le profil_atouts_demande_rec "Profil Test automatique"
+      And   le manager saisi la justification_de_la_demande_rec "Justification Test automatique"
+      And   le manager clique pour ajouter_des_fichiers_demande_rec
+      And   le manager ajoute un fichier a la demande de rec
+      And   le manager selectionne la devise_demande_rec "Dinar tunisien"
+      And   le manager saisi le salaire_demande_rec "2000"
+     Then   verifier que le salaire_annuel_demande_rec est "2000"
+     When   le manager saisi le bonus_demande_rec "1000"
+     Then   verifier que le salaire annuel_demande_rec est "22000"
+     When   le manager saisi autres_demande_rec "1500"
+     Then   verifier que le salaire annuel_demande_rec est "23500"
+     When   le manager coche budgetise_demande_rec
+     And    le manager saisi budget_demande_rec "24000"
+     Then   verifier que le montant_demande_rec "500" s affiche a droite
+     When   le manager clique pour envoyer_demande_rec
       And   wait (valeur)
 
      #Etape 004: Verification de la demande lancee par le manager par lui meme
-     Then   verifier que le premier libelle dans la liste "Test automatique"
-      And   verifier que la premiere date de creation dans la liste aujourd hui
-      And   verifier que le premier status dans la liste 'Orange' et l intitule "En cours"
-      And   verifier que la premiere ligne de l effectif a couvrir dans la liste "2"
-      And   verifier que le premier lieu dans la liste est "Ariana"
-      And   verifier que la premiere ligne de publiee n est pas cochee
+        #Verification des champs dans la liste affichee dans le sous module#
+     Then   verifier que le premier libelle dans la liste_demandes_rec_mgr "Test automatique"
+      And   verifier que la premiere date de creation dans la liste_demandes_rec_mgr aujourd hui
+      And   verifier que le premier status dans la liste_demandes_rec_mgr 'Orange' et l intitule "En cours"
+      And   verifier que la premiere ligne de l effectif a couvrir dans la liste_demandes_rec_mgr "2"
+      And   verifier que le premier lieu dans la liste_demandes_rec_mgr est "Ariana"
+      And   verifier que la premiere ligne de publiee dans la liste_demandes_rec_mgr n est pas cochee
+        #Verification des champs dans la liste voir historique : bouton fleche dans la colonne Actions#
      When   l utilisateur clique sur l icone voir historique
      Then   verifier que l'initiateur est "Yasushi TAKAGI"
       And   verifier que la date de debut est aujourd hui
@@ -84,6 +87,7 @@
       And   l utilisateur clique sur le sous module Recrutement
 
      #Etape 008: Verification de la demande de recrutement lancee par le manager par le profil RH
+        #Verification des champs dans la liste affichee dans le sous module#
      Then   verifier que le premier libelle dans la liste "Test automatique"
       And   verifier que la premiere date de creation dans la liste aujourd hui
       And   verifier que le premier status dans la liste 'Orange' et l intitule "En cours"
@@ -93,6 +97,7 @@
       And   verifier que la premiere ligne de l effectif a couvrir dans la liste "2"
       And   verifier que le premier lieu dans la liste est "Ariana"
       And   verifier que la premiere ligne de publiee n est pas cochee
+        #Verification des champs dans la liste voir historique : bouton fleche dans la colonne Actions#
      When   l utilisateur clique sur l icone voir historique
      Then   verifier que l'initiateur est "Yasushi TAKAGI"
       And   verifier que la date de debut est aujourd hui
