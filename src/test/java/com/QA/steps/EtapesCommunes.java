@@ -102,5 +102,20 @@ public class EtapesCommunes {
         Assert.assertTrue(driver.findElement(By.xpath(ReferentielsLocators.Bouton_Rubrique_Postes)).isDisplayed());
 
     }
+
+    @And("l'utilisateur clique sur portal")
+    public void lUtilisateurCliqueSurPortal() {
+        driver.findElement(By.xpath(CommonLocators.Bouton_Portal)).click();
+    }
+
+
+
+    @And("wait {int}")
+    public void wait(int arg0) throws InterruptedException {
+        synchronized (driver) {
+            driver.wait(arg0);
+        }
+
+    }
 }
 
