@@ -117,5 +117,14 @@ public class EtapesCommunes {
         }
 
     }
+
+
+    @And("l'utilisateur clique sur Annonces")
+    public void lUtilisateurCliqueSurAnnonces() {
+
+        driver.findElement(By.xpath(CommonLocators.Bouton_Annonce)).click();
+    }
+
+
 }
 
