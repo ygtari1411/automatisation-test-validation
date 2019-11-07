@@ -10,5 +10,7 @@ public class CommonLocators {
     public static final String Bouton_Module_Connect = "/html/body/app-root/app-layout/div/app-sidebar/nav/ul/li[6]/a";
     public static final String Notification_Action_Reussie = "/html/body/app-root/simple-notifications/div/simple-notification/div/div[1]/div[2]";
     public static final String Bouton_Module_CoreRH = "/html/body/app-root/app-layout/div/app-sidebar/nav/ul/li[3]";
+    public static final String Bouton_Portal = "/html/body/app-root/app-layout/div/app-header/nav/div[2]/ul[1]/li[2]/a/em";
+    public static final String Option_Liste_Profil_Tag = "//*[@id=\"post-holder\"]/acc-timeline-post/div/acc-timeline-post-comments/div/div/div/form/div/acc-mention-per-timelines/quill-editor/div/div[3]";
 
 }
