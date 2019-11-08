@@ -16,8 +16,6 @@ public class AnnoncesLocator {
     public static final String Bouton_Modifier_Annonce ="/html/body/app-root/app-layout/div/section/div/acc-annonces-container/div[2]/acc-annonces-list/div[1]/acc-annonces-card/div/div/div/i[2]";
     public static final String Premiere_Annonce = "/html/body/app-root/app-layout/div/section/div/acc-annonces-container/div[2]/acc-annonces-list/div[1]/acc-annonces-card/div/div/div/div[3]/p";
     public static final String Bouton_Supprimer_Annonce="/html/body/app-root/app-layout/div/section/div/acc-annonces-container/div[2]/acc-annonces-list/div[1]/acc-annonces-card/div/div/div/i[1]";
-    public static final String Bouton_Valider_Suppression ="/html/body/ngb-modal-window/div/div/acc-confirmation-modal/div[3]/button[1]";
-    public static final String Img_First_List ="/html/body/app-root/app-layout/div/section/div/acc-annonces-container/div[2]/acc-annonces-list/div[1]/acc-annonces-card/div/div/a/img";
     public static final String List_Annonces="/html/body/app-root/app-layout/div/section/div/acc-annonces-container/div[2]/acc-annonces-list/div";
 
 
