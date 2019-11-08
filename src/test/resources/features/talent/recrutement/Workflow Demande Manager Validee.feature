@@ -231,6 +231,7 @@
       And   verifier que le premier status_valid_rec_sup 'Orange' et l intitule "En cours"
       And   verifier que la premiere ligne de l effectif a couvrir_valid_rec_sup "2"
       And   verifier que le premier lieu_valid_rec_sup "Ariana"
+        #Verification des champs dans la liste voir historique : bouton fleche dans la colonne Actions#
      When   le superieur clique sur l icone voir historique_valid_rec_sup
      Then   verifier que l initiateur_voir_hist_sup "Yasushi TAKAGI"
       And   verifier que la date de debut_voir_hist_sup aujourd hui
