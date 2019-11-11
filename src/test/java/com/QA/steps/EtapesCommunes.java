@@ -126,5 +126,11 @@ public class EtapesCommunes {
     }
 
 
+    @And("l utilisateur se deconnecte")
+    public void lUtilisateurSeDeconnecte() {
+
+        driver.manage().deleteAllCookies();
+        driver.navigate().refresh();
+    }
 }
 

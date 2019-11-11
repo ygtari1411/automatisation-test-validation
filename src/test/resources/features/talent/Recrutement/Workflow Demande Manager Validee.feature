@@ -71,10 +71,7 @@
      When   le manager clique sur le bouton fermer_voir_hist_mgr
 
      #Etape 005: Deconnexion
-      And   l utilisateur clique sur le bouton configuration
-      And   l utilisateur clique sur le bouton deconnexion
-      And   wait (valeur)
-     Then   la page de connexion est affiche
+      And l utilisateur se deconnecte
 
      #Etape 006: Connexion avec le profil RH
      When   l'utilisateur "nanakomatsu.CM@gmail.com" est connecté
@@ -109,10 +106,7 @@
 
 
      #Etape 009: Deconnexion
-      And   l utilisateur clique sur le bouton configuration
-      And   l utilisateur clique sur le bouton deconnexion
-      And   wait 2000
-     Then   la page de connexion est affiche
+      And   l utilisateur se deconnecte
      
      #Etape 010: Connexion avec le profil N+1 du manager
      When   l'utilisateur "nobuoterashima.cm@gmail.com" est connecté
@@ -170,13 +164,10 @@
      Then   verifier que le permier libelle_valid_rec_sup n est pas "Test automatique"
 
      #Etape 014: Deconnexion
-     When   l utilisateur clique sur le bouton configuration
-      And   l utilisateur clique sur le bouton deconnexion
-      And   wait 2000
-     Then   la page de connexion est affiche
+     When   l utilisateur se deconnecte
 
      #Etape 015: Connexion avec le profil RH
-     When   l'utilisateur "nanakomatsu.CM@gmail.com" est connecté
+      And   l'utilisateur "nanakomatsu.CM@gmail.com" est connecté
      Then   le nom de l utilisateur "Nana Komatsu" est affiche en haut a gauche
 
      #Etape 016: Acceder au menu recrutement par le profil RH
@@ -211,10 +202,7 @@
      When   l utilisateur clique sur le bouton fermer_voir_hist_HR
 
      #Etape 018: Deconnexion
-      And   l utilisateur clique sur le bouton configuration
-      And   l utilisateur clique sur le bouton deconnexion
-      And   wait 2000
-     Then   la page de connexion est affiche
+    And   l utilisateur se deconnecte
 
      #Etape 019: Connexion avec le profil N+2
      When   l'utilisateur "renhonjo.cm@gmail.com" est connecté
@@ -274,10 +262,7 @@
      Then   verifier le permier libelle n est pas Test automatique
 
      #Etape 023: Deconnexion
-      And   l utilisateur clique sur le bouton Configuration
-      And   l utilisateur clique sur le bouton deconnexion
-      And   wait 2000
-     Then   la page de connexion est affiche
+    And   l utilisateur se deconnecte
 
      #Etape 024: Connexion avec le profil RH_Recruitment
      When   l'utilisateur "hrrecruitment@yopmail.com" est connecté
@@ -373,10 +358,7 @@
      When   l utilisateur clique sur le bouton fermer_voir_hist_HR
 
      #Etape 028: Deconnexion
-      And   l utilisateur clique sur le bouton configuration
-      And   l utilisateur clique sur le bouton deconnexion
-      And   wait 2000
-     Then   la page de connexion est affiche
+    And   l utilisateur se deconnecte
 
      #Etape 029: Connexion avec le profil Role_Admin
      When   l'utilisateur "KyosukeTAKAKURA1@yopmail.com" est connecté
@@ -487,10 +469,7 @@
       And   verifier que le quatrieme commentaire_voir_hist_HR "Validation Role RH_Admin"
      Then   l utilisateur clique sur le bouton fermer_voir_hist_HR
       #Etape 031: Deconnexion
-      And   l utilisateur clique sur le bouton configuration
-      And   l utilisateur clique sur le bouton deconnexion
-      And   wait 2000
-     Then   la page de connexion est affiche
+    And   l utilisateur se deconnecte
 
      #Etape 032: Connexion avec le profil manager
      When   l'utilisateur "yasushitakagi.cm@gmail.com" est connecté
