@@ -9,18 +9,32 @@
 @ACCRETIO2-SONDAGE
 @ACCRETIO2-SONDAGE-0001
 
-  Feature: Sondage
+  Feature: Sondage : Création d'un sondage
 
     Scenario: Création d'un sondage
+
+      #Etape1 : Se connecter au TNR
+
       Given le navigateur est ouvert et la page d'acceuil est affichée
       And l'utilisateur "resp-RH@mail.com" est connecté
+
+      #Etape2 : Ajouter un sondage
+
       When l'utilisateur clique sur espace-RH
       And l'utilisateur clique sur le module Connect
       And l'utilisateur clique sur Sondage
-      And l'utilisateur clique sur ajouter un Sondage
+      And l'utilisateur clique sur le bouton ajouter un Sondage
+
+      #Etape3 : Remplir tous les champs d'un sondage
+
       When le modal création Sondage s'affiche
-      And l'utilisateur remplit tous les champs
-      And l'utilisateur clique sur sauvegarder
+      And l'utilisateur remplit Question1 par "tester sondage 1"
+      And l'utilisateur remplit Réponse1 par "oui"
+      And l'utilisateur remplit Réponse2 par "non"
+      And l'utilisateur clique sur le bouton confirmer ajout sondage
+
+      #Etape4 : Vérifier l'ajout du sondage
+
       Then vérifier la création de Sondage
 
 

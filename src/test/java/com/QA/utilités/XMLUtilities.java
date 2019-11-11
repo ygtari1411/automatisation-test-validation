@@ -30,7 +30,7 @@ public class XMLUtilities {
         SAXParserFactory parserFactor = SAXParserFactory.newInstance();
         SAXParser parser = parserFactor.newSAXParser();
         UserHolder handler = utilities.new UserHolder();
-        parser.parse(ClassLoader.getSystemResourceAsStream("jeudedonnées\\users.xml"), handler);
+        parser.parse(ClassLoader.getSystemResourceAsStream("jeudedonnées/users.xml"), handler);
 
         for (User user : handler.users) {
             if (username.equalsIgnoreCase(user.getUsername())) {

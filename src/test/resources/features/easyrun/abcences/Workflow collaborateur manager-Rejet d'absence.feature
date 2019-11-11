@@ -1,6 +1,6 @@
 # Auteur: Manel Hachicha
-# Feature: Workflow collaborateur manager-Rejet d'absence
-# Scénario: Rejet d'une demande d'absence au workflow collaborateur manager
+# Feature: WorkflowN1Rejet
+# Scénario: Rejet d'une demande d'absence en workflowN1
 # Date de création: 01/11/2019
 
 
@@ -9,9 +9,9 @@
 @ACCRETIO2-ABSENCES
 @ACCRETIO2-ABSENCES-0002
 
-Feature: Absences: Rejet d'une demande d'absence au workflow collaborateur manager
+Feature: WorkflowN1Rejet
 
-  Scenario: Rejet d'une demande d'absence au workflow collaborateur manager
+  Scenario: Rejet d'une demande d'absence en workflowN1
     Given le navigateur est ouvert et la page d'acceuil est affichée
 
     #Prérequis: Au niveau du paramétrage de l'absence:

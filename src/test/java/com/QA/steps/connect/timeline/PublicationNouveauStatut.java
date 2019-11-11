@@ -28,10 +28,9 @@ public class PublicationNouveauStatut {
 
     }
 
-    @And("^L'utilisateur rédige son statut$")
-    public void lUtilisateurRédigeSonStatut() throws InterruptedException {
-
-        driver.findElement(By.xpath(TimelineLocators.Champ_Input_Statut)).sendKeys("Ceci est un test automatisé qui vise à vérifier le fonctionnement correcte de la publication de statut");
+    @And ("L'utilisateur rédige son statut {string}")
+    public void lUtilisateurRédigeSonStatut(String arg0) throws InterruptedException {
+        driver.findElement(By.xpath(TimelineLocators.Champ_Input_Statut)).sendKeys(arg0);
         action.pause(driver, 300);
     }
 

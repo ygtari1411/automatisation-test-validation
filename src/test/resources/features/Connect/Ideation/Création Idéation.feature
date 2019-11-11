@@ -10,7 +10,7 @@
 @ACCRETIO2-IDEATION-0001
 
 
-Feature: Ideation
+Feature: Ideation : Création d'une idée
 
   Scenario: Créer une idée
     Given le navigateur est ouvert et la page d'acceuil est affichée

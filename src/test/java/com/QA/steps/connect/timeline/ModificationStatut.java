@@ -17,7 +17,6 @@ public class ModificationStatut {
 
     private final WebDriver driver = GenerateurDriver.driver;
     private ActionsCommunes action = new ActionsCommunes();
-    private String statut;
 
 
     @And("l'utilsateur clique pour modifier le statut")
@@ -31,7 +30,7 @@ public class ModificationStatut {
     }
 
     @And("L'utilisateur modifie le statut déja publié")
-    public void lUtilisateurModifieLeStatutDéjaPublié() throws InterruptedException {
+    public void lUtilisateurModifieLeStatutDéjaPublié()  {
 
         driver.findElement(By.xpath(TimelineLocators.Champ_Input_Modification_Statut)).clear();
         driver.findElement(By.xpath(TimelineLocators.Champ_Input_Modification_Statut)).sendKeys("Mise à jour");

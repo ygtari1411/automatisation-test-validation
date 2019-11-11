@@ -31,8 +31,8 @@ public class CréationEtablissement {
     }
 
 
-    @And("l'utilisateur remplie tous les champs ajout établissement")
-    public void lUtilisateurRemplieTousLesChampsAjoutÉtablissement() throws InterruptedException, AWTException {
+    @And("l'utilisateur remplit tous les champs ajout établissement")
+    public void lUtilisateurRemplitTousLesChampsAjoutÉtablissement() throws InterruptedException, AWTException {
 
         driver.findElement(By.xpath(ReferentielsLocators.Champs_Input_Code_Etablissement)).sendKeys("SOCETAB01");
         action.pause(driver, 100);

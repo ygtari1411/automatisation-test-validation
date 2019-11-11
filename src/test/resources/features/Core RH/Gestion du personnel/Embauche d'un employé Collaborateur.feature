@@ -9,7 +9,7 @@
 @ACCRETIO2-GESTIONDUPERSONNEL
 @ACCRETIO2-GESTIONDUPERSONNEL-001
 
-Feature: Gestion du personnel
+Feature: Gestion du personnel : Embauche d'un employé Collaborateur
 
   Scenario: Embauche d'un employé Collaborateur
 
@@ -18,6 +18,7 @@ Feature: Gestion du personnel
     And l'utilisateur "resp-RH@mail.com" est connecté
 
     # Etape 2 : Accès à l'espace RH
+
     When l'utilisateur clique sur espace-RH
     And l'utilisateur clique sur le module coreRH
     And l'utilisateur clique sur Gestion du personnel
@@ -25,7 +26,7 @@ Feature: Gestion du personnel
     # Etape 3 : Embauche d'un nouveau collaborateur
     ## Première popup d'embauche ##
     When l'utilisateur clique pour ajouter un collaborateur
-    And l'utlisateur saisi la date d entree 01/01/2019
+    And l'utlisateur saisi la date d entree "01/01/2019"
     And l'utlisateur selectionne le type Interne
     And l'utlisateur saisi le matricule SOC00001
     And l'utlisateur selectionne la qualité M.

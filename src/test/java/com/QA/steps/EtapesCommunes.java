@@ -102,5 +102,35 @@ public class EtapesCommunes {
         Assert.assertTrue(driver.findElement(By.xpath(ReferentielsLocators.Bouton_Rubrique_Postes)).isDisplayed());
 
     }
+
+    @And("l'utilisateur clique sur portal")
+    public void lUtilisateurCliqueSurPortal() {
+        driver.findElement(By.xpath(CommonLocators.Bouton_Portal)).click();
+    }
+
+
+
+    @And("wait {int}")
+    public void wait(int arg0) throws InterruptedException {
+        synchronized (driver) {
+            driver.wait(arg0);
+        }
+
+    }
+
+
+    @And("l'utilisateur clique sur Annonces")
+    public void lUtilisateurCliqueSurAnnonces() {
+
+        driver.findElement(By.xpath(CommonLocators.Bouton_Annonce)).click();
+    }
+
+
+    @And("l utilisateur se deconnecte")
+    public void lUtilisateurSeDeconnecte() {
+
+        driver.manage().deleteAllCookies();
+        driver.navigate().refresh();
+    }
 }
 
