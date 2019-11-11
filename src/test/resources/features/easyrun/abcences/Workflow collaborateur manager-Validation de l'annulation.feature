@@ -1,17 +1,17 @@
 # Auteur: Manel Hachicha
-# Feature: WorkflowN1Validation
-# Scénario: Validation d'une demande d'absence en workflowN1
-# Date de création: 01/11/2019
+# Feature: Workflow collaborateur manager
+# Scénario: Validation de l'annulation d'une demande d'absence au workflow collaborateur manager
+# Date de création: 08/11/2019
 
 
 @ACCRETIO2
 @ACCRETIO2-EASYRUN
 @ACCRETIO2-ABSENCES
-@ACCRETIO2-ABSENCES-0001
+@ACCRETIO2-ABSENCES-0003
 
-Feature: WorkflowN1Validation
+Feature: Absences: Validation de l'annulation d'une demande d'absence au workflow collaborateur manager
 
-  Scenario: Validation d'une demande d'absence en workflowN1
+  Scenario: Validation de l'annulation d'une demande d'absence au workflow collaborateur manager
     Given le navigateur est ouvert et la page d'acceuil est affichée
 
     #Prérequis: Au niveau du paramétrage de l'absence:
@@ -38,6 +38,7 @@ Feature: WorkflowN1Validation
     And l'utilisateur sélectionne la règle "Congé Payé"
     And l'utilisateur sélectionne le type du calendrier "Jours ouvrés"
     And l'utilisateur clique sur valider l'affectation
+    And le message Opération effectuée avec succés s'affiche à l'ecran
 
     #Etape 2 : Profil collaborateur-Ajout de demande d'absence
     And l'utilisateur "haf01.collaborateur@gmail.com" est connecté
@@ -63,5 +64,25 @@ Feature: WorkflowN1Validation
 
    #Etape 4 : Profil collaborateur-Vérification de la validation de la demande d'absence
     And l'utilisateur "haf01.collaborateur@gmail.com" est connecté
-    Then Vérifier que l'utilisateur reçoit une notification de la validation de la demande d'absence et que le statut de la demande d'absence devient Validée
+    And Vérifier que l'utilisateur reçoit une notification "Votre demande d'absence a été acceptée" et que le statut de la demande d'absence devient Validée et que la demande d'absence s'affiche dans le calendrier
+
+   #Etape 5 : Profil collaborateur-Annulation de la demande d'absence
+    And l'utilisateur clique sur l'icône Annuler la demande d'absence
+    And la fenêtre de confirmation de l'annulation de la demande d'absence s'affiche à l'écran
+    And l'utilisateur clique sur Valider l'annulation de la demande d'absence au niveau de la fenêtre de confirmation d'annulation de la demande d'absence
+    And le message Opération effectuée avec succés s'affiche à l'ecran
+
+    #Etape 6 : Profil manager-Validation de l'annulation de la demande d'absence
+    And l'utilisateur "haf02.manager@gmail.com" est connecté
+    And l'utilisateur reçoit une notification d'annulation de demande d'absence
+    And l'utilisateur clique sur l'icône Accepter l'annulation de demande d'absence
+    And la fenêtre de confirmation de l'annulation de la demande d'absence s'affiche à l'écran
+    And l'utilisateur clique sur Valider l'annulation de la demande d'absence au niveau de la fenêtre de confirmation d'annulation de la demande d'absence
+    And le message Opération effectuée avec succés s'affiche à l'ecran
+    And Vérifier que la demande d'absence est déplacée au niveau de la rubrique Historique et que son statut devient Annulée
+
+   #Etape 7 : Profil collaborateur-Vérification de la validation de l'annulation de la demande d'absence
+    And l'utilisateur "haf01.collaborateur@gmail.com" est connecté
+    Then Vérifier que l'utilisateur reçoit une notification "Votre demande d'annulation de la demande d'absence a été validée" de la validation de l'annulation de la demande d'absence et que le statut de la demande d'absence devient Annulée et que la demande d'absence ne s'affiche plus dans le calendrier
+
 
