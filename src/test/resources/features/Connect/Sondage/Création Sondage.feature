@@ -9,7 +9,7 @@
 @ACCRETIO2-SONDAGE
 @ACCRETIO2-SONDAGE-0001
 
-  Feature: Sondage
+  Feature: Sondage : Création d'un sondage
 
     Scenario: Création d'un sondage
       Given le navigateur est ouvert et la page d'acceuil est affichée

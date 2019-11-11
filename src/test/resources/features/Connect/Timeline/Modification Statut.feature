@@ -9,13 +9,13 @@
 @ACCRETIO2-TIMELINE
 @ACCRETIO2-TIMELINE-0002
 
-Feature: Timeline
+Feature: Timeline : Modification d'un statut
 
-  Scenario: Modifier un statut
+  Scenario: Modification d'un statut
     Given le navigateur est ouvert et la page d'acceuil est affichée
     And l'utilisateur "resp-RH@mail.com" est connecté
     When L'utilisateur clique pour publier un nouveau statut
-    And L'utilisateur rédige son statut
+    And L'utilisateur rédige son statut "Publication statut en mode auto"
     And L'utilisateur choisi la timeline cible
     And L'utilisateur clique sur Publier
     And l'utilsateur clique pour modifier le statut

@@ -9,7 +9,7 @@
 @ACCRETIO2-SONDAGE
 @ACCRETIO2-SONDAGE-0002
 
-  Feature: Sondage
+  Feature: Sondage : Modification d'un sondage
 
     Scenario: Modification d'un sondage
       Given le navigateur est ouvert et la page d'acceuil est affichée

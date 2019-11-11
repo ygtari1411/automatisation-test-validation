@@ -9,7 +9,7 @@
 @ACCRETIO2-RECRUTEMENT
 @ACCRETIO2-RECRUTEMENT-0001
 
-  Feature: Recrutement
+  Feature: Recrutement : Demande de recrutement par manager avec validation
    Scenario: Demande de recrutement par manager avec validation
       
      #Etape 001: Connexion manager

@@ -1,6 +1,6 @@
 # Auteur: wboufade
 # Feature:
-# Scénario: Création nouvelle news
+# Scénario: Création nouvelle Société
 # Date de création: 02/10/2019
 
 
@@ -9,7 +9,7 @@
 @ACCRETIO2-REFERENTIELS
 @ACCRETIO2-REFERENTIELS-0001
 
-Feature: Référentiels
+Feature: Référentiels : Création société
 
   Scenario: Création société
     Given le navigateur est ouvert et la page d'acceuil est affichée

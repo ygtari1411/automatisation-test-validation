@@ -14,5 +14,8 @@ public class TimelineLocators {
     public static final String Bouton_Publier_Statut = "/html/body/ngb-modal-window/div/div/acc-edit-post-modal/div/div[1]/fieldset/button[1]";
     public static final String Bouton_Supprimer_Statut = "Supprimer";
     public static final String Bouton_Valider_Suppression_Statut = ".mb-sm:nth-child(2)";
+    public static final String Bouton_Submit_Commentaire = "//*[@id=\"post-holder\"]/acc-timeline-post/div/acc-timeline-post-comments/div/div/div/form/button";
+    public static final String Bouton_Affichage_Commentaires_Existant = "//*[@id=\"post-holder\"]/acc-timeline-post/div/div[3]/div[1]/a[2]";
+
 
 }

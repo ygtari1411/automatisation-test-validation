@@ -9,7 +9,7 @@
 @ACCRETIO2-ABSENCES
 @ACCRETIO2-ABSENCES-0001
 
-Feature: WorkflowN1Validation
+Feature: WorkflowN1Validation : Validation d'une demande d'absence en workflowN1
 
   Scenario: Validation d'une demande d'absence en workflowN1
     Given le navigateur est ouvert et la page d'acceuil est affichée

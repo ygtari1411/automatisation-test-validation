@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SuppressionNews {
-    private String titre_News;
+    private static String titre_News;
     private final WebDriver driver = GenerateurDriver.driver;
     private ActionsCommunes action = new ActionsCommunes();
 
@@ -36,15 +36,18 @@ public class SuppressionNews {
         driver.findElement(By.xpath(NewsLocators.Bouton_Supprimer_News)).click();
         action.pause(driver, 200);
         driver.findElement(By.xpath(NewsLocators.Bouton_Validation_Suppression_News)).click();
-        boolean modules = (new WebDriverWait(driver, 3))
-                .until(ExpectedConditions.invisibilityOfElementWithText(By.xpath(NewsLocators.Premier_Element_Liste_News), titre_News));
-        Assert.assertNotEquals(driver.findElement(By.xpath(NewsLocators.Premier_Element_Liste_News)).getText(), titre_News);
+
 
     }
 
     @Then("vérifier la suppression de la News")
     public void vérifierLaSuppressionDeLaNews() {
 
+        boolean modules = (new WebDriverWait(driver, 3))
+                .until(ExpectedConditions.invisibilityOfElementWithText(By.xpath(NewsLocators.Premier_Element_Liste_News), titre_News));
+        Assert.assertNotEquals(driver.findElement(By.xpath(NewsLocators.Premier_Element_Liste_News)).getText(), titre_News);
         Assert.assertTrue(driver.findElement(By.xpath(CommonLocators.Notification_Action_Reussie)).getText().contains("succès"));
+
+        /*TODO  :   * Mettre en conformité les features de suppression News et de modification News */
     }
 }

@@ -9,9 +9,10 @@
 @ACCRETIO2-ABSENCES
 @ACCRETIO2-ABSENCES-0002
 
-Feature: WorkflowN1Rejet
+Feature: WorkflowN1Rejet : Rejet d'une demande d'absence en workflowN1
 
   Scenario: Rejet d'une demande d'absence en workflowN1
+
     Given le navigateur est ouvert et la page d'acceuil est affichée
 
     #Prérequis: Au niveau du paramétrage de l'absence:

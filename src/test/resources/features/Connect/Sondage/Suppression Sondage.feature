@@ -9,7 +9,7 @@
 @ACCRETIO2-SONDAGE
 @ACCRETIO2-SONDAGE-0003
 
-  Feature: Sondage
+  Feature: Sondage : Suppression d'un Sondage
 
     Scenario: Suppression d'un Sondage
       Given le navigateur est ouvert et la page d'acceuil est affichée
