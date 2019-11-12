@@ -9,10 +9,9 @@
 @ACCRETIO2-ABSENCES
 @ACCRETIO2-ABSENCES-0002
 
-Feature: WorkflowN1Rejet : Rejet d'une demande d'absence en workflowN1
+Feature: WorkflowN1Rejet
 
   Scenario: Rejet d'une demande d'absence en workflowN1
-
     Given le navigateur est ouvert et la page d'acceuil est affichée
 
     #Prérequis: Au niveau du paramétrage de l'absence:
@@ -39,6 +38,7 @@ Feature: WorkflowN1Rejet : Rejet d'une demande d'absence en workflowN1
     And l'utilisateur sélectionne la règle "Congé Payé"
     And l'utilisateur sélectionne le type du calendrier "Jours ouvrés"
     And l'utilisateur clique sur valider l'affectation
+    And le message Opération effectuée avec succés s'affiche à l'ecran
 
     #Etape 2 : Profil collaborateur-Ajout de demande d'absence
     And l'utilisateur "haf01.collaborateur@gmail.com" est connecté
@@ -53,7 +53,7 @@ Feature: WorkflowN1Rejet : Rejet d'une demande d'absence en workflowN1
 
     # Etape 3 : Profil manager-Rejet de demande d'absence
     And l'utilisateur "haf02.manager@gmail.com" est connecté
-    And l'utilisateur reçoit une notification d'envoi de demande d'absence
+    And l'utilisateur reçoit une notification "a envoyé une demande d'absence"
     And l'utilisateur clique sur Mon équipe
     And l'utilisateur clique sur Absences
     And l'utilisateur clique sur l'icône Rejeter la demande d'absence
@@ -65,4 +65,4 @@ Feature: WorkflowN1Rejet : Rejet d'une demande d'absence en workflowN1
 
    #Etape 4 : Profil collaborateur-Vérification du rejet de la demande d'absence
     And l'utilisateur "haf01.collaborateur@gmail.com" est connecté
-    Then Vérifier que l'utilisateur reçoit une notification du rejet de la demande d'absence et que le statut de la demande d'absence devient Rejetée
+    Then Vérifier que l'utilisateur reçoit une notification "Votre demande d'absence a été rejetée" et que le statut de la demande d'absence devient Rejetée et que la demande d'absence ne s'affiche pas dans le calendrier
