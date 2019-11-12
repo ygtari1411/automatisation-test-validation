@@ -1,17 +1,17 @@
 # Auteur: Ons MANSOURI
 # Feature: Recrutement
-# Scénario: Demande de recrutement par Manager avec validation
-# Date de création: 01/11/2019
+# Scénario: Demande de recrutement par Manager avec rejet HR_Recruitment
+# Date de création: 11/11/2019
 
 
 @ACCRETIO2
 @ACCRETIO2-TALENT
 @ACCRETIO2-RECRUTEMENT
-@ACCRETIO2-RECRUTEMENT-0001
+@ACCRETIO2-RECRUTEMENT-0004
 
-  Feature: Recrutement : Demande de recrutement par manager avec validation
-   Scenario: Demande de recrutement par manager avec validation
-      
+  Feature: Recrutement
+   Scenario: Demande de recrutement par manager avec rejet HR_Recruitment
+
      #Etape 001: Connexion manager
     Given   le navigateur est ouvert et la page d'acceuil est affichée
       And   l'utilisateur "yasushitakagi.cm@gmail.com" est connecté
@@ -28,7 +28,7 @@
         #Bouton ajouter une demande en haut a gauche#
      When   le manager clique pour ajouter une demande_rec
       And   wait 2000
-      And   le manager saisi l intitule_demande_rec "Test automatique"
+      And   le manager saisi l intitule_demande_rec "Test automatique 3"
       And   le manager saisi effectif_a_couvrir_demande_rec 2
       And   le manager selectionne la cible_demande_rec "Interne" et "Externe"
       And   le manager selectionne le lieu_demande_rec "Ariana"
@@ -55,7 +55,7 @@
      #Etape 004: Verification de la demande lancee par le manager par lui meme
 
         #Verification des champs dans la liste affichee dans le sous module#
-     Then   verifier que le premier libelle_demandes_rec_mgr "Test automatique"
+     Then   verifier que le premier libelle_demandes_rec_mgr "Test automatique 3"
       And   verifier que la premiere date de creation_demandes_rec_mgr aujourd hui
       And   verifier que le premier status_demandes_rec_mgr 'Orange' et l intitule "En cours"
       And   verifier que la premiere ligne de l effectif a couvrir_demandes_rec_mgr 2
@@ -88,7 +88,7 @@
      #Etape 008: Verification de la demande de recrutement du manager par le profil RH
 
         #Verification des champs dans la liste affichee dans le sous module#
-     Then   verifier que le premier libelle_offres_rec_HR "Test automatique"
+     Then   verifier que le premier libelle_offres_rec_HR "Test automatique 3"
       And   verifier que la premiere date de creation_offres_rec_HR aujourd hui
       And   verifier que le premier status_offres_rec_HR 'Orange' et l intitule "En cours"
       And   verifier que le premier initiateur_offres_rec_HR "TAKAGI Yasushi"
@@ -123,7 +123,7 @@
      #Etape 012: Verification de la demande de recrutement par N+1
       And   le superieur clique sur a valider_demandes_rec_sup
       And   wait 2000
-     Then   verifier que le premier libelle_valid_rec_sup "Test automatique"
+     Then   verifier que le premier libelle_valid_rec_sup "Test automatique 3"
       And   verifier que la premiere date de creation_valid_rec_sup aujourd hui
       And   verifier que le premier status_valid_rec_sup 'Orange' et l intitule "En cours"
       And   verifier que la premiere ligne de l effectif a couvrir_valid_rec_sup "2"
@@ -142,7 +142,7 @@
 
         #Verification des champs dans le modal visualiser le resultat : bouton stylo dans la colonne Actions#
       And   le superieur clique sur visualiser le resultat_valid_rec_sup
-     Then   verifier que l intitule_rec_valid_sup "Test automatique"
+     Then   verifier que l intitule_rec_valid_sup "Test automatique 3"
       And   verifier que l effectif a couvrir_rec_valid_sup 2
       And   verifier que la cible_rec_valid_sup "Interne" et "Externe"
       And   verifier que le contrat_rec_valid_sup "CDI"
@@ -165,7 +165,7 @@
       And   le superieur selectionne l action valider_rec_valid_sup
       And   le superieur clique sur envoyer_rec_valid_sup
       And   wait 2000
-     Then   verifier que le permier libelle_valid_rec_sup n est pas "Test automatique"
+     Then   verifier que le permier libelle_valid_rec_sup n est pas "Test automatique 3"
 
      #Etape 014: Deconnexion
      When   l utilisateur se deconnecte
@@ -180,7 +180,7 @@
       And   l utilisateur clique sur le sous module Recrutement
 
      #Etape 017: Verification de la demande de recrutement par le role RH
-     Then   verifier que le premier libelle_offres_rec_HR "Test automatique"
+     Then   verifier que le premier libelle_offres_rec_HR "Test automatique 3"
       And   verifier que la premiere date de creation_offres_rec_HR aujourd hui
       And   verifier que le premier status_offres_rec_HR 'Orange' et l intitule "En cours"
       And   verifier que le premier initiateur_offres_rec_HR "TAKAGI Yasushi"
@@ -219,7 +219,7 @@
 
     #Etape 021: Verification de la demande de recrutement par N+2
       And   le superieur clique sur a valider_demandes_rec_sup
-     Then   verifier que le premier libelle_valid_rec_sup "Test automatique"
+     Then   verifier que le premier libelle_valid_rec_sup "Test automatique 3"
       And   verifier que la premiere date de creation_valid_rec_sup aujourd hui
       And   verifier que le premier status_valid_rec_sup 'Orange' et l intitule "En cours"
       And   verifier que la premiere ligne de l effectif a couvrir_valid_rec_sup 2
@@ -241,7 +241,7 @@
       And   verifier que le second commentaire_voir_hist_sup vide
      When   le superieur clique sur le bouton fermer_voir_hist_sup
       And   le superieur clique sur visualiser le resultat_valid_rec_sup
-     Then   verifier que l intitule_valid_rec_sup "Test automatique"
+     Then   verifier que l intitule_valid_rec_sup "Test automatique 3"
       And   verifier que l effectif a couvrir_valid_rec_sup 2
       And   verifier que la cible_valid_rec_sup "Interne" et "Externe"
       And   verifier que le lieu_valid_rec_sup "Ariana"
@@ -265,12 +265,12 @@
       And   le superieur selectionne l action valider_valid_rec_sup
       And   le superieur clique sur envoyer_valid_rec_sup
       And   wait 2000
-     Then   verifier que le permier libelle_valid_rec_sup n est pas "Test automatique"
+     Then   verifier que le permier libelle_valid_rec_sup n est pas "Test automatique 3"
 
      #Etape 023: Deconnexion
-      And   l utilisateur se deconnecte
+     When   l utilisateur se deconnecte
 
-     #Etape 024: Connexion avec le profil RH_Recruitment
+    #Etape 024: Connexion avec le profil RH_Recruitment
      When   l'utilisateur "hrrecruitment@yopmail.com" est connecté
      Then   le nom de l utilisateur "Shin'Ichi OKAZAKI" est affiche en haut a gauche
 
@@ -333,12 +333,12 @@
       And   verifier que le budget_valid_HR_rec 24000
       And   verifier que le montant_valid_HR_rec 500 s affiche a droite
 
-     #Etape 027: Validation de la demande de recrutement par le rôle RH_Recruitment
-     When   le role_RH_rec saisi le commentaire_valid_HR_rec "Validation Role RH_Recruitment"
-      And   le role_RH_rec selectionne l action valider_HR_rec valider
+     #Etape 027: Rejet de la demande de recrutement par le rôle RH_Recruitment
+     When   le role_RH_rec saisi le commentaire_valid_HR_rec "Rejet Role RH_Recruitment"
+      And   le role_RH_rec selectionne l action rejet_HR_rec valider
       And   le role_RH_rec clique sur envoyer_valid_HR_rec
       And   wait 2000
-     Then   verifier le permier libelle_valid_HR_rec n est pas "Test automatique"
+     Then   verifier le permier libelle_valid_HR_rec n est pas "Test automatique 3"
      When   l utilisateur clique sur toutes les offres
       And   wait 2000
       And   le role_RH_rec clique sur voir historique_offres_rec_HR
@@ -357,139 +357,24 @@
       And   verifier que le troisieme validateur_voir_hist_HR "Shin'Ichi OKAZAKI"
       And   verifier que la troisieme date de debut_voir_hist_HR aujourd hui
       And   verifier que la troisieme date de fin_voir_hist_HR aujourd hui
-      And   verifier que la troisieme decision_voir_hist_HR "Acceptée" et la couleur est Vert
-      And   verifier que le troisieme commentaire_voir_hist_HR "Validation Role RH_Recruitment"
-      And   verifier que le quatrieme validateur est Role_admin
+      And   verifier que la troisieme decision_voir_hist_HR "Rejetée" et la couleur est rouge
+      And   verifier que le troisieme commentaire_voir_hist_HR "Rejet Role RH_Recruitment"
+      And   verifier qu il n y a pas de quatrieme validateur
      When   l utilisateur clique sur le bouton fermer_voir_hist_HR
 
      #Etape 028: Deconnexion
       And   l utilisateur se deconnecte
 
-     #Etape 029: Connexion avec le profil Role_Admin
-     When   l'utilisateur "KyosukeTAKAKURA1@yopmail.com" est connecté
-     Then   le nom de l utilisateur "Kyosuke TAKAKURA" est affiche en haut a gauche
-
-     #Etape 030: Verification et validation de la demande de recrutement par le rôle RH_Admin
-     When   l'utilisateur clique sur espace-RH
-      And   l utilisateur clique sur la notification de demande de validation
-      And   l utilisateur clique sur a valider
-      And   wait 2000
-     Then   verifier que le premier libelle_offres_rec_HR "Test automatique"
-      And   verifier que la premiere date de creation_offres_rec_HR aujourd hui
-      And   verifier que le premier status_offres_rec_HR 'Orange' et l intitule "En cours"
-      And   verifier que le premier initiateur_offres_rec_HR "TAKAGI Yasushi"
-      And   verifier que le premier responsable de recrutement_offres_rec_HR vide
-      And   verifier que la premiere ligne de candidature_offres_rec_HR "0"
-      And   verifier que la premiere ligne de l effectif a couvrir_offres_rec_HR "2"
-      And   verifier que le premier lieu_offres_rec_HR "Ariana"
-      And   verifier que la premiere ligne de publiee_offres_rec_HR n est pas cochee
-
-        #Verification des champs dans la liste voir historique : bouton fleche dans la colonne Actions#
-     When   verifier que l initiateur_voir_hist_HR "Yasushi TAKAGI"
-      And   verifier que la date de debut_voir_hist_HR aujourd hui
-      And   verifier que le premier validateur_voir_hist_HR "Nobuo TERASHIMA"
-      And   verifier que la premiere date de debut_voir_hist_HR aujourd hui
-      And   verifier que la premiere date de fin_voir_hist_HR aujourd hui
-      And   verifier que la premiere decision_voir_hist_HR "Acceptée" et la couleur est Vert
-      And   verifier que le premier commentaire_voir_hist_HR "Validation N+1"
-      And   verifier que le second validateur_voir_hist_HR "Ren Honjo"
-      And   verifier que la seconde date de debut_voir_hist_HR aujourd hui
-      And   verifier que la seconde date de fin_voir_hist_HR aujourd hui
-      And   verifier que la seconde  decision_voir_hist_HR "Acceptée" et la couleur est Vert
-      And   verifier que le second commentaire_voir_hist_HR "Validation N+2"
-      And   verifier que le troisieme validateur_voir_hist_HR "Shin'Ichi OKAZAKI"
-      And   verifier que la troisieme date de debut_voir_hist_HR aujourd hui
-      And   verifier que la troisieme date de fin_voir_hist_HR aujourd hui
-      And   verifier que la troisieme decision_voir_hist_HR "Acceptée" et la couleur est Vert
-      And   verifier que le troisieme commentaire_voir_hist_HR "Validation Role RH_Recruitment"
-      And   verifier que le quatrieme validateur_voir_hist_HR Role_admin
-      And   verifier que la quatrieme date de debut_voir_hist_HR aujourd hui
-      And   verifier que la quatrieme date de fin_voir_hist_HR vide
-      And   verifier que la quatrieme  decision_voir_hist_HR vide
-      And   verifier que le quatrieme commentaire_voir_hist_HR vide
-     When   l utilisateur clique sur le bouton fermer_voir_hist_HR
-          #Verification des champs dans le modal Editer offre: la loupe dans la colonne Actions#
-      And   le role_RH clique sur le bouton editer_offres_rec_HR
-     Then   verifier que l intitule_valid_HR_rec "Test automatique"
-      And   verifier que la date de creation_valid_HR_rec aujourd hui
-      And   verifier que le statut de la demande_valid_HR_rec "En cours"
-      And   verifier que l initiateur_valid_HR_rec est "Yasushi TAKAGI"
-      And   verifier que l effectif a couvrir_valid_HR_rec 2
-      And   verifier que le responsable de recrutement_valid_HR_rec vide
-      And   verifier que a pourvoir_valid_HR_rec vide
-      And   verifier que la cible_valid_HR_rec "Interne" et "Externe"
-      And   verifier que le lieu_valid_HR_rec "Ariana"
-      And   verifier que le contrat_valid_HR_rec "CDI"
-      And   verifier que l emploi associe_valid_HR_rec "CM Chief RH"
-      And   verifier que le poste associe_valid_HR_rec "CM Collaborateur Buisness Partner"
-      And   verifier que le champs Mission_valid_HR_rec "Mission Test automatique"
-      And   verifier que le champs profil atouts_valid_HR_rec "Profil Test automatique"
-      And   verifier que le champs justification de la demande_valid_HR_rec "Justification Test automatique"
-      And   verifier que la devise_valid_HR_rec "Dinars tunisien"
-      And   verifier que le champs salaire_valid_HR_rec 2000
-      And   verifier que le champs  bonus_valid_HR_rec 1000
-      And   verifier que le champs autres_valid_HR_rec 1500
-      And   verifier que le salaire annuel_valid_HR_rec 23500
-      And   verifier que la case budgetise_valid_HR_rec coche
-      And   verifier que le budget_valid_HR_rec 24000
-      And   verifier que le montant_valid_HR_rec 500 s affiche a droite
-
-        #Validation de la demande par le role admin#
-     When   l utilisateur saisi le commentaire_valid_HR_rec "Validation Role RH_Admin"
-      And   l utilisateur choisi l action_valid_HR_rec valider
-      And   l utilisateur clique sur envoyer_valid_HR_rec
-      And   wait 2000
-     Then   verifier le permier libelle_valid_HR_rec n est pas Test automatique
-     When   l utilisateur clique sur toutes les offres
-      And   wait 2000
-     Then   verifier que le premier libelle_valid_HR_rec "Test automatique"
-      And   verifier que la premiere date de creation dans la liste aujourd hui
-      And   verifier que le premier status_valid_HR_rec 'Vert' et l intitule "Validée"
-      And   verifier que le premier initiateur_valid_HR_rec "TAKAGI Yasushi"
-      And   verifier que la premiere ligne de candidature_valid_HR_rec 0
-      And   verifier que la premiere ligne de l effectif a couvrir_valid_HR_rec 2
-      And   verifier que le premier lieu_valid_HR_rec "Ariana"
-      And   verifier que la premiere ligne de publiee_valid_HR_rec n est pas cochee
-
-        #Verification des champs dans la liste voir historique : bouton fleche dans la colonne Actions#
-     When   le role_RH clique sur voir historique
-     Then   verifier que l initiateur_voir_hist_HR "Yasushi TAKAGI"
-      And   verifier que la date de debut_voir_hist_HR aujourd hui
-      And   verifier que le premier validateur_voir_hist_HR "Nobuo TERASHIMA"
-      And   verifier que la premiere date de debut_voir_hist_HR aujourd hui
-      And   verifier que la premiere date de fin_voir_hist_HR aujourd hui
-      And   verifier que la premiere decision_voir_hist_HR "Acceptée" et la couleur est Vert
-      And   verifier que le premier commentaire_voir_hist_HR "Validation N+1"
-      And   verifier que le second validateur_voir_hist_HR "Ren Honjo"
-      And   verifier que la seconde date de debut_voir_hist_HR aujourd hui
-      And   verifier que la seconde date de fin_voir_hist_HR aujourd hui
-      And   verifier que la seconde  decision_voir_hist_HR "Acceptée" et la couleur est Vert
-      And   verifier que le second commentaire_voir_hist_HR "Validation N+2"
-      And   verifier que le troisieme validateur_voir_hist_HR "Shin'Ichi OKAZAKI"
-      And   verifier que la troisieme date de debut_voir_hist_HR aujourd hui
-      And   verifier que la troisieme date de fin_voir_hist_HR aujourd hui
-      And   verifier que la troisieme decision_voir_hist_HR "Acceptée" et la couleur est Vert
-      And   verifier que le troisieme commentaire_voir_hist_HR "Validation Role RH_Recruitment"
-      And   verifier que le quatrieme validateur_voir_hist_HR Role_admin
-      And   verifier que la quatrieme date de debut_voir_hist_HR aujourd hui
-      And   verifier que la quatrieme date de fin_voir_hist_HR aujourd hui
-      And   verifier que la quatrieme decision_voir_hist_HR "Acceptée" et la couleur est Vert
-      And   verifier que le quatrieme commentaire_voir_hist_HR "Validation Role RH_Admin"
-     Then   l utilisateur clique sur le bouton fermer_voir_hist_HR
-
-      #Etape 031: Deconnexion
-    And   l utilisateur se deconnecte
-
-     #Etape 032: Connexion avec le profil manager
+     #Etape 029: Connexion avec le profil manager
      When   l'utilisateur "yasushitakagi.cm@gmail.com" est connecté
      Then   le nom de l utilisateur "Yasushi TAKAGI" est affiche en haut a gauche
 
-     #Etape 033: Verification de la reception de la notification de validation RH par le manager
-      And   l utilisateur clique sur la notification de validation de la demande de recrutement
-     Then   verifier que le premier libelle dans la liste "Test automatique"
+     #Etape 030: Verification de la reception de la notification de rejet RH par le manager
+      And   l utilisateur clique sur la notification de rejet de la demande de recrutement
+     Then   verifier que le premier libelle dans la liste "Test automatique 3"
       And   verifier que la premiere date de creation dans la liste aujourd hui
-      And   verifier que le premier status dans la liste 'Vert' et l intitule "Validée"
-      And   verifier que la premiere ligne de l effectif a couvrir dans la liste 2
+      And   verifier que le premier status dans la liste 'rouge' et l intitule "Rejetée"
+      And   verifier que la premiere ligne de l effectif a couvrir dans la liste "2"
       And   verifier que le premier lieu dans la liste est "Ariana"
       And   verifier que la premiere ligne de publiee n est pas cochee
 
@@ -511,11 +396,7 @@
       And   verifier que le troisieme validateur_voir_hist_mgr "Shin'Ichi OKAZAKI"
       And   verifier que la troisieme date de debut_voir_hist_mgr aujourd hui
       And   verifier que la troisieme date de fin_voir_hist_mgr aujourd hui
-      And   verifier que la troisieme decision_voir_hist_mgr "Acceptée" et la couleur est Vert
-      And   verifier que le troisieme commentaire_voir_hist_mgr "Validation Role RH_Recruitment"
-      And   verifier que le quatrieme validateur_voir_hist_mgr "Kyosuke Takakura"
-      And   verifier que la quatrieme date de debut_voir_hist_mgr aujourd hui
-      And   verifier que la quatrieme date de fin_voir_hist_mgr aujourd hui
-      And   verifier que la quatrieme decision_voir_hist_mgr "Acceptée" et la couleur est Vert
-      And   verifier que le quatrieme commentaire_voir_hist_mgr "Validation Role RH_Admin"
-     When   l utilisateur clique sur le bouton fermer_voir_hist_mgr
+      And   verifier que la troisieme decision_voir_hist_mgr "Rejetée" et la couleur est rouge
+      And   verifier que le troisieme commentaire_voir_hist_mgr "Rejet Role RH_Recruitment"
+      And   verifier qu il n y a pas de quatrieme validateur
+     When   l utilisateur clique sur le bouton fermer_voir_hist_mgr_voir_hist_mgr
