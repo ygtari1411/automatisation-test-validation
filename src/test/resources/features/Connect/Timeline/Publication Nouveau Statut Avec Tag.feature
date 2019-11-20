@@ -19,14 +19,12 @@ Feature: Timeline : Publication nouveau statut avec Tag
 
            #Etape 2 : Creation statut avec tag
 
-
-    When L'utilisateur clique pour publier un nouveau statut
-    And L'utilisateur rédige son statut "@Responsable prod"
-    And L'utilisateur choisi la timeline cible
-    And L'utilisateur clique sur Publier
-
+    When l utilisateur clique sur le bouton "Champ_Statut"
+    And l utilisateur saisit "@Responsable Prod. MT" dans le champs "Champ_Input_Statut"
+    And l utilisateur choisit le profil du tag du statut dans la liste
+    And l utilisateur selectionne "Tous les utilisateurs" dans la liste deroulante "Liste_Deroulante_Timeline"
+    And l utilisateur clique sur le bouton "Bouton_Publication_Statut"
 
            #Etape 3 : verfication création statut avec tag
-
 
     Then Vérifier que le statut est publié et que le tag est affiché

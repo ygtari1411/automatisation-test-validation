@@ -68,7 +68,7 @@ public class CréationSociété {
     @Then("vérifier l'ajout correct de la société")
     public void vérifierLAjoutCorrectDeLaSociété() throws InterruptedException {
 
-        Assert.assertTrue(driver.findElement(By.xpath(CommonLocators.Notification_Action_Reussie)).getText().contains("succès"));
+        Assert.assertTrue(driver.findElement(By.xpath(CommonLocators.Notification_Simple)).getText().contains("succès"));
         action.pause(driver, 100);
         List<WebElement> elements = driver.findElements(By.xpath("//span[contains(@class,'pull-left menu-label')]"));
         for (WebElement element : elements){
@@ -166,8 +166,8 @@ public class CréationSociété {
 
         driver.findElement(By.xpath(ReferentielsLocators.Bouton_Sauvegarder_Edition_Société)).click();
         WebElement modules = (new WebDriverWait(driver, 5))
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(CommonLocators.Notification_Action_Reussie)));
-        Assert.assertTrue(driver.findElement(By.xpath(CommonLocators.Notification_Action_Reussie)).getText().contains("succès"));
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(CommonLocators.Notification_Simple)));
+        Assert.assertTrue(driver.findElement(By.xpath(CommonLocators.Notification_Simple)).getText().contains("succès"));
         Assert.assertTrue(driver.findElement(By.xpath(ReferentielsLocators.Champs_RIB_Coordonnées_Bancaire)).getText().contains("56485365124785462369"));
         Assert.assertTrue(driver.findElement(By.xpath(ReferentielsLocators.Champs_Contacts_Contacts_Société)).getText().contains("François Dutertre"));
     }

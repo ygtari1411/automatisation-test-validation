@@ -87,8 +87,6 @@ public class CreationNews {
     @Then("vérifier la création de la nouvelle news")
     public void vérifierLaCréationDeLaNouvelleNews() throws InterruptedException {
         action.pause(driver, 100);
-        WebElement modules = (new WebDriverWait(driver, 10))
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(CommonLocators.Notification_Action_Reussie)));
         String s = driver.findElement(By.xpath(NewsLocators.Premier_Element_Liste_News)).getText();
         Assert.assertEquals(Titre_News, s);
         action.pause(driver, 80);

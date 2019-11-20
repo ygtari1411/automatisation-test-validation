@@ -57,8 +57,8 @@ public class CréationEO {
 
         driver.findElement(By.xpath(ReferentielsLocators.Bouton_Validation_Création_EO)).click();
         WebElement modules = (new WebDriverWait(driver, 5))
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(CommonLocators.Notification_Action_Reussie)));
-        Assert.assertTrue(driver.findElement(By.xpath(CommonLocators.Notification_Action_Reussie)).getText().contains("succès"));
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(CommonLocators.Notification_Simple)));
+        Assert.assertTrue(driver.findElement(By.xpath(CommonLocators.Notification_Simple)).getText().contains("succès"));
     }
 
 
@@ -89,8 +89,8 @@ public class CréationEO {
 
 
         WebElement modules = (new WebDriverWait(driver, 10))
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(CommonLocators.Notification_Action_Reussie)));
-        Assert.assertTrue(driver.findElement(By.xpath(CommonLocators.Notification_Action_Reussie)).getText().contains("succès"));
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(CommonLocators.Notification_Simple)));
+        Assert.assertTrue(driver.findElement(By.xpath(CommonLocators.Notification_Simple)).getText().contains("succès"));
         driver.navigate().refresh();
         driver.findElement(By.xpath(ReferentielsLocators.Champs_Input_Recherche_Entité_Organisationnelle)).sendKeys("Entité 1");
         Boolean b = (new WebDriverWait(driver, 10))

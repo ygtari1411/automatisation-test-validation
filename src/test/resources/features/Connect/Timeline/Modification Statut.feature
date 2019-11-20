@@ -18,18 +18,22 @@ Feature: Timeline : Modification d'un statut
     Given le navigateur est ouvert et la page d'acceuil est affichée
     And l'utilisateur "resp-RH@mail.com" est connecté
 
+      #Etape 2 : Création statut
 
-      #Etape 2 : Creation statut
+    When l utilisateur clique sur le bouton "Champ_Statut"
+    And l utilisateur saisit "Ceci est un test automatisé qui vise à vérifier le fonctionnement correcte de la publication de statut" dans le champs "Champ_Input_Statut"
+    And l utilisateur selectionne "Tous les utilisateurs" dans la liste deroulante "Liste_Deroulante_Timeline"
+    And l utilisateur clique sur le bouton "Bouton_Publication_Statut"
+    And wait 3000
 
-    When L'utilisateur clique pour publier un nouveau statut
-    And L'utilisateur rédige son statut "Publication statut en mode auto"
-    And L'utilisateur choisi la timeline cible
-    And L'utilisateur clique sur Publier
-    And l'utilsateur clique pour modifier le statut
-    And L'utilisateur modifie le statut déja publié
-    And L'utilisateur clique sur le bouton valider
+      #Etape 3 : Modification statut
 
-          #Etape 3 : Verifier modification statut
+    And l utilisateur clique sur le bouton "Bouton_Menu_Modif_Supp_Statut"
+    And l utilisateur clique sur le bouton "Bouton_Modif_Statut"
+    And l utilisateur saisit "Modification statut" dans le champs "Champ_Input_Modification_Statut"
+    And l utilisateur clique sur le bouton "Bouton_Publier_Statut"
+
+      #Etape 4 : Verification modification statut
 
     Then verifier que la modification du statut est enregistrée
 

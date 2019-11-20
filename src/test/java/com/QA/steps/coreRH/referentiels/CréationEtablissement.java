@@ -68,7 +68,7 @@ public class CréationEtablissement {
         action.pause(driver, 100);
         driver.findElement(By.xpath(ReferentielsLocators.Bouton_Enregistrer_Création_Etablissement)).click();
         action.pause(driver, 100);
-        Assert.assertTrue(driver.findElement(By.xpath(CommonLocators.Notification_Action_Reussie)).getText().contains("succès"));
+        Assert.assertTrue(driver.findElement(By.xpath(CommonLocators.Notification_Simple)).getText().contains("succès"));
     }
 
 

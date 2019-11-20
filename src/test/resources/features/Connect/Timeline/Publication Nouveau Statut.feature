@@ -2,6 +2,7 @@
 # Feature: Timeline
 # Scénario: Publication nouveau statut
 # Date de création: 17/09/2019
+# Date de dernière modif. : 15/11/2019
 
 
 @ACCRETIO2
@@ -13,17 +14,17 @@ Feature: Timeline : Publication nouveau statut
 
   Scenario: Publication nouveau statut
 
-     #Etape 1 : Connexion
+      #Etape 1 : Connexion
 
     Given le navigateur est ouvert et la page d'acceuil est affichée
     And l'utilisateur "resp-RH@mail.com" est connecté
 
-     #Etape 2 : Creation statut
+      #Etape 2 : Creation statut
 
-    When L'utilisateur clique pour publier un nouveau statut
-    And L'utilisateur rédige son statut "Ceci est un test automatisé qui vise à vérifier le fonctionnement correcte de la publication de statut"
-    And L'utilisateur choisi la timeline cible
-    And L'utilisateur clique sur Publier
+    When l utilisateur clique sur le bouton "Champ_Statut"
+    And l utilisateur saisit "Test automatisé publication statut" dans le champs "Champ_Input_Statut"
+    And l utilisateur selectionne "Tous les utilisateurs" dans la liste deroulante "Liste_Deroulante_Timeline"
+    And l utilisateur clique sur le bouton "Bouton_Publication_Statut"
 
       #Etape 3 : verification de la création d'un statut
 

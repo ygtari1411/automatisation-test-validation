@@ -37,6 +37,7 @@ Feature: News : Création nouvelle news
 
     #Etape 4 : Vérification de la création de la News
 
+    Then vérifier que le message "succès" s affiche
     Then vérifier la création de la nouvelle news
 
 

@@ -3,6 +3,7 @@ package com.QA.base;
 
 
 
+import com.QA.locators.*;
 import com.QA.steps.GenerateurDriver;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
@@ -12,6 +13,12 @@ import org.apache.log4j.Logger;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
+
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 
 @RunWith(Cucumber.class)
@@ -25,19 +32,26 @@ import org.junit.runner.RunWith;
 public class TestGenerateurDriverInit {
 
     private static final Logger logger = Logger.getLogger(TestGenerateurDriverInit.class);
-
+    public static List<List<Field>> ListeGlobaleLocators = new ArrayList<>();
 
     @BeforeClass
     public static void SetupClass() {
         BasicConfigurator.configure();
         Logger.getRootLogger().setLevel(Level.INFO);
         logger.info("Configuration de l'environnement de test");
+        ListeGlobaleLocators.add(Arrays.stream(CommonLocators.class.getFields()).collect(Collectors.toList()));
+        ListeGlobaleLocators.add(Arrays.stream(NewsLocators.class.getFields()).collect(Collectors.toList()));
+        ListeGlobaleLocators.add(Arrays.stream(AnnoncesLocator.class.getFields()).collect(Collectors.toList()));
+        ListeGlobaleLocators.add(Arrays.stream(RecrutementLocators.class.getFields()).collect(Collectors.toList()));
+        ListeGlobaleLocators.add(Arrays.stream(ReferentielsLocators.class.getFields()).collect(Collectors.toList()));
+        ListeGlobaleLocators.add(Arrays.stream(TimelineLocators.class.getFields()).collect(Collectors.toList()));
         logger.info("Configuration terminée");
     }
 
     @AfterClass
     public static void TearDown() {
        logger.info("Fin des tests, fermeture du navigateur et génération des rapports");
+       ListeGlobaleLocators.clear();
        GenerateurDriver.driver.quit();
     }
 

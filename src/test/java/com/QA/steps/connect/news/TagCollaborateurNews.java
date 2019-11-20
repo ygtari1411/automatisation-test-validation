@@ -32,8 +32,8 @@ public class TagCollaborateurNews {
 
         action.pause(driver, 300);
         WebElement modules = (new WebDriverWait(driver, 10))
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(CommonLocators.Notification_Action_Reussie)));
-        Assert.assertTrue(driver.findElement(By.xpath(CommonLocators.Notification_Action_Reussie)).getText().contains("succès"));
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(CommonLocators.Notification_Simple)));
+        Assert.assertTrue(driver.findElement(By.xpath(CommonLocators.Notification_Simple)).getText().contains("succès"));
         List<WebElement> Element3 = driver.findElements(By.cssSelector("span[class=mention]"));
         Assert.assertEquals(1, Element3.size());
 

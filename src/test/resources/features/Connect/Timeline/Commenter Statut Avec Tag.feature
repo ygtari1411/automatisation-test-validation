@@ -10,27 +10,28 @@
 @ACCRETIO2-TIMELINE-0004
 
 
-Feature: Timeline : Commenter une publication
+Feature: Timeline : Ajout commentaire avec tag sur un statut
 
-  Scenario: Commenter une publication
+  Scenario: Ajout commentaire avec tag sur un statut
 
-     #Etape 1 : Connexion
+        #Etape 1 : Connexion
 
     Given le navigateur est ouvert et la page d'acceuil est affichée
     And l'utilisateur "resp-RH@mail.com" est connecté
 
-       #Etape 2 : Creation commentaire avec tag
+       #Etape 2 : Publication nouveau statut
 
-    When L'utilisateur clique pour publier un nouveau statut
-    And L'utilisateur rédige son statut "Publication statut en mode auto"
-    And L'utilisateur choisi la timeline cible
-    And L'utilisateur clique sur Publier
-    When l'utilisateur clique pour commenter le statut ajouté
-    And l'utilisateur saisit "@Responsable Prod" dans le champ du commentaire du statut
-    And l'utilisateur clique sur publier commentaire statut
-
+    And l utilisateur clique sur le bouton "Champ_Statut"
+    And l utilisateur saisit "Ceci est un test automatisé qui vise à vérifier le fonctionnement correcte du commentaire avec tag sur un statut" dans le champs "Champ_Input_Statut"
+    And l utilisateur selectionne "Tous les utilisateurs" dans la liste deroulante "Liste_Deroulante_Timeline"
+    And l utilisateur clique sur le bouton "Bouton_Publication_Statut"
+    And wait 3000
+      #Etape 3 : Ajout commentaire avec tag sur le statut
+    
+    When l utilisateur saisit "@Responsable Prod. MT" dans le champs "Champs_Input_Commentaire"
+    And l utilisateur choisit le profil du tag du commentaire dans la liste
+    And l utilisateur clique sur le bouton "JS_Bouton_Submit_Commentaire"
 
        #Etape 3 : Vérification ajout commentaire avec tag
-
 
     Then Vérifier que le tag est affiché correctement sous le statut

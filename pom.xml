@@ -68,13 +68,20 @@
             <version>4.9.0</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/com.trivago.rta/cluecumber-report-plugin -->
+        <dependency>
+            <groupId>com.trivago.rta</groupId>
+            <artifactId>cluecumber-report-plugin</artifactId>
+            <version>2.3.1</version>
+        </dependency>
+
+
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-guice -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-guice</artifactId>
             <version>4.7.2</version>
         </dependency>
-
 
 
         <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
@@ -138,10 +145,7 @@
         </dependency>
 
 
-
-
         <!-- test dependencies -->
-
 
 
         <!-- http://mvnrepository.com/artifact/org.apache.xmlbeans/xmlbeans -->
@@ -172,7 +176,6 @@
         </dependency>
 
 
-
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
@@ -186,7 +189,6 @@
             <version>${webdrivermanager}</version>
             <scope>test</scope>
         </dependency>
-
 
 
     </dependencies>
@@ -265,6 +267,32 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>com.trivago.rta</groupId>
+                <artifactId>cluecumber-report-plugin</artifactId>
+                <version>2.3.1</version>
+                <executions>
+                    <execution>
+                        <id>report</id>
+                        <phase>post-integration-test</phase>
+                        <goals>
+                            <goal>reporting</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <sourceJsonReportDirectory>${project.build.directory}/reports/cucumber.json
+                    </sourceJsonReportDirectory>
+                    <generatedHtmlReportDirectory>${project.build.directory}/generated-report
+                    </generatedHtmlReportDirectory>
+                    <customParameters>
+                        <Titre_>Rapport récapitulatif des tests de validation fonctionnels</Titre_>
+                        <Plateforme_de_test>https://accretio-2-tnr.advyteam.com/login</Plateforme_de_test>
+                        <customPageTitle>Accretio 2 - tests de validation fonctionnelle</customPageTitle>
+                    </customParameters>
+                </configuration>
             </plugin>
 
         </plugins>

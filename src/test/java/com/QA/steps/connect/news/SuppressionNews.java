@@ -46,7 +46,7 @@ public class SuppressionNews {
         boolean modules = (new WebDriverWait(driver, 3))
                 .until(ExpectedConditions.invisibilityOfElementWithText(By.xpath(NewsLocators.Premier_Element_Liste_News), titre_News));
         Assert.assertNotEquals(driver.findElement(By.xpath(NewsLocators.Premier_Element_Liste_News)).getText(), titre_News);
-        Assert.assertTrue(driver.findElement(By.xpath(CommonLocators.Notification_Action_Reussie)).getText().contains("succès"));
+        Assert.assertTrue(driver.findElement(By.xpath(CommonLocators.Notification_Simple)).getText().contains("succès"));
 
         /*TODO  :   * Mettre en conformité les features de suppression News et de modification News */
     }

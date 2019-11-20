@@ -30,7 +30,6 @@ public class CommenterNewsAvecTag {
 
         driver.navigate().refresh();
         List<WebElement> Element1 = driver.findElements(By.cssSelector(NewsLocators.Liste_News_Déroulants));
-        System.out.println(Element1.size());
         for ( WebElement element : Element1 )
         {
             if (element.getAttribute("outerText").contains(CreationNews.Titre_News))
@@ -52,7 +51,7 @@ public class CommenterNewsAvecTag {
     public void lUtilisateurSaisitDansLeChampDuCommentaire(String arg0) throws InterruptedException {
 
         Text_Commentaire = arg0;
-        driver.findElement(By.xpath(NewsLocators.Champs_Input_Commentaire_Sur_News)).sendKeys(arg0);
+        driver.findElement(By.xpath(TimelineLocators.Champs_Input_Commentaire)).sendKeys(arg0);
         action.pause(driver,3500);
         driver.findElement(By.cssSelector(CommonLocators.Option_Liste_Profil_Tag)).click();
         action.pause(driver,50);
@@ -61,19 +60,18 @@ public class CommenterNewsAvecTag {
     @And("l'utilisateur clique sur publier commentaire")
     public void lUtilisateurCliqueSurPublier() {
 
-        WebElement element = driver.findElement(By.xpath(TimelineLocators.Bouton_Submit_Commentaire));
+        WebElement element = driver.findElement(By.xpath(TimelineLocators.JS_Bouton_Submit_Commentaire));
         JavascriptExecutor executor = (JavascriptExecutor) driver;
         executor.executeScript("arguments[0].click();", element);
 
     }
 
     @Then("Vérifier que le tag est affiché")
-    public void vérifierQueLeTagEstAffiché() throws InterruptedException {
+    public void vérifierQueLeTagEstAffiché()  {
 
         Boolean modules = (new WebDriverWait(driver, 6))
                 .until(ExpectedConditions.attributeContains(By.xpath(NewsLocators.Premier_Commentaire_Sur_News),"innerText", Text_Commentaire));
         List<WebElement> Element3 = driver.findElements(By.cssSelector("span[class=mention]"));
-        int nbrmention2 = Element3.size();
-        Assert.assertEquals( x + 1,nbrmention2);
+        Assert.assertEquals( x + 1,Element3.size());
     }
 }

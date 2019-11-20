@@ -66,8 +66,8 @@ public class CreationAnnonce {
     public void vérifierLaCréationDeLaNouvelleAnnonce() throws InterruptedException {
 
         WebElement myDynamicElement = (new WebDriverWait(driver, 10))
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(CommonLocators.Notification_Action_Reussie)));
-        Assert.assertTrue(driver.findElement(By.xpath(CommonLocators.Notification_Action_Reussie)).getText().contains("succès"));
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(CommonLocators.Notification_Simple)));
+        Assert.assertTrue(driver.findElement(By.xpath(CommonLocators.Notification_Simple)).getText().contains("succès"));
 
         action.pause(driver,500);
 
