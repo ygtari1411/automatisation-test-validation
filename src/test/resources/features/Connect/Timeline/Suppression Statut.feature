@@ -23,16 +23,16 @@ Feature: Timeline : Suppression statut
 
          #Etape 2 : Publiation Statut
 
-    And l utilisateur clique sur le bouton "Champ_Statut"
+    And l utilisateur clique sur "Champ_Statut"
     And l utilisateur saisit "Ceci est un test automatisé qui vise à vérifier le fonctionnement correcte de la suppression statut" dans le champs "Champ_Input_Statut"
     And l utilisateur selectionne "Tous les utilisateurs" dans la liste deroulante "Liste_Deroulante_Timeline"
-    And l utilisateur clique sur le bouton "Bouton_Publication_Statut"
+    And l utilisateur clique sur "Bouton_Publication_Statut"
     And wait 2000
       #Etape 3 : Suppression Statut
 
-    And l utilisateur clique sur le bouton "Bouton_Menu_Modif_Supp_Statut"
-    And l utilisateur clique sur le bouton "Bouton_Supprimer_Statut"
-    And l utilisateur clique sur le bouton "Bouton_Valider_Suppression_Statut"
+    And l utilisateur clique sur "Bouton_Menu_Modif_Supp_Statut"
+    And l utilisateur clique sur "Bouton_Supprimer_Statut"
+    And l utilisateur clique sur "Bouton_Valider_Suppression_Statut"
 
         #Etape 4 : Vérification de la suppression d'un statut
 

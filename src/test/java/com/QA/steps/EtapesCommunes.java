@@ -134,9 +134,8 @@ public class EtapesCommunes {
         driver.navigate().refresh();
     }
 
-    @And("l utilisateur clique sur le bouton {string}")
-    public void lUtilisateurCliqueSurLeBouton(String bouton) throws IllegalAccessException {
-
+    @And("l utilisateur clique sur {string}")
+    public void lUtilisateurCliqueSur(String bouton) throws IllegalAccessException {
         String locator = "vide";
         for (List<Field> f : ListeGlobaleLocators) {
             for (Field x : f) {

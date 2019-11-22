@@ -21,10 +21,10 @@ Feature: Timeline : Publication nouveau statut
 
       #Etape 2 : Creation statut
 
-    When l utilisateur clique sur le bouton "Champ_Statut"
+    When l utilisateur clique sur "Champ_Statut"
     And l utilisateur saisit "Test automatisé publication statut" dans le champs "Champ_Input_Statut"
     And l utilisateur selectionne "Tous les utilisateurs" dans la liste deroulante "Liste_Deroulante_Timeline"
-    And l utilisateur clique sur le bouton "Bouton_Publication_Statut"
+    And l utilisateur clique sur "Bouton_Publication_Statut"
 
       #Etape 3 : verification de la création d'un statut
 
