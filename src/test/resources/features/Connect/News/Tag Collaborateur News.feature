@@ -21,21 +21,21 @@ Feature: News : Tag d'un collaborateur dans le corps d'une news
 
     #Etape 2 : Changement de role
 
-    When l'utilisateur clique sur espace-RH
-    And l'utilisateur clique sur le module Connect
-    And l'utilisateur clique sur News
+    When l utilisateur clique sur "Bouton_Role_RH"
+    And l utilisateur clique sur "Bouton_Menu_Etendu"
+    And l utilisateur clique sur "Bouton_Module_Connect"
+    And l utilisateur clique sur "Bouton_Module_News"
 
     #Etape 3 : Ajout News
 
-    And L'utilisateur clique sur  ajouter News
-    When le modal création News s'affiche
-    And  l'utilisateur remplit le champ titre par "Test news automatique"
-    And l utilisateur remplit le champ contenu par "C'est un test automatique de l'ajout d'une news avec tag @Responsable Prod"
-    And l'utilisateur selectionne le profile du tag
+    And l utilisateur clique sur "Bouton_Ajout_News"
+    And l utilisateur saisit "Test automatique création news avec tag " dans le champs "Champ_Input_Titre_News"
+    And l utilisateur saisit "@Responsable Prod. MT" dans le champs "Champ_Input_Texte_News"
+    And l utilisateur choisit le profil du tag dans le corps de la News
     And l'utilisateur selectionne la date actuelle du champ date de publication
-    And l'utilisateur ajoute une photo dans le champ photo
-    And L'utilisateur clique sur enregistrer Création News
-    And wait 2000
+    And l utilisateur upload une photo dans la News
+    And wait 1000
+    And l utilisateur clique sur "Bouton_Sauvegarde_Creation_News"
 
     #Etape 4 : Vérification
 

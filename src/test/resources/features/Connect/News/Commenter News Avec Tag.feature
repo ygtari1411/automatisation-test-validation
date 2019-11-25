@@ -21,27 +21,30 @@ Feature: News : Commentaire avec tag collaborateur sur une news
 
     #Etape 2 : Changement de role
 
-    When l'utilisateur clique sur espace-RH
-    And l'utilisateur clique sur le module Connect
-    And l'utilisateur clique sur News
+    When l utilisateur clique sur "Bouton_Role_RH"
+    And l utilisateur clique sur "Bouton_Menu_Etendu"
+    And l utilisateur clique sur "Bouton_Module_Connect"
+    And l utilisateur clique sur "Bouton_Module_News"
 
     #Etape 3 : Ajout News
 
-    And L'utilisateur clique sur  ajouter News
-    When le modal création News s'affiche
-    And  l'utilisateur remplit le champ titre par "Test news automatique"
-    And l utilisateur remplit le champ contenu par "C'est un test automatique de l'ajout d'une news"
+    And l utilisateur clique sur "Bouton_Ajout_News"
+    And l utilisateur saisit "Test automatique création news" dans le champs "Champ_Input_Titre_News"
+    And l utilisateur saisit "C'est un test automatique de l'ajout d'une news" dans le champs "Champ_Input_Texte_News"
     And l'utilisateur selectionne la date actuelle du champ date de publication
-    And l'utilisateur ajoute une photo dans le champ photo
-    And L'utilisateur clique sur enregistrer Création News
-    And wait 3000
+    And l utilisateur upload une photo dans la News
+    And wait 1000
+    And l utilisateur clique sur "Bouton_Sauvegarde_Creation_News"
+    And wait 1000
+
 
     #Etape 4 :Ajout commentaire sur la News
 
-    And l'utilisateur clique sur portal
+    And l utilisateur clique sur "Bouton_Portal"
     When l'utilisateur clique sur la news ajoutée
-    And l'utilisateur saisit "@Responsable Prod" dans le champ du commentaire
-    And l'utilisateur clique sur publier commentaire
+    And l utilisateur saisit "@Responsable Prod. MT" dans le champs "Champs_Input_Commentaire"
+    And l utilisateur choisit le profil du tag du commentaire News dans la liste
+    And l utilisateur clique sur "JS_Bouton_Submit_Commentaire"
 
     #Etape 5 : Vérification de la News
 

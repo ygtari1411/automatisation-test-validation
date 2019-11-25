@@ -20,19 +20,20 @@ Feature: News : Création nouvelle news
 
     #Etape 2 : Changement de role
 
-    When l'utilisateur clique sur espace-RH
-    And l'utilisateur clique sur le module Connect
-    And l'utilisateur clique sur News
+    When l utilisateur clique sur "Bouton_Role_RH"
+    And l utilisateur clique sur "Bouton_Menu_Etendu"
+    And l utilisateur clique sur "Bouton_Module_Connect"
+    And l utilisateur clique sur "Bouton_Module_News"
 
     #Etape 3 : Ajout News
 
-    And L'utilisateur clique sur  ajouter News
-    When le modal création News s'affiche
-    And  l'utilisateur remplit le champ titre par "Test news automatique"
-    And l utilisateur remplit le champ contenu par "C'est un test automatique de l'ajout d'une news"
+    And l utilisateur clique sur "Bouton_Ajout_News"
+    And l utilisateur saisit "Test automatique création news" dans le champs "Champ_Input_Titre_News"
+    And l utilisateur saisit "C'est un test automatique de l'ajout d'une news" dans le champs "Champ_Input_Texte_News"
     And l'utilisateur selectionne la date actuelle du champ date de publication
-    And l'utilisateur ajoute une photo dans le champ photo
-    And L'utilisateur clique sur enregistrer Création News
+    And l utilisateur upload une photo dans la News
+    And wait 1000
+    And l utilisateur clique sur "Bouton_Sauvegarde_Creation_News"
     And wait 1000
 
     #Etape 4 : Vérification de la création de la News

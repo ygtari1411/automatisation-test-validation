@@ -2,7 +2,6 @@ package com.QA.steps.connect.news;
 
 import com.QA.locators.CommonLocators;
 import com.QA.locators.NewsLocators;
-import com.QA.locators.TimelineLocators;
 import com.QA.steps.ActionsCommunes;
 import com.QA.steps.GenerateurDriver;
 import io.cucumber.java.en.And;
@@ -23,7 +22,6 @@ public class CommenterNewsAvecTag {
     private final WebDriver driver = GenerateurDriver.driver;
     private ActionsCommunes action = new ActionsCommunes();
     private static int x ;
-    static String Text_Commentaire;
 
     @When("l'utilisateur clique sur la news ajoutée")
     public void lUtilisateurCliqueSurLaNewsAjoutée() throws InterruptedException {
@@ -32,11 +30,11 @@ public class CommenterNewsAvecTag {
         List<WebElement> Element1 = driver.findElements(By.cssSelector(NewsLocators.Liste_News_Déroulants));
         for ( WebElement element : Element1 )
         {
-            if (element.getAttribute("outerText").contains(CreationNews.Titre_News))
+            if (element.getAttribute("outerText").contains(ActionsCommunes.DataProvider("Champ_Input_Titre_News")))
             {
                 element.click();
                 Boolean modules = (new WebDriverWait(driver, 6))
-                        .until(ExpectedConditions.attributeContains(By.xpath(NewsLocators.News_Active_Carroussel),"innerText",CreationNews.Titre_News));
+                        .until(ExpectedConditions.attributeContains(By.xpath(NewsLocators.News_Active_Carroussel),"innerText",ActionsCommunes.DataProvider("Champ_Input_Titre_News")));
                 action.pause(driver,500);
                 driver.findElement(By.xpath(NewsLocators.News_Active_Carroussel2)).click();
                 break;
@@ -47,31 +45,27 @@ public class CommenterNewsAvecTag {
         x= Element2.size();
     }
 
-    @And("l'utilisateur saisit {string} dans le champ du commentaire")
-    public void lUtilisateurSaisitDansLeChampDuCommentaire(String arg0) throws InterruptedException {
 
-        Text_Commentaire = arg0;
-        driver.findElement(By.xpath(TimelineLocators.Champs_Input_Commentaire)).sendKeys(arg0);
-        action.pause(driver,3500);
-        driver.findElement(By.cssSelector(CommonLocators.Option_Liste_Profil_Tag)).click();
-        action.pause(driver,50);
-    }
+    @And("l utilisateur choisit le profil du tag du commentaire News dans la liste")
+    public void lUtilisateurChoisitLeProfilDuTagDuCommentaireNewsDansLaListe() throws InterruptedException {
 
-    @And("l'utilisateur clique sur publier commentaire")
-    public void lUtilisateurCliqueSurPublier() {
-
-        WebElement element = driver.findElement(By.xpath(TimelineLocators.JS_Bouton_Submit_Commentaire));
+        String str = ActionsCommunes.DataProvider("Champs_Input_Commentaire").substring(1);
+        Boolean modules = (new WebDriverWait(driver, 10))
+                .until(ExpectedConditions.refreshed(ExpectedConditions.attributeContains(By.cssSelector(CommonLocators.Option_Liste_Profil_Tag), "innerText", str)));
+        WebElement element = driver.findElement(By.cssSelector(CommonLocators.Option_Liste_Profil_Tag));
         JavascriptExecutor executor = (JavascriptExecutor) driver;
         executor.executeScript("arguments[0].click();", element);
+        action.pause(driver, 500);
 
     }
 
     @Then("Vérifier que le tag est affiché")
     public void vérifierQueLeTagEstAffiché()  {
 
-        Boolean modules = (new WebDriverWait(driver, 6))
-                .until(ExpectedConditions.attributeContains(By.xpath(NewsLocators.Premier_Commentaire_Sur_News),"innerText", Text_Commentaire));
+        Boolean modules = (new WebDriverWait(driver, 7))
+                .until(ExpectedConditions.attributeContains(By.xpath(NewsLocators.Premier_Commentaire_Sur_News),"innerText", ActionsCommunes.DataProvider("Champs_Input_Commentaire")));
         List<WebElement> Element3 = driver.findElements(By.cssSelector("span[class=mention]"));
         Assert.assertEquals( x + 1,Element3.size());
     }
+
 }
