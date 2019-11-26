@@ -18,9 +18,9 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
      Then   le nom de l utilisateur "Yasushi TAKAGI" est affiche en haut a gauche
 
      #Etape 002: Acceder  a la page Demandes de recrutement espace manager
-     When   l utlisateur clique sur l icone mon equipe
+     When   l utilisateur clique sur "Mon_Equipe"
       And   wait 2000
-     When   l utilisateur clique sur l icone demande de recrutement
+     When   l utilisateur clique sur "Demande_De_Recrutement"
       And   wait 2000
 
      #Etape 003: Lancer la demande de recrutement par le manager
