@@ -26,30 +26,33 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
      #Etape 003: Lancer la demande de recrutement par le manager
 
         #Bouton ajouter une demande en haut a gauche#
-     When   le manager clique pour ajouter une demande_rec
+     When   l utilisateur clique sur "Ajout_Demande_rec_mgr"
       And   wait 2000
-      And   le manager saisi l intitule_demande_rec "Test automatique 4"
-      And   le manager saisi effectif_a_couvrir_demande_rec 2
-      And   le manager selectionne la cible_demande_rec "Interne" et "Externe"
-      And   le manager selectionne le lieu_demande_rec "Ariana"
-      And   le manager selectionne le contrat_demande_rec "CDI"
-      And   le manager selectionne l emploie_associe_demande_rec "CM Chief RH"
-      And   le manager selectionne le poste_associe_demande_rec "CM Collaborateur Buisness Partner"
-      And   le manager saisi la mission_demande_rec "Mission Test automatique"
-      And   le manager saisi le profil_atouts_demande_rec "Profil Test automatique"
-      And   le manager saisi la justification_de_la_demande_rec "Justification Test automatique"
+      And   l utilisateur saisit "Test automatique 4" dans le champs "Intitule_dmd_rec_mgr"
+      And   l utilisateur saisit "2" dans le champs "Effectif_a_couvrir_dmd_rec_mgr"
+      And   l utilisateur selectionne "Interne" dans la liste deroulante "Cible_dmd_rec_mgr"
+      And   l utilisateur selectionne "Externe" dans la liste deroulante "Cible_dmd_rec_mgr"
+      And   l utilisateur selectionne "Ariana" dans la liste deroulante "Lieu_dmd_rec_mgr"
+      And   l utilisateur selectionne "CDI" dans la liste deroulante "Contrat_dmd_rec_mgr"
+      And   l utilisateur selectionne "CM Chief RH" dans la liste deroulante "Emploi_associe_dmd_rec_mgr"
+      And   l utilisateur selectionne "CM Collaborateur Buisness Partner" dans la liste deroulante "Poste_associe dmd_rec_mgr"
+      And   l utilisateur saisit "Mission Test automatique 4" dans le champs "Mission_dmd_rec_mgr"
+      And   l utilisateur saisit "Profil Test automatique 4" dans le champs "Profil_Atouts_dmd_rec_mgr"
+      And   l utilisateur saisit "Justification Test automatique 4" dans le champs "Justification_dmd_rec_mgr"
+
       And   le manager clique pour ajouter_des_fichiers_demande_rec
-      And   le manager selectionne la devise_demande_rec "Dinar tunisien"
-      And   le manager saisi le salaire_demande_rec 2000
+
+      And   l utilisateur selectionne "Dinar tunisien" dans la liste deroulante "Devise_dmd_rec_mgr"
+      And   l utilisateur saisit "2000" dans le champs "Salaire_dmd_rec_mgr"
      Then   verifier que le salaire_annuel_demande_rec est 2000
-     When   le manager saisi le bonus_demande_rec 1000
+     When   l utilisateur saisit "1000" dans le champs "Bonus_dmd_rec_mgr"
      Then   verifier que le salaire annuel_demande_rec est 22000
-     When   le manager saisi autres_demande_rec 1500
+     When   l utilisateur saisit "1500" dans le champs "Autres_dmd_rec_mgr"
      Then   verifier que le salaire annuel_demande_rec est 23500
-     When   le manager coche budgetise_demande_rec
-      And   le manager saisi budget_demande_rec 24000
+     When   l utilisateur clique sur "Budgetise_dmd_rec_mgr"
+      And   l utilisateur saisit "24000" dans le champs "Budget_dmd_rec_mgr"
      Then   verifier que le montant_demande_rec 500 s affiche a droite
-     When   le manager clique pour envoyer_demande_rec
+     When   l utilisateur clique sur "Envoyer_dmd_rec_mgr"
       And   wait 2000
 
      #Etape 004: Verification de la demande lancee par le manager par lui meme
@@ -63,7 +66,7 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
       And   verifier que la premiere ligne de publiee_demandes_rec_mgr n est pas cochee
 
         #Verification des champs dans le modal voir historique : bouton fleche dans la colonne Actions#
-     When   le manager clique sur l icone voir historique_demandes_rec_mgr
+     When   l utilisateur clique sur "Voir_historique_dmd_rec_mgr"
      Then   verifier que l initiateur_voir_hist_mgr "Yasushi TAKAGI"
       And   verifier que la date de debut_voir_hist_mgr aujourd hui
       And   verifier que le premier validateur_voir_hist_mgr "Nobuo TERASHIMA"
@@ -71,7 +74,8 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
       And   verifier que la premiere date de fin_voir_hist_mgr vide
       And   verifier que la premiere decision_voir_hist_mgr vide
       And   verifier que le premier commentaire_voir_hist_mgr vide
-     When   le manager clique sur le bouton fermer_voir_hist_mgr
+     When   l utilisateur clique sur "Fermer_voir_hist_dmd_rec_mgr"
+
 
      #Etape 005: Deconnexion
       And   l utilisateur se deconnecte
@@ -82,8 +86,9 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
 
      #Etape 007: Acceder au menu recrutement par le profil RH
      When   l'utilisateur clique sur espace-RH
-      And   l utilisateur clique sur le module Talent
-      And   l utilisateur clique sur le sous module Recrutement
+      And   l utilisateur clique sur "Bouton_menu_etendu"
+      And   l utilisateur clique sur "Module_Talent"
+      And   l utilisateur clique sur "Sous_module_Recrutement"
 
      #Etape 008: Verification de la demande de recrutement du manager par le profil RH
 
@@ -99,7 +104,7 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
       And   verifier que la premiere ligne de publiee_offres_rec_HR n est pas cochee
 
         #Verification des champs dans la liste voir historique : bouton fleche dans la colonne Actions#
-     When   le role_RH clique sur l icone voir historique_offres_rec_HR
+     When   l utilisateur clique sur "Voir_historique_dmd_rec_HR"
      Then   verifier que l initiateur_voir_hist_HR "Yasushi TAKAGI"
       And   verifier que la date de debut_voir_hist_HR aujourd hui
       And   verifier que le premier validateur_voir_hist_HR "Nobuo TERASHIMA"
@@ -107,7 +112,7 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
       And   verifier que la premiere date de fin_voir_hist_HR vide
       And   verifier que la premiere decision_voir_hist_HR vide
       And   verifier que le premier commentaire_voir_hist_HR vide
-     When   l utilisateur clique sur le bouton fermer_voir_hist_HR
+     When   l utilisateur clique sur "Fermer_voir_hist_dmd_rec_HR"
 
      #Etape 009: Deconnexion
       And   l utilisateur se deconnecte
@@ -117,11 +122,11 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
      Then   le nom de l utilisateur "Nobuo TERASHIMA" est affiche en haut a gauche
 
      #Etape 011: Acceder au menu recrutement avec le profil N+1
-      And   le superieur recoit une notification de demande de validation
-     When   le superieur clique sur la notification de validation_demande_rec
+     When   l utilisateur clique sur "Icone_notifications"
+      And   le superieur clique sur la notification de validation_demande_rec
 
      #Etape 012: Verification de la demande de recrutement par N+1
-      And   le superieur clique sur a valider_demandes_rec_sup
+      And   l utilisateur clique sur "A_valider_liste_dmd_rec_mgr"
       And   wait 2000
      Then   verifier que le premier libelle_valid_rec_sup "Test automatique 4"
       And   verifier que la premiere date de creation_valid_rec_sup aujourd hui
@@ -129,8 +134,8 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
       And   verifier que la premiere ligne de l effectif a couvrir_valid_rec_sup "2"
       And   verifier que le premier lieu_valid_rec_sup "Ariana"
 
-        #Verification des champs dans la liste voir historique : bouton fleche dans la colonne Actions#
-     When   le superieur clique sur l icone voir historique_valid_rec_sup
+        #Verification des champs dans la liste voir historique pour N+1 : bouton fleche dans la colonne Actions#
+     When   l utilisateur clique sur "Voir_historique_dmd_rec_sup"
      Then   verifier que l initiateur_voir_hist_sup "Yasushi TAKAGI"
       And   verifier que la date de debut_voir_hist_sup aujourd hui
       And   verifier que le premier validateur_voir_hist_sup "Nobuo TERASHIMA"
@@ -138,10 +143,10 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
       And   verifier que la premiere date de fin_voir_hist_sup vide
       And   verifier que la premiere decision_voir_hist_sup vide
       And   verifier que le premier commentaire_voir_hist_sup vide
-     When   le superieur clique sur le bouton fermer_voir_hist_sup
+     When   l utilisateur clique sur "Fermer_hist_dmd_rec_sup"
 
         #Verification des champs dans le modal visualiser le resultat : bouton stylo dans la colonne Actions#
-      And   le superieur clique sur visualiser le resultat_valid_rec_sup
+      And   l utilisateur clique sur "Resultat_Validation_dmd_rec_sup"
      Then   verifier que l intitule_rec_valid_sup "Test automatique 4"
       And   verifier que l effectif a couvrir_rec_valid_sup 2
       And   verifier que la cible_rec_valid_sup "Interne" et "Externe"
@@ -161,9 +166,9 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
       And   verifier que le montant_rec_valid_sup 500 s affiche a droite
 
      #Etape 013: Validation de la demande de recrutement par N+1
-     When   le superieur saisie le commentaire_rec_valid_sup "Validation N+1"
-      And   le superieur selectionne l action valider_rec_valid_sup
-      And   le superieur clique sur envoyer_rec_valid_sup
+     When   l utilisateur saisit "Validation N+1" dans le champs "Commentaire_dmd_rec_sup"
+      And   l utilisateur selectionne "Valider_dmd_rec_sup" dans la liste deroulante "Validation_dmd_rec_sup"
+      And   l utilisateur clique sur "Envoyer_dmd_rec_sup"
       And   wait 2000
      Then   verifier que le permier libelle_valid_rec_sup n est pas "Test automatique 4"
 
@@ -176,8 +181,9 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
 
      #Etape 016: Acceder au menu recrutement par le profil RH
      When   l'utilisateur clique sur espace-RH
-      And   l utilisateur clique sur le module Talent
-      And   l utilisateur clique sur le sous module Recrutement
+      And   l utilisateur clique sur "Bouton_menu_etendu"
+      And   l utilisateur clique sur "Module_Talent"
+      And   l utilisateur clique sur "Sous_module_Recrutement"
 
      #Etape 017: Verification de la demande de recrutement par le role RH
      Then   verifier que le premier libelle_offres_rec_HR "Test automatique 4"
@@ -191,7 +197,7 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
       And   verifier que la premiere ligne de publiee_offres_rec_HR n est pas cochee
 
          #Verification des champs dans la liste voir historique : bouton fleche dans la colonne Actions#
-     When   le role_RH clique sur l icone voir historique_offres_rec_HR
+     When   l utilisateur clique sur "Voir_historique_dmd_rec_HR"
      Then   verifier que l initiateur_voir_hist_HR "Yasushi TAKAGI"
       And   verifier que la date de debut_voir_hist_HR aujourd hui
       And   verifier que le premier validateur_voir_hist_HR "Nobuo TERASHIMA"
@@ -204,7 +210,7 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
       And   verifier que la seconde date de fin_voir_hist_HR vide
       And   verifier que la seconde  decision_voir_hist_HR vide
       And   verifier que le second commentaire_voir_hist_HR vide
-     When   l utilisateur clique sur le bouton fermer_voir_hist_HR
+     When   l utilisateur clique sur "Fermer_voir_hist_dmd_rec_HR"
 
      #Etape 018: Deconnexion
       And   l utilisateur se deconnecte
@@ -214,19 +220,19 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
      Then   le nom de l utilisateur "Ren HONJO" est affiche en haut a gauche
 
      #Etape 020: Acceder au menu recrutement avec le profil N+2
-      And   l utilisateur recoit une notification de demande de validation
+      And   l utilisateur clique sur "Icone_notifications"
      When   le superieur clique sur la notification de validation_demande_rec
 
     #Etape 021: Verification de la demande de recrutement par N+2
-      And   le superieur clique sur a valider_demandes_rec_sup
-     Then   verifier que le premier libelle_valid_rec_sup "Test automatique 4"
+      And   l utilisateur clique sur "A_valider_liste_dmd_rec_mgr"
+     Then   verifier que le premier libelle_valid_rec_sup "Test automatique 3"
       And   verifier que la premiere date de creation_valid_rec_sup aujourd hui
       And   verifier que le premier status_valid_rec_sup 'Orange' et l intitule "En cours"
       And   verifier que la premiere ligne de l effectif a couvrir_valid_rec_sup 2
       And   verifier que le premier lieu_valid_rec_sup "Ariana"
 
         #Verification des champs dans la liste voir historique : bouton fleche dans la colonne Actions#
-     When   le superieur clique sur l icone voir historique_valid_rec_sup
+     When   l utilisateur clique sur "Voir_historique_dmd_rec_sup"
      Then   verifier que l initiateur_voir_hist_sup "Yasushi TAKAGI"
       And   verifier que la date de debut_voir_hist_sup aujourd hui
       And   verifier que le premier validateur_voir_hist_sup "Nobuo TERASHIMA"
@@ -239,9 +245,9 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
       And   verifier que la seconde date de fin_voir_hist_sup vide
       And   verifier que la seconde  decision_voir_hist_sup vide
       And   verifier que le second commentaire_voir_hist_sup vide
-     When   le superieur clique sur le bouton fermer_voir_hist_sup
-      And   le superieur clique sur visualiser le resultat_valid_rec_sup
-     Then   verifier que l intitule_valid_rec_sup "Test automatique 4"
+     When   l utilisateur clique sur "Fermer_hist_dmd_rec_sup"
+      And   l utilisateur clique sur "Resultat_Validation_dmd_rec_sup"
+     Then   verifier que l intitule_valid_rec_sup "Test automatique"
       And   verifier que l effectif a couvrir_valid_rec_sup 2
       And   verifier que la cible_valid_rec_sup "Interne" et "Externe"
       And   verifier que le lieu_valid_rec_sup "Ariana"
@@ -261,25 +267,29 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
       And   verifier que le montant_valid_rec_sup 500 s affiche a droite
 
     #Etape 022: Validation de la demande de recrutement par N+2
-     When   le superieur saisi le commentaire_valid_rec_sup "Validation N+2"
-      And   le superieur selectionne l action valider_valid_rec_sup
-      And   le superieur clique sur envoyer_valid_rec_sup
+     When   l utilisateur saisit "Validation N+2" dans le champs "Commentaire_dmd_rec_sup"
+      And   l utilisateur selectionne "Valider_dmd_rec_sup" dans la liste deroulante "Validation_dmd_rec_sup"
+      And   l utilisateur clique sur "Envoyer_dmd_rec_sup"
       And   wait 2000
      Then   verifier que le permier libelle_valid_rec_sup n est pas "Test automatique 4"
 
      #Etape 023: Deconnexion
-      And   l utilisateur se deconnecte
+     When   l utilisateur se deconnecte
 
-     #Etape 024: Connexion avec le profil RH_Recruitment
-     When   l'utilisateur "hrrecruitment@yopmail.com" est connecté
+    #Etape 024: Connexion avec le profil RH_Recruitment
+      And  l'utilisateur "hrrecruitment@yopmail.com" est connecté
      Then   le nom de l utilisateur "Shin'Ichi OKAZAKI" est affiche en haut a gauche
 
      #Etape 025: Acceder au menu recrutement avec le profil RH_Recruitment
      When   l'utilisateur clique sur espace-RH
+      And   l utilisateur clique sur "Bouton_menu_etendu"
+      And   l utilisateur clique sur "Module_Talent"
+      And   l utilisateur clique sur "Sous_module_Recrutement"
+      And   l utilisateur clique sur "Icone_notifications"
       And   l utilisateur clique sur la notification de demande de validation
 
      #Etape 026: Verification et de la demande de recrutement par le rôle RH_Recruitment
-      And   l utilisateur clique sur a valider
+      And   l utilisateur clique sur "A_valider_liste_dmd_rec_HR"
       And   wait 2000
      Then   verifier que le premier libelle_valid_HR_rec "Test automatique 4"
       And   verifier que la premiere date de creation_valid_HR_rec aujourd hui
@@ -289,7 +299,7 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
       And   verifier que la premiere ligne de l effectif a couvrir_valid_HR_rec 2
       And   verifier que le premier lieu_valid_HR_rec "Ariana"
       And   verifier que la premiere ligne de publiee_valid_HR_rec n est pas cochee
-     When   le role_RH_rec clique sur l icone voir historique_valid_HR_rec
+     When   l utilisateur clique sur "Voir_historique_dmd_rec_HR"
      Then   verifier que l initiateur_voir_hist_HR_rec est "Yasushi TAKAGI"
       And   verifier que la date de debut_voir_hist_HR_rec aujourd hui
       And   verifier que le premier validateur_voir_hist_HR_rec "Nobuo TERASHIMA"
@@ -307,8 +317,8 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
       And   verifier que la troisieme date de fin_voir_hist_HR_rec vide
       And   verifier que la troisieme  decision_voir_hist_HR_rec vide
       And   verifier que le troisieme commentaire_voir_hist_HR_rec vide
-     When   le role_RH_rec clique sur le bouton fermer_voir_hist_HR_rec
-      And   le role_RH_rec clique sur le bouton editer_valid_HR_rec
+     When   l utilisateur clique sur "Fermer_voir_hist_dmd_rec_HR"
+      And   l utilisateur clique sur "Editer_Validation_dmd_rec_HR"
      Then   verifier que l intitule_valid_HR_rec "Test automatique 4"
       And   verifier que la date de creation_valid_HR_rec aujourd hui
       And   verifier que le statut de la demande_valid_HR_rec "En cours"
@@ -334,14 +344,15 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
       And   verifier que le montant_valid_HR_rec 500 s affiche a droite
 
      #Etape 027: Validation de la demande de recrutement par le rôle RH_Recruitment
-     When   le role_RH_rec saisi le commentaire_valid_HR_rec "Validation Role RH_Recruitment"
-      And   le role_RH_rec selectionne l action valider_HR_rec valider
-      And   le role_RH_rec clique sur envoyer_valid_HR_rec
+     When   l utilisateur saisit "Validation Role RH_Recruitment" dans le champs "Commentaire_dmd_rec_HR"
+      And   l utilisateur selectionne "Valider_dmd_rec_HR" dans la liste deroulante "Validation_dmd_rec_HR"
+      And   l utilisateur clique sur "Envoyer_dmd_rec_HR"
+
       And   wait 2000
      Then   verifier le permier libelle_valid_HR_rec n est pas "Test automatique 4"
-     When   l utilisateur clique sur toutes les offres
+     When   l utilisateur clique sur "Tte_les_offres_liste_dmd_rec_mgr"
       And   wait 2000
-      And   le role_RH_rec clique sur voir historique_offres_rec_HR
+      And   l utilisateur clique sur "Voir_historique_dmd_rec_HR"
      Then   verifier que l initiateur_voir_hist_HR est "Yasushi TAKAGI"
       And   verifier que la date de debut_voir_hist_HR aujourd hui
       And   verifier que le premier validateur_voir_hist_HR "Nobuo TERASHIMA"
@@ -360,7 +371,7 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
       And   verifier que la troisieme decision_voir_hist_HR "Acceptée" et la couleur est Vert
       And   verifier que le troisieme commentaire_voir_hist_HR "Validation Role RH_Recruitment"
       And   verifier que le quatrieme validateur est Role_admin
-     When   l utilisateur clique sur le bouton fermer_voir_hist_HR
+     When   l utilisateur clique sur "Fermer_voir_hist_dmd_rec_HR"
 
      #Etape 028: Deconnexion
       And   l utilisateur se deconnecte
@@ -371,10 +382,11 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
 
      #Etape 030: Verification de la demande de recrutement par le rôle RH_Admin
      When   l'utilisateur clique sur espace-RH
+      And   l utilisateur clique sur "Icone_notifications"
       And   l utilisateur clique sur la notification de demande de validation
-      And   l utilisateur clique sur a valider
+      And   l utilisateur clique sur "A_valider_liste_dmd_rec_HR"
       And   wait 2000
-     Then   verifier que le premier libelle_offres_rec_HR "Test automatique 4"
+     Then   verifier que le premier libelle_offres_rec_HR "Test automatique"
       And   verifier que la premiere date de creation_offres_rec_HR aujourd hui
       And   verifier que le premier status_offres_rec_HR 'Orange' et l intitule "En cours"
       And   verifier que le premier initiateur_offres_rec_HR "TAKAGI Yasushi"
@@ -385,7 +397,8 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
       And   verifier que la premiere ligne de publiee_offres_rec_HR n est pas cochee
 
         #Verification des champs dans la liste voir historique : bouton fleche dans la colonne Actions#
-     When   verifier que l initiateur_voir_hist_HR "Yasushi TAKAGI"
+     When   l utilisateur clique sur "Voir_historique_dmd_rec_HR"
+     Then   verifier que l initiateur_voir_hist_HR "Yasushi TAKAGI"
       And   verifier que la date de debut_voir_hist_HR aujourd hui
       And   verifier que le premier validateur_voir_hist_HR "Nobuo TERASHIMA"
       And   verifier que la premiere date de debut_voir_hist_HR aujourd hui
@@ -407,10 +420,9 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
       And   verifier que la quatrieme date de fin_voir_hist_HR vide
       And   verifier que la quatrieme  decision_voir_hist_HR vide
       And   verifier que le quatrieme commentaire_voir_hist_HR vide
-     When   l utilisateur clique sur le bouton fermer_voir_hist_HR
-
+     When   l utilisateur clique sur "Fermer_voir_hist_dmd_rec_HR"
           #Verification des champs dans le modal Editer offre: la loupe dans la colonne Actions#
-      And   le role_RH clique sur le bouton editer_offres_rec_HR
+      And   l utilisateur clique sur "Editer_Validation_dmd_rec_HR"
      Then   verifier que l intitule_valid_HR_rec "Test automatique 4"
       And   verifier que la date de creation_valid_HR_rec aujourd hui
       And   verifier que le statut de la demande_valid_HR_rec "En cours"
@@ -436,13 +448,12 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
       And   verifier que le montant_valid_HR_rec 500 s affiche a droite
 
     #Etape 031: Rejet de la demande de recrutement par le rôle RH_Admin
-
-     When   l utilisateur  saisi le commentaire_valid_HR_rec "Rejet Role RH_Admin"
-      And   l utilisateur choisi l action rejet_HR_rec rejeter
-      And   l utilisateur clique sur envoyer_valid_HR_rec
-
+     When   l utilisateur saisit "Rejet Role RH_Admin" dans le champs "Commentaire_dmd_rec_HR"
+      And   l utilisateur selectionne "Rejeter_dmd_rec_sup" dans la liste deroulante "Validation_dmd_rec_sup"
+      And   l utilisateur clique sur "Envoyer_dmd_rec_HR"
+      And   wait 2000
       #Apparition d une pop-up#
-      And   le role_RH_rec clique sur valider_pop_up_rec_valid_HR
+      And   l utilisateur clique sur "Valider_pop_up_rec_rej_HR"
       And   wait 2000
 
       #Verification par le role Admin apres rejet#
@@ -459,7 +470,7 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
       And   verifier que la premiere ligne de publiee_valid_HR_rec n est pas cochee
 
         #Verification des champs dans la liste voir historique : bouton fleche dans la colonne Actions#
-     When   le role_RH clique sur voir historique
+     When   l utilisateur clique sur "Voir_historique_dmd_rec_HR"
      Then   verifier que l initiateur_voir_hist_HR "Yasushi TAKAGI"
       And   verifier que la date de debut_voir_hist_HR aujourd hui
       And   verifier que le premier validateur_voir_hist_HR "Nobuo TERASHIMA"
@@ -492,6 +503,7 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
      Then   le nom de l utilisateur "Yasushi TAKAGI" est affiche en haut a gauche
 
      #Etape 033: Verification de la reception de la notification de Rejet role admin par le manager
+     When   l utilisateur clique sur "Icone_notifications"
       And   l utilisateur clique sur la notification de rejet de la demande de recrutement
      Then   verifier que le premier libelle dans la liste "Test automatique 4"
       And   verifier que la premiere date de creation dans la liste aujourd hui
@@ -501,7 +513,7 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
       And   verifier que la premiere ligne de publiee n est pas cochee
 
         #Verification des champs dans le modal voir historique : bouton fleche dans la colonne Actions#
-     When   le manager clique sur voir historique_demandes_rec_mgr
+     When   l utilisateur clique sur "Voir_historique_dmd_rec_mgr"
      Then   verifier que l initiateur_voir_hist_mgr "Yasushi TAKAGI"
       And   verifier que la date de debut_voir_hist_mgr aujourd hui
       And   verifier que la date de fin_voir_hist_mgr aujourd hui
@@ -525,4 +537,4 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
       And   verifier que la quatrieme date de fin_voir_hist_mgr aujourd hui
       And   verifier que la quatrieme decision_voir_hist_mgr "Rejetée" et la couleur est rouge
       And   verifier que le quatrieme commentaire_voir_hist_mgr "Rejet Role RH_Admin"
-     When   l utilisateur clique sur le bouton fermer_voir_hist_mgr
+     When   l utilisateur clique sur "Fermer_voir_hist_dmd_rec_mgr"
