@@ -18,16 +18,17 @@ Feature: Référentiels : Création Emploi
     And l'utilisateur "resp-RH@mail.com" est connecté
 
     # Etape 2 : Accès à l'espace RH
-    When l'utilisateur clique sur espace-RH
-    And l'utilisateur clique sur le module coreRH
-    And l'utilisateur clique sur Référentiels
-    And l'utilisateur clique sur Emplois
+    When l utilisateur clique sur "espace-RH"
+    And  l utilisateur clique sur "Bouton_menu_etendu"
+    And l utilisateur clique sur "Core RH"
+    And l utilisateur clique sur "GRéférentiels"
+    And l utilisateur clique sur "Emplois"
 
     # Etape 3 : Ajout d'un nouvel emploi
-    When l'utilisateur clique pour ajouter un emploi
-    And l'utlisateur saisi le code "SOCEMP01"
-    And l'utlisateur saisi le libelle "Emploi 1"
-    And l'utlisateur saisi la date d'effet "01/01/2019"
+    When l utilisateur clique sur "Ajouter un emploi"
+    And l utilisateur saisit "SOCEMP01" dans le champs "Code_emploi"
+    And l utilisateur saisit "Emploi 1" dans le champs "Libellé_emploi"
+    And l utilisateur saisit "01/01/2019" dans le champs "Date d'effet_emploi"
     And l'utlisateur selectionne le statut "Actif"
     And l'utilisateur clique sur le bouton Enregistrer_Emploi
 
