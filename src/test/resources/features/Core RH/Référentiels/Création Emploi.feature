@@ -25,51 +25,52 @@ Feature: Référentiels : Création Emploi
     And l utilisateur clique sur "Emplois"
 
     # Etape 3 : Ajout d'un nouvel emploi
-    When l utilisateur clique sur "Ajouter un emploi"
+    When l utilisateur clique sur "Ajouter_un_emploi"
     And l utilisateur saisit "SOCEMP01" dans le champs "Code_emploi"
     And l utilisateur saisit "Emploi 1" dans le champs "Libellé_emploi"
-    And l utilisateur saisit "01/01/2019" dans le champs "Date d'effet_emploi"
-    And l'utlisateur selectionne le statut "Actif"
-    And l'utilisateur clique sur le bouton Enregistrer_Emploi
+    And l utilisateur saisit "01/01/2019" dans le champs "Date_d_effet_emploi"
+    # And l utilisateur selectionne "Actif" dans la liste deroulante "Statut_emploi"
+    And l utilisateur clique sur "Enregistrer_Emploi"
+    And vérifier que le message "Opération effectuée avec succès" s affiche
 
     # Etape 4 : Ajout d'une compétence
-    When l'utilisateur clique sur l onglet Exigences_Emploi
-    And l'utilisateur clique sur Ajouter competence_Emploi
-    And l'utilisateur selectionne la competence_Emploi "validation"
-    And l'utilisateur selectionne le niveau_Emploi "Confirmé"
-    And l'utilisateur selectionne l importance1_Emploi "Requise"
-    And l'utilisateur clique sur le bouton Valider competence_Emploi
+    When l utilisateur clique sur "Exigences_Emploi"
+    And l utilisateur clique sur "Ajouter_competence_Emploi"
+    And l utilisateur selectionne "validation" dans la liste deroulante "Compétence_emploi"
+    And l utilisateur selectionne "Confirmé" dans la liste deroulante "Niveau_compétence_emploi"
+    And l utilisateur selectionne "Requise" dans la liste deroulante "Importance_compétence_emploi"
+    And l utilisateur clique sur "Valider_competence_Emploi"
 
     # Etape 5 : Ajout d'une langue
-    When l'utlisateur clique sur Ajouter langue_Emploi
-    And l'utilisateur selectionne la langue_Emploi "Français"
-    And l'utilisateur selectionne le niveau_Emploi "Avancé"
-    And l'utilisateur l importance2_Emploi "Requise"
-    And l'utilisateur clique sur le bouton Valider langue_Emploi
+    When l utilisateur clique sur "Ajouter_langue_Emploi"
+    And l utilisateur selectionne "Français" dans la liste deroulante "Langue_emploi"
+    And l utilisateur selectionne "Avancé" dans la liste deroulante "Niveau_langue_emploi"
+    And l utilisateur selectionne "Requise" dans la liste deroulante "Importance_langue_emploi"
+    And l utilisateur clique sur "Valider langue_Emploi"
 
     # Etape 6 : Ajout d'une habilitation
-    When l'utlisateur clique sur Ajouter habilitation_Emploi
-    And l'utilisateur selectionne le type_Emploi "Permis de conduire"
-    And l'utilisateur selectionne le modele_Emploi "Permis de conduire : Type A"
-    And l'utilisateur selectionne l importance3_Emploi "Préféré(e)"
-    And l'utilisateur clique sur le bouton Valider habilitation_Emploi
+    When l utilisateur clique sur "Ajouter_habilitation_Emploi"
+    And l utilisateur selectionne "Permis de conduire" dans la liste deroulante "Type_habilitation_emploi"
+    And l utilisateur selectionne "Permis de conduire : Type A" dans la liste deroulante "Modèle_habilitation_emploi"
+    And l utilisateur selectionne "Préféré(e)" dans la liste deroulante "Importance_habilitation_emploi"
+    And l utilisateur clique sur "Valider_habilitation_Emploi"
 
      # Etape 7 : Ajout d'un diplôme
-    When l'utlisateur clique sur Ajouter diplome_Emploi
-    And l'utilisateur selectionne le diplome_Emploi "Ingénieur"
-    And l'utilisateur selectionne la discipline_Emploi "Informatique"
-    And l'utilisateur selectionne l importance4_Emploi "Préféré(e)"
-    And l'utilisateur clique sur le bouton Valider diplome_Emploi
+    When l utilisateur clique sur "Ajouter_diplome_Emploi"
+    And l utilisateur selectionne "Ingénieur" dans la liste deroulante "Diplôme_emploi"
+    And l utilisateur selectionne "Informatique" dans la liste deroulante "Discipline_diplôme_emploi"
+    And l utilisateur selectionne "Préféré(e)" dans la liste deroulante "Importance_diplôme_emploi"
+    And l utilisateur clique sur "Valider_diplome_Emploi"
 
      # Etape 8 : Ajout d'une expérience professionnelle
-    When l'utlisateur clique sur Ajouter experience_Emploi
-    And l'utilisateur saisi l emploi_Emploi "Ingénieur de test junior"
-    And l'utilisateur selectionne le secteur_Emploi "Service"
-    And l'utilisateur saisi les annees d experience_Emploi "2"
-    And l'utilisateur selectionne l importance5_Emploi "Requise"
-    And l'utilisateur clique sur le bouton Valider annees experience_Emploi
+    When l utilisateur clique sur "Ajouter_experience_Emploi"
+    And l utilisateur saisit "Ingénieur de test junior" dans le champs "Emploi_expérience"
+    And l utilisateur selectionne "Service" dans la liste deroulante "Secteur_expérience_emploi"
+    And l utilisateur saisit "2" dans le champs "Années_d_expérience_expérience"
+    And l utilisateur selectionne "requise" dans la liste deroulante "Importance_expérience_emploi"
+    And l utilisateur clique sur "Valider_annees_experience_Emploi"
 
 
     # Etape 9 : Validation finale
-    And l'utilisateur clique sur le bouton Enregistrer_Emploi
-    Then vérifier la sauvegarde correcte de l'emploi
+    And l utilisateur clique sur "Enregistrer_Emploi"
+    Then vérifier que le message "Opération effectuée avec succès" s affiche
