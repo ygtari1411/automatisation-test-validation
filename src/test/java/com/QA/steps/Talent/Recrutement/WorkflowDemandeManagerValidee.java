@@ -4,6 +4,7 @@ import com.QA.locators.CommonLocators;
 import com.QA.locators.RecrutementLocators;
 import com.QA.steps.ActionsCommunes;
 import com.QA.steps.GenerateurDriver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
@@ -40,5 +41,23 @@ public class WorkflowDemandeManagerValidee {
     }
 
 
+    @When("le manager clique pour ajouter une demande_rec")
+    public void leManagerCliquePourAjouterUneDemande_rec() {
+            driver.findElement(By.xpath(RecrutementLocators.Bouton_Ajouter_Demande_Recrutement)).click();
+    }
+
+
+    @And("le manager saisi l intitule_demande_rec {string}")
+    public void leManagerSaisiLIntitule_demande_rec(String arg0) throws InterruptedException {
+
+        driver.findElement(By.xpath(RecrutementLocators.Champ_Imput_texte_Intitulé)).sendKeys(arg0);
+
+    }
+
+
+
+
 
 }
+
+

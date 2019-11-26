@@ -20,16 +20,22 @@ Feature: Annonces : Création  nouvelle annonce
 
     # Etape 2 : Changement de role
 
-    When l'utilisateur clique sur espace-RH
-    And l'utilisateur clique sur le module Connect
-    And l'utilisateur clique sur Annonces
+    When l utilisateur clique sur "Bouton_Role_RH"
+    And l utilisateur clique sur "Bouton_Menu_Etendu"
+    And l utilisateur clique sur "Bouton_Module_Connect"
+    And l utilisateur clique sur "Bouton_Annonce"
 
     # Etape 3 : Ajout Annonce
 
-    And L'utilisateur clique sur  ajouter Annonce
-    When L'utilisateur rempli les champs de de la création annonce
-    And L'utilisateur clique sur valider creer annonce
+    When l utilisateur clique sur "Bouton_Ajouter_Annonces"
+    When l utilisateur saisit "Test Automatique Publication Annonce" dans le champs "Input_Nom_Annonce"
+    And l utilisateur selectionne "Vente" dans la liste deroulante "Liste_Deroulante_Type"
+    And l utilisateur saisit "Ceci est un test automatique de la creation d'une annonce" dans le champs "Input_Texte_Annonces_Creation"
+    And l'utilisateur ajoute une photo dans le champ photo annonce
+    And l utilisateur clique sur "Bouton_Valider_Image"
+    And l utilisateur clique sur "JS_Bouton_Valider_Ajouter_Annonces"
 
     # Etape 4 : Vérification ajout annonce
 
+    Then vérifier que le message "succès" s affiche
     Then vérifier la création de la nouvelle annonce

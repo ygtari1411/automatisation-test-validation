@@ -21,18 +21,33 @@ Feature: Annonces : Modification annonce
 
      # Etape 2 : Changement de role
 
-    When l'utilisateur clique sur espace-RH
-    And l'utilisateur clique sur le module Connect
-    And l'utilisateur clique sur Annonces
+    When l utilisateur clique sur "Bouton_Role_RH"
+    And l utilisateur clique sur "Bouton_Menu_Etendu"
+    And l utilisateur clique sur "Bouton_Module_Connect"
+    And l utilisateur clique sur "Bouton_Annonce"
 
-    # Etape 3 : Modification annonce
+     # Etape 3 : Ajout Annonce
 
-    And L'utilisateur clique sur  modifier Annonce
-    And L'utilisateur modifie le contenu de l annonce
-    And L'utilisateur clique sur valider modifier annonce
+    When l utilisateur clique sur "Bouton_Ajouter_Annonces"
+    And l utilisateur saisit "Test Automatique Modification Annonce" dans le champs "Input_Nom_Annonce"
+    And l utilisateur selectionne "Vente" dans la liste deroulante "Liste_Deroulante_Type"
+    And l utilisateur saisit "Annonce" dans le champs "Input_Texte_Annonces_Creation"
+    And l'utilisateur ajoute une photo dans le champ photo annonce
+    And l utilisateur clique sur "Bouton_Valider_Image"
+    And l utilisateur clique sur "JS_Bouton_Valider_Ajouter_Annonces"
+    And vérifier la création de la nouvelle annonce
 
-    # Etape 4 : Vérification de la modification
 
+    # Etape 4 : Modification annonce
+
+    And l utilisateur clique sur "Bouton_Modifier_Annonce"
+    And l utilisateur saisit "_Modification" dans le champs "Input_Texte_Annonces_Modification"
+    And l utilisateur clique sur "JS_Bouton_Valider_Ajouter_Annonces"
+    And wait 3000
+
+    # Etape 5 : Vérification de la modification
+
+    And l'utilisateur rafraichit la page
     Then vérifier la modification de l'annonce
 
 

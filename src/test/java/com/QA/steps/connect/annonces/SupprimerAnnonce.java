@@ -10,97 +10,70 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.List;
 
 public class SupprimerAnnonce {
 
     private final WebDriver driver = GenerateurDriver.driver;
-    private final JavascriptExecutor event =  (JavascriptExecutor)driver;
+    private final JavascriptExecutor event = (JavascriptExecutor) driver;
     private ActionsCommunes action = new ActionsCommunes();
     private static String[] tab1;
 
 
     @And("L'utilisateur clique sur  supprimer Annonce")
     public void lUtilisateurCliqueSurSupprimerAnnonce() throws InterruptedException {
-        //Remplir le tableau t1  du contenu des annonces avant suppression et creer une chaine de caractere contenant la somme des elements de tab
+        //Remplir le tableau tab1  du contenu des annonces avant suppression
 
-        List<WebElement> liste=driver.findElements(By.xpath(AnnoncesLocator.List_Annonces));
-        int taille=liste.size();
-        tab1 =new String[taille];
+        List<WebElement> liste = driver.findElements(By.xpath(AnnoncesLocator.List_Annonces));
+        int taille = liste.size();
+        tab1 = new String[taille];
 
-        for(int i=0;i<taille;i++){
-            tab1[i]=liste.get(i).getText();
+        for (int i = 0; i < taille; i++) {
+            tab1[i] = liste.get(i).getText();
         }
 
-       action.pause(driver,500);
-       driver.findElement(By.xpath(AnnoncesLocator.Bouton_Supprimer_Annonce)).click();
-
-
-
-    }
-
-
-
-    @And("L'utilisateur clique sur valider suppression")
-    public void lUtilisateurCliqueSurValiderSuppression() throws InterruptedException {
-
-        WebElement element = driver.findElement(By.xpath("/html/body/ngb-modal-window/div/div/acc-confirmation-modal/div[3]/button[1]"));
-        JavascriptExecutor executor = (JavascriptExecutor) driver;
-        executor.executeScript("arguments[0].click();", element);
-        action.pause(driver,1000);
+        action.pause(driver, 500);
+        driver.findElement(By.xpath(AnnoncesLocator.Bouton_Supprimer_Annonce)).click();
 
 
     }
-
 
 
     @Then("vérifier la suppression de l'annonce")
     public void vérifierLaSuppressionDeLAnnonce() throws InterruptedException {
-         driver.navigate().refresh();
-         action.pause(driver,1000);
- //Remplir le tableau tab  du contenu des annonces apres suppression et creer une chaine de caractere contenant la somme des elements de tab
+        driver.navigate().refresh();
+        action.pause(driver, 1000);
+        //Remplir le tableau tab2  du contenu des annonces apres suppression
+        //Faire la somme des différences entre les deux tableaux tab1 et tab2
+        //Le nombre de différence doit etre supérieur a zero
 
-        List<WebElement> liste=driver.findElements(By.xpath(AnnoncesLocator.List_Annonces));
-        int taille=liste.size();
+        List<WebElement> liste = driver.findElements(By.xpath(AnnoncesLocator.List_Annonces));
+        int taille = liste.size();
         String[] tab2 = new String[taille];
 
-        for(int i=0;i<taille;i++){
-            tab2[i]=liste.get(i).getText();
+        for (int i = 0; i < taille; i++) {
+            tab2[i] = liste.get(i).getText();
         }
 
-        int nombreDeDifference=0;
-        for(int i=0;i<taille;i++){
+        int nombreDeDifference = 0;
+        for (int i = 0; i < taille; i++) {
 
             String chaine1 = tab1[i];
             String chaine2 = tab2[i];
-            if(!chaine1.equals(chaine2)){
+            if (!chaine1.equals(chaine2)) {
                 nombreDeDifference++;
             }
 
         }
 
 
-        action.pause(driver,500);
+        action.pause(driver, 500);
 
-        Assert.assertNotEquals(nombreDeDifference,0);
-
+        Assert.assertNotEquals(nombreDeDifference, 0);
 
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
