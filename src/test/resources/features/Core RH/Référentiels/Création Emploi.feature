@@ -21,7 +21,7 @@ Feature: Référentiels : Création Emploi
     When l utilisateur clique sur "espace-RH"
     And  l utilisateur clique sur "Bouton_menu_etendu"
     And l utilisateur clique sur "Core RH"
-    And l utilisateur clique sur "GRéférentiels"
+    And l utilisateur clique sur "Référentiels"
     And l utilisateur clique sur "Emplois"
 
     # Etape 3 : Ajout d'un nouvel emploi
@@ -66,7 +66,8 @@ Feature: Référentiels : Création Emploi
     When l utilisateur clique sur "Ajouter_experience_Emploi"
     And l utilisateur saisit "Ingénieur de test junior" dans le champs "Emploi_expérience"
     And l utilisateur selectionne "Service" dans la liste deroulante "Secteur_expérience_emploi"
-    And l utilisateur saisit "2" dans le champs "Années_d_expérience_expérience"
+    And l utilisateur saisit "2" dans le champs "Années_d_expérience_emploi"
+    And l utilisateur saisit "2" dans le champs "Années_d_expérience_emploi"
     And l utilisateur selectionne "requise" dans la liste deroulante "Importance_expérience_emploi"
     And l utilisateur clique sur "Valider_annees_experience_Emploi"
 
