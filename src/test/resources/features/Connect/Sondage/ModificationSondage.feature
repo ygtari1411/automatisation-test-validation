@@ -20,30 +20,32 @@
 
       #Etape2 : Ajouter un sondage
 
-    When l'utilisateur clique sur espace-RH
-    And l'utilisateur clique sur le module Connect
-    And l'utilisateur clique sur Sondage
-    And l'utilisateur clique sur le bouton ajouter un Sondage
+    When l utilisateur clique sur "Bouton_Role_RH"
+    And l utilisateur clique sur "Bouton_Menu_Etendu"
+    And l utilisateur clique sur "Bouton_Connect"
+    And l utilisateur clique sur "Bouton_Sondage"
+    And l utilisateur clique sur "Bouton_Ajouter_Sondage"
 
       #Etape3 : Remplir tous les champs d'un sondage
 
     When le modal création Sondage s'affiche
-    And l'utilisateur remplit Question1 par "tester sondage 1"
-    And l'utilisateur remplit Réponse1 par "oui"
-    And l'utilisateur remplit Réponse2 par "non"
-    And l'utilisateur clique sur le bouton confirmer ajout sondage
-    And l'utilisateur clique sur le bouton modifier sondage
+    And l utilisateur saisit "Sondage" dans le champs "Question1"
+    And l utilisateur saisit "oui" dans le champs "Reponse_1_sondage"
+    And l utilisateur saisit "non" dans le champs "Réponse_2_sondage"
+    And l utilisateur clique sur le bouton "Bouton_Confirmer_Ajout_Sondage"
+
       #Etape4 : Modifier un sondage et confirmer la modification
 
-      When La fenêtre de modification s'affiche
-      And l'utilisateur modifie Question1 de "tester sondage 1" par "tester sondage 1 modifié"
-      And l'utilisateur modifie Réponse1 de "oui" par "oui modifié"
-      And l'utilisateur modifie Réponse2 de "non" par "non modifié"
-      And l'utilisateur clique sur le bouton modifier sondage crée
-
+    And l utilisateur clique sur "Bouton_Options_Sondage"
+    And l utilisateur clique sur "Bouton_Modifier_Sondage"
+    When La fenêtre de modification s'affiche
+    And l utilisateur saisit " modifié" dans le champs "Question1"
+    And l utilisateur saisit " oui" dans le champs "Réponse1_sondage"
+    And l utilisateur saisit " non" dans le champs "Réponse2_sondage"
+    And l utilisateur clique sur "Bouton_Confirmer_Modif_Sondage"
 
       #Etape5 : Vérifier que la mise à jour du sondage a été effectué avec succés
 
-      Then vérifier que le sondage a été modifié correctement
+    Then vérifier que le sondage a été modifié correctement
 
 

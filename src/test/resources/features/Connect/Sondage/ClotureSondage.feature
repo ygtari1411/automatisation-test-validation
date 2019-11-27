@@ -1,19 +1,19 @@
 # Auteur: marwamaherssi
 # Feature: Sondage
-# Scénario: Lancer sondage
-# Date de création: 05/11/2019
+# Scénario: Cloture sondage
+# Date de création: 12/11/2019
 
 
 @ACCRETIO2
 @ACCRETIO2-CONNECT
 @ACCRETIO2-SONDAGE
-@ACCRETIO2-SONDAGE-0004
+@ACCRETIO2-SONDAGE-0006
 
 Feature: Sondage
 
-  Scenario: Lancer un Sondage
+  Scenario: Cloture d'un sondage
 
-       #Etape1 : Se connecter au TNR
+     #Etape1 : Se connecter au TNR
 
     Given le navigateur est ouvert et la page d'acceuil est affichée
     And l'utilisateur "resp-RH@mail.com" est connecté
@@ -29,24 +29,21 @@ Feature: Sondage
       #Etape3 : Remplir tous les champs d'un sondage
 
     When le modal création Sondage s'affiche
-    And l utilisateur saisit "sondage 3" dans le champs "Question1"
-    And l utilisateur saisit "oui 3" dans le champs "Reponse_1_sondage"
-    And l utilisateur saisit "non 3" dans le champs "Réponse_2_sondage"
+    And l utilisateur saisit "Sondage Cloture" dans le champs "Question1"
+    And l utilisateur saisit "oui" dans le champs "Reponse_1_sondage"
+    And l utilisateur saisit "non" dans le champs "Réponse_2_sondage"
     And l utilisateur clique sur "Bouton_Confirmer_Ajout_Sondage"
-
-
-     #Etape4 : Lancer un sondage
-
     And l utilisateur clique sur "Bouton_Options_Sondage"
     And l utilisateur clique sur "Bouton_Lancer_Sondage"
-    When le modal lancer Sondage s'affiche
     And l utilisateur clique sur "Bouton_Confirmer_Lancer_Sondage"
 
-    #Etape5 : Confirmer que le sondage est affiché
+    #Etape4 : Cloturer un sondage
 
-    And l utilisateur clique sur "Bouton_Portail"
-    And l utilisateur clique sur "Bouton_Sondage_Portail"
-    Then verifier que le sondage est affiché
+    And l utilisateur clique sur "Bouton_Options_Sondage"
+    And l utilisateur clique sur "Bouton_Cloturer_Sondage"
+    When la fenetre de cloture s'affiche
+    And l utilisateur clique sur "Bouton_Confirmer_Cloture_Sondage"
 
+    #Etape5 : Vérifier que la cloture du sondage a été effectuée avec succés
 
-
+   Then verifier que le sondage ne peut plus etre lancer ou stopper

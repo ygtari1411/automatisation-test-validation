@@ -9,7 +9,7 @@
 @ACCRETIO2-SONDAGE
 @ACCRETIO2-SONDAGE-0001
 
-  Feature: Sondage : Création d'un sondage
+  Feature: Sondage
 
     Scenario: Création d'un sondage
 
@@ -20,18 +20,19 @@
 
       #Etape2 : Ajouter un sondage
 
-      When l'utilisateur clique sur espace-RH
-      And l'utilisateur clique sur le module Connect
-      And l'utilisateur clique sur Sondage
-      And l'utilisateur clique sur le bouton ajouter un Sondage
+      When l utilisateur clique sur "Bouton_Role_RH"
+      And l utilisateur clique sur "Bouton_Menu_Etendu"
+      And l utilisateur clique sur "Bouton_Connect"
+      And l utilisateur clique sur "Bouton_Sondage"
+      And l utilisateur clique sur "Bouton_Ajouter_Sondage"
 
       #Etape3 : Remplir tous les champs d'un sondage
 
       When le modal création Sondage s'affiche
-      And l'utilisateur remplit Question1 par "tester sondage 1"
-      And l'utilisateur remplit Réponse1 par "oui"
-      And l'utilisateur remplit Réponse2 par "non"
-      And l'utilisateur clique sur le bouton confirmer ajout sondage
+      And l utilisateur saisit "Sondage création" dans le champs "Question1"
+      And l utilisateur saisit "oui" dans le champs "Reponse_1_sondage"
+      And l utilisateur saisit "non" dans le champs "Réponse_2_sondage"
+      And l utilisateur clique sur le bouton "Bouton_Confirmer_Ajout_Sondage"
 
       #Etape4 : Vérifier l'ajout du sondage
 
