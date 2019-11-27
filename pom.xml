@@ -289,6 +289,7 @@
                     </generatedHtmlReportDirectory>
                     <customPageTitle>Accretio 2 - tests de validation fonctionnelle</customPageTitle>
                     <expandBeforeAfterHooks>true</expandBeforeAfterHooks>
+                    <logLevel>minimal</logLevel>
                     <customParameters>
                         <Titre_>Rapport récapitulatif des tests de validation fonctionnels</Titre_>
                         <Plateforme_de_test>https://accretio-2-tnr.advyteam.com</Plateforme_de_test>
