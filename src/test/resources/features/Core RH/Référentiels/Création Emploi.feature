@@ -73,5 +73,5 @@ Feature: Référentiels : Création Emploi
 
 
     # Etape 9 : Validation finale
-    And l utilisateur clique sur "Enregistrer_Emploi"
+    And l utilisateur clique sur "Sauvegarder_Emploi"
     Then vérifier que le message "Opération effectuée avec succès" s affiche

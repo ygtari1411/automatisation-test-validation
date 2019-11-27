@@ -74,5 +74,5 @@ Feature: Référentiels : Création Poste
     And l utilisateur clique sur "Valider_annees_experience_poste"
 
     # Etape 9 : Validation finale
-    And l utilisateur clique sur "Enregistrer_Poste"
+    And l utilisateur clique sur "Sauvegarder_Poste"
     Then vérifier que le message "Opération effectuée avec succès" s affiche
