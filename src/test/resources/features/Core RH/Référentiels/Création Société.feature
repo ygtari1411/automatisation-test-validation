@@ -1,7 +1,7 @@
-# Auteur: wboufade
-# Feature:
+# Auteur: htlili
+# Feature: Référentiels
 # Scénario: Création nouvelle Société
-# Date de création: 02/10/2019
+# Date de création: 28/11/2019
 
 
 @ACCRETIO2
@@ -12,17 +12,71 @@
 Feature: Référentiels : Création société
 
   Scenario: Création société
+
+    # Etape 1 : Connexion :
     Given le navigateur est ouvert et la page d'acceuil est affichée
     And l'utilisateur "resp-RH@mail.com" est connecté
-    When l'utilisateur clique sur espace-RH
-    And  l'utilisateur clique sur le module coreRH
-    And l'utilisateur clique sur Référentiels
-    Then vérifier l'affichage correct des rubriques
-    When l'utilisateur clique sur ajouter entreprise
-    And l'utilisateur remplie tous les champs
-    Then vérifier l'ajout correct de la société
-    When l'utilisateur clique pour ajouter des contacts
-    And l'utilisateur remplie tous les champs contacts
-    And l'utilisateur clique pour ajouter des coordonnées bancaires
-    And l'utilisateur remplie tous les champs coordonnées bancaires
-    Then vérifier l'enregistrement correct des ajouts
+
+    # Etape 2 : Accès à l'espace RH
+    When l utilisateur clique sur "espace-RH"
+    And  l utilisateur clique sur "Bouton_menu_etendu"
+    And l utilisateur clique sur "Core RH"
+    And l utilisateur clique sur "Référentiels"
+    And l utilisateur clique sur "Sociétés"
+
+    # Etape 3 : Ajout d'une nouvelle société
+    When l utilisateur clique sur "Ajouter_une_société"
+    And l utilisateur saisit "SOC01" dans le champs "Code_société"
+    And l utilisateur saisit "Société de service" dans le champs "Libellé_société"
+    And l utilisateur saisit "01/01/2019" dans le champs "Date_d_effet_société"
+    And l utilisateur selectionne "Arabe" dans la liste deroulante "langue_officielle_société"
+    And l utilisateur selectionne "Dinar tunisien" dans la liste deroulante "Devise_société"
+    And l utilisateur saisit "15 Rue de la liberté" dans le champs "Adresse_société"
+    And l utilisateur selectionne "Tunisie" dans la liste deroulante "Pays_société"
+    And l utilisateur selectionne "Tunis" dans la liste deroulante "Ville_société"
+    And l utilisateur clique sur "Enregistrer_société"
+    Then vérifier que le message "Opération effectuée avec succès" s affiche
+
+    # Etape 4 : Ajout du secteur d'activité et immatriculation
+    When l utilisateur selectionne "Service" dans la liste deroulante "Secteur_société"
+    And l utilisateur selectionne "test" dans la liste deroulante "Activité_société"
+    And l utilisateur selectionne "Société anonyme" dans la liste deroulante "Statut_juridique_société"
+    And l utilisateur saisit "SOCTN000000111" dans le champs "Immatriculation_société"
+    And l utilisateur selectionne "Prestataires de services" dans la liste deroulante "SConvention_collective_société"
+    And l utilisateur saisit "SOCTN000000777" dans le champs "Affiliation_sécurité_sociale_société"
+    And l utilisateur saisit "SOCREGTN000001" dans le champs "Registre_de_commerce_société"
+    And l utilisateur saisit "11144" dans le champs "Numéro_TVA_société"
+    And l utilisateur clique sur "Sauvegarder_société"
+    Then vérifier que le message "Opération effectuée avec succès" s affiche
+
+    # Etape 5 : Ajout d'un contact société
+    When l utilisateur clique sur "Ajouter_contact_société"
+    And l utilisateur clique sur "Externe"
+    And l utilisateur saisit "Walid Sahli" dans le champs "Contact_société"
+    And l utilisateur selectionne "Avocat de la société" dans la liste deroulante "Fonction_société"
+    And l utilisateur saisit "00216 71381000" dans le champs "Téléphone_contact_société"
+    And l utilisateur clique sur "Sauvegarder_société"
+    Then vérifier que le message "Opération effectuée avec succès" s affiche
+
+    # Etape 6 : Ajout des coordonnées bancaires de la société
+    When l utilisateur clique sur "Ajouter_coordonnées_bancaires_société"
+    And l utilisateur saisit "01/01/2019" dans le champs "Date_d_effet_coordonnées_société"
+    And l utilisateur selectionne "Tunisie" dans la liste deroulante "Pays_coordonnées_société"
+    And l utilisateur selectionne "Espèces" dans la liste deroulante "Mode_de_paiement_société"
+    And l utilisateur selectionne "Dinar tunisien" dans la liste deroulante "Devise_de_paiement_société"
+    And l utilisateur selectionne "ATB" dans la liste deroulante "Libellé_banque_société"
+    And l utilisateur selectionne "ATB, Agence LA SOUKRA" dans la liste deroulante "Libellé_agence_société"
+    And l utilisateur saisit "12345678901234567890" dans le champs "RIB_société"
+    And l utilisateur clique sur "Sauvegarder_société"
+    Then vérifier que le message "Opération effectuée avec succès" s affiche
+
+    # Etape 7 : Ajout d'un véhicule de la société
+    When l utilisateur clique sur "Véhicules_société"
+    And l utilisateur clique sur "Ajouter_véhicule_société"
+    And l utilisateur selectionne "211 TU 2655" dans la liste deroulante "Immatriculation_véhicule_société"
+    And l utilisateur selectionne "BMW" dans la liste deroulante "Marque_véhicule_société"
+    And l utilisateur selectionne "Série 7" dans la liste deroulante "Modèle_véhicule_société"
+    And l utilisateur selectionne "Opérationnel" dans la liste deroulante "Type_de_leasing_société"
+    And l utilisateur selectionne "Hiver" dans la liste deroulante "Pneus_actuels_véhicule_société"
+    And l utilisateur clique sur "Sauvegarder_société"
+    Then vérifier que le message "Opération effectuée avec succès" s affiche
