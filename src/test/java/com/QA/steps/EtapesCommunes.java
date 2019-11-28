@@ -244,11 +244,11 @@ public class EtapesCommunes {
             }
         }
         if (Character.toString(locator.charAt(0)).contains("/")) {
-            driver.findElement(By.xpath(inputlistederoulante)).sendKeys(optionlistederoulante);
+            driver.findElement(By.xpath(locator)).sendKeys(optionlistederoulante);
         } else if (locator.contains("[") || Character.toString(locator.charAt(0)).contains(".")) {
-            driver.findElement(By.cssSelector(inputlistederoulante)).sendKeys(optionlistederoulante);
+            driver.findElement(By.cssSelector(locator)).sendKeys(optionlistederoulante);
         } else {
-            driver.findElement(By.id(inputlistederoulante)).sendKeys(optionlistederoulante);
+            driver.findElement(By.id(locator)).sendKeys(optionlistederoulante);
         }
         action.pause(driver, 500);
         WebElement element = driver.findElement(By.cssSelector("div[class='ui-select-choices-row active']"));
