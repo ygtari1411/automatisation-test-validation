@@ -39,7 +39,7 @@ public class EtapesCommunes {
     public void leNavigateurEstOuvertEtLaPageDAcceuilEstAffichée() {
 
         driver.get(reader.getProperty("testsiteurl"));
-        logger.info(" Ouverture de l'environnement : "+reader.getProperty("testsiteurl"));
+        logger.info(" Ouverture de l'environnement : " + reader.getProperty("testsiteurl"));
     }
 
     @And("l'utilisateur {string} est connecté")
@@ -52,7 +52,7 @@ public class EtapesCommunes {
         action.pause(driver, 500);
         driver.findElement(By.xpath(CommonLocators.Login_Bouton_connexion)).click();
         Assert.assertTrue(driver.findElements(By.cssSelector("a[class='list-group-item'][routerlink='/logout']")).size() != 0);
-        logger.info("Connexion avec le user : "+utilisateur);
+        logger.info("Connexion avec le user : " + utilisateur);
     }
 
     @When("l'utilisateur clique sur espace-RH")
@@ -120,7 +120,7 @@ public class EtapesCommunes {
         synchronized (driver) {
             driver.wait(arg0);
         }
-        logger.info("Pause de " +arg0/1000 +" secondes");
+        logger.info("Pause de " + arg0 / 1000 + " secondes");
     }
 
 
@@ -140,7 +140,7 @@ public class EtapesCommunes {
 
     @And("l utilisateur clique sur {string}")
     public void lUtilisateurCliqueSur(String bouton) throws IllegalAccessException {
-        logger.info("L'utilisateur clique sur : "+bouton);
+        logger.info("L'utilisateur clique sur : " + bouton);
         String locator = "vide";
         for (List<Field> f : ListeGlobaleLocators) {
             for (Field x : f) {
@@ -173,7 +173,7 @@ public class EtapesCommunes {
 
     @And("l utilisateur saisit {string} dans le champs {string}")
     public void lUtilisateurSaisitDansLeChamps(String texteSaisi, String Champ) throws IllegalAccessException {
-        logger.info("L'utilisateur saisit : "+texteSaisi + " dans le champ "  +Champ );
+        logger.info("L'utilisateur saisit : " + texteSaisi + " dans le champ " + Champ);
         String locator = "vide";
         listededonnees.add(Champ);
         listededonnees.add(texteSaisi);
@@ -201,7 +201,7 @@ public class EtapesCommunes {
 
     @And("l utilisateur selectionne {string} dans la liste deroulante {string}")
     public void lutilisateurSelectionneDansLaListeDeroulante(String optionlistederoulante, String listederoulante) throws IllegalAccessException, InterruptedException {
-        logger.info("L'utilisateur selectionne : " + optionlistederoulante+ " dans la liste déroulante : " +listederoulante);
+        logger.info("L'utilisateur selectionne : " + optionlistederoulante + " dans la liste déroulante : " + listederoulante);
         String locator = "vide";
         for (List<Field> f : ListeGlobaleLocators) {
             for (Field x : f) {
@@ -231,8 +231,25 @@ public class EtapesCommunes {
 
         action.pause(driver, 500);
 
-        driver.findElement(By.cssSelector("div[class='ui-select-container dropdown open'] .ui-select-search")).sendKeys(optionlistederoulante);
-
+        String inputlistederoulante = listederoulante + "_IL";
+        for (List<Field> f : ListeGlobaleLocators) {
+            for (Field x : f) {
+                if (x.getName().equals(inputlistederoulante)) {
+                    locator = (String) x.get(x);
+                    break;
+                }
+            }
+            if (!locator.equals("vide")) {
+                break;
+            }
+        }
+        if (Character.toString(locator.charAt(0)).contains("/")) {
+            driver.findElement(By.xpath(inputlistederoulante)).sendKeys(optionlistederoulante);
+        } else if (locator.contains("[") || Character.toString(locator.charAt(0)).contains(".")) {
+            driver.findElement(By.cssSelector(inputlistederoulante)).sendKeys(optionlistederoulante);
+        } else {
+            driver.findElement(By.id(inputlistederoulante)).sendKeys(optionlistederoulante);
+        }
         action.pause(driver, 500);
         WebElement element = driver.findElement(By.cssSelector("div[class='ui-select-choices-row active']"));
         JavascriptExecutor executor = (JavascriptExecutor) driver;
@@ -243,7 +260,7 @@ public class EtapesCommunes {
 
     @And("l utilisateur selectionne {string} dans la liste {string}")
     public void lUtilisateurSelectionneDansLaListe(String Optiondelaliste, String liste) throws IllegalAccessException {
-        logger.info("L'utilisateur selectionne : " + Optiondelaliste + " dans la liste : " +liste);
+        logger.info("L'utilisateur selectionne : " + Optiondelaliste + " dans la liste : " + liste);
         String locator = "vide";
         List<WebElement> L;
         for (List<Field> f : ListeGlobaleLocators) {
@@ -279,7 +296,7 @@ public class EtapesCommunes {
 
     @Then("vérifier que le message {string} s affiche")
     public void vérifierQueLeMessageSAffiche(String textenotification) {
-        logger.info("Vérification de l'affichage du message : "+textenotification);
+        logger.info("Vérification de l'affichage du message : " + textenotification);
         WebElement modules = (new WebDriverWait(driver, 10))
                 .until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(CommonLocators.Notification_Simple)));
         Assert.assertTrue(driver.findElement(By.cssSelector(CommonLocators.Notification_Simple)).getText().contains(textenotification));
