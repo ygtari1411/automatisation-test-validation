@@ -229,6 +229,7 @@ public class EtapesCommunes {
             driver.findElement(By.id(locator)).click();
         }
 
+        locator = "vide";
         action.pause(driver, 500);
 
         String inputlistederoulante = listederoulante + "_IL";
