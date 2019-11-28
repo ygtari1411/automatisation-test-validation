@@ -32,6 +32,7 @@ Feature: Absences: Rejet de l'annulation au workflow collaborateur manager
     And l utilisateur selectionne "Règle" dans la liste deroulante "Type"
     And l utilisateur selectionne "Role utilisateur" dans la liste deroulante "Utilisé par"
     And l utilisateur selectionne "Groupement par défaut" dans la liste deroulante "Groupement de motifs"
+    And l utilisateur selectionne "Validation N+1" dans la liste deroulante "Processus de validation"
      # Case Visible à cocher
     And l utilisateur clique sur "Case_Visible"
     And l utilisateur clique sur "Bouton_Enregistrer"
