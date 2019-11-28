@@ -13,13 +13,40 @@ Feature: Référentiels : Création Entité organisationnelle
 
   Scenario: Création Entité organisationnelle
 
+    # Etape 1 : Connexion :
     Given le navigateur est ouvert et la page d'acceuil est affichée
     And l'utilisateur "resp-RH@mail.com" est connecté
-    When l'utilisateur clique sur espace-RH
-    And  l'utilisateur clique sur le module coreRH
-    And l'utilisateur clique sur Référentiels
-    When l'utilisateur clique pour ajouter une Entité Organisationnelle
-    And l'utilisateur remplie tous les champs ajout Entité Organisationnelle
-    And l'utilisateur valide la création de EO
-    And l'utilisateur modifie les informations de EO et clique enregistrer
-    Then vérifier la sauvegarde correcte de l'Entité Organisationnelle
+
+    # Etape 2 : Accès à l'espace RH
+    When l utilisateur clique sur "espace-RH"
+    And  l utilisateur clique sur "Bouton_menu_etendu"
+    And l utilisateur clique sur "Core RH"
+    And l utilisateur clique sur "Référentiels"
+    And l utilisateur clique sur "Entités_organisationnelles"
+
+    # Etape 3 : Ajout d'une entité organisationnelle
+    When l utilisateur clique sur "Ajouter_une_EO"
+    And l utilisateur saisit "SOCEO01" dans le champs "Code_EO"
+    And l utilisateur saisit "Entité 1" dans le champs "Libellé_EO"
+    And l utilisateur saisit "01/01/2019" dans le champs "Date_d_effet_EO"
+    # And l utilisateur selectionne "Actif" dans la liste deroulante "Statut_EO"
+    And l utilisateur selectionne "Société_de_service" dans la liste deroulante "Société_EO"
+    And l utilisateur selectionne "Direction" dans la liste deroulante "Type_EO"
+    And l utilisateur clique sur "Enregistrer_EO"
+    Then vérifier que le message "Opération effectuée avec succès" s affiche
+
+    # Etape 4 : Ajout d'un responsable de l'entité
+    When l utilisateur clique sur "Ajouter_responsable_EO"
+    And l utilisateur saisit "01/01/2019" dans le champs "Date_de_début_responsable_EO"
+    And l utilisateur selectionne "Ahmed_Tounsi" dans la liste deroulante "Responsable_EO"
+    And l utilisateur clique sur "Sauvegarder_EO"
+    Then vérifier que le message "Opération effectuée avec succès" s affiche
+
+    # Etape 5 : Ajout d'une adresse EO
+    When l utilisateur saisit "11 Avenue des martyres" dans le champs "Adresse_EO"
+    And l utilisateur saisit "9 Avenue des martyres" dans le champs "Adresse_EO"
+    And l utilisateur selectionne "Tunisie" dans la liste deroulante "Pays_EO"
+    And l utilisateur selectionne "Ariana" dans la liste deroulante "Ville_EO"
+    And l utilisateur selectionne "3060" dans la liste deroulante "Code_postal_EO"
+    And l utilisateur clique sur "Sauvegarder_EO"
+    Then vérifier que le message "Opération effectuée avec succès" s affiche
