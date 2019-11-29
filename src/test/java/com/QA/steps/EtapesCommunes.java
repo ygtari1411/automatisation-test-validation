@@ -251,8 +251,29 @@ public class EtapesCommunes {
         } else {
             driver.findElement(By.id(locator)).sendKeys(optionlistederoulante);
         }
+        locator = "vide";
         action.pause(driver, 500);
-        WebElement element = driver.findElement(By.cssSelector("div[class='ui-select-choices-row active']"));
+
+        String cliquelistederoulante = listederoulante + "_CL";
+        WebElement element = null;
+        for (List<Field> f : ListeGlobaleLocators) {
+            for (Field x : f) {
+                if (x.getName().equals(cliquelistederoulante)) {
+                    locator = (String) x.get(x);
+                    break;
+                }
+            }
+            if (!locator.equals("vide")) {
+                break;
+            }
+        }
+        if (Character.toString(locator.charAt(0)).contains("/")) {
+            element = driver.findElement(By.xpath(locator));
+        } else if (locator.contains("[") || Character.toString(locator.charAt(0)).contains(".")) {
+            element = driver.findElement(By.cssSelector(locator));
+        } else {
+            element = driver.findElement(By.id(locator));
+        }
         JavascriptExecutor executor = (JavascriptExecutor) driver;
         executor.executeScript("arguments[0].click();", element);
 
