@@ -52,15 +52,6 @@
         </dependency>
 
 
-        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
-        <dependency>
-            <groupId>info.cukes</groupId>
-            <artifactId>cucumber-junit</artifactId>
-            <version>1.2.5</version>
-            <scope>test</scope>
-        </dependency>
-
-
         <!-- https://mvnrepository.com/artifact/net.masterthought/cucumber-reporting -->
         <dependency>
             <groupId>net.masterthought</groupId>
@@ -291,7 +282,7 @@
                     <expandBeforeAfterHooks>true</expandBeforeAfterHooks>
                     <logLevel>minimal</logLevel>
                     <customParameters>
-                        <Titre_>Rapport récapitulatif des tests de validation fonctionnels</Titre_>
+                        <Titre_>Rapport récapitulatif des tests de validation fonctionnelle</Titre_>
                         <Plateforme_de_test>https://accretio-2-tnr.advyteam.com</Plateforme_de_test>
                     </customParameters>
                 </configuration>

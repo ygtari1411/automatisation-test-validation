@@ -18,9 +18,9 @@ Feature: Référentiels : Création Poste
     And l'utilisateur "resp-RH@mail.com" est connecté
 
     # Etape 2 : Accès à l'espace RH
-    When l utilisateur clique sur "espace-RH"
-    And  l utilisateur clique sur "Bouton_menu_etendu"
-    And l utilisateur clique sur "Core RH"
+    When l utilisateur clique sur "Bouton_Role_RH"
+    And l utilisateur clique sur "Bouton_Menu_Etendu"
+    And l utilisateur clique sur "Core_RH"
     And l utilisateur clique sur "Référentiels"
     And l utilisateur clique sur "Postes"
 

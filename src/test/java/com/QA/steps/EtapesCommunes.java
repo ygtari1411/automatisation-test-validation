@@ -80,34 +80,7 @@ public class EtapesCommunes {
 
     }
 
-    @And("l'utilisateur clique sur le module coreRH")
-    public void lUtilisateurCliqueSurLeModuleCoreRH() throws InterruptedException {
 
-        driver.findElement(By.xpath(CommonLocators.Bouton_Module_CoreRH)).click();
-        action.pause(driver, 200);
-
-    }
-
-
-    @And("l'utilisateur clique sur Référentiels")
-    public void lUtilisateurCliqueSurRéférentiels() throws InterruptedException {
-
-        driver.findElement(By.xpath(ReferentielsLocators.Bouton_Module_Referentiels)).click();
-        action.pause(driver, 200);
-    }
-
-    @Then("vérifier l'affichage correct des rubriques")
-    public void vérifierLAffichageCorrectDesRubriques() {
-
-        WebElement modules = (new WebDriverWait(driver, 5))
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(ReferentielsLocators.Bouton_Rubrique_Société)));
-        Assert.assertTrue(driver.findElement(By.xpath(ReferentielsLocators.Bouton_Rubrique_Société)).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.xpath(ReferentielsLocators.Bouton_Rubrique_Etablissemnt)).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.xpath(ReferentielsLocators.Bouton_Rubrique_Entité_Organisationnelle)).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.xpath(ReferentielsLocators.Bouton_Rubrique_Emplois)).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.xpath(ReferentielsLocators.Bouton_Rubrique_Postes)).isDisplayed());
-
-    }
 
     @And("l'utilisateur clique sur portal")
     public void lUtilisateurCliqueSurPortal() {
@@ -158,13 +131,13 @@ public class EtapesCommunes {
             JavascriptExecutor executor = (JavascriptExecutor) driver;
             executor.executeScript("arguments[0].click();", element);
         } else if (Character.toString(locator.charAt(0)).contains("/")) {
-            WebElement modules = (new WebDriverWait(driver, 7)).until(ExpectedConditions.elementToBeClickable(By.xpath(locator)));
+            WebElement modules = (new WebDriverWait(driver, 10)).until(ExpectedConditions.elementToBeClickable(By.xpath(locator)));
             driver.findElement(By.xpath(locator)).click();
         } else if (locator.contains("[") || Character.toString(locator.charAt(0)).contains(".")) {
-            WebElement modules = (new WebDriverWait(driver, 7)).until(ExpectedConditions.elementToBeClickable(By.cssSelector(locator)));
+            WebElement modules = (new WebDriverWait(driver, 10)).until(ExpectedConditions.elementToBeClickable(By.cssSelector(locator)));
             driver.findElement(By.cssSelector(locator)).click();
         } else {
-            WebElement modules = (new WebDriverWait(driver, 7)).until(ExpectedConditions.elementToBeClickable(By.id(locator)));
+            WebElement modules = (new WebDriverWait(driver, 10)).until(ExpectedConditions.elementToBeClickable(By.id(locator)));
             driver.findElement(By.id(locator)).click();
         }
 

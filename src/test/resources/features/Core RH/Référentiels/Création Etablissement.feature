@@ -18,9 +18,9 @@ Feature: Référentiels : Création établissement
     And l'utilisateur "resp-RH@mail.com" est connecté
 
     # Etape 2 : Accès à l'espace RH
-    When l utilisateur clique sur "espace-RH"
-    And  l utilisateur clique sur "Bouton_menu_etendu"
-    And l utilisateur clique sur "Core RH"
+    When l utilisateur clique sur "Bouton_Role_RH"
+    And l utilisateur clique sur "Bouton_Menu_Etendu"
+    And l utilisateur clique sur "Core_RH"
     And l utilisateur clique sur "Référentiels"
     And l utilisateur clique sur "Etablissements"
 
@@ -40,9 +40,10 @@ Feature: Référentiels : Création établissement
      # Etape 4 : Ajout d'un contact établissement
     When l utilisateur clique sur "Ajouter_contact_établissement"
     And l utilisateur saisit "Mariem Yahyaoui" dans le champs "Contact_établissement"
-    And l utilisateur selectionne "Comptable" dans la liste deroulante "Fonction_établissement"
-    And l utilisateur saisit "00216 71391000" dans le champs "Téléphone_contact_établissement"
-    And l utilisateur clique sur "Sauvegarder_établissement"
+    And l utilisateur saisit "Comptable" dans le champs "Fonction_établissement"
+    And l utilisateur saisit "0021671391000" dans le champs "Téléphone_contact_établissement"
+    And l utilisateur clique sur "Valider_contact_établissement"
+    And l utilisateur clique sur "JS_Sauvegarder_établissement"
     Then vérifier que le message "Opération effectuée avec succès" s affiche
 
     # Etape 5 : Ajout des coordonnées bancaires de la société
@@ -54,5 +55,6 @@ Feature: Référentiels : Création établissement
     And l utilisateur selectionne "ATB" dans la liste deroulante "Libellé_banque_établissement"
     And l utilisateur selectionne "ATB, Agence LA SOUKRA" dans la liste deroulante "Libellé_agence_établissement"
     And l utilisateur saisit "12345678901234567890" dans le champs "RIB_établissement"
-    And l utilisateur clique sur "Sauvegarder_établissement"
+    And l utilisateur clique sur "Valider_coordonnées_bancaire_établissement"
+    And l utilisateur clique sur "JS_Sauvegarder_établissement"
     Then vérifier que le message "Opération effectuée avec succès" s affiche

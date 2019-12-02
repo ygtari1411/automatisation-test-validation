@@ -15,12 +15,12 @@ Feature: Référentiels : Création société
 
     # Etape 1 : Connexion :
     Given le navigateur est ouvert et la page d'acceuil est affichée
-    And l'utilisateur "resp-RH@mail.com" est connecté
+    And l'utilisateur "faten.mzali@yopmail.com" est connecté
 
     # Etape 2 : Accès à l'espace RH
-    When l utilisateur clique sur "espace-RH"
-    And  l utilisateur clique sur "Bouton_menu_etendu"
-    And l utilisateur clique sur "Core RH"
+    When l utilisateur clique sur "Bouton_Role_RH"
+    And l utilisateur clique sur "Bouton_Menu_Etendu"
+    And l utilisateur clique sur "Core_RH"
     And l utilisateur clique sur "Référentiels"
     And l utilisateur clique sur "Sociétés"
 
@@ -41,11 +41,11 @@ Feature: Référentiels : Création société
     When l utilisateur selectionne "Service" dans la liste deroulante "Secteur_société"
     And l utilisateur selectionne "test" dans la liste deroulante "Activité_société"
     And l utilisateur selectionne "Société anonyme" dans la liste deroulante "Statut_juridique_société"
-    And l utilisateur saisit "SOCTN000000111" dans le champs "Immatriculation_société"
-    And l utilisateur selectionne "Prestataires de services" dans la liste deroulante "SConvention_collective_société"
-    And l utilisateur saisit "SOCTN000000777" dans le champs "Affiliation_sécurité_sociale_société"
-    And l utilisateur saisit "SOCREGTN000001" dans le champs "Registre_de_commerce_société"
-    And l utilisateur saisit "11144" dans le champs "Numéro_TVA_société"
+    And l utilisateur saisit "SOCTN000000114" dans le champs "Immatriculation_société"
+    And l utilisateur selectionne "Prestataires de services" dans la liste deroulante "Convention_collective_société"
+    And l utilisateur saisit "SOCTN000000780" dans le champs "Affiliation_sécurité_sociale_société"
+    And l utilisateur saisit "SOCREGTN000004" dans le champs "Registre_de_commerce_société"
+    And l utilisateur saisit "11147" dans le champs "Numéro_TVA_société"
     And l utilisateur clique sur "Sauvegarder_société"
     Then vérifier que le message "Opération effectuée avec succès" s affiche
 
@@ -54,7 +54,8 @@ Feature: Référentiels : Création société
     And l utilisateur clique sur "Externe"
     And l utilisateur saisit "Walid Sahli" dans le champs "Contact_société"
     And l utilisateur selectionne "Avocat de la société" dans la liste deroulante "Fonction_société"
-    And l utilisateur saisit "00216 71381000" dans le champs "Téléphone_contact_société"
+    And l utilisateur saisit "0021671381000" dans le champs "Téléphone_contact_société"
+    And l utilisateur clique sur "Valider_contact_société"
     And l utilisateur clique sur "Sauvegarder_société"
     Then vérifier que le message "Opération effectuée avec succès" s affiche
 
@@ -66,17 +67,19 @@ Feature: Référentiels : Création société
     And l utilisateur selectionne "Dinar tunisien" dans la liste deroulante "Devise_de_paiement_société"
     And l utilisateur selectionne "ATB" dans la liste deroulante "Libellé_banque_société"
     And l utilisateur selectionne "ATB, Agence LA SOUKRA" dans la liste deroulante "Libellé_agence_société"
-    And l utilisateur saisit "12345678901234567890" dans le champs "RIB_société"
+    And l utilisateur saisit "12345678901234567892" dans le champs "RIB_société"
+    And l utilisateur clique sur "Valider_coordonnées_bancaire_société"
     And l utilisateur clique sur "Sauvegarder_société"
     Then vérifier que le message "Opération effectuée avec succès" s affiche
 
     # Etape 7 : Ajout d'un véhicule de la société
     When l utilisateur clique sur "Véhicules_société"
     And l utilisateur clique sur "Ajouter_véhicule_société"
-    And l utilisateur selectionne "211 TU 2655" dans la liste deroulante "Immatriculation_véhicule_société"
+    And l utilisateur saisit "211 TU 2655" dans le champs "Immatriculation_véhicule_société"
     And l utilisateur selectionne "BMW" dans la liste deroulante "Marque_véhicule_société"
-    And l utilisateur selectionne "Série 7" dans la liste deroulante "Modèle_véhicule_société"
+    And l utilisateur selectionne "Serie 7" dans la liste deroulante "Modèle_véhicule_société"
     And l utilisateur selectionne "Opérationnel" dans la liste deroulante "Type_de_leasing_société"
     And l utilisateur selectionne "Hiver" dans la liste deroulante "Pneus_actuels_véhicule_société"
+    And l utilisateur clique sur "Valider_véhicules_société"
     And l utilisateur clique sur "Sauvegarder_société"
     Then vérifier que le message "Opération effectuée avec succès" s affiche
