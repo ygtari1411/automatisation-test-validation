@@ -1,17 +1,17 @@
 # Auteur: Manel Hachicha
-# Feature: Workflow collaborateur manager rh-Validation d'une demande d'absence
-# Scénario: Validation d'une demande d'absence au workflow collaborateur manager rh
+# Feature: Workflow collaborateur manager rh-Rejet d'une demande d'absence
+# Scénario: Rejet d'une demande d'absence au workflow collaborateur manager rh
 # Date de création: 01/11/2019
 
 
 @ACCRETIO2
 @ACCRETIO2-EASYRUN
 @ACCRETIO2-ABSENCES
-@ACCRETIO2-ABSENCES-0005
+@ACCRETIO2-ABSENCES-0006
 
-Feature: Absences: Validation d'une demande d'absence au workflow collaborateur manager rh
+Feature: Absences: Rejet d'une demande d'absence au workflow collaborateur manager rh
 
-  Scenario: Validation d'une demande d'absence au workflow collaborateur manager rh
+  Scenario: Rejet d'une demande d'absence au workflow collaborateur manager rh
     Given le navigateur est ouvert et la page d'acceuil est affichée
 
     #Prérequis: Au niveau du paramétrage de l'absence:
@@ -67,7 +67,7 @@ Feature: Absences: Validation d'une demande d'absence au workflow collaborateur 
     And vérifier que le message "Opération effectuée avec succés" s affiche
     And Vérifier que la demande d'absence est déplacée au niveau de la rubrique Historique et que son statut devient Validée par le manager
 
-    #Etape 4 : Profil rh-Validation de demande d'absence
+    #Etape 4 : Profil rh-Rejet de demande d'absence
     And l'utilisateur "haf03.expert@gmail.com" est connecté
     When l utilisateur clique sur "Bouton_Role_RH"
     And l utilisateur clique sur "Bouton_Menu_Etendu"
@@ -75,14 +75,14 @@ Feature: Absences: Validation d'une demande d'absence au workflow collaborateur 
     And l utilisateur clique sur "Sous_Module_Absences"
     And l utilisateur clique sur "Onglet_Suivi des absences"
     And l utilisateur clique sur "Référence_Absence"
-    And l utilisateur clique sur "Bouton_Accepter_Demande_Absence"
-    And la fenêtre de confirmation de validation de la demande d'absence s'affiche à l'écran
-    And l utilisateur clique sur "Bouton_Valider_Acceptation"
+    And l utilisateur clique sur "Bouton_Rejeter_Demande_Absence"
+    And la fenêtre de confirmation de rejet de la demande d'absence s'affiche à l'écran
+    And l utilisateur saisit "Rejet" dans le champs "Commentaire"
+    And l utilisateur clique sur "Bouton_Valider_rejet"
     And vérifier que le message "Opération effectuée avec succés" s affiche
-    And Vérifier que la demande d'absence est déplacée au niveau de la rubrique Historique et que son statut devient Validée par le manager
+    And Vérifier que la demande d'absence est déplacée au niveau de la rubrique Historique et que son statut devient Rejetée
 
-
-   #Etape 5 : Profil collaborateur-Vérification de la validation de la demande d'absence
+   #Etape 5 : Profil collaborateur-Vérification du rejet de la demande d'absence
     And l'utilisateur "haf01.collaborateur@gmail.com" est connecté
-    Then Vérifier que l'utilisateur reçoit une notification "Votre demande d'absence a été acceptée" et que le statut de la demande d'absence devient Validée et que la demande d'absence s'affiche dans le calendrier
+    Then Vérifier que l'utilisateur reçoit une notification "Votre demande d'absence a été rejetée" et que le statut de la demande d'absence devient Rejetée et que la demande d'absence ne s'affiche pas dans le calendrier
 
