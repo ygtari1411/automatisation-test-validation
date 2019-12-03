@@ -41,7 +41,7 @@ public class TestGenerateurDriverInit {
         logger.info("Configuration de l'environnement de test");
         ListeGlobaleLocators.add(Arrays.stream(CommonLocators.class.getFields()).collect(Collectors.toList()));
         ListeGlobaleLocators.add(Arrays.stream(NewsLocators.class.getFields()).collect(Collectors.toList()));
-        ListeGlobaleLocators.add(Arrays.stream(AnnoncesLocator.class.getFields()).collect(Collectors.toList()));
+        ListeGlobaleLocators.add(Arrays.stream(AnnoncesLocators.class.getFields()).collect(Collectors.toList()));
         ListeGlobaleLocators.add(Arrays.stream(RecrutementLocators.class.getFields()).collect(Collectors.toList()));
         ListeGlobaleLocators.add(Arrays.stream(ReferentielsLocators.class.getFields()).collect(Collectors.toList()));
         ListeGlobaleLocators.add(Arrays.stream(TimelineLocators.class.getFields()).collect(Collectors.toList()));

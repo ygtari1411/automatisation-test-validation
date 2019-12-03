@@ -13,8 +13,7 @@ public class CommonLocators {
     public static final String Bouton_Annonce="/html/body/app-root/app-layout/div/app-sidebar/nav/ul/li[6]/ul/li[8]/a";
     public static final String Bouton_Portal = "/html/body/app-root/app-layout/div/app-header/nav/div[2]/ul[1]/li[2]/a/em";
     public static final String Option_Liste_Profil_Tag = "li[class='ql-mention-list-item selected']";
-    public static final String  Icone_Nom_Utilisateur = "/html/body/app-root/app-layout/div/section/div/acc-global-container/acc-portal-container/div/div/div[1]/acc-left-side-container/div/acc-user-widget/div/div[2]/span/span";
-    public static final String  Icone_MonEquipe ="/html/body/app-root/app-layout/div/section/div/acc-global-container/acc-portal-container/div/div/div[1]/acc-left-side-container/div/acc-user-widget/div/div[3]/ul/li[2]/a";
-
+    public static final String  Mon_Equipe ="/html/body/app-root/app-layout/div/section/div/acc-global-container/acc-portal-container/div/div/div[1]/acc-left-side-container/div/acc-user-widget/div/div[3]/ul/li[2]";
+    public static final String Icone_Nom_Utilisateur="/html/body/app-root/app-layout/div/section/div/acc-global-container/acc-portal-container/div/div/div[1]/acc-left-side-container/div/acc-user-widget/div/div[2]/span/span";
 
 }

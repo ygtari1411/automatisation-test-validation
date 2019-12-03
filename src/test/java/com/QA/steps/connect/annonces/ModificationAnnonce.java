@@ -1,6 +1,6 @@
 package com.QA.steps.connect.annonces;
 
-import com.QA.locators.AnnoncesLocator;
+import com.QA.locators.AnnoncesLocators;
 import com.QA.steps.ActionsCommunes;
 import com.QA.steps.GenerateurDriver;
 import io.cucumber.java.en.And;
@@ -22,10 +22,10 @@ public class ModificationAnnonce {
 
 
         Boolean modules = (new WebDriverWait(driver, 10))
-                .until(ExpectedConditions.attributeContains(By.xpath(AnnoncesLocator.Premiere_Annonce),"innerText",ActionsCommunes.DataProvider("Input_Texte_Annonces_Creation")+ActionsCommunes.DataProvider("Input_Texte_Annonces_Modification")));
+                .until(ExpectedConditions.attributeContains(By.xpath(AnnoncesLocators.Premiere_Annonce),"innerText",ActionsCommunes.DataProvider("Input_Texte_Annonces_Creation")+ActionsCommunes.DataProvider("Input_Texte_Annonces_Modification")));
 
 
-         Assert.assertEquals(ActionsCommunes.DataProvider("Input_Texte_Annonces_Creation")+ActionsCommunes.DataProvider("Input_Texte_Annonces_Modification"),driver.findElement(By.xpath(AnnoncesLocator.Premiere_Annonce)).getAttribute("innerText"));
+         Assert.assertEquals(ActionsCommunes.DataProvider("Input_Texte_Annonces_Creation")+ActionsCommunes.DataProvider("Input_Texte_Annonces_Modification"),driver.findElement(By.xpath(AnnoncesLocators.Premiere_Annonce)).getAttribute("innerText"));
 
 
 

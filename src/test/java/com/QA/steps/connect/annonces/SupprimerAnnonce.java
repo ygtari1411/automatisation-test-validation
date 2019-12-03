@@ -1,6 +1,6 @@
 package com.QA.steps.connect.annonces;
 
-import com.QA.locators.AnnoncesLocator;
+import com.QA.locators.AnnoncesLocators;
 import com.QA.steps.ActionsCommunes;
 import com.QA.steps.GenerateurDriver;
 import io.cucumber.java.en.And;
@@ -25,7 +25,7 @@ public class SupprimerAnnonce {
     public void lUtilisateurCliqueSurSupprimerAnnonce() throws InterruptedException {
         //Remplir le tableau tab1  du contenu des annonces avant suppression
 
-        List<WebElement> liste = driver.findElements(By.xpath(AnnoncesLocator.List_Annonces));
+        List<WebElement> liste = driver.findElements(By.xpath(AnnoncesLocators.List_Annonces));
         int taille = liste.size();
         tab1 = new String[taille];
 
@@ -34,7 +34,7 @@ public class SupprimerAnnonce {
         }
 
         action.pause(driver, 500);
-        driver.findElement(By.xpath(AnnoncesLocator.Bouton_Supprimer_Annonce)).click();
+        driver.findElement(By.xpath(AnnoncesLocators.Bouton_Supprimer_Annonce)).click();
 
 
     }
@@ -48,7 +48,7 @@ public class SupprimerAnnonce {
         //Faire la somme des différences entre les deux tableaux tab1 et tab2
         //Le nombre de différence doit etre supérieur a zero
 
-        List<WebElement> liste = driver.findElements(By.xpath(AnnoncesLocator.List_Annonces));
+        List<WebElement> liste = driver.findElements(By.xpath(AnnoncesLocators.List_Annonces));
         int taille = liste.size();
         String[] tab2 = new String[taille];
 

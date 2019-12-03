@@ -1,6 +1,6 @@
 package com.QA.steps.connect.annonces;
 
-import com.QA.locators.AnnoncesLocator;
+import com.QA.locators.AnnoncesLocators;
 import com.QA.steps.ActionsCommunes;
 import com.QA.steps.GenerateurDriver;
 import io.cucumber.java.en.And;
@@ -22,16 +22,16 @@ public class CreationAnnonce {
     public void vérifierLaCréationDeLaNouvelleAnnonce() {
 
         Boolean modules = (new WebDriverWait(driver, 10))
-                .until(ExpectedConditions.attributeToBe(By.xpath(AnnoncesLocator.Premiere_Annonce), "innerText", ActionsCommunes.DataProvider("Input_Texte_Annonces_Creation")));
+                .until(ExpectedConditions.attributeToBe(By.xpath(AnnoncesLocators.Premiere_Annonce), "innerText", ActionsCommunes.DataProvider("Input_Texte_Annonces_Creation")));
 
-        Assert.assertEquals(ActionsCommunes.DataProvider("Input_Texte_Annonces_Creation"), driver.findElement(By.xpath(AnnoncesLocator.Premiere_Annonce)).getText());
+        Assert.assertEquals(ActionsCommunes.DataProvider("Input_Texte_Annonces_Creation"), driver.findElement(By.xpath(AnnoncesLocators.Premiere_Annonce)).getText());
 
     }
 
 
     @And("l'utilisateur ajoute une photo dans le champ photo annonce")
     public void lUtilisateurAjouteUnePhotoDansLeChampPhotoAnnonce() {
-        driver.findElement(By.xpath(AnnoncesLocator.Upload_Image_Annonce)).sendKeys(System.getProperty("user.dir") + "/src/test/resources/imagespourtest/imagetest.jpg");
+        driver.findElement(By.xpath(AnnoncesLocators.Upload_Image_Annonce)).sendKeys(System.getProperty("user.dir") + "/src/test/resources/imagespourtest/imagetest.jpg");
 
     }
 
