@@ -81,7 +81,6 @@ public class EtapesCommunes {
     }
 
 
-
     @And("l'utilisateur clique sur portal")
     public void lUtilisateurCliqueSurPortal() {
         driver.findElement(By.xpath(CommonLocators.Bouton_Portal)).click();
@@ -288,7 +287,6 @@ public class EtapesCommunes {
 
     }
 
-
     @Then("vérifier que le message {string} s affiche")
     public void vérifierQueLeMessageSAffiche(String textenotification) {
         logger.info("Vérification de l'affichage du message : " + textenotification);
@@ -298,6 +296,13 @@ public class EtapesCommunes {
 
     }
 
+    @And("vérifier que le titre du modal est {string} et le texte du corps du modal est {string}")
+    public void vérifierQueLeTitreDuModalEstEtLeTexteDuCorpsDuModalEst(String titremodal , String textecorpsmodal) {
 
+        Assert.assertEquals(driver.findElement(By.cssSelector("h4[class='modal-title']")).getAttribute("innerText"), titremodal);
+        Assert.assertEquals(driver.findElement(By.cssSelector("text-center")).getAttribute("innerText"),textecorpsmodal);
+
+
+    }
 }
 
