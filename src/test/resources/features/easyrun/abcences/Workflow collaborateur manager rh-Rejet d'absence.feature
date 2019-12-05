@@ -27,7 +27,7 @@ Feature: Absences: Rejet d'une demande d'absence au workflow collaborateur manag
     And l utilisateur clique sur "Onglet_Paramétrage"
     And l utilisateur clique sur "Rubrique_Motifs_absence"
     And l utilisateur clique sur "Ajouter_motif"
-    And l utilisateur saisit "CPWorkflow2" dans le champs "Code_Ajout_Motif_Abcences"
+    And l utilisateur saisit "CPW2" dans le champs "Code_Ajout_Motif_Abcences"
     And l utilisateur saisit "Congés Payés Workflow2" dans le champs "Libellé_Ajout_Motif_Abcences"
     And l utilisateur selectionne "Règle" dans la liste deroulante "Type_Ajout_Motif_Abcences"
     And l utilisateur selectionne "Role utilisateur" dans la liste deroulante "Utilisé_par_Ajout_Motif_Abcences"

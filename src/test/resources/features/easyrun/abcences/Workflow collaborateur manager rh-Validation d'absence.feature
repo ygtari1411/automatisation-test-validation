@@ -27,7 +27,7 @@ Feature: Absences: Validation d'une demande d'absence au workflow collaborateur 
     And l utilisateur clique sur "Onglet_Paramétrage"
     And l utilisateur clique sur "Rubrique_Motifs_absence"
     And l utilisateur clique sur "Ajouter_motif"
-    And l utilisateur saisit "CPWorkflow2" dans le champs "Code_Ajout_Motif_Abcences"
+    And l utilisateur saisit "CPW2" dans le champs "Code_Ajout_Motif_Abcences"
     And l utilisateur saisit "Congés Payés Workflow2" dans le champs "Libellé_Ajout_Motif_Abcences"
     And l utilisateur selectionne "Règle" dans la liste deroulante "Type_Ajout_Motif_Abcences"
     And l utilisateur selectionne "Role utilisateur" dans la liste deroulante "Utilisé_par_Ajout_Motif_Abcences"
@@ -67,7 +67,7 @@ Feature: Absences: Validation d'une demande d'absence au workflow collaborateur 
     And vérifier que le titre du modal est "Confirmation de la validation" et le texte du corps du modal est "Voulez vous vraiment valider cette demande ?"
     And l utilisateur clique sur "JS_Bouton_Valider_Acceptation"
     And vérifier que le message "Opération effectuée avec succés" s affiche
-    And Vérifier que la demande d'absence est déplacée au niveau de la rubrique Historique et que son statut devient Validée par le manager
+    And l utilisateur se deconnecte
 
     #Etape 4 : Profil rh-Validation de demande d'absence
     And l'utilisateur "haf03.expert@gmail.com" est connecté
@@ -76,15 +76,15 @@ Feature: Absences: Validation d'une demande d'absence au workflow collaborateur 
     And l utilisateur clique sur "Module_Easyrun"
     And l utilisateur clique sur "Sous_Module_Absences"
     And l utilisateur clique sur "Onglet_Suivi des absences"
-    And l utilisateur clique sur "Bouton_Absences"
+    # Choisir la première demande absence de liste
     And l utilisateur clique sur "Bouton_Accepter_Demande_Absence_Rh"
     And vérifier que le titre du modal est "Confirmation de la validation" et le texte du corps du modal est "Voulez vous vraiment valider cette demande ?"
     And l utilisateur clique sur "JS_Bouton_Valider_Acceptation"
     And vérifier que le message "Opération effectuée avec succés" s affiche
     And Vérifier que la demande d'absence est déplacée au niveau de la rubrique Historique et que son statut devient Validée
-
+    And l utilisateur se deconnecte
 
    #Etape 5 : Profil collaborateur-Vérification de la validation de la demande d'absence
     And l'utilisateur "haf01.collaborateur@gmail.com" est connecté
-    Then Vérifier que l'utilisateur reçoit une notification "Votre demande d'absence a été acceptée" et que le statut de la demande d'absence devient Validée et que la demande d'absence s'affiche dans le calendrier
+    Then Vérifier que l utilisateur reçoit une notification "Votre demande d'absence a été acceptée" et que le statut de la demande d absence devient Validée et que la demande d absence s affiche dans le calendrier
 

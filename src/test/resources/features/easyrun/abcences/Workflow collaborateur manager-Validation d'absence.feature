@@ -27,7 +27,7 @@ Feature: Absences: Validation d'une demande d'absence au workflow collaborateur 
     And l utilisateur clique sur "Onglet_Paramétrage"
     And l utilisateur clique sur "Rubrique_Motifs_absence"
     And l utilisateur clique sur "Ajouter_motif"
-    And l utilisateur saisit "CPWorkflow1" dans le champs "Code_Ajout_Motif_Abcences"
+    And l utilisateur saisit "CPW1" dans le champs "Code_Ajout_Motif_Abcences"
     And l utilisateur saisit "Congés Payés Workflow1" dans le champs "Libellé_Ajout_Motif_Abcences"
     And l utilisateur selectionne "Règle" dans la liste deroulante "Type_Ajout_Motif_Abcences"
     And l utilisateur selectionne "Role utilisateur" dans la liste deroulante "Utilisé_par_Ajout_Motif_Abcences"
