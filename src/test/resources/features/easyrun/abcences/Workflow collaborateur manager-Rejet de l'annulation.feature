@@ -27,34 +27,37 @@ Feature: Absences: Rejet de l'annulation au workflow collaborateur manager
     And l utilisateur clique sur "Onglet_Paramétrage"
     And l utilisateur clique sur "Rubrique_Motifs_absence"
     And l utilisateur clique sur "Ajouter_motif"
-    And l utilisateur saisit "CP2020" dans le champs "Code"
-    And l utilisateur saisit "Congés Payés" dans le champs "Libellé"
-    And l utilisateur selectionne "Règle" dans la liste deroulante "Type"
-    And l utilisateur selectionne "Role utilisateur" dans la liste deroulante "Utilisé par"
-    And l utilisateur selectionne "Groupement par défaut" dans la liste deroulante "Groupement de motifs"
-    And l utilisateur selectionne "Validation N+1" dans la liste deroulante "Processus de validation"
+    And l utilisateur saisit "CPWorkflow1" dans le champs "Code_Ajout_Motif_Abcences"
+    And l utilisateur saisit "Congés Payés Workflow1" dans le champs "Libellé_Ajout_Motif_Abcences"
+    And l utilisateur selectionne "Règle" dans la liste deroulante "Type_Ajout_Motif_Abcences"
+    And l utilisateur selectionne "Role utilisateur" dans la liste deroulante "Utilisé_par_Ajout_Motif_Abcences"
+    And l utilisateur selectionne "Groupement par défaut" dans la liste deroulante "Groupement_de_motifs_Ajout_Motif_Abcences"
+    And l utilisateur selectionne "Validation N+1" dans la liste deroulante "Processus de validation_Ajout_Motif_Abcences"
      # Case Visible à cocher
-    And l utilisateur clique sur "Case_Visible"
-    And l utilisateur clique sur "Bouton_Enregistrer"
-    And l utilisateur clique sur "Bouton_Affectation_population"
-    And l utilisateur saisit "01/11/2019" dans le champs "Date d'effet"
-    And l utilisateur saisit "Wajdi Hamdi" dans le champs "Population"
-    And l utilisateur selectionne "Congé Payé" dans la liste deroulante "Règle"
-    And l utilisateur selectionne "Jours ouvrés" dans la liste deroulante "Type du calendrier"
+    #And l utilisateur clique sur "Case_Visible"
+    And l utilisateur clique sur "Bouton_Ajouter_Motif_Abcences"
+    And l utilisateur clique sur "Bouton_Affectation_Population"
+    And l utilisateur clique sur "Bouton_Ajout_Affectation_Population_Motif_Abcence"
+    And l utilisateur saisit "01/11/2019" dans le champs "Date_d_effet_Affectation_Population_Motif_Abcence"
+    And l utilisateur selectionne "Wajdi Hamdi" dans la liste deroulante "Population_Affectation_Population_Motif_Abcence"
+    And l utilisateur selectionne "Congé Payé" dans la liste deroulante "Règle_Affectation_Population_Motif_Abcence"
+    And l utilisateur selectionne "Jours ouvrés" dans la liste deroulante "Type_du_calendrier_Affectation_Population_Motif_Abcence"
     And l utilisateur clique sur "Bouton_Valider_affectation"
     And vérifier que le message "Opération effectuée avec succés" s affiche
+    And l utilisateur se deconnecte
 
     #Etape 2 : Profil collaborateur-Ajout de demande d'absence
     And l'utilisateur "haf01.collaborateur@gmail.com" est connecté
-    When l utilisateur clique sur "Bouton_Absences"
+    When l utilisateur clique sur "Bouton_Mes_Absences"
     # Cliquer sur une journée libre représentée par une case blanche au niveau du calendrier
-    And l utilisateur clique sur "Case_Journée_libre"
-    And l utilisateur selectionne "Congés payés" dans la liste deroulante "motif d'absence"
-    And l utilisateur selectionne "Mehrez Somrani" dans la liste deroulante "Backup"
-    And l'utilisateur sélectionne un justificatif
-    And l utilisateur clique sur "Bouton_Envoyer"
+    And l utilisateur selectionne une case de journée libre dans le calendrier
+    And l utilisateur selectionne "Congés Payés Workflow1" dans la liste deroulante "Motif_d_absence_Ajout_Demande_Absence_Collaborateur"
+    And l utilisateur selectionne "Mehrez Somrani" dans la liste deroulante "Backup_Ajout_Demande_Absence_Collaborateur"
+    And l'utilisateur upload un justificatif
+    And l utilisateur clique sur "Bouton_Envoyer_Ajout_Demande_Absence_Collaborateur"
     And vérifier que le message "Opération effectuée avec succés" s affiche
-    And le statut de la demande devient En cours
+    And vérifier que le statut de la demande devient En cours
+    And l utilisateur se deconnecte
 
 
     #Etape 3 : Profil manager-Validation de demande d'absence
