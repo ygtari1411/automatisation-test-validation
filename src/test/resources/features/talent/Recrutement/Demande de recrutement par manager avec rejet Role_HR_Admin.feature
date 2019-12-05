@@ -14,8 +14,8 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
 
      #Etape 001: Connexion manager
     Given   le navigateur est ouvert et la page d'acceuil est affichée
-      And   l'utilisateur "yasushitakagi.cm@gmail.com" est connecté
-     Then   le nom de l utilisateur "Yasushi TAKAGI" est affiche en haut a gauche
+      And   l'utilisateur "TemariDUSABLE@YOPMAIL.COM" est connecté
+     Then   le nom de l utilisateur "Temari DU SABLE" est affiche en haut a gauche
 
      #Etape 002: Acceder  a la page Demandes de recrutement espace manager
      When   l utilisateur clique sur "Mon_Equipe"
@@ -67,9 +67,9 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
 
         #Verification des champs dans le modal voir historique : bouton fleche dans la colonne Actions#
      When   l utilisateur clique sur "Voir_historique_dmd_rec_mgr"
-     Then   verifier que l initiateur_voir_hist_mgr "Yasushi TAKAGI"
+     Then   verifier que l initiateur_voir_hist_mgr "Temari DU SABLE"
       And   verifier que la date de debut_voir_hist_mgr aujourd hui
-      And   verifier que le premier validateur_voir_hist_mgr "Nobuo TERASHIMA"
+      And   verifier que le premier validateur_voir_hist_mgr "Gaara DU SABLE"
       And   verifier que la premiere date de debut_voir_hist_mgr aujourd hui
       And   verifier que la premiere date de fin_voir_hist_mgr vide
       And   verifier que la premiere decision_voir_hist_mgr vide
@@ -81,8 +81,8 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
       And   l utilisateur se deconnecte
 
      #Etape 006: Connexion avec le profil RH
-     When   l'utilisateur "nanakomatsu.CM@gmail.com" est connecté
-     Then   le nom de l utilisateur "Nana Komatsu" est affiche en haut a gauche
+     When   l'utilisateur "kakashihatake@yopmail.com" est connecté
+     Then   le nom de l utilisateur "Kakashi HATAKE" est affiche en haut a gauche
 
      #Etape 007: Acceder au menu recrutement par le profil RH
      When   l'utilisateur clique sur espace-RH
@@ -96,7 +96,7 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
      Then   verifier que le premier libelle_offres_rec_HR "Test automatique 4"
       And   verifier que la premiere date de creation_offres_rec_HR aujourd hui
       And   verifier que le premier status_offres_rec_HR 'Orange' et l intitule "En cours"
-      And   verifier que le premier initiateur_offres_rec_HR "TAKAGI Yasushi"
+      And   verifier que le premier initiateur_offres_rec_HR "DU SABLE Temari"
       And   verifier que le premier responsable de recrutement_offres_rec_HR vide
       And   verifier que la premiere ligne de candidature_offres_rec_HR 0
       And   verifier que la premiere ligne de l effectif a couvrir_offres_rec_HR 2
@@ -105,9 +105,9 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
 
         #Verification des champs dans la liste voir historique : bouton fleche dans la colonne Actions#
      When   l utilisateur clique sur "Voir_historique_dmd_rec_HR"
-     Then   verifier que l initiateur_voir_hist_HR "Yasushi TAKAGI"
+     Then   verifier que l initiateur_voir_hist_HR "Temari DU SABLE"
       And   verifier que la date de debut_voir_hist_HR aujourd hui
-      And   verifier que le premier validateur_voir_hist_HR "Nobuo TERASHIMA"
+      And   verifier que le premier validateur_voir_hist_HR "Gaara DU SABLE"
       And   verifier que la premiere date de debut_voir_hist_HR aujourd hui
       And   verifier que la premiere date de fin_voir_hist_HR vide
       And   verifier que la premiere decision_voir_hist_HR vide
@@ -118,8 +118,8 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
       And   l utilisateur se deconnecte
 
      #Etape 010: Connexion avec le profil N+1 du manager
-     When   l'utilisateur "nobuoterashima.cm@gmail.com" est connecté
-     Then   le nom de l utilisateur "Nobuo TERASHIMA" est affiche en haut a gauche
+     When   l'utilisateur "GaaraDUSABLE@yopmail.com" est connecté
+     Then   le nom de l utilisateur "Gaara DU SABLE" est affiche en haut a gauche
 
      #Etape 011: Acceder au menu recrutement avec le profil N+1
      When   l utilisateur clique sur "Icone_notifications"
@@ -136,9 +136,9 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
 
         #Verification des champs dans la liste voir historique pour N+1 : bouton fleche dans la colonne Actions#
      When   l utilisateur clique sur "Voir_historique_dmd_rec_sup"
-     Then   verifier que l initiateur_voir_hist_sup "Yasushi TAKAGI"
+     Then   verifier que l initiateur_voir_hist_sup "Temari DU SABLE"
       And   verifier que la date de debut_voir_hist_sup aujourd hui
-      And   verifier que le premier validateur_voir_hist_sup "Nobuo TERASHIMA"
+      And   verifier que le premier validateur_voir_hist_sup "Gaara DU SABLE"
       And   verifier que la premiere date de debut_voir_hist_sup aujourd hui
       And   verifier que la premiere date de fin_voir_hist_sup vide
       And   verifier que la premiere decision_voir_hist_sup vide
@@ -176,8 +176,8 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
      When   l utilisateur se deconnecte
 
      #Etape 015: Connexion avec le profil RH
-      And   l'utilisateur "nanakomatsu.CM@gmail.com" est connecté
-     Then   le nom de l utilisateur "Nana Komatsu" est affiche en haut a gauche
+      And   l'utilisateur "kakashihatake@yopmail.com" est connecté
+     Then   le nom de l utilisateur "Kakashi HATAKE" est affiche en haut a gauche
 
      #Etape 016: Acceder au menu recrutement par le profil RH
      When   l'utilisateur clique sur espace-RH
@@ -189,7 +189,7 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
      Then   verifier que le premier libelle_offres_rec_HR "Test automatique 4"
       And   verifier que la premiere date de creation_offres_rec_HR aujourd hui
       And   verifier que le premier status_offres_rec_HR 'Orange' et l intitule "En cours"
-      And   verifier que le premier initiateur_offres_rec_HR "TAKAGI Yasushi"
+      And   verifier que le premier initiateur_offres_rec_HR "DU SABLE Temari"
       And   verifier que le premier responsable de recrutement_offres_rec_HR vide
       And   verifier que la premiere ligne de candidature_offres_rec_HR "0"
       And   verifier que la premiere ligne de l effectif a couvrir_offres_rec_HR "2"
@@ -198,14 +198,14 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
 
          #Verification des champs dans la liste voir historique : bouton fleche dans la colonne Actions#
      When   l utilisateur clique sur "Voir_historique_dmd_rec_HR"
-     Then   verifier que l initiateur_voir_hist_HR "Yasushi TAKAGI"
+     Then   verifier que l initiateur_voir_hist_HR "Temari DU SABLE"
       And   verifier que la date de debut_voir_hist_HR aujourd hui
-      And   verifier que le premier validateur_voir_hist_HR "Nobuo TERASHIMA"
+      And   verifier que le premier validateur_voir_hist_HR "Gaara DU SABLE"
       And   verifier que la premiere date de debut_voir_hist_HR aujourd hui
       And   verifier que la premiere date de fin_voir_hist_HR aujourd hui
       And   verifier que la premiere decision_voir_hist_HR "Acceptée" et la couleur est Vert
       And   verifier que le premier commentaire_voir_hist_HR "Validation N+1"
-      And   verifier que le second validateur_voir_hist_HR "Ren Honjo"
+      And   verifier que le second validateur_voir_hist_HR "Yashamaru DU SABLE"
       And   verifier que la seconde date de debut_voir_hist_HR aujourd hui
       And   verifier que la seconde date de fin_voir_hist_HR vide
       And   verifier que la seconde  decision_voir_hist_HR vide
@@ -216,8 +216,8 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
       And   l utilisateur se deconnecte
 
      #Etape 019: Connexion avec le profil N+2
-     When   l'utilisateur "renhonjo.cm@gmail.com" est connecté
-     Then   le nom de l utilisateur "Ren HONJO" est affiche en haut a gauche
+     When   l'utilisateur "yashamarudusable@yopmail.com" est connecté
+     Then   le nom de l utilisateur "Yashamaru DU SABLE" est affiche en haut a gauche
 
      #Etape 020: Acceder au menu recrutement avec le profil N+2
       And   l utilisateur clique sur "Icone_notifications"
@@ -233,14 +233,14 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
 
         #Verification des champs dans la liste voir historique : bouton fleche dans la colonne Actions#
      When   l utilisateur clique sur "Voir_historique_dmd_rec_sup"
-     Then   verifier que l initiateur_voir_hist_sup "Yasushi TAKAGI"
+     Then   verifier que l initiateur_voir_hist_sup "Temari DU SABLE"
       And   verifier que la date de debut_voir_hist_sup aujourd hui
-      And   verifier que le premier validateur_voir_hist_sup "Nobuo TERASHIMA"
+      And   verifier que le premier validateur_voir_hist_sup "Gaara DU SABLE"
       And   verifier que la premiere date de debut_voir_hist_sup aujourd hui
       And   verifier que la premiere date de fin_voir_hist_sup aujourd hui
       And   verifier que la premiere decision_voir_hist_sup "Acceptée" et la couleur est Vert
       And   verifier que le premier commentaire_voir_hist_sup "Validation N+1"
-      And   verifier que le second validateur_voir_hist_sup "Ren Honjo"
+      And   verifier que le second validateur_voir_hist_sup "Yashamaru DU SABLE"
       And   verifier que la seconde date de debut_voir_hist_sup aujourd hui
       And   verifier que la seconde date de fin_voir_hist_sup vide
       And   verifier que la seconde  decision_voir_hist_sup vide
@@ -277,8 +277,8 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
      When   l utilisateur se deconnecte
 
     #Etape 024: Connexion avec le profil RH_Recruitment
-      And  l'utilisateur "hrrecruitment@yopmail.com" est connecté
-     Then   le nom de l utilisateur "Shin'Ichi OKAZAKI" est affiche en haut a gauche
+      And  l'utilisateur "NarutoUZUMAKI@yopmail.com" est connecté
+     Then   le nom de l utilisateur "Naruto UZUMAKI" est affiche en haut a gauche
 
      #Etape 025: Acceder au menu recrutement avec le profil RH_Recruitment
      When   l'utilisateur clique sur espace-RH
@@ -294,20 +294,20 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
      Then   verifier que le premier libelle_valid_HR_rec "Test automatique 4"
       And   verifier que la premiere date de creation_valid_HR_rec aujourd hui
       And   verifier que le premier status dans la liste_valid_HR_rec 'Orange' et l intitule "En cours"
-      And   verifier que le premier initiateur_valid_HR_rec "TAKAGI Yasushi"
+      And   verifier que le premier initiateur_valid_HR_rec "DU SABLE Temari"
       And   verifier que la premiere ligne de candidature_valid_HR_rec 0
       And   verifier que la premiere ligne de l effectif a couvrir_valid_HR_rec 2
       And   verifier que le premier lieu_valid_HR_rec "Ariana"
       And   verifier que la premiere ligne de publiee_valid_HR_rec n est pas cochee
      When   l utilisateur clique sur "Voir_historique_dmd_rec_HR"
-     Then   verifier que l initiateur_voir_hist_HR_rec est "Yasushi TAKAGI"
+     Then   verifier que l initiateur_voir_hist_HR_rec est "Temari DU SABLE"
       And   verifier que la date de debut_voir_hist_HR_rec aujourd hui
-      And   verifier que le premier validateur_voir_hist_HR_rec "Nobuo TERASHIMA"
+      And   verifier que le premier validateur_voir_hist_HR_rec "Gaara DU SABLE"
       And   verifier que la premiere date de debut_voir_hist_HR_rec aujourd hui
       And   verifier que la premiere date de fin_voir_hist_HR_rec aujourd hui
       And   verifier que la premiere decision_voir_hist_HR_rec "Acceptée" et la couleur est Vert
       And   verifier que le premier commentaire_voir_hist_HR_rec "Validation N+1"
-      And   verifier que le second validateur_voir_hist_HR_rec "Ren Honjo"
+      And   verifier que le second validateur_voir_hist_HR_rec "Yashamaru DU SABLE"
       And   verifier que la seconde date de debut_voir_hist_HR_rec aujourd hui
       And   verifier que la seconde date de fin_voir_hist_HR_rec aujourd hui
       And   verifier que la seconde  decision_voir_hist_HR_rec "Acceptée" et la couleur est Vert
@@ -322,7 +322,7 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
      Then   verifier que l intitule_valid_HR_rec "Test automatique 4"
       And   verifier que la date de creation_valid_HR_rec aujourd hui
       And   verifier que le statut de la demande_valid_HR_rec "En cours"
-      And   verifier que l initiateur_valid_HR_rec est "Yasushi TAKAGI"
+      And   verifier que l initiateur_valid_HR_rec est "Temari DU SABLE"
       And   verifier que l effectif a couvrir_valid_HR_rec 2
       And   verifier que le responsable de recrutement_valid_HR_rec vide
       And   verifier que a pourvoir_valid_HR_rec vide
@@ -353,19 +353,19 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
      When   l utilisateur clique sur "Tte_les_offres_liste_dmd_rec_mgr"
       And   wait 2000
       And   l utilisateur clique sur "Voir_historique_dmd_rec_HR"
-     Then   verifier que l initiateur_voir_hist_HR est "Yasushi TAKAGI"
+     Then   verifier que l initiateur_voir_hist_HR est "Temari DU SABLE"
       And   verifier que la date de debut_voir_hist_HR aujourd hui
-      And   verifier que le premier validateur_voir_hist_HR "Nobuo TERASHIMA"
+      And   verifier que le premier validateur_voir_hist_HR "Gaara DU SABLE"
       And   verifier que la premiere date de debut_voir_hist_HR aujourd hui
       And   verifier que la premiere date de fin_voir_hist_HR aujourd hui
       And   verifier que la premiere decision_voir_hist_HR "Acceptée" et la couleur est Vert
       And   verifier que le premier commentaire_voir_hist_HR "Validation N+1"
-      And   verifier que le second validateur_voir_hist_HR "Ren Honjo"
+      And   verifier que le second validateur_voir_hist_HR "Yashamaru DU SABLE"
       And   verifier que la seconde date de debut_voir_hist_HR aujourd hui
       And   verifier que la seconde date de fin_voir_hist_HR aujourd hui
       And   verifier que la seconde  decision_voir_hist_HR "Acceptée" et la couleur est Vert
       And   verifier que le second commentaire_voir_hist_HR "Validation N+2"
-      And   verifier que le troisieme validateur_voir_hist_HR "Shin'Ichi OKAZAKI"
+      And   verifier que le troisieme validateur_voir_hist_HR "Naruto UZUMAKI"
       And   verifier que la troisieme date de debut_voir_hist_HR aujourd hui
       And   verifier que la troisieme date de fin_voir_hist_HR aujourd hui
       And   verifier que la troisieme decision_voir_hist_HR "Acceptée" et la couleur est Vert
@@ -377,8 +377,8 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
       And   l utilisateur se deconnecte
 
      #Etape 029: Connexion avec le profil Role_Admin
-     When   l'utilisateur "KyosukeTAKAKURA1@yopmail.com" est connecté
-     Then   le nom de l utilisateur "Kyosuke TAKAKURA" est affiche en haut a gauche
+     When   l'utilisateur "TsunadeSENJU1@yopmail.com" est connecté
+     Then   le nom de l utilisateur "Tsunade SENJU" est affiche en haut a gauche
 
      #Etape 030: Verification de la demande de recrutement par le rôle RH_Admin
      When   l'utilisateur clique sur espace-RH
@@ -389,7 +389,7 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
      Then   verifier que le premier libelle_offres_rec_HR "Test automatique"
       And   verifier que la premiere date de creation_offres_rec_HR aujourd hui
       And   verifier que le premier status_offres_rec_HR 'Orange' et l intitule "En cours"
-      And   verifier que le premier initiateur_offres_rec_HR "TAKAGI Yasushi"
+      And   verifier que le premier initiateur_offres_rec_HR "DU SABLE Temari"
       And   verifier que le premier responsable de recrutement_offres_rec_HR vide
       And   verifier que la premiere ligne de candidature_offres_rec_HR "0"
       And   verifier que la premiere ligne de l effectif a couvrir_offres_rec_HR "2"
@@ -398,19 +398,19 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
 
         #Verification des champs dans la liste voir historique : bouton fleche dans la colonne Actions#
      When   l utilisateur clique sur "Voir_historique_dmd_rec_HR"
-     Then   verifier que l initiateur_voir_hist_HR "Yasushi TAKAGI"
+     Then   verifier que l initiateur_voir_hist_HR "Temari DU SABLE"
       And   verifier que la date de debut_voir_hist_HR aujourd hui
-      And   verifier que le premier validateur_voir_hist_HR "Nobuo TERASHIMA"
+      And   verifier que le premier validateur_voir_hist_HR "Gaara DU SABLE"
       And   verifier que la premiere date de debut_voir_hist_HR aujourd hui
       And   verifier que la premiere date de fin_voir_hist_HR aujourd hui
       And   verifier que la premiere decision_voir_hist_HR "Acceptée" et la couleur est Vert
       And   verifier que le premier commentaire_voir_hist_HR "Validation N+1"
-      And   verifier que le second validateur_voir_hist_HR "Ren Honjo"
+      And   verifier que le second validateur_voir_hist_HR "Yashamaru DU SABLE"
       And   verifier que la seconde date de debut_voir_hist_HR aujourd hui
       And   verifier que la seconde date de fin_voir_hist_HR aujourd hui
       And   verifier que la seconde  decision_voir_hist_HR "Acceptée" et la couleur est Vert
       And   verifier que le second commentaire_voir_hist_HR "Validation N+2"
-      And   verifier que le troisieme validateur_voir_hist_HR "Shin'Ichi OKAZAKI"
+      And   verifier que le troisieme validateur_voir_hist_HR "Naruto UZUMAKI"
       And   verifier que la troisieme date de debut_voir_hist_HR aujourd hui
       And   verifier que la troisieme date de fin_voir_hist_HR aujourd hui
       And   verifier que la troisieme decision_voir_hist_HR "Acceptée" et la couleur est Vert
@@ -426,7 +426,7 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
      Then   verifier que l intitule_valid_HR_rec "Test automatique 4"
       And   verifier que la date de creation_valid_HR_rec aujourd hui
       And   verifier que le statut de la demande_valid_HR_rec "En cours"
-      And   verifier que l initiateur_valid_HR_rec est "Yasushi TAKAGI"
+      And   verifier que l initiateur_valid_HR_rec est "Temari DU SABLE"
       And   verifier que l effectif a couvrir_valid_HR_rec 2
       And   verifier que le responsable de recrutement_valid_HR_rec vide
       And   verifier que a pourvoir_valid_HR_rec vide
@@ -463,7 +463,7 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
      Then   verifier que le premier libelle_valid_HR_rec "Test automatique 4"
       And   verifier que la premiere date de creation dans la liste aujourd hui
       And   verifier que le premier status_valid_HR_rec 'Vert' et l intitule "Validée"
-      And   verifier que le premier initiateur_valid_HR_rec "TAKAGI Yasushi"
+      And   verifier que le premier initiateur_valid_HR_rec "DU SABLE Temari"
       And   verifier que la premiere ligne de candidature_valid_HR_rec 0
       And   verifier que la premiere ligne de l effectif a couvrir_valid_HR_rec 2
       And   verifier que le premier lieu_valid_HR_rec "Ariana"
@@ -471,24 +471,24 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
 
         #Verification des champs dans la liste voir historique : bouton fleche dans la colonne Actions#
      When   l utilisateur clique sur "Voir_historique_dmd_rec_HR"
-     Then   verifier que l initiateur_voir_hist_HR "Yasushi TAKAGI"
+     Then   verifier que l initiateur_voir_hist_HR "Temari DU SABLE"
       And   verifier que la date de debut_voir_hist_HR aujourd hui
-      And   verifier que le premier validateur_voir_hist_HR "Nobuo TERASHIMA"
+      And   verifier que le premier validateur_voir_hist_HR "Gaara DU SABLE"
       And   verifier que la premiere date de debut_voir_hist_HR aujourd hui
       And   verifier que la premiere date de fin_voir_hist_HR aujourd hui
       And   verifier que la premiere decision_voir_hist_HR "Acceptée" et la couleur est Vert
       And   verifier que le premier commentaire_voir_hist_HR "Validation N+1"
-      And   verifier que le second validateur_voir_hist_HR "Ren Honjo"
+      And   verifier que le second validateur_voir_hist_HR "Yashamaru DU SABLE"
       And   verifier que la seconde date de debut_voir_hist_HR aujourd hui
       And   verifier que la seconde date de fin_voir_hist_HR aujourd hui
       And   verifier que la seconde  decision_voir_hist_HR "Acceptée" et la couleur est Vert
       And   verifier que le second commentaire_voir_hist_HR "Validation N+2"
-      And   verifier que le troisieme validateur_voir_hist_HR "Shin'Ichi OKAZAKI"
+      And   verifier que le troisieme validateur_voir_hist_HR "Naruto UZUMAKI"
       And   verifier que la troisieme date de debut_voir_hist_HR aujourd hui
       And   verifier que la troisieme date de fin_voir_hist_HR aujourd hui
       And   verifier que la troisieme decision_voir_hist_HR "Acceptée" et la couleur est Vert
       And   verifier que le troisieme commentaire_voir_hist_HR "Validation Role RH_Recruitment"
-      And   verifier que le quatrieme validateur_voir_hist_HR "Kyosuke TAKAKURA"
+      And   verifier que le quatrieme validateur_voir_hist_HR "Tsunade SENJU"
       And   verifier que la quatrieme date de debut_voir_hist_HR aujourd hui
       And   verifier que la quatrieme date de fin_voir_hist_HR aujourd hui
       And   verifier que la quatrieme decision_voir_hist_HR "Rejetée" et la couleur est rouge
@@ -499,8 +499,8 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
       And   l utilisateur se deconnecte
 
      #Etape 032: Connexion avec le profil manager
-     When   l'utilisateur "yasushitakagi.cm@gmail.com" est connecté
-     Then   le nom de l utilisateur "Yasushi TAKAGI" est affiche en haut a gauche
+     When   l'utilisateur "temaridusable@yopmail.com" est connecté
+     Then   le nom de l utilisateur "Temari DU SABLE" est affiche en haut a gauche
 
      #Etape 033: Verification de la reception de la notification de Rejet role admin par le manager
      When   l utilisateur clique sur "Icone_notifications"
@@ -514,25 +514,25 @@ Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Adm
 
         #Verification des champs dans le modal voir historique : bouton fleche dans la colonne Actions#
      When   l utilisateur clique sur "Voir_historique_dmd_rec_mgr"
-     Then   verifier que l initiateur_voir_hist_mgr "Yasushi TAKAGI"
+     Then   verifier que l initiateur_voir_hist_mgr "Temari DU SABLE"
       And   verifier que la date de debut_voir_hist_mgr aujourd hui
       And   verifier que la date de fin_voir_hist_mgr aujourd hui
-      And   verifier que le premier validateur_voir_hist_mgr "Nobuo TERASHIMA"
+      And   verifier que le premier validateur_voir_hist_mgr "Gaara DU SABLE"
       And   verifier que la premiere date de debut_voir_hist_mgr aujourd hui
       And   verifier que la premiere date de fin_voir_hist_mgr aujourd hui
       And   verifier que la premiere decision_voir_hist_mgr "Acceptée" et la couleur est vert
       And   verifier que le premier commentaire_voir_hist_mgr "Validation N+1"
-      And   verifier que le second validateur_voir_hist_mgr "Ren HONJO"
+      And   verifier que le second validateur_voir_hist_mgr "Yashamaru DU SABLE"
       And   verifier que la seconde date de debut_voir_hist_mgr aujourd hui
       And   verifier que la seconde date de fin_voir_hist_mgr aujourd hui
       And   verifier que la seconde  decision_voir_hist_mgr "Acceptée" et la couleur est vert
       And   verifier que le second commentaire_voir_hist_mgr "Validation N+2"
-      And   verifier que le troisieme validateur_voir_hist_mgr "Shin'Ichi OKAZAKI"
+      And   verifier que le troisieme validateur_voir_hist_mgr "Naruto UZUMAKI"
       And   verifier que la troisieme date de debut_voir_hist_mgr aujourd hui
       And   verifier que la troisieme date de fin_voir_hist_mgr aujourd hui
       And   verifier que la troisieme decision_voir_hist_mgr "Acceptée" et la couleur est Vert
       And   verifier que le troisieme commentaire_voir_hist_mgr "Validation Role RH_Recruitment"
-      And   verifier que le quatrieme validateur_voir_hist_mgr "Kyosuke Takakura"
+      And   verifier que le quatrieme validateur_voir_hist_mgr "Tsunade SENJU"
       And   verifier que la quatrieme date de debut_voir_hist_mgr aujourd hui
       And   verifier que la quatrieme date de fin_voir_hist_mgr aujourd hui
       And   verifier que la quatrieme decision_voir_hist_mgr "Rejetée" et la couleur est rouge
