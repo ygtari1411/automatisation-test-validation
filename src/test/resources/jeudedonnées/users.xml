@@ -69,4 +69,24 @@
         <password>advyteam</password>
     </user>
 
+    <user>
+        <username>faten.mzali@yopmail.com</username>
+        <password>faten*11</password>
+    </user>
+
+    <user>
+        <username>haf01.collaborateur@gmail.com</username>
+        <password>haf01</password>
+    </user>
+
+    <user>
+        <username>haf02.manager@gmail.com</username>
+        <password>haf02</password>
+    </user>
+
+    <user>
+        <username>haf03.expert@gmail.com</username>
+        <password>haf03</password>
+    </user>
+
 </users>
