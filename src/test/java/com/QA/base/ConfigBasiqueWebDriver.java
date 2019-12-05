@@ -66,6 +66,20 @@ public class ConfigBasiqueWebDriver {
                     driver = new RemoteWebDriver(grid, optionsF);
                     break;
 
+                case "chrome-headless":
+                    ChromeOptions optionsCh = new ChromeOptions();
+                    optionsCh.addArguments("--headless");
+                    optionsCh.addArguments("start-maximized");
+                    optionsCh.addArguments("enable-automation");
+                    optionsCh.addArguments("--no-sandbox");
+                    optionsCh.addArguments("--disable-infobars");
+                    optionsCh.addArguments("--disable-dev-shm-usage");
+                    optionsCh.addArguments("--disable-browser-side-navigation");
+                    optionsCh.addArguments("--disable-gpu");
+                    logger.info("Lancement d'un navigateur chrome en mode Headless dans un docker container");
+                    driver = new RemoteWebDriver(grid, optionsCh);
+                    break;
+
                 default:
                     logger.warning("le choix du navigateur n'est pas correct");
 
