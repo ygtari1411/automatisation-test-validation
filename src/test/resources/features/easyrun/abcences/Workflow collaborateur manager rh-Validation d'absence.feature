@@ -27,8 +27,8 @@ Feature: Absences: Validation d'une demande d'absence au workflow collaborateur 
     And l utilisateur clique sur "Onglet_Paramétrage"
     And l utilisateur clique sur "Rubrique_Motifs_absence"
     And l utilisateur clique sur "Ajouter_motif"
-    And l utilisateur saisit "CP2020" dans le champs "Code_Ajout_Motif_Abcences"
-    And l utilisateur saisit "Congés Payés" dans le champs "Libellé_Ajout_Motif_Abcences"
+    And l utilisateur saisit "CPWorkflow2" dans le champs "Code_Ajout_Motif_Abcences"
+    And l utilisateur saisit "Congés Payés Workflow2" dans le champs "Libellé_Ajout_Motif_Abcences"
     And l utilisateur selectionne "Règle" dans la liste deroulante "Type_Ajout_Motif_Abcences"
     And l utilisateur selectionne "Role utilisateur" dans la liste deroulante "Utilisé_par_Ajout_Motif_Abcences"
     And l utilisateur selectionne "Groupement par défaut" dans la liste deroulante "Groupement_de_motifs_Ajout_Motif_Abcences"
@@ -51,7 +51,7 @@ Feature: Absences: Validation d'une demande d'absence au workflow collaborateur 
     When l utilisateur clique sur "Bouton_Mes_Absences"
     # Cliquer sur une journée libre représentée par une case blanche au niveau du calendrier
     And l utilisateur selectionne une case de journée libre dans le calendrier
-    And l utilisateur selectionne "Congés payés" dans la liste deroulante "Motif_d_absence_Ajout_Demande_Absence_Collaborateur"
+    And l utilisateur selectionne "Congés Payés Workflow2" dans la liste deroulante "Motif_d_absence_Ajout_Demande_Absence_Collaborateur"
     And l utilisateur selectionne "Mehrez Somrani" dans la liste deroulante "Backup_Ajout_Demande_Absence_Collaborateur"
     And l'utilisateur upload un justificatif
     And l utilisateur clique sur "Bouton_Envoyer_Ajout_Demande_Absence_Collaborateur"
