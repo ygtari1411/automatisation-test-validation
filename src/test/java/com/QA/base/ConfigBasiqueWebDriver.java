@@ -58,11 +58,13 @@ public class ConfigBasiqueWebDriver {
 
                 case "chrome":
                     logger.info("Lancement d'un navigateur chrome dans un docker container ");
+                    optionsC.addArguments("--window-size=1920,1080");
                     driver = new RemoteWebDriver(grid, optionsC);
                     break;
 
                 case "firefox":
                     logger.info("Lancement d'un navigateur firefox dans un docker container ");
+                    optionsF.addArguments("--window-size=1920,1080");
                     driver = new RemoteWebDriver(grid, optionsF);
                     break;
 
@@ -70,6 +72,7 @@ public class ConfigBasiqueWebDriver {
                     ChromeOptions optionsCh = new ChromeOptions();
                     optionsCh.addArguments("--headless");
                     optionsCh.addArguments("start-maximized");
+                    optionsCh.addArguments("--window-size=1920,1080");
                     optionsCh.addArguments("enable-automation");
                     optionsCh.addArguments("--no-sandbox");
                     optionsCh.addArguments("--disable-infobars");
@@ -104,6 +107,7 @@ public class ConfigBasiqueWebDriver {
                     ChromeOptions optionsCh = new ChromeOptions();
                     optionsCh.addArguments("--headless");
                     optionsCh.addArguments("start-maximized");
+                    optionsCh.addArguments("--window-size=1920,1080");
                     optionsCh.addArguments("enable-automation");
                     optionsCh.addArguments("--no-sandbox");
                     optionsCh.addArguments("--disable-infobars");
