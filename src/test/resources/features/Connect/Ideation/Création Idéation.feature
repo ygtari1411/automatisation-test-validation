@@ -24,7 +24,7 @@ Feature: Ideation
 
     And l utilisateur clique sur "Widget_Idéation"
     And l utilisateur clique sur "Proposer_une_idée"
-    And l utilisateur selectionne "Standard" dans la liste deroulante "Liste_Deroulante_Catégorie_Idée"
+    And l utilisateur selectionne "Entreprise" dans la liste deroulante "Liste_Deroulante_Catégorie_Idée"
     And l utilisateur saisit "C'est un test automatique de l'ajout d'une idée" dans le champs "Libellé_Création_Idée"
     And l utilisateur selectionne "Tous les utilisateurs" dans la liste deroulante "Liste_Deroulante_Timeline_Création_Idéation"
     And l utilisateur saisit "Ceci est la description de l'idée" dans le champs "Description_Création_Idée"

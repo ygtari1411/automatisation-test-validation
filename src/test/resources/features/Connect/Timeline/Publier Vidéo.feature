@@ -20,10 +20,10 @@
       #Etape 2 : Publication de la vidéo
 
       When l utilisateur clique sur "Publier_une_vidéo"
-      And l utilisateur uploade une vidéo
+      And l utilisateur upload une vidéo
       And l utilisateur selectionne "Tous les utilisateurs" dans la liste deroulante "Liste_Deroulante_Timeline"
       And l utilisateur clique sur "Bouton_Publication_Statut"
 
       #Etape 3 : Vérification de la publication
 
-      Then Vérifier que l album est publié
+      Then Vérifier que la vidéo est publié
