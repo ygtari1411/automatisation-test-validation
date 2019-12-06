@@ -26,4 +26,4 @@
 
       #Etape 3 : Vérification de la publication
 
-      Then Vérifier que la vidéo est publié
+      Then Vérifier que la vidéo est publiée
