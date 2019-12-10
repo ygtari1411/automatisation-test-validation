@@ -76,3 +76,7 @@ Feature: Référentiels : Création Poste
     # Etape 9 : Validation finale
     And l utilisateur clique sur "Sauvegarder_Poste"
     Then vérifier que le message "Opération effectuée avec succès" s affiche
+    And wait 2000
+
+    # Etape 10 : Déconnexion
+    And l utilisateur se deconnecte

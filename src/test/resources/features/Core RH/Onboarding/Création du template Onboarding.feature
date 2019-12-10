@@ -101,3 +101,6 @@ Feature: Onboarding : Creation du template Onboarding
     And l utilisateur clique sur "Obligatoire_fiche_de_poste"
     And l utilisateur clique sur "Enregistrer_Template_Onboarding"
     Then vérifier que le message "Opération effectuée avec succès" s affiche
+
+    # Etape 10 : Déconnexion
+    And l utilisateur se deconnecte

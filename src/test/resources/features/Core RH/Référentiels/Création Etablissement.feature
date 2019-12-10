@@ -58,3 +58,7 @@ Feature: Référentiels : Création établissement
     And l utilisateur clique sur "Valider_coordonnées_bancaire_établissement"
     And l utilisateur clique sur "JS_Sauvegarder_établissement"
     Then vérifier que le message "Opération effectuée avec succès" s affiche
+    And wait 2000
+
+    # Etape 6 : Déconnexion
+    And l utilisateur se deconnecte

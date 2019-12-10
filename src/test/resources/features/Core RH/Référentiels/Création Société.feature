@@ -83,3 +83,7 @@ Feature: Référentiels : Création société
     And l utilisateur clique sur "Valider_véhicules_société"
     And l utilisateur clique sur "Sauvegarder_société"
     Then vérifier que le message "Opération effectuée avec succès" s affiche
+    And wait 2000
+
+    # Etape 8 : Déconnexion
+    And l utilisateur se deconnecte

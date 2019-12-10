@@ -50,3 +50,6 @@ Feature: Référentiels : Création Entité organisationnelle
     And l utilisateur selectionne "3060" dans la liste deroulante "Code_postal_EO"
     And l utilisateur clique sur "Sauvegarder_EO"
     Then vérifier que le message "Opération effectuée avec succès" s affiche
+
+    # Etape 6 : Déconnexion
+    And l utilisateur se deconnecte

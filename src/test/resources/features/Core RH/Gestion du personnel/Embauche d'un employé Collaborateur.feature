@@ -73,7 +73,7 @@ Feature: Gestion du personnel : Embauche d'un employé Collaborateur
     #And l utilisateur clique sur "Sauvegarder_Collaborateur"
     #Then vérifier que le message "Opération effectuée avec succès" s affiche
 
-    #Etape 6 : Ajout d'un salaire
+    # Etape 6 : Ajout d'un salaire
     When l utilisateur clique sur "Rémunération_collaborateur"
     And l utilisateur clique sur "Ajouter_un_salaire_collaborateur"
     And wait 2000
@@ -87,5 +87,7 @@ Feature: Gestion du personnel : Embauche d'un employé Collaborateur
     And wait 8000
     And l utilisateur clique sur "Sauvegarder_Collaborateur"
     Then vérifier que le message "Opération effectuée avec succès" s affiche
+    And wait 2000
 
-
+    # Etape 7 : Déconnexion
+  And  l utilisateur se deconnecte
