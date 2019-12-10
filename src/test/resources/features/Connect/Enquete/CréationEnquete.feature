@@ -20,22 +20,23 @@ Feature: Enquete
 
       #Etape2 : Ajouter une enquete
 
-    When l'utilisateur clique sur espace-RH
-    And l'utilisateur clique sur le module Connect
-    And l'utilisateur clique sur Enquete
-    And l'utilisateur clique sur le bouton ajouter une Enquete
+    When l utilisateur clique sur "Bouton_Role_RH"
+    And l utilisateur clique sur "Bouton_Menu_Etendu"
+    And l utilisateur clique sur "Bouton_Connect"
+    And l utilisateur clique sur "Bouton_Enquete"
 
     #Etape3 : Remplir tous les champs d'une enquete
 
-    When le modal création Enquete s'affiche
-    And l'utilisateur remplit Libellé Enquete par "Enquete 1"
-    And l'utilisateur remplit Population par "test population enquete"
-    And l'utilisateur remplit Réponse 1 par "oui"
-    And l'utilisateur remplit Réponse 2 par "non"
-    And l'utilisateur remplit Axe par "Chapitre 1"
-    And l'utilisateur remplit Question 1 par "tester question"
-    And l'utilisateur clique sur le bouton confirmer ajout enquete
+    When l utilisateur clique sur "Bouton_Ajouter_Enquete"
+    And l utilisateur saisit "Enquete création" dans le champs "Libelle_Enquete"
+    And l utilisateur saisit "test population enquete" dans le champs "Population_Enquete"
+    And l utilisateur saisit "reponse 1" dans le champs "Reponse_1_enquete"
+    And l utilisateur saisit "reponse 2" dans le champs "Reponse_2_enquete"
+    And l utilisateur saisit "Chapitre1" dans le champs "Axe_Enquete"
+    And l utilisateur saisit "tester question" dans le champs "Question_Creation_Enquete"
+    And l utilisateur clique sur "Bouton_Confirmer_Ajouter_Enquete"
 
     #Etape4 : Vérifier l'ajout de l'enquete
+
    Then vérifier la création de l'enquete
 

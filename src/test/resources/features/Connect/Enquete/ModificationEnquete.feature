@@ -11,7 +11,7 @@
 
 Feature: Enquete
 
-  Scenario: Suppression d'une enquete
+  Scenario: Modification d'une enquete
 
       #Etape1 : Se connecter au TNR
 
@@ -20,37 +20,37 @@ Feature: Enquete
 
       #Etape2 : Ajouter une enquete
 
-    When l'utilisateur clique sur espace-RH
-    And l'utilisateur clique sur le module Connect
-    And l'utilisateur clique sur Enquete
-    And l'utilisateur clique sur le bouton ajouter une Enquete
+    When l utilisateur clique sur "Bouton_Role_RH"
+    And l utilisateur clique sur "Bouton_Menu_Etendu"
+    And l utilisateur clique sur "Bouton_Connect"
+    And l utilisateur clique sur "Bouton_Enquete"
 
     #Etape3 : Remplir tous les champs d'une enquete
 
-    When le modal création Enquete s'affiche
-    And l'utilisateur remplit Libellé Enquete par "Enquete 1"
-    And l'utilisateur remplit Population par "test population enquete"
-    And l'utilisateur remplit Réponse 1 par "oui"
-    And l'utilisateur remplit Réponse 2 par "non"
-    And l'utilisateur remplit Axe par "Chapitre 1"
-    And l'utilisateur remplit Question 1 par "tester question"
-    And l'utilisateur clique sur le bouton confirmer ajout enquete
-    And l'utilisateur clique sur le bouton modifier enquete
+    When l utilisateur clique sur "Bouton_Ajouter_Enquete"
+    And l utilisateur saisit "Enquete" dans le champs "Libelle_Enquete"
+    And l utilisateur saisit "test population enquete" dans le champs "Population_Enquete"
+    And l utilisateur saisit "reponse 1" dans le champs "Reponse_1_enquete"
+    And l utilisateur saisit "reponse 2" dans le champs "Reponse_2_enquete"
+    And l utilisateur saisit "Chapitre1" dans le champs "Axe_Enquete"
+    And l utilisateur saisit "tester question" dans le champs "Question_Creation_Enquete"
+    And l utilisateur clique sur "Bouton_Confirmer_Ajouter_Enquete"
 
     #Etape4 : Modifier une enquete et confirmer la modification
 
-    When La fenêtre de modification s'affiche
-    And l'utilisateur modifie Libellé Enquete par "Enquete 1 modifié"
-    And l'utilisateur modifie Population par ajouter une personne " amal chograni "
-    And l'utilisateur remplit Réponse 1 par "oui modifié"
-    And l'utilisateur remplit Réponse 2 par "non modifié"
-    And l'utilisateur remplit Axe par "Chapitre 1 modifié"
-    And l'utilisateur remplit Question 1 par "tester question modifié"
-    And l'utilisateur clique sur le bouton modifié enquete crée
-    And l'utilisateur clique sur le bouton lancer enquete
-    And l utilisateur se deconnecte
-      #Etape5 : Vérifier que la mise à jour du sondage a été effectué avec succés
+    And l utilisateur clique sur "Bouton_Options_Enquete"
+    When l utilisateur clique sur "Bouton_Modifier_Enquete"
+    And l utilisateur saisit "  modifié" dans le champs "Libelle_Enquete"
+    And l utilisateur saisit "test population enquete modifie" dans le champs "Population_Enquete"
+    And l utilisateur saisit " oui" dans le champs "Reponse_1_enquete"
+    And l utilisateur saisit " non" dans le champs "Reponse_2_enquete"
+    And l utilisateur saisit " modifié" dans le champs "Axe_Enquete"
+    And l utilisateur saisit " vérifié" dans le champs "Question_Modification_Enquete"
+    And l utilisateur clique sur "Bouton_Confirmer_Modifier_Enquete"
+    And l utilisateur clique sur "Bouton_Lancer_Enquete"
 
-    When l'utilisateur "amal chograni" est connecté
-    And l'utilisateur clique sur sondage
+      #Etape5 : Vérifier que la mise à jour de l'enquete a été effectuée avec succés
+
+    And l utilisateur se deconnecte
+    And l'utilisateur "amal.chograni@yopmail.com" est connecté
     Then vérifier que l'enquete a été modifié correctement
