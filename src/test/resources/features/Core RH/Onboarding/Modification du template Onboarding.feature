@@ -26,7 +26,7 @@ Feature: Onboarding : Modification du template Onboarding
 
     # Etape 3 : Modification du template
   When l utilisateur clique sur "Modifier_template_onboarding"
-    ## Une fonction standar "modifie" doit être créé de la même menière que saisit, selectionne, etc ....##
+    ## Une fonction standard "modifie" doit être créé de la même menière que saisit, selectionne, etc ....##
     And l utilisateur modifie "Template_Test_QA" dans le champs "Nom_du_template_onboarding"
     And l utilisateur modifie "80" dans le champs "Durée_d'affichage_(en_mois)_onboarding"
     And l utilisateur clique sur "Enregistrer_Ajout_Template_onboarding"
