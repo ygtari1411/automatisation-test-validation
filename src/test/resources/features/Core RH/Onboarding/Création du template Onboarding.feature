@@ -1,5 +1,5 @@
 # Auteur: Hafedh Tlili
-# Feature: Gestion du personnel
+# Feature: Onboarding
 # Scénario: Création du template Onboarding
 # Date de création: 09/12/2019
 
@@ -49,7 +49,7 @@ Feature: Onboarding : Creation du template Onboarding
     And l utilisateur clique sur "Première_connexion_onboarding"
     # And l utilisateur selectionne "Français" dans la liste deroulante "Langue_première_connexion_onboarding"
     And l utilisateur saisit "Bienvenue dans votre espace collaborateur Accretio" dans le champs "Texte_de_la_première_connexion_onboarding"
-    Then l utilisateur clique sur "Enregistrer_Template_Onboarding"
+    And l utilisateur clique sur "Enregistrer_Template_Onboarding"
     Then vérifier que le message "Opération effectuée avec succès" s affiche
 
 
