@@ -304,5 +304,36 @@ public class EtapesCommunes {
 
 
     }
+
+    @And("l utilisateur modifie {string} dans le champs {string}")
+    public void lUtilisateurModifieDansLeChamps(String nouveautexte, String champsamodifier) throws IllegalAccessException {
+
+        String locator = "vide";
+        listededonnees.add(champsamodifier);
+        listededonnees.add(nouveautexte);
+        for (List<Field> f : ListeGlobaleLocators) {
+            for (Field x : f) {
+                if (x.getName().equals(champsamodifier)) {
+                    locator = (String) x.get(x);
+                    break;
+                }
+            }
+            if (!locator.equals("vide")) {
+                break;
+            }
+        }
+
+        if (Character.toString(locator.charAt(0)).contains("/")) {
+            driver.findElement(By.xpath(locator)).clear();
+            driver.findElement(By.xpath(locator)).sendKeys(nouveautexte);
+        } else if (locator.contains("[") || Character.toString(locator.charAt(0)).contains(".")) {
+            driver.findElement(By.cssSelector(locator)).clear();
+            driver.findElement(By.cssSelector(locator)).sendKeys(nouveautexte);
+        } else {
+            driver.findElement(By.id(locator)).clear();
+            driver.findElement(By.id(locator)).sendKeys(nouveautexte);
+        }
+
+    }
 }
 

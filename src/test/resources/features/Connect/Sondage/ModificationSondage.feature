@@ -23,27 +23,28 @@
 
     When l utilisateur clique sur "Bouton_Role_RH"
     And l utilisateur clique sur "Bouton_Menu_Etendu"
-    And l utilisateur clique sur "Bouton_Connect"
+    And l utilisateur clique sur "Bouton_Module_Connect"
     And l utilisateur clique sur "Bouton_Sondage"
     And l utilisateur clique sur "Bouton_Ajouter_Sondage"
+    And   wait 3000
 
       #Etape3 : Remplir tous les champs d'un sondage
 
-    When le modal création Sondage s'affiche
-    And l utilisateur saisit "Sondage" dans le champs "Question1"
+    And l utilisateur saisit "Sondage" dans le champs "Question1_Creation_Sondage"
     And l utilisateur saisit "oui" dans le champs "Reponse_1_sondage"
-    And l utilisateur saisit "non" dans le champs "Réponse_2_sondage"
-    And l utilisateur clique sur le bouton "Bouton_Confirmer_Ajout_Sondage"
+    And l utilisateur saisit "non" dans le champs "Reponse_2_sondage"
+    And l utilisateur clique sur "Bouton_Confirmer_Ajout_Sondage"
+    And   wait 3000
 
       #Etape4 : Modifier un sondage et confirmer la modification
 
     And l utilisateur clique sur "Bouton_Options_Sondage"
     And l utilisateur clique sur "Bouton_Modifier_Sondage"
-    When La fenêtre de modification s'affiche
-    And l utilisateur saisit " modifié" dans le champs "Question1"
-    And l utilisateur saisit " oui" dans le champs "Réponse1_sondage"
-    And l utilisateur saisit " non" dans le champs "Réponse2_sondage"
+    And l utilisateur saisit " modifié" dans le champs "Question1_Modification_Sondage"
+    And l utilisateur saisit " oui" dans le champs "Reponse_1_sondage"
+    And l utilisateur saisit " non" dans le champs "Reponse_2_sondage"
     And l utilisateur clique sur "Bouton_Confirmer_Modif_Sondage"
+    And   wait 3000
 
       #Etape5 : Vérifier que la mise à jour du sondage a été effectué avec succés
 

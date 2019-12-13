@@ -22,25 +22,25 @@
 
     When l utilisateur clique sur "Bouton_Role_RH"
     And l utilisateur clique sur "Bouton_Menu_Etendu"
-    And l utilisateur clique sur "Bouton_Connect"
+    And l utilisateur clique sur "Bouton_Module_Connect"
     And l utilisateur clique sur "Bouton_Sondage"
     And l utilisateur clique sur "Bouton_Ajouter_Sondage"
 
       #Etape3 : Remplir tous les champs d'un sondage
 
-    When le modal création Sondage s'affiche
-    And l utilisateur saisit "Sondage suppression" dans le champs "Question1"
+    And l utilisateur saisit "Sondage suppression" dans le champs "Question1_Creation_Sondage"
     And l utilisateur saisit "oui" dans le champs "Reponse_1_sondage"
-    And l utilisateur saisit "non" dans le champs "Réponse_2_sondage"
+    And l utilisateur saisit "non" dans le champs "Reponse_2_sondage"
     And l utilisateur clique sur "Bouton_Confirmer_Ajout_Sondage"
+    And   wait 3000
 
       #Etape4 : Confirmer la suppression du sondage
 
     And l utilisateur clique sur "Bouton_Options_Sondage"
     And l utilisateur clique sur "Bouton_Supprimer_Sondage"
-    When La fenêtre pour confirmer la suppression s'affiche
     And l utilisateur clique sur "Bouton_Confirmer_Supprimer_Sondage"
+    And   wait 3000
 
       #Etape5 : Vérifier que la suppression d'un sondage a été effectué avec succés
 
-      Then vérifier la suppression correct du Sondage
+    Then vérifier la suppression correct du Sondage

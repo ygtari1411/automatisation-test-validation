@@ -22,17 +22,17 @@
 
       When l utilisateur clique sur "Bouton_Role_RH"
       And l utilisateur clique sur "Bouton_Menu_Etendu"
-      And l utilisateur clique sur "Bouton_Connect"
+      And l utilisateur clique sur "Bouton_Module_Connect"
       And l utilisateur clique sur "Bouton_Sondage"
       And l utilisateur clique sur "Bouton_Ajouter_Sondage"
 
       #Etape3 : Remplir tous les champs d'un sondage
 
-      When le modal création Sondage s'affiche
-      And l utilisateur saisit "Sondage création" dans le champs "Question1"
+      And l utilisateur saisit "Sondage création" dans le champs "Question1_Creation_Sondage"
       And l utilisateur saisit "oui" dans le champs "Reponse_1_sondage"
-      And l utilisateur saisit "non" dans le champs "Réponse_2_sondage"
-      And l utilisateur clique sur le bouton "Bouton_Confirmer_Ajout_Sondage"
+      And l utilisateur saisit "non" dans le champs "Reponse_2_sondage"
+      And l utilisateur clique sur "Bouton_Confirmer_Ajout_Sondage"
+      And   wait 3000
 
       #Etape4 : Vérifier l'ajout du sondage
 
