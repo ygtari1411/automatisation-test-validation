@@ -32,5 +32,8 @@ public class SondageLocators {
     public static final String Champ_Heure_Fin_Sondage="//*[@id=\"popup\"]/div[1]/section[2]/div[2]/div[1]/section/div/div/timepicker/table/tbody/tr[2]/td[1]/input";
     public static final String Bouton_Format_Horaire_Sondage="//*[@id=\"popup\"]/div[1]/section[2]/div[2]/div[1]/section/div/div/timepicker/table/tbody/tr[2]/td[3]/button";
     public static final String Sondage_JoursRestants_Afficher="//*[@id=\"sondages\"]/acc-portal-survey/div[2]/div/div/i";
+    public static final String Bouton_Reponse_1_Sondage_Portail="//*[@id=\"sondages\"]/acc-portal-survey/div[2]/span[2]/span[1]/span/label/span";
+    public static final String Bouton_Voter_Sondage="//*[@id=\"sondages\"]/acc-portal-survey/div[2]/div/button";
+    public static final String Pourcentage_Sondage_Afficher="/html/body/app-root/app-layout/div/section/div/acc-connect-survey-container/div/div[2]/acc-connect-survey-table/p-datatable/div/div[1]/table/tbody/tr[1]/td[6]/span/div/div[1]/span[1]/h6/span";
 
 }
