@@ -25,6 +25,7 @@
       And l utilisateur clique sur "Bouton_Module_Connect"
       And l utilisateur clique sur "Bouton_Sondage"
       And l utilisateur clique sur "Bouton_Ajouter_Sondage"
+      And   wait 3000
 
       #Etape3 : Remplir tous les champs d'un sondage
 

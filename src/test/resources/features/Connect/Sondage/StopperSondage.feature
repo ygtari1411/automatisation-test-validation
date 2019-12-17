@@ -44,7 +44,9 @@
     #Etape5 : Stopper un sondage
 
     And l utilisateur clique sur "Bouton_Options_Sondage"
+    And   wait 3000
     And l utilisateur clique sur "Bouton_Stopper_Sondage"
+    And   wait 3000
     And l utilisateur clique sur "Bouton_Confirmer_Stop_Sondage"
     And   wait 3000
 

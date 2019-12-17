@@ -41,6 +41,7 @@ Feature: Sondage
     #Etape4 : Cloturer un sondage
 
     And l utilisateur clique sur "Bouton_Options_Sondage"
+    And   wait 3000
     And l utilisateur clique sur "Bouton_Cloturer_Sondage"
     And   wait 3000
     And l utilisateur clique sur "Bouton_Confirmer_Cloture_Sondage"

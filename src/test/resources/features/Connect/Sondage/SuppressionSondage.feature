@@ -37,7 +37,9 @@
       #Etape4 : Confirmer la suppression du sondage
 
     And l utilisateur clique sur "Bouton_Options_Sondage"
+    And   wait 3000
     And l utilisateur clique sur "Bouton_Supprimer_Sondage"
+    And   wait 3000
     And l utilisateur clique sur "Bouton_Confirmer_Supprimer_Sondage"
     And   wait 3000
 

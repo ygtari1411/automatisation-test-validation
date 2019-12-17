@@ -39,7 +39,9 @@
       #Etape4 : Modifier un sondage et confirmer la modification
 
     And l utilisateur clique sur "Bouton_Options_Sondage"
+    And   wait 3000
     And l utilisateur clique sur "Bouton_Modifier_Sondage"
+    And   wait 3000
     And l utilisateur saisit " modifié" dans le champs "Question1_Modification_Sondage"
     And l utilisateur saisit " oui" dans le champs "Reponse_1_sondage"
     And l utilisateur saisit " non" dans le champs "Reponse_2_sondage"

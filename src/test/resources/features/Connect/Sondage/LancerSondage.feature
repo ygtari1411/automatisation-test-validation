@@ -38,7 +38,9 @@ Feature: Sondage
      #Etape4 : Lancer un sondage
 
     And l utilisateur clique sur "Bouton_Options_Sondage"
+    And   wait 3000
     And l utilisateur clique sur "Bouton_Lancer_Sondage"
+    And   wait 3000
     And l utilisateur clique sur "Bouton_Confirmer_Lancer_Sondage"
     And   wait 3000
 
