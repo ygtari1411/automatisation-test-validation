@@ -45,7 +45,12 @@ public class EtapesCommunes {
     @And("l'utilisateur {string} est connecté")
     public void lUtilisateurEstConnecté(String utilisateur) throws Exception {
 
+
+        WebElement modules1 = (new WebDriverWait(driver, 100))
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(CommonLocators.Login_Bouton_connexion)));
+
         XMLUtilities utilities = new XMLUtilities();
+
         driver.findElement(By.id(CommonLocators.Login_Champ_Username)).sendKeys(utilisateur);
         action.pause(driver, 500);
         driver.findElement(By.id(CommonLocators.Login_Champ_password)).sendKeys((utilities.findUser(utilisateur).getPassword()));
@@ -107,7 +112,7 @@ public class EtapesCommunes {
     public void lUtilisateurSeDeconnecte() {
 
         driver.manage().deleteAllCookies();
-        driver.navigate().refresh();
+        driver.get(reader.getProperty("testsiteurl"));
     }
 
     @And("l utilisateur clique sur {string}")
@@ -335,5 +340,42 @@ public class EtapesCommunes {
         }
 
     }
+
+    @And("l utilisateur selectionne la population {string} dans la liste des populations {string}")
+    public void lUtilisateurSelectionneLaPopulationDansLaListeDesPopulations(String nompopulation, String populationenquete) throws IllegalAccessException, InterruptedException {
+
+
+        String locator = "vide";
+
+        for (List<Field> f : ListeGlobaleLocators) {
+            for (Field x : f) {
+                if (x.getName().equals(populationenquete)) {
+                    locator = (String) x.get(x);
+                    break;
+                }
+            }
+            if (!locator.equals("vide")) {
+                break;
+            }
+        }
+        if (Character.toString(locator.charAt(0)).contains("/")) {
+            driver.findElement(By.xpath(locator)).sendKeys(nompopulation);
+        } else if (locator.contains("[") || Character.toString(locator.charAt(0)).contains(".")) {
+            driver.findElement(By.cssSelector(locator)).sendKeys(nompopulation);
+        } else {
+            driver.findElement(By.id(locator)).sendKeys(nompopulation);
+        }
+
+
+
+        action.pause(driver, 1000);
+
+       driver.findElement(By.cssSelector("li[role='menuitem']")).click();
+
+
+    }
+
+
+
 }
 
