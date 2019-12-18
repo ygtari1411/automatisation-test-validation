@@ -21,10 +21,12 @@ public class CollaborateurManagerValidationAbsence {
     private final WebDriver driver = GenerateurDriver.driver;
     private ActionsCommunes action = new ActionsCommunes();
     private static String etat = "Pas encore";
+    public static WebElement Jourlibre;
     List<List<WebElement>> listejours = null;
 
     @And("l utilisateur selectionne une case de journée libre dans le calendrier")
     public void lUtilisateurSelectionneUneCaseDeJournéeLibreDansLeCalendrier() {
+
         logger.info("Recherche d'une journée libre");
         WebElement modules = (new WebDriverWait(driver, 10)).until(ExpectedConditions.elementToBeClickable(By.xpath(AbcencesLocators.Bouton_Avance_Mois_Calendrier_Ajout_Abcence)));
         listejours.add(driver.findElements(By.cssSelector("fc-day ui-widget-content fc-mon fc-future")));
@@ -37,6 +39,7 @@ public class CollaborateurManagerValidationAbsence {
                 for (WebElement jour : L) {
                     if (!jour.getAttribute("outerHTML").contains("style=\"background-color:")) {
 
+                        Jourlibre = jour;
                         JavascriptExecutor executor = (JavascriptExecutor) driver;
                         executor.executeScript("arguments[0].click();", jour);
                         etat = "Jour trouvé";

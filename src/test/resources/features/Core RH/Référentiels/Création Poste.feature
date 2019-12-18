@@ -49,7 +49,7 @@ Feature: Référentiels : Création Poste
     And l utilisateur selectionne "Français" dans la liste deroulante "Langue_poste"
     And l utilisateur selectionne "Avancé" dans la liste deroulante "Niveau_langue_poste"
     And l utilisateur selectionne "Requise" dans la liste deroulante "Importance_langue_poste"
-    And l utilisateur clique sur "Valider langue_Poste"
+    And l utilisateur clique sur "Valider_langue_Poste"
 
     # Etape 6 : Ajout d'une habilitation
     When l utilisateur clique sur "Ajouter_habilitation_Poste"
@@ -76,7 +76,5 @@ Feature: Référentiels : Création Poste
     # Etape 9 : Validation finale
     And l utilisateur clique sur "Sauvegarder_Poste"
     Then vérifier que le message "Opération effectuée avec succès" s affiche
-    And wait 2000
 
-    # Etape 10 : Déconnexion
-    And l utilisateur se deconnecte
+

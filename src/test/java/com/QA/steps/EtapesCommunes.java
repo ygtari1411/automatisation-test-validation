@@ -9,18 +9,20 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 import java.lang.reflect.Field;
 import java.util.*;
+import java.util.function.Function;
 
 import static com.QA.base.TestGenerateurDriverInit.ListeGlobaleLocators;
+import static java.util.concurrent.TimeUnit.SECONDS;
 
 public class EtapesCommunes {
 
@@ -135,13 +137,13 @@ public class EtapesCommunes {
             JavascriptExecutor executor = (JavascriptExecutor) driver;
             executor.executeScript("arguments[0].click();", element);
         } else if (Character.toString(locator.charAt(0)).contains("/")) {
-            WebElement modules = (new WebDriverWait(driver, 10)).until(ExpectedConditions.elementToBeClickable(By.xpath(locator)));
+            WebElement modules = (new WebDriverWait(driver, 20)).until(ExpectedConditions.elementToBeClickable(By.xpath(locator)));
             driver.findElement(By.xpath(locator)).click();
         } else if (locator.contains("[") || Character.toString(locator.charAt(0)).contains(".")) {
-            WebElement modules = (new WebDriverWait(driver, 10)).until(ExpectedConditions.elementToBeClickable(By.cssSelector(locator)));
+            WebElement modules = (new WebDriverWait(driver, 20)).until(ExpectedConditions.elementToBeClickable(By.cssSelector(locator)));
             driver.findElement(By.cssSelector(locator)).click();
         } else {
-            WebElement modules = (new WebDriverWait(driver, 10)).until(ExpectedConditions.elementToBeClickable(By.id(locator)));
+            WebElement modules = (new WebDriverWait(driver, 20)).until(ExpectedConditions.elementToBeClickable(By.id(locator)));
             driver.findElement(By.id(locator)).click();
         }
 
@@ -206,7 +208,7 @@ public class EtapesCommunes {
             driver.findElement(By.id(locator)).click();
         }
 
-        locator = "vide";
+        /*locator = "vide";
         action.pause(driver, 500);
 
         String inputlistederoulante = listederoulante + "_IL";
@@ -227,10 +229,9 @@ public class EtapesCommunes {
             driver.findElement(By.cssSelector(locator)).sendKeys(optionlistederoulante);
         } else {
             driver.findElement(By.id(locator)).sendKeys(optionlistederoulante);
-        }
+        }*/
         locator = "vide";
-        action.pause(driver, 500);
-
+        action.pause(driver, 1000);
         String cliquelistederoulante = listederoulante + "_CL";
         WebElement element = null;
         for (List<Field> f : ListeGlobaleLocators) {
@@ -244,15 +245,41 @@ public class EtapesCommunes {
                 break;
             }
         }
-        if (Character.toString(locator.charAt(0)).contains("/")) {
+
+        boolean x = true;
+        while (x) {
+            List<WebElement> list1 = driver.findElements(By.xpath(locator));
+            if (list1.size() > 1) {
+                try {
+                    for (WebElement element1 : list1) {
+                        new Actions(driver).moveToElement(element1).perform();
+                        if (element1.getAttribute("innerText").equals(optionlistederoulante)) {
+                            element1.click();
+                            x = false;
+                            break;
+                        }
+                    }
+                    x = false;
+                } catch (StaleElementReferenceException ignored) {
+                }
+            } else {
+                driver.findElement(By.xpath(locator)).click();
+                x = false;
+            }
+        }
+
+       /* if (Character.toString(locator.charAt(0)).contains("/")) {
+            List<WebElement> list = driver.findElements(By.xpath(locator));
             element = driver.findElement(By.xpath(locator));
         } else if (locator.contains("[") || Character.toString(locator.charAt(0)).contains(".")) {
+            List<WebElement> list = driver.findElements(By.cssSelector(locator));
             element = driver.findElement(By.cssSelector(locator));
         } else {
+
             element = driver.findElement(By.id(locator));
         }
         JavascriptExecutor executor = (JavascriptExecutor) driver;
-        executor.executeScript("arguments[0].click();", element);
+        executor.executeScript("arguments[0].click();", element);*/
 
     }
 
@@ -287,9 +314,7 @@ public class EtapesCommunes {
                 x.click();
                 break;
             }
-
         }
-
     }
 
     @Then("vérifier que le message {string} s affiche")
@@ -302,11 +327,10 @@ public class EtapesCommunes {
     }
 
     @And("vérifier que le titre du modal est {string} et le texte du corps du modal est {string}")
-    public void vérifierQueLeTitreDuModalEstEtLeTexteDuCorpsDuModalEst(String titremodal , String textecorpsmodal) {
+    public void vérifierQueLeTitreDuModalEstEtLeTexteDuCorpsDuModalEst(String titremodal, String textecorpsmodal) {
 
         Assert.assertEquals(driver.findElement(By.cssSelector("h4[class='modal-title']")).getAttribute("innerText"), titremodal);
-        Assert.assertEquals(driver.findElement(By.cssSelector("text-center")).getAttribute("innerText"),textecorpsmodal);
-
+        Assert.assertEquals(driver.findElement(By.cssSelector("text-center")).getAttribute("innerText"), textecorpsmodal);
 
     }
 
@@ -344,7 +368,6 @@ public class EtapesCommunes {
     @And("l utilisateur selectionne la population {string} dans la liste des populations {string}")
     public void lUtilisateurSelectionneLaPopulationDansLaListeDesPopulations(String nompopulation, String populationenquete) throws IllegalAccessException, InterruptedException {
 
-
         String locator = "vide";
 
         for (List<Field> f : ListeGlobaleLocators) {
@@ -366,15 +389,11 @@ public class EtapesCommunes {
             driver.findElement(By.id(locator)).sendKeys(nompopulation);
         }
 
-
-
         action.pause(driver, 1000);
 
-       driver.findElement(By.cssSelector("li[role='menuitem']")).click();
-
+        driver.findElement(By.cssSelector("li[role='menuitem']")).click();
 
     }
-
 
 
 }

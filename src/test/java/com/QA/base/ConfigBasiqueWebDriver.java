@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.LocalFileDetector;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -60,12 +61,14 @@ public class ConfigBasiqueWebDriver {
                     logger.info("Lancement d'un navigateur chrome dans un docker container ");
                     optionsC.addArguments("--window-size=1920,1080");
                     driver = new RemoteWebDriver(grid, optionsC);
+                    ((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
                     break;
 
                 case "firefox":
                     logger.info("Lancement d'un navigateur firefox dans un docker container ");
                     optionsF.addArguments("--window-size=1920,1080");
                     driver = new RemoteWebDriver(grid, optionsF);
+                    ((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
                     break;
 
                 case "chrome-headless":

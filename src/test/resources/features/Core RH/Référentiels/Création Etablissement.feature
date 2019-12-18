@@ -60,5 +60,4 @@ Feature: Référentiels : Création établissement
     Then vérifier que le message "Opération effectuée avec succès" s affiche
     And wait 2000
 
-    # Etape 6 : Déconnexion
-    And l utilisateur se deconnecte
+

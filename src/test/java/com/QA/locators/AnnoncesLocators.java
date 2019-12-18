@@ -17,7 +17,7 @@ public class AnnoncesLocators {
     public static final String List_Annonces = "/html/body/app-root/app-layout/div/section/div/acc-annonces-container/div[2]/acc-annonces-list/div";
     public static final String Liste_Deroulante_Type = "//*[@id=\"popup-add-useful-information\"]/div[2]/section/div[1]/div[1]/div[2]/acc-select-cr/ng-select/div/div[2]/span";
     public static final String Liste_Deroulante_Type_IL = "//*[@id=\"popup-add-useful-information\"]/div[2]/section/div[1]/div[1]/div[2]/acc-select-cr/ng-select/div/input";
-    public static final String Liste_Deroulante_Type_CL = "//*[@id=\"popup-add-useful-information\"]/div[2]/section/div[1]/div[1]/div[2]/acc-select-cr/ng-select/div/ul/li/div";
+    public static final String Liste_Deroulante_Type_CL = "//*[@id=\"popup-add-useful-information\"]/div[2]/section/div[1]/div[1]/div[2]/acc-select-cr/ng-select/div/ul/li";
     public static final String JS_Bouton_Valider_Supprimer_Annonce = "/html/body/ngb-modal-window/div/div/acc-confirmation-modal/div[3]/button[1]";
     public static final String Input_Texte_Annonces_Creation = ".ql-editor";
     public static final String Input_Texte_Annonces_Modification = ".ql-editor";

@@ -26,7 +26,7 @@ Feature: Référentiels : Création société
 
     # Etape 3 : Ajout d'une nouvelle société
     When l utilisateur clique sur "Ajouter_une_société"
-    And l utilisateur saisit "SOC01" dans le champs "Code_société"
+    And l utilisateur saisit "SOC02" dans le champs "Code_société"
     And l utilisateur saisit "Société de service" dans le champs "Libellé_société"
     And l utilisateur saisit "01/01/2019" dans le champs "Date_d_effet_société"
     And l utilisateur selectionne "Arabe" dans la liste deroulante "langue_officielle_société"
@@ -41,7 +41,7 @@ Feature: Référentiels : Création société
     When l utilisateur selectionne "Service" dans la liste deroulante "Secteur_société"
     And l utilisateur selectionne "test" dans la liste deroulante "Activité_société"
     And l utilisateur selectionne "Société anonyme" dans la liste deroulante "Statut_juridique_société"
-    And l utilisateur saisit "SOCTN000000114" dans le champs "Immatriculation_société"
+    And l utilisateur saisit "SOCTN000000115" dans le champs "Immatriculation_société"
     And l utilisateur selectionne "Prestataires de services" dans la liste deroulante "Convention_collective_société"
     And l utilisateur saisit "SOCTN000000780" dans le champs "Affiliation_sécurité_sociale_société"
     And l utilisateur saisit "SOCREGTN000004" dans le champs "Registre_de_commerce_société"
@@ -85,5 +85,4 @@ Feature: Référentiels : Création société
     Then vérifier que le message "Opération effectuée avec succès" s affiche
     And wait 2000
 
-    # Etape 8 : Déconnexion
-    And l utilisateur se deconnecte
+

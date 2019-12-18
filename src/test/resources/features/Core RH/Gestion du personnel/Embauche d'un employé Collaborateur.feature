@@ -29,7 +29,7 @@ Feature: Gestion du personnel : Embauche d'un employé Collaborateur
     When l utilisateur clique sur "Ajouter_collaborateur"
     And l utilisateur saisit "01/01/2019" dans le champs "Date_d_entrée_collaborateur"
     And l utilisateur selectionne "Interne" dans la liste deroulante "Type_collaborateur"
-    And l utilisateur saisit "SOC00127" dans le champs "Matricule_collaborateur"
+    And l utilisateur saisit "SOC00300" dans le champs "Matricule_collaborateur"
     And l utilisateur selectionne "M." dans la liste deroulante "Qualité_collaborateur"
     And l utilisateur saisit "Tounsi" dans le champs "Nom_collaborateur"
     And l utilisateur saisit "Ahmed" dans le champs "Prénom_collaborateur"
@@ -89,5 +89,4 @@ Feature: Gestion du personnel : Embauche d'un employé Collaborateur
     Then vérifier que le message "Opération effectuée avec succès" s affiche
     And wait 2000
 
-    # Etape 7 : Déconnexion
-  And  l utilisateur se deconnecte
+

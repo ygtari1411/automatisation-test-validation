@@ -30,7 +30,7 @@ Feature: Référentiels : Création Entité organisationnelle
     And l utilisateur saisit "Entité 1" dans le champs "Libellé_EO"
     And l utilisateur saisit "01/01/2019" dans le champs "Date_d_effet_EO"
     # And l utilisateur selectionne "Actif" dans la liste deroulante "Statut_EO"
-    And l utilisateur selectionne "Société_de_service" dans la liste deroulante "Société_EO"
+    And l utilisateur selectionne "Société de service" dans la liste deroulante "Société_EO"
     And l utilisateur selectionne "Direction" dans la liste deroulante "Type_EO"
     And l utilisateur clique sur "Enregistrer_EO"
     Then vérifier que le message "Opération effectuée avec succès" s affiche
@@ -38,18 +38,17 @@ Feature: Référentiels : Création Entité organisationnelle
     # Etape 4 : Ajout d'un responsable de l'entité
     When l utilisateur clique sur "Ajouter_responsable_EO"
     And l utilisateur saisit "01/01/2019" dans le champs "Date_de_début_responsable_EO"
-    And l utilisateur selectionne "Ahmed_Tounsi" dans la liste deroulante "Responsable_EO"
+    And l utilisateur selectionne "Ahmed Tounsi" dans la liste deroulante "Responsable_EO"
+    And l utilisateur clique sur "Valider_Responsable_EO"
     And l utilisateur clique sur "Sauvegarder_EO"
     Then vérifier que le message "Opération effectuée avec succès" s affiche
 
     # Etape 5 : Ajout d'une adresse EO
     When l utilisateur saisit "11 Avenue des martyres" dans le champs "Adresse_EO"
-    And l utilisateur saisit "9 Avenue des martyres" dans le champs "Adresse_EO"
     And l utilisateur selectionne "Tunisie" dans la liste deroulante "Pays_EO"
     And l utilisateur selectionne "Ariana" dans la liste deroulante "Ville_EO"
     And l utilisateur selectionne "3060" dans la liste deroulante "Code_postal_EO"
     And l utilisateur clique sur "Sauvegarder_EO"
     Then vérifier que le message "Opération effectuée avec succès" s affiche
 
-    # Etape 6 : Déconnexion
-    And l utilisateur se deconnecte
+

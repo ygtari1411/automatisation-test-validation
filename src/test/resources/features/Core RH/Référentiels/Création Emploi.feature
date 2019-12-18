@@ -46,7 +46,7 @@ Feature: Référentiels : Création Emploi
     And l utilisateur selectionne "Français" dans la liste deroulante "Langue_emploi"
     And l utilisateur selectionne "Avancé" dans la liste deroulante "Niveau_langue_emploi"
     And l utilisateur selectionne "Requise" dans la liste deroulante "Importance_langue_emploi"
-    And l utilisateur clique sur "Valider langue_Emploi"
+    And l utilisateur clique sur "Valider_langue_Emploi"
 
     # Etape 6 : Ajout d'une habilitation
     When l utilisateur clique sur "Ajouter_habilitation_Emploi"
@@ -67,7 +67,6 @@ Feature: Référentiels : Création Emploi
     And l utilisateur saisit "Ingénieur de test junior" dans le champs "Emploi_expérience"
     And l utilisateur selectionne "Service" dans la liste deroulante "Secteur_expérience_emploi"
     And l utilisateur saisit "2" dans le champs "Années_d_expérience_emploi"
-    And l utilisateur saisit "2" dans le champs "Années_d_expérience_emploi"
     And l utilisateur selectionne "requise" dans la liste deroulante "Importance_expérience_emploi"
     And l utilisateur clique sur "Valider_annees_experience_Emploi"
 
@@ -76,5 +75,3 @@ Feature: Référentiels : Création Emploi
     And l utilisateur clique sur "Sauvegarder_Emploi"
     Then vérifier que le message "Opération effectuée avec succès" s affiche
 
-    # Etape 10 : Déconnexion
-    And l utilisateur se deconnecte

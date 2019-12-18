@@ -29,5 +29,4 @@ Feature: Onboarding : Modification du template Onboarding
     And l utilisateur clique sur "Valider_suppression_onboarding"
     Then vérifier que le message "Opération effectuée avec succès" s affiche
 
-    # Etape 4 : Déconnexion
-    And l utilisateur se deconnecte
+

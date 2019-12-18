@@ -34,8 +34,7 @@ Feature: Onboarding : Modification du template Onboarding
     ## Une nouvelle fonction à créer similaire à la fonction "vérifier la modification de l'annonce" ##
     And vérifier la modification du nom de l'onboarding
 
-    # Etape 4 : Déconnexion
-    And l utilisateur se deconnecte
+
 
 
 
