@@ -247,12 +247,13 @@ public class EtapesCommunes {
         }
 
         boolean x = true;
+        Actions actions = new Actions(driver);
         while (x) {
             List<WebElement> list1 = driver.findElements(By.xpath(locator));
             if (list1.size() > 1) {
                 try {
                     for (WebElement element1 : list1) {
-                        new Actions(driver).moveToElement(element1).perform();
+                        actions.moveToElement(element1).perform();
                         if (element1.getAttribute("innerText").equals(optionlistederoulante)) {
                             element1.click();
                             x = false;
@@ -394,7 +395,6 @@ public class EtapesCommunes {
         driver.findElement(By.cssSelector("li[role='menuitem']")).click();
 
     }
-
 
 }
 

@@ -56,7 +56,6 @@ Feature: Référentiels : Création société
     And l utilisateur selectionne "Avocat de la société" dans la liste deroulante "Fonction_société"
     And l utilisateur saisit "0021671381000" dans le champs "Téléphone_contact_société"
     And l utilisateur clique sur "Valider_contact_société"
-    And l utilisateur clique sur "Sauvegarder_société"
     Then vérifier que le message "Opération effectuée avec succès" s affiche
 
     # Etape 6 : Ajout des coordonnées bancaires de la société
@@ -81,8 +80,9 @@ Feature: Référentiels : Création société
     And l utilisateur selectionne "Opérationnel" dans la liste deroulante "Type_de_leasing_société"
     And l utilisateur selectionne "Hiver" dans la liste deroulante "Pneus_actuels_véhicule_société"
     And l utilisateur clique sur "Valider_véhicules_société"
+    And wait 2000
     And l utilisateur clique sur "Sauvegarder_société"
     Then vérifier que le message "Opération effectuée avec succès" s affiche
-    And wait 2000
+
 
 
