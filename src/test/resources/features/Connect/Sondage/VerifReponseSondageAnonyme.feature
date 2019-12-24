@@ -6,7 +6,7 @@
 @ACCRETIO2
 @ACCRETIO2-CONNECT
 @ACCRETIO2-SONDAGE
-@ACCRETIO2-SONDAGE-0008
+@ACCRETIO2-SONDAGE-0009
 
 
 Feature: Sondage
@@ -32,6 +32,7 @@ Feature: Sondage
     And l utilisateur saisit "Sondage Anonyme" dans le champs "Question1_Creation_Sondage"
     And l utilisateur saisit "oui" dans le champs "Reponse_1_sondage"
     And l utilisateur saisit "non" dans le champs "Reponse_2_sondage"
+    And l utilisateur clique sur "Bouton_Sondage_Anonyme"
     And l utilisateur clique sur "Bouton_Confirmer_Ajout_Sondage"
     And   wait 3000
     And l utilisateur clique sur "Bouton_Options_Sondage"
@@ -39,7 +40,7 @@ Feature: Sondage
     And l utilisateur clique sur "Bouton_Lancer_Sondage"
     And   wait 3000
     And l utilisateur clique sur "Bouton_Confirmer_Lancer_Sondage"
-    And   wait 3000
+    And   wait 2000
 
     #Etape4 : Répondre au sondage crée
 
@@ -48,7 +49,7 @@ Feature: Sondage
     And l utilisateur clique sur "Bouton_Reponse_1_Sondage_Portail"
     And l utilisateur clique sur "Bouton_Voter_Sondage"
 
-     #Etape5 : Verifier que la réponse est anonyme
+   #Etape5 : Verifier que la réponse est anonyme
 
     When l utilisateur clique sur "Bouton_Role_RH"
     And l utilisateur clique sur "Bouton_Menu_Etendu"
