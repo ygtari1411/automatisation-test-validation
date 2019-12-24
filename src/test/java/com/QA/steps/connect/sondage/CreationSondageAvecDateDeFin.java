@@ -27,7 +27,7 @@ public class CreationSondageAvecDateDeFin {
 
           frm = new SimpleDateFormat("dd/MM/yyyy");
           calendar = Calendar.getInstance();
-          calendar.add(Calendar.DATE,3);
+          calendar.add(Calendar.DATE,4);
           String DateDeClotureSondage=frm.format(calendar.getTime());
           driver.findElement(By.xpath(SondageLocators.Champ_Date_Sondage)).sendKeys(DateDeClotureSondage);
 
