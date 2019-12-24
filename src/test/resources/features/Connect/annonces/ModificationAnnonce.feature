@@ -32,7 +32,7 @@ Feature: Annonces : Modification annonce
     And l utilisateur saisit "Test Automatique Modification Annonce" dans le champs "Input_Nom_Annonce"
     And l utilisateur selectionne "Vente" dans la liste deroulante "Liste_Deroulante_Type"
     And l utilisateur saisit "Annonce" dans le champs "Input_Texte_Annonces_Creation"
-    And l'utilisateur ajoute une photo dans le champ photo annonce
+    And  l utilisateur upload "une image" dans le champs "Upload_Image_Annonce"
     And l utilisateur clique sur "Bouton_Valider_Image"
     And l utilisateur clique sur "JS_Bouton_Valider_Ajouter_Annonces"
     And vérifier la création de la nouvelle annonce

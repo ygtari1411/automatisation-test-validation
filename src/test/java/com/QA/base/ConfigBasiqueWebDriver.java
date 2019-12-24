@@ -99,11 +99,10 @@ public class ConfigBasiqueWebDriver {
                     logger.info("Lancement d'un navigateur chrome pour les tests");
                     if (System.getProperty("os.name").toLowerCase().contains("wind")) {
                         System.setProperty("webdriver.chrome.driver", streams.readers().getProperty("ChromeDriverPath"));
-                        driver = new ChromeDriver(optionsC);
                     } else {
                         WebDriverManager.chromedriver().setup();
-                        driver = new ChromeDriver(optionsC);
                     }
+                    driver = new ChromeDriver(optionsC);
                     break;
 
                 case "chrome-headless":

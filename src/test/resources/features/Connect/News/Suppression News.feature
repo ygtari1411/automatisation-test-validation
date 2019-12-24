@@ -31,7 +31,7 @@ Feature: News : Suppression News
     And l utilisateur saisit "Test automatique suppression news" dans le champs "Champ_Input_Titre_News"
     And l utilisateur saisit "C'est un test automatique d'ajout puis de suppression d'une news" dans le champs "Champ_Input_Texte_News"
     And l'utilisateur selectionne la date actuelle du champ date de publication
-    And l utilisateur upload une photo dans la News
+    And  l utilisateur upload "une image" dans le champs "Upload_Image_News"
     And wait 1000
     And l utilisateur clique sur "Bouton_Sauvegarde_Creation_News"
     And wait 5000

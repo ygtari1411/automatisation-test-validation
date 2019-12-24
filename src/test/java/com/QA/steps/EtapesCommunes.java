@@ -396,5 +396,63 @@ public class EtapesCommunes {
 
     }
 
+
+    @And("l utilisateur upload {string} dans le champs {string}")
+    public void lUtilisateurUploadDansLeChamps(String elementpourupload, String champsupload) throws IllegalAccessException {
+
+        String locator = "vide";
+
+        for (List<Field> f : ListeGlobaleLocators) {
+            for (Field x : f) {
+                if (x.getName().equals(champsupload)) {
+                    locator = (String) x.get(x);
+                    break;
+                }
+            }
+            if (!locator.equals("vide")) {
+                break;
+            }
+        }
+        boolean b = locator.contains("[") || Character.toString(locator.charAt(0)).contains(".");
+        boolean b1 = Character.toString(locator.charAt(0)).contains("/");
+        switch (elementpourupload) {
+            case "une vidéo":
+                if (b1) {
+                    driver.findElement(By.xpath(locator)).sendKeys(System.getProperty("user.dir") + "src/test/resources/videospourtest/VideoTest.mp4");
+                } else if (b) {
+                    driver.findElement(By.cssSelector(locator)).sendKeys(System.getProperty("user.dir") + "src/test/resources/videospourtest/VideoTest.mp4");
+                } else {
+                    driver.findElement(By.id(locator)).sendKeys(System.getProperty("user.dir") + "src/test/resources/videospourtest/VideoTest.mp4");
+                }
+                break;
+
+            case "un document":
+                if (b1) {
+                    driver.findElement(By.xpath(locator)).sendKeys(System.getProperty("user.dir") + "src/test/resources/documentspourtest/DocumentTest.xlsx");
+                } else if (b) {
+                    driver.findElement(By.cssSelector(locator)).sendKeys(System.getProperty("user.dir") + "src/test/resources/documentspourtest/DocumentTest.xlsx");
+                } else {
+                    driver.findElement(By.id(locator)).sendKeys(System.getProperty("user.dir") + "src/test/resources/documentspourtest/DocumentTest.xlsx");
+                }
+                break;
+
+            case "une image":
+                if (b1) {
+                    driver.findElement(By.xpath(locator)).sendKeys(System.getProperty("user.dir") + "/src/test/resources/imagespourtest/imagetest.jpg");
+                } else if (b) {
+                    driver.findElement(By.cssSelector(locator)).sendKeys(System.getProperty("user.dir") + "/src/test/resources/imagespourtest/imagetest.jpg");
+                } else {
+                    driver.findElement(By.id(locator)).sendKeys(System.getProperty("user.dir") + "/src/test/resources/imagespourtest/imagetest.jpg");
+                }
+                break;
+
+            default:
+                logger.info("Aucun type de fichier selectionné pour l'upload ");
+        }
+
+    }
+
+
 }
+
 

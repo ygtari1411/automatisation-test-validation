@@ -21,7 +21,7 @@
         <tags>@no-tag-specified</tags>
         <cucumber.version>1.2.5</cucumber.version>
         <selenium.version>3.141.59</selenium.version>
-        <webdrivermanager>3.6.2</webdrivermanager>
+        <webdrivermanager>3.7.1</webdrivermanager>
         <buildName></buildName>
     </properties>
 

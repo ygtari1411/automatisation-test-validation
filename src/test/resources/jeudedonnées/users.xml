@@ -89,4 +89,9 @@
         <password>haf03</password>
     </user>
 
+    <user>
+        <username>admin@accretio.io</username>
+        <password>tnr2019</password>
+    </user>
+
 </users>
