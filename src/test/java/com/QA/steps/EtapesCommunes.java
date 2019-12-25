@@ -328,10 +328,10 @@ public class EtapesCommunes {
     }
 
     @And("vérifier que le titre du modal est {string} et le texte du corps du modal est {string}")
-    public void vérifierQueLeTitreDuModalEstEtLeTexteDuCorpsDuModalEst(String titremodal, String textecorpsmodal) {
+    public void vérifierQueLeTitreDuModalEstEtLeTexteDuCorpsDuModalEst(String titremodal , String textecorpsmodal) {
 
         Assert.assertEquals(driver.findElement(By.cssSelector("h4[class='modal-title']")).getAttribute("innerText"), titremodal);
-        Assert.assertEquals(driver.findElement(By.cssSelector("text-center")).getAttribute("innerText"), textecorpsmodal);
+        Assert.assertEquals(driver.findElement(By.cssSelector("text-center")).getAttribute("innerText"),textecorpsmodal);
 
     }
 
@@ -418,21 +418,21 @@ public class EtapesCommunes {
         switch (elementpourupload) {
             case "une vidéo":
                 if (b1) {
-                    driver.findElement(By.xpath(locator)).sendKeys(System.getProperty("user.dir") + "src/test/resources/videospourtest/VideoTest.mp4");
+                    driver.findElement(By.xpath(locator)).sendKeys(System.getProperty("user.dir") + "/src/test/resources/videospourtest/VideoTest.mp4");
                 } else if (b) {
-                    driver.findElement(By.cssSelector(locator)).sendKeys(System.getProperty("user.dir") + "src/test/resources/videospourtest/VideoTest.mp4");
+                    driver.findElement(By.cssSelector(locator)).sendKeys(System.getProperty("user.dir") + "/src/test/resources/videospourtest/VideoTest.mp4");
                 } else {
-                    driver.findElement(By.id(locator)).sendKeys(System.getProperty("user.dir") + "src/test/resources/videospourtest/VideoTest.mp4");
+                    driver.findElement(By.id(locator)).sendKeys(System.getProperty("user.dir") + "/src/test/resources/videospourtest/VideoTest.mp4");
                 }
                 break;
 
             case "un document":
                 if (b1) {
-                    driver.findElement(By.xpath(locator)).sendKeys(System.getProperty("user.dir") + "src/test/resources/documentspourtest/DocumentTest.xlsx");
+                    driver.findElement(By.xpath(locator)).sendKeys(System.getProperty("user.dir") + "/src/test/resources/documentspourtest/DocumentTest.xlsx");
                 } else if (b) {
-                    driver.findElement(By.cssSelector(locator)).sendKeys(System.getProperty("user.dir") + "src/test/resources/documentspourtest/DocumentTest.xlsx");
+                    driver.findElement(By.cssSelector(locator)).sendKeys(System.getProperty("user.dir") + "/src/test/resources/documentspourtest/DocumentTest.xlsx");
                 } else {
-                    driver.findElement(By.id(locator)).sendKeys(System.getProperty("user.dir") + "src/test/resources/documentspourtest/DocumentTest.xlsx");
+                    driver.findElement(By.id(locator)).sendKeys(System.getProperty("user.dir") + "/src/test/resources/documentspourtest/DocumentTest.xlsx");
                 }
                 break;
 
