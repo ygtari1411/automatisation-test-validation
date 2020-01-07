@@ -30,7 +30,7 @@ Feature: Configuration
       And   l utilisateur choisit la couleur noir
       And   l utilisateur saisit "Test Ajout Automatique" dans le champs "Description1_ajout_niv_comp"
       And   l utilisateur clique sur "Valider_ajout_niv_comp"
-      And   l utilisateur clique sur "Enregistrer_ajout_niv_comp"
+      And   l utilisateur clique sur "Sauvegarder_niv_comp"
     #Vérification de l ajout du niveau de compétences
      Then   vérifier que le message "succès" s affiche
       And   verifier que le dernier libelle est "Niveau competence test auto 1"

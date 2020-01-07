@@ -26,14 +26,14 @@ Feature: Configuration
       And   l utilisateur selectionne "Chiffre" dans la liste deroulante "Chiffre_ajout_classification"
       And   l utilisateur selectionne "Coefficient" dans la liste deroulante "Coefficient_ajout_classification"
       And   l utilisateur clique sur "Valider_ajout_classification"
-      And   l utilisateur clique sur "Enregistrer_ajout_classification"
+      And   l utilisateur clique sur "Sauvegarder_classification"
      Then   vérifier que le message "succès" s affiche
       And   verifier que le dernier libelle "Ajout Classification Test auto 2"
       And   verifier que la derniere classification parent "Communication"
       And   verifier que la derniere echelle "Chiffre"
      When   l utilisateur clique sur "Option_conf_classification"
       And   l utilisateur clique sur "Supprimer_option_conf_classification"
-      And   l utilisateur clique sur "Enregistrer_ajout_classification"
+      And   l utilisateur clique sur "Sauvegarder_classification"
      Then   vérifier que le message "succès" s affiche
       And   verifier que le libelle Ajout Classification Test auto 3 n est plus dans la liste
   
