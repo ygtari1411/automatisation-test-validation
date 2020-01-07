@@ -13,8 +13,8 @@ Feature: Configuration
   Scenario: Ajout de niveau de compétences
     #Etape 001: Connexion RH_Skills
     Given   le navigateur est ouvert et la page d'acceuil est affichée
-      And   l'utilisateur "saianbu@YOPMAIL.COM" est connecté
-     Then   le nom de l utilisateur "Sai ANBU" est affiche en haut a gauche
+      And   l'utilisateur "combes.caroline@YOPMAIL.COM" est connecté
+     Then   le nom de l utilisateur "Caroline Combes" est affiche en haut a gauche
 
     #Etape 002: Acceder  au sous module configuration
      When   l utilisateur clique sur "Bouton_menu_etendu"
