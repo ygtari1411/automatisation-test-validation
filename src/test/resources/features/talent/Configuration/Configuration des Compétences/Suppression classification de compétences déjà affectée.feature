@@ -1,7 +1,7 @@
 # Auteur: Ons MANSOURI
 # Feature: Configuration
 # Scénario: Suppression de classification de competences deja affectee
-# Date de création: 10/12/2019
+# Date de création: 07/01/2020
 
 
 @ACCRETIO2
