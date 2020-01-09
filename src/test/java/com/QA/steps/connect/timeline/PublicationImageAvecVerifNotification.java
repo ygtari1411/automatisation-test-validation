@@ -35,10 +35,10 @@ public class PublicationImageAvecVerifNotification {
     @Then("verifier que la notification existe et l'utilisateur peut afficher la publication image")
     public void verifierQueLaNotificationExisteEtLUtilisateurPeutAfficherLaPublicationImage() throws InterruptedException {
 
-        driver.findElement(By.xpath(CommonLocators.Icone_Notifications)).click();
+        driver.findElement(By.xpath(CommonLocators.Bouton_Notifications_Portal)).click();
         action.pause(driver,1000);
 
-        driver.findElement(By.xpath(CommonLocators.Premiere_Notification)).click();
+        driver.findElement(By.xpath(CommonLocators.Première_Notification_Portal)).click();
 
         WebElement modules2 = (new WebDriverWait(driver, 50))
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath(TimelineLocators.Premiere_Image_Publier_Timeline)));

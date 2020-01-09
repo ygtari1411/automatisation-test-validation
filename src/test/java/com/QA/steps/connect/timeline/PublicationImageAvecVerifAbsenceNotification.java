@@ -55,7 +55,7 @@ public class PublicationImageAvecVerifAbsenceNotification {
 
            boolean NotificationPresence=false;
 
-            driver.findElement(By.xpath(CommonLocators.Icone_Notifications)).click();
+            driver.findElement(By.xpath(CommonLocators.Bouton_Notifications_Portal)).click();
             action.pause(driver,1000);
 
             List<WebElement> l2=driver.findElements(By.xpath(CommonLocators.Liste_Notifications));
