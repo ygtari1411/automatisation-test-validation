@@ -8,7 +8,7 @@
 @ACCRETIO2
 @ACCRETIO2-CONNECT
 @ACCRETIO2-TIMELINE
-@ACCRETIO2-TIMELINE-0009
+@ACCRETIO2-TIMELINE-0004
 
 Feature: Timeline
 
@@ -21,11 +21,11 @@ Feature: Timeline
 
       #Etape 2 : Creation statut avec image
 
-    When l utilisateur clique sur "Bouton_Image_Timeline"
-    And l utilisateur upload photo dans la publication
+    When  l utilisateur upload "une image" dans le champs "Champ_Input_Image_Publication"
     And l utilisateur saisit "Test automatisé publication image et verif de la notification" dans le champs "Champ_Input_Statut_Image"
     And l utilisateur selectionne "Tous les utilisateurs" dans la liste deroulante "Liste_Deroulante_Timeline"
     And l utilisateur clique sur "Bouton_Publication_Image"
+    Then verifier que l image a etait publie
 
       #Etape 3 : verifier la notification d'un autre compte et consulter la publication
 

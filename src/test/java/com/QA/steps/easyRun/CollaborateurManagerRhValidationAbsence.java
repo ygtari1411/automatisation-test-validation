@@ -44,4 +44,6 @@ public class CollaborateurManagerRhValidationAbsence {
         Assert.assertTrue(wb.getAttribute("outerHTML").contains("style=\"background-color:"));
 
     }
+
+
 }

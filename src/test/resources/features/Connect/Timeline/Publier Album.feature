@@ -6,7 +6,7 @@
 @ACCRETIO2
 @ACCRETIO2-CONNECT
 @ACCRETIO2-TIMELINE
-@ACCRETIO2-TIMELINE-0007
+@ACCRETIO2-TIMELINE-0009
 
   Feature: Timeline
 
@@ -15,14 +15,15 @@
        #Etape 1 : Connexion
 
       Given le navigateur est ouvert et la page d'acceuil est affichée
-      And l utilisateur "resp-RH@mail.com" est connecté
+      And l'utilisateur "resp-RH@mail.com" est connecté
 
       #Etape 2 : Création de la publication
 
-      When l utilisateur clique sur "Publier_un_album"
-      And l utilisateur uploade un album
-      And l utilisateur selectionne "Tous les utilisateurs" dans la liste deroulante "Liste_Deroulante_Timeline"
-      And l utilisateur clique sur "Bouton_Publication_Statut"
+      When l utilisateur selectionne "Tous les utilisateurs" dans la liste deroulante "Liste_Deroulante_Timeline"
+      And  l utilisateur upload "une image" dans le champs "Champ_Input_Album_Publication"
+      And  l utilisateur upload "une image" dans le champs "Champ_Input_Album_Publication"
+      And l utilisateur clique sur "Bouton_Publication_Album"
+      And wait 5000
 
       #Etape 3 : Vérification de la création de la publication
 

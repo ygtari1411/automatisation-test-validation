@@ -43,4 +43,5 @@ public class CommenterStatutAvecTag {
         Assert.assertEquals(str, driver.findElement(By.xpath(TimelineLocators.Contenu_Commentaire_avec_TAG)).getText());
 
     }
+
 }

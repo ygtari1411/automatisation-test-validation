@@ -32,7 +32,6 @@ public class CreationAnnonce {
     @And("l'utilisateur ajoute une photo dans le champ photo annonce")
     public void lUtilisateurAjouteUnePhotoDansLeChampPhotoAnnonce() {
         driver.findElement(By.xpath(AnnoncesLocators.Upload_Image_Annonce)).sendKeys(System.getProperty("user.dir") + "/src/test/resources/imagespourtest/imagetest.jpg");
-
     }
 
 

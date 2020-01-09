@@ -22,19 +22,21 @@ Feature: Enquete
 
     When l utilisateur clique sur "Bouton_Role_RH"
     And l utilisateur clique sur "Bouton_Menu_Etendu"
-    And l utilisateur clique sur "Bouton_Connect"
+    And l utilisateur clique sur "Bouton_Module_Connect"
     And l utilisateur clique sur "Bouton_Enquete"
 
     #Etape3 : Remplir tous les champs d'une enquete
 
     When l utilisateur clique sur "Bouton_Ajouter_Enquete"
-    And l utilisateur saisit "Enquete création" dans le champs "Libelle_Enquete"
-    And l utilisateur saisit "test population enquete" dans le champs "Population_Enquete"
+    And l utilisateur saisit "Enquete création" dans le champs "Libelle_Enquete_Creation"
+    And l utilisateur selectionne la population "test population pour enquete" dans la liste des populations "Population_Enquete"
     And l utilisateur saisit "reponse 1" dans le champs "Reponse_1_enquete"
     And l utilisateur saisit "reponse 2" dans le champs "Reponse_2_enquete"
     And l utilisateur saisit "Chapitre1" dans le champs "Axe_Enquete"
     And l utilisateur saisit "tester question" dans le champs "Question_Creation_Enquete"
     And l utilisateur clique sur "Bouton_Confirmer_Ajouter_Enquete"
+    And   wait 3000
+
 
     #Etape4 : Vérifier l'ajout de l'enquete
 

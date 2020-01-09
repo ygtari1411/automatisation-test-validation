@@ -22,30 +22,33 @@ Feature: Enquete
 
     When l utilisateur clique sur "Bouton_Role_RH"
     And l utilisateur clique sur "Bouton_Menu_Etendu"
-    And l utilisateur clique sur "Bouton_Connect"
+    And l utilisateur clique sur "Bouton_Module_Connect"
     And l utilisateur clique sur "Bouton_Enquete"
 
     #Etape3 : Remplir tous les champs d'une enquete
 
     When l utilisateur clique sur "Bouton_Ajouter_Enquete"
-    And l utilisateur saisit "Enquete vote" dans le champs "Libelle_Enquete"
-    And l utilisateur saisit "test population enquete" dans le champs "Population_Enquete"
+    And l utilisateur saisit "Enquete vote" dans le champs "Libelle_Enquete_Creation"
+    And l utilisateur selectionne la population "test population pour enquete" dans la liste des populations "Population_Enquete"
     And l utilisateur saisit "reponse 1" dans le champs "Reponse_1_enquete"
     And l utilisateur saisit "reponse 2" dans le champs "Reponse_2_enquete"
     And l utilisateur saisit "Chapitre1" dans le champs "Axe_Enquete"
     And l utilisateur saisit "tester question" dans le champs "Question_Creation_Enquete"
     And l utilisateur clique sur "Bouton_Confirmer_Ajouter_Enquete"
+    And   wait 3000
 
     #Etape4 : Lancer une enquete
 
-    When l utilisateur clique sur "Bouton_Options_Enquete"
-    And l utilisateur clique sur "Bouton_Lancer_Enquete"
+    When l utilisateur clique sur "Bouton_Lancer_Enquete"
     And l utilisateur clique sur "Bouton_Confirmer_Lancer_Enquete"
+    And   wait 5000
 
     #Etape5 : Répondre à une enquete lancée
 
     When l utilisateur clique sur "Bouton_Portal"
-    And l utilisateur clique sur "Bouton_Enquete_Portail"
+    And l utilisateur clique sur Bouton_Enquete_Portail et verifie le chargement de la liste des enquetes
+    And l utilisateur choisit l'enquete
+    And l utilisateur clique sur "Bouton_Axe_Enquete_Portail"
     And l utilisateur clique sur "Bouton_Reponse_1_Enquete_Portail"
     And l utilisateur clique sur "Bouton_Voter_Enquete"
 
@@ -53,6 +56,6 @@ Feature: Enquete
 
     When l utilisateur clique sur "Bouton_Role_RH"
     And l utilisateur clique sur "Bouton_Menu_Etendu"
-    And l utilisateur clique sur "Bouton_Connect"
+    And l utilisateur clique sur "Bouton_Module_Connect"
     And l utilisateur clique sur "Bouton_Enquete"
-    Then verifier que le vote a été compté
+    Then verifier que le vote de l enquete a etait compte

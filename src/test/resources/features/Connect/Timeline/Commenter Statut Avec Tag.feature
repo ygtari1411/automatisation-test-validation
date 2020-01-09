@@ -7,7 +7,7 @@
 @ACCRETIO2
 @ACCRETIO2-CONNECT
 @ACCRETIO2-TIMELINE
-@ACCRETIO2-TIMELINE-0004
+@ACCRETIO2-TIMELINE-0001
 
 
 Feature: Timeline : Ajout commentaire avec tag sur un statut

@@ -6,7 +6,7 @@
 @ACCRETIO2
 @ACCRETIO2-CONNECT
 @ACCRETIO2-TIMELINE
-@ACCRETIO2-TIMELINE-0006
+@ACCRETIO2-TIMELINE-0010
 
 
 Feature: Timeline
@@ -20,10 +20,9 @@ Feature: Timeline
 
  #Etape 2 : Création de la publication
 
-  When l utilisateur clique sur "Publier_un_document"
-  And l utilisateur uploade une pièce jointe
-  And l utilisateur selectionne "Tous les utilisateurs" dans la liste deroulante "Liste_Deroulante_Timeline"
-  And l utilisateur clique sur "Bouton_Publication_Statut"
+  When l utilisateur selectionne "Tous les utilisateurs" dans la liste deroulante "Liste_Deroulante_Timeline"
+  And  l utilisateur upload "un document" dans le champs "Champ_Input_Piece_Jointe_Publication"
+  And l utilisateur clique sur "Bouton_Publication_Piece_Jointe"
 
      #Etape 3 : Vérification de la création de la publication
 

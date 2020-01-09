@@ -43,7 +43,7 @@ Feature: Sondage
     And l utilisateur clique sur "Bouton_Options_Sondage"
     And l utilisateur clique sur "Bouton_Cloturer_Sondage"
     And l utilisateur clique sur "Bouton_Confirmer_Cloture_Sondage"
-    And   wait 3000
+
 
     #Etape5 : Vérifier que la cloture du sondage a été effectuée avec succés
 

@@ -20,29 +20,35 @@ Feature: Enquete
 
       #Etape2 : Ajouter une enquete
 
-    When l'utilisateur clique sur espace-RH
-    And l'utilisateur clique sur le module Connect
-    And l'utilisateur clique sur Enquete
-    And l'utilisateur clique sur le bouton ajouter une Enquete
+    When l utilisateur clique sur "Bouton_Role_RH"
+    And l utilisateur clique sur "Bouton_Menu_Etendu"
+    And l utilisateur clique sur "Bouton_Module_Connect"
+    And l utilisateur clique sur "Bouton_Enquete"
 
     #Etape3 : Remplir tous les champs d'une enquete
 
-    When le modal création Enquete s'affiche
-    And l'utilisateur remplit Libellé Enquete par "Enquete 1"
-    And l'utilisateur remplit Population par "test population enquete"
-    And l'utilisateur remplit Réponse 1 par "oui"
-    And l'utilisateur remplit Réponse 2 par "non"
-    And l'utilisateur remplit Axe par "Chapitre 1"
-    And l'utilisateur remplit Question 1 par "tester question"
-    And l'utilisateur clique sur le bouton confirmer ajout enquete
-    And l'utilisateur clique sur le bouton cloturer enquete
+    When l utilisateur clique sur "Bouton_Ajouter_Enquete"
+    And l utilisateur saisit "Enquete suppression" dans le champs "Libelle_Enquete_Creation"
+    And l utilisateur selectionne la population "test population pour enquete" dans la liste des populations "Population_Enquete"
+    And l utilisateur saisit "reponse 1" dans le champs "Reponse_1_enquete"
+    And l utilisateur saisit "reponse 2" dans le champs "Reponse_2_enquete"
+    And l utilisateur saisit "Chapitre1" dans le champs "Axe_Enquete"
+    And l utilisateur saisit "tester question" dans le champs "Question_Creation_Enquete"
+    And l utilisateur clique sur "Bouton_Confirmer_Ajouter_Enquete"
+    And   wait 4000
 
-    #Etape4 : Cloturer une enquete
+     #Etape4 : Lancer une enquete
 
-    When la fenêtre de cloture s'affiche
-    And  l'utilisateur clique sur le
-      #Etape5 : Vérifier que la mise à jour du sondage a été effectué avec succés
+    And l utilisateur clique sur "Bouton_Lancer_Enquete"
+    And l utilisateur clique sur "Bouton_Confirmer_Lancer_Enquete"
+    And   wait 5000
 
-    When l'utilisateur "amal chograni" est connecté
-    And l'utilisateur clique sur sondage
-    Then vérifier que l'enquete a été modifié correctement
+    #Etape5 : Cloturer une enquete
+
+    When l utilisateur clique sur "Bouton_Cloturer_Enquete"
+    And  l utilisateur clique sur "Confirmer_Cloture_Enquete"
+    And   wait 5000
+
+    #Etape6 : Vérifier que la mise à jour du sondage a été effectué avec succés
+
+    Then verifier que l enquete ne peut plus etre lancer ou stopper

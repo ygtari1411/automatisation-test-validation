@@ -390,6 +390,7 @@ public class EtapesCommunes {
             driver.findElement(By.id(locator)).sendKeys(nompopulation);
         }
 
+
         action.pause(driver, 1000);
 
         driver.findElement(By.cssSelector("li[role='menuitem']")).click();

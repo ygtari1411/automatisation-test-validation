@@ -22,24 +22,25 @@
 
       #Etape 2 : Création de l'idée
 
-      And l utilisateur clique sur "Widget_Idéation"
-      And l utilisateur clique sur "Proposer_une_idée"
-      And l utilisateur selectionne "Entreprise" dans la liste deroulante "Liste_Deroulante_Catégorie_Idée"
-      And l utilisateur saisit "C'est un test automatique de l'ajout d'une idée" dans le champs "Libellé_Création_Idée"
-      And l utilisateur selectionne "Tous les utilisateurs" dans la liste deroulante "Liste_Deroulante_Timeline_Création_Idéation"
-      And l utilisateur saisit "Ceci est la description de l'idée" dans le champs "Description_Création_Idée"
-      And l utilisateur clique sur "Bouton_Sauvegarde_Creation_Idéation"
-      And wait 1000
+      And l utilisateur attend l'apparition du Widget_Ideation
+      And l utilisateur clique sur "Widget_Ideation"
+      And l utilisateur clique sur "Proposer_une_idee"
+      And l utilisateur selectionne "Entreprise" dans la liste deroulante "Liste_Deroulante_Categorie_Idee"
+      And l utilisateur saisit "C'est un test automatique de la suppression d'une idée" dans le champs "Libelle_Creation_Idee"
+      And l utilisateur selectionne "Tous les utilisateurs" dans la liste deroulante "Liste_Deroulante_Timeline_Creation_Ideation"
+      And l utilisateur saisit "Ceci est la description de l'idée" dans le champs "Description_Creation_Idee"
+      And l utilisateur clique sur "Bouton_Sauvegarde_Creation_Ideation"
+      And wait 5000
 
       #Etape 3 : Supprimer l'idée
 
-      When l utilisateur clique sur "Bouton_Supprimer_Ideation"
+      When l utilisateur clique sur "JS_Bouton_Supprimer_Ideation"
       And l utilisateur clique sur "Confirmer_Suppression_Ideation"
 
 
       #Etape 4 : Confirmer que l'idée est supprimer
 
-     Then verifier que l'idée n'est plus affichée
+     Then verifier que l idée n est plus affichée
 
 
 

@@ -22,35 +22,40 @@ Feature: Enquete
 
     When l utilisateur clique sur "Bouton_Role_RH"
     And l utilisateur clique sur "Bouton_Menu_Etendu"
-    And l utilisateur clique sur "Bouton_Connect"
+    And l utilisateur clique sur "Bouton_Module_Connect"
     And l utilisateur clique sur "Bouton_Enquete"
 
     #Etape3 : Remplir tous les champs d'une enquete
 
     When l utilisateur clique sur "Bouton_Ajouter_Enquete"
-    And l utilisateur saisit "Enquete" dans le champs "Libelle_Enquete"
-    And l utilisateur saisit "test population enquete" dans le champs "Population_Enquete"
+    And l utilisateur saisit "Enquete" dans le champs "Libelle_Enquete_Creation"
+    And l utilisateur selectionne la population "test population pour enquete" dans la liste des populations "Population_Enquete"
     And l utilisateur saisit "reponse 1" dans le champs "Reponse_1_enquete"
     And l utilisateur saisit "reponse 2" dans le champs "Reponse_2_enquete"
     And l utilisateur saisit "Chapitre1" dans le champs "Axe_Enquete"
     And l utilisateur saisit "tester question" dans le champs "Question_Creation_Enquete"
     And l utilisateur clique sur "Bouton_Confirmer_Ajouter_Enquete"
+    And   wait 3000
 
-    #Etape4 : Modifier une enquete et confirmer la modification
+      #Etape4 : Modifier une enquete et confirmer la modification
 
-    And l utilisateur clique sur "Bouton_Options_Enquete"
-    When l utilisateur clique sur "Bouton_Modifier_Enquete"
-    And l utilisateur saisit "  modifié" dans le champs "Libelle_Enquete"
-    And l utilisateur saisit "test population enquete modifie" dans le champs "Population_Enquete"
-    And l utilisateur saisit " oui" dans le champs "Reponse_1_enquete"
-    And l utilisateur saisit " non" dans le champs "Reponse_2_enquete"
-    And l utilisateur saisit " modifié" dans le champs "Axe_Enquete"
-    And l utilisateur saisit " vérifié" dans le champs "Question_Modification_Enquete"
+    And l utilisateur clique sur "Bouton_Modifier_Enquete"
+    And l utilisateur modifie "Enquete_modifié" dans le champs "Libelle_Enquete_Modification"
+    And l utilisateur selectionne la population "test population pour enquete modifie" dans la liste des populations "Population_Enquete"
+    And l utilisateur modifie "reponse 1 oui" dans le champs "Reponse_1_enquete"
+    And l utilisateur modifie "reponse 2 non" dans le champs "Reponse_2_enquete"
+    And l utilisateur modifie "chapitre1 modifié" dans le champs "Axe_Enquete"
+    And l utilisateur modifie "tester question vérifié" dans le champs "Question_Creation_Enquete"
     And l utilisateur clique sur "Bouton_Confirmer_Modifier_Enquete"
+    And   wait 3000
     And l utilisateur clique sur "Bouton_Lancer_Enquete"
+    And l utilisateur clique sur "Bouton_Confirmer_Lancer_Enquete"
+    And   wait 3000
+
 
       #Etape5 : Vérifier que la mise à jour de l'enquete a été effectuée avec succés
 
     And l utilisateur se deconnecte
     And l'utilisateur "amal.chograni@yopmail.com" est connecté
+    And l utilisateur clique sur Bouton_Enquete_Portail et verifie le chargement de la liste des enquetes
     Then vérifier que l'enquete a été modifié correctement
