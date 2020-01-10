@@ -16,7 +16,7 @@
       #Etape1 : Se connecter au TNR
 
       Given le navigateur est ouvert et la page d'acceuil est affichée
-      And l'utilisateur "amal.chograni@yopmail.com" est connecté
+      And l'utilisateur "responsable@yopmail.com" est connecté
 
       #Etape2 : Ajouter une enquete
 
@@ -29,7 +29,8 @@
 
       When l utilisateur clique sur "Bouton_Ajouter_Enquete"
       And l utilisateur saisit "Enquete vote RH" dans le champs "Libelle_Enquete_Creation"
-      And l utilisateur selectionne la population "population tempo" dans la liste des populations "Population_Enquete"
+      And l utilisateur selectionne la population "Population sans createur" dans la liste des populations "Population_Enquete"
+      #Population qui ne contient pas l'utilisateur connecté
       And l utilisateur saisit "reponse 1" dans le champs "Reponse_1_enquete"
       And l utilisateur saisit "reponse 2" dans le champs "Reponse_2_enquete"
       And l utilisateur saisit "Chapitre1" dans le champs "Axe_Enquete"

@@ -16,7 +16,7 @@ Feature: Sondage
        #Etape1 : Se connecter au TNR
 
     Given le navigateur est ouvert et la page d'acceuil est affichée
-    And l'utilisateur "resp-RH@mail.com" est connecté
+    And l'utilisateur "responsable@yopmail.com" est connecté
 
       #Etape2 : Ajouter un sondage
 

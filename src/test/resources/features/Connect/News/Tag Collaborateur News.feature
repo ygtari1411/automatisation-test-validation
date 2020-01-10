@@ -17,7 +17,7 @@ Feature: News : Tag d'un collaborateur dans le corps d'une news
     #Etape 1 : Connexion
 
     Given le navigateur est ouvert et la page d'acceuil est affichée
-    And l'utilisateur "resp-RH@mail.com" est connecté
+    And l'utilisateur "responsable@yopmail.com" est connecté
 
     #Etape 2 : Changement de role
 
@@ -30,7 +30,7 @@ Feature: News : Tag d'un collaborateur dans le corps d'une news
 
     And l utilisateur clique sur "Bouton_Ajout_News"
     And l utilisateur saisit "Test automatique création news avec tag " dans le champs "Champ_Input_Titre_News"
-    And l utilisateur saisit "@Responsable Prod. MT" dans le champs "Champ_Input_Texte_News"
+    And l utilisateur saisit "@gaston.boutot@yopmail.com" dans le champs "Champ_Input_Texte_News"
     And l utilisateur choisit le profil du tag dans le corps de la News
     And l'utilisateur selectionne la date actuelle du champ date de publication
     And  l utilisateur upload "une image" dans le champs "Upload_Image_News"

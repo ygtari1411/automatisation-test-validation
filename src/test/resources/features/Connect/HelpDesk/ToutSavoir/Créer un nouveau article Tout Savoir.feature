@@ -18,7 +18,7 @@
       #Etape1 :  Connexion
 
       Given le navigateur est ouvert et la page d'acceuil est affichée
-      And l'utilisateur "resp-RH@mail.com" est connecté
+      And l'utilisateur "responsable@yopmail.com" est connecté
 
       #Etape2 :  Ajouter article
 

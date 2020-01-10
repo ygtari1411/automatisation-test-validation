@@ -16,7 +16,7 @@ Feature: Enquete
       #Etape1 : Se connecter au TNR
 
     Given le navigateur est ouvert et la page d'acceuil est affichée
-    And l'utilisateur "resp-RH@mail.com" est connecté
+    And l'utilisateur "responsable@yopmail.com" est connecté
 
       #Etape2 : Ajouter une enquete
 
@@ -30,6 +30,7 @@ Feature: Enquete
     When l utilisateur clique sur "Bouton_Ajouter_Enquete"
     And l utilisateur saisit "Enquete" dans le champs "Libelle_Enquete_Creation"
     And l utilisateur selectionne la population "test population pour enquete" dans la liste des populations "Population_Enquete"
+    #Timeline qui contient l'utilisateur connecté responsable@yopmail.com
     And l utilisateur saisit "reponse 1" dans le champs "Reponse_1_enquete"
     And l utilisateur saisit "reponse 2" dans le champs "Reponse_2_enquete"
     And l utilisateur saisit "Chapitre1" dans le champs "Axe_Enquete"
@@ -37,11 +38,12 @@ Feature: Enquete
     And l utilisateur clique sur "Bouton_Confirmer_Ajouter_Enquete"
     And   wait 3000
 
-      #Etape4 : Modifier une enquete et confirmer la modification
+    #Etape4 : Modifier une enquete et confirmer la modification
 
     And l utilisateur clique sur "Bouton_Modifier_Enquete"
     And l utilisateur modifie "Enquete_modifié" dans le champs "Libelle_Enquete_Modification"
     And l utilisateur selectionne la population "test population pour enquete modifie" dans la liste des populations "Population_Enquete"
+    #Timeline qui contient l'utilisateur heloise.sciverit@yopmail.com
     And l utilisateur modifie "reponse 1 oui" dans le champs "Reponse_1_enquete"
     And l utilisateur modifie "reponse 2 non" dans le champs "Reponse_2_enquete"
     And l utilisateur modifie "chapitre1 modifié" dans le champs "Axe_Enquete"
@@ -56,6 +58,6 @@ Feature: Enquete
       #Etape5 : Vérifier que la mise à jour de l'enquete a été effectuée avec succés
 
     And l utilisateur se deconnecte
-    And l'utilisateur "amal.chograni@yopmail.com" est connecté
+    And l'utilisateur "heloise.sciverit@yopmail.com" est connecté
     And l utilisateur clique sur Bouton_Enquete_Portail et verifie le chargement de la liste des enquetes
     Then vérifier que l'enquete a été modifié correctement

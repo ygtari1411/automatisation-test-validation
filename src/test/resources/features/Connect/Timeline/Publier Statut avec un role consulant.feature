@@ -15,8 +15,8 @@
       #Etape 1 : Connexion
 
       Given le navigateur est ouvert et la page d'acceuil est affichée
-      And l'utilisateur "rania.chaari@advyteam.com" est connecté
-      #le role de l utilisateur doit etre "consultant"
+      And l'utilisateur "gilles.guimond@yopmail.com" est connecté
+      #Le role de l utilisateur ci-dessus est consultant
 
       #Etape 2 : verification de l'impossibilité de la publication
 

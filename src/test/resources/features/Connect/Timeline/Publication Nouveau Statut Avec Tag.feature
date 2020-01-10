@@ -15,16 +15,17 @@ Feature: Timeline : Publication nouveau statut avec Tag
          #Etape 1 : Connexion
 
     Given le navigateur est ouvert et la page d'acceuil est affichée
-    And l'utilisateur "resp-RH@mail.com" est connecté
+    And l'utilisateur "responsable@yopmail.com" est connecté
 
            #Etape 2 : Creation statut avec tag
 
     When l utilisateur clique sur "Champ_Statut"
-    And l utilisateur saisit "@Responsable Prod. MT" dans le champs "Champ_Input_Statut"
+    And l utilisateur saisit "@gaston.boutot@yopmail.com" dans le champs "Champ_Input_Statut"
     And l utilisateur choisit le profil du tag du statut dans la liste
-    And l utilisateur selectionne "Tous les utilisateurs" dans la liste deroulante "Liste_Deroulante_Timeline"
+    And l utilisateur selectionne "Tous les utilisateurs Connect" dans la liste deroulante "Liste_Deroulante_Timeline"
+    #Timeline qui contient tous les utilisateurs de la solution
     And l utilisateur clique sur "Bouton_Publication_Statut"
 
-           #Etape 3 : verfication création statut avec tag
+           #Etape 3 : vérfication création statut avec tag
 
     Then Vérifier que le statut est publié et que le tag est affiché

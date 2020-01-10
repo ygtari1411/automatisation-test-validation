@@ -19,13 +19,14 @@ Feature: Timeline : Suppression statut
          #Etape 1 : Connexion
 
     Given le navigateur est ouvert et la page d'acceuil est affichée
-    And l'utilisateur "resp-RH@mail.com" est connecté
+    And l'utilisateur "responsable@yopmail.com" est connecté
 
          #Etape 2 : Publiation Statut
 
     And l utilisateur clique sur "Champ_Statut"
     And l utilisateur saisit "Ceci est un test automatisé qui vise à vérifier le fonctionnement correcte de la suppression statut" dans le champs "Champ_Input_Statut"
-    And l utilisateur selectionne "Tous les utilisateurs" dans la liste deroulante "Liste_Deroulante_Timeline"
+    And l utilisateur selectionne "Tous les utilisateurs Connect" dans la liste deroulante "Liste_Deroulante_Timeline"
+    #Timeline qui contient tous les utilisateurs du module connect
     And l utilisateur clique sur "Bouton_Publication_Statut"
     And wait 2000
       #Etape 3 : Suppression Statut

@@ -17,7 +17,7 @@ Feature: News : Commentaire avec tag collaborateur sur une news
     #Etape 1 : Connexion
 
     Given le navigateur est ouvert et la page d'acceuil est affichée
-    And l'utilisateur "resp-RH@mail.com" est connecté
+    And l'utilisateur "responsable@yopmail.com" est connecté
 
     #Etape 2 : Changement de role
 
@@ -42,7 +42,7 @@ Feature: News : Commentaire avec tag collaborateur sur une news
 
     And l utilisateur clique sur "Bouton_Portal"
     When l'utilisateur clique sur la news ajoutée
-    And l utilisateur saisit "@Responsable Prod. MT" dans le champs "Champs_Input_Commentaire"
+    And l utilisateur saisit "@gaston.boutot@yopmail.com" dans le champs "Champs_Input_Commentaire"
     And l utilisateur choisit le profil du tag du commentaire News dans la liste
     And l utilisateur clique sur "JS_Bouton_Submit_Commentaire"
 

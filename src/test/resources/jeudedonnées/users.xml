@@ -104,6 +104,24 @@
         <password>advyteam</password>
     </user>
 
+    <user>
+        <username>responsable@yopmail.com</username>
+        <password>accretio1</password>
+    </user>
 
+    <user>
+    <username>heloise.sciverit@yopmail.com</username>
+    <password>accretio2</password>
+    </user>
+
+    <user>
+        <username>gaston.boutot@yopmail.com</username>
+        <password>accretio3</password>
+    </user>
+
+    <user>
+        <username>gilles.guimond@yopmail.com</username>
+        <password>accretio4</password>
+    </user>
 
 </users>

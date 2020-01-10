@@ -15,11 +15,12 @@
       #Etape 1 : Connexion
 
       Given le navigateur est ouvert et la page d'acceuil est affichée
-      And l'utilisateur "resp-RH@mail.com" est connecté
+      And l'utilisateur "responsable@yopmail.com" est connecté
 
       #Etape 2 : Publication de la vidéo
 
-      When l utilisateur selectionne "Tous les utilisateurs" dans la liste deroulante "Liste_Deroulante_Timeline"
+      When l utilisateur selectionne "Tous les utilisateurs Connect" dans la liste deroulante "Liste_Deroulante_Timeline"
+      #Timeline qui contient tous les utilisateurs de la solution
       And  l utilisateur upload "une vidéo" dans le champs "Champ_Input_Video_Publication"
       And l utilisateur saisit "Test automatisé publication video" dans le champs "Champ_Input_Statut_Video"
       And l utilisateur clique sur "Bouton_Publication_Video"
