@@ -11,7 +11,7 @@
 
 Feature: Sondage
 
-  Scenario: Stopper un sondage
+  Scenario: Impossible de voter dans un sondage stoppé
 
       #Etape1 : Se connecter au TNR
 

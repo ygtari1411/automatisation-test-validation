@@ -31,5 +31,4 @@ Feature: Timeline
 
    And l utilisateur se deconnecte
    And l'utilisateur "heloise.sciverit@yopmail.com" est connecté
-   When le navigateur est ouvert et la page d'acceuil est affichée
    Then verifier que la notification existe et l'utilisateur peut afficher la publication

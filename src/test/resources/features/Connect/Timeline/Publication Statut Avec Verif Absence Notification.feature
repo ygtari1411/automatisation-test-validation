@@ -33,5 +33,4 @@ Feature: Timeline
 
     And l utilisateur se deconnecte
     And l'utilisateur "gaston.boutot@yopmail.com" est connecté
-    When le navigateur est ouvert et la page d'acceuil est affichée
     Then verifier que la notification n existe pas et que l utilisateur ne peut pas afficher la publication

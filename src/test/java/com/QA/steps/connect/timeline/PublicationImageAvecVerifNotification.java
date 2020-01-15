@@ -17,17 +17,31 @@ public class PublicationImageAvecVerifNotification {
 
     private final WebDriver driver = GenerateurDriver.driver;
     private ActionsCommunes action = new ActionsCommunes();
-    private String codeImage;
+    private static String codeImage;
+
 
     @Then("verifier que l image a etait publie")
     public void verifierQueLImageAEtaitPublie() {
+
+        String str1=ActionsCommunes.DataProvider("Champ_Input_Statut_Image");
+
+        Boolean modules1 = (new WebDriverWait(driver, 50))
+                .until(ExpectedConditions.attributeToBe(By.cssSelector(TimelineLocators.Premiere_Pulication_Statut), "innerText", str1));
+
 
         WebElement modules2 = (new WebDriverWait(driver, 50))
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath(TimelineLocators.Premiere_Image_Publier_Timeline )));
 
         Assert.assertTrue(driver.findElement(By.xpath(TimelineLocators.Premiere_Image_Publier_Timeline)).getAttribute("outerHTML").contains("documentsmanagement/api/document-mgm/load-images"));
 
-       codeImage=driver.findElement(By.xpath(TimelineLocators.Premiere_Image_Publier_Timeline)).getAttribute("outerHTML");
+        codeImage=driver.findElement(By.cssSelector(TimelineLocators.Premiere_Image_Publier_Timeline_Afficher)).getAttribute("outerHTML");
+
+        int pos = codeImage.indexOf("codeFile");
+
+
+        codeImage=codeImage.substring(pos);
+
+
 
     }
 
@@ -39,13 +53,15 @@ public class PublicationImageAvecVerifNotification {
         action.pause(driver,1000);
 
         driver.findElement(By.xpath(CommonLocators.Première_Notification_Portal)).click();
+        action.pause(driver,1000);
 
         WebElement modules2 = (new WebDriverWait(driver, 50))
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath(TimelineLocators.Premiere_Image_Publier_Timeline)));
 
-        String str2= driver.findElement(By.xpath(TimelineLocators.Premiere_Image_Publier_Timeline)).getAttribute("outerHTML");
+        String str2= driver.findElement(By.cssSelector(TimelineLocators.Premiere_Image_Publier_Timeline_Afficher)).getAttribute("outerHTML");
 
-        Assert.assertEquals(codeImage,str2);
+
+        Assert.assertTrue(str2.contains(codeImage));
 
     }
 

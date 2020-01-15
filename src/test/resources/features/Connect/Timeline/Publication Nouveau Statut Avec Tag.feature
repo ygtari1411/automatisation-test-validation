@@ -20,7 +20,7 @@ Feature: Timeline : Publication nouveau statut avec Tag
            #Etape 2 : Creation statut avec tag
 
     When l utilisateur clique sur "Champ_Statut"
-    And l utilisateur saisit "@gaston.boutot@yopmail.com" dans le champs "Champ_Input_Statut"
+    And l utilisateur saisit "@Gilles Guimond" dans le champs "Champ_Input_Statut"
     And l utilisateur choisit le profil du tag du statut dans la liste
     And l utilisateur selectionne "Tous les utilisateurs Connect" dans la liste deroulante "Liste_Deroulante_Timeline"
     #Timeline qui contient tous les utilisateurs de la solution

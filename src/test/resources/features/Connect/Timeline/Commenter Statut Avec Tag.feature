@@ -29,7 +29,7 @@ Feature: Timeline : Ajout commentaire avec tag sur un statut
     And wait 3000
       #Etape 3 : Ajout commentaire avec tag sur le statut
     
-    When l utilisateur saisit "@gilles.guimond@yopmail.com" dans le champs "Champs_Input_Commentaire"
+    When l utilisateur saisit "@Gilles Guimond" dans le champs "Champs_Input_Commentaire"
     And l utilisateur choisit le profil du tag du commentaire dans la liste
     And l utilisateur clique sur "JS_Bouton_Submit_Commentaire"
 

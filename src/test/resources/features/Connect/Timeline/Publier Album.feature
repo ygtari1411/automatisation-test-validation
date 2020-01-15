@@ -22,9 +22,11 @@
       When l utilisateur selectionne "Tous les utilisateurs Connect" dans la liste deroulante "Liste_Deroulante_Timeline"
       #Timeline qui contient les utilisateurs du module connect
       And  l utilisateur upload "une image" dans le champs "Champ_Input_Album_Publication"
-      And  l utilisateur upload "une image" dans le champs "Champ_Input_Album_Publication"
+      And wait 5000
+      And  l utilisateur upload "une image 2" dans le champs "Champ_Input_Album_Publication_Image_2"
+      And wait 3000
       #Timeline qui contient tous les utilisateurs de la solution
-      And l utilisateur clique sur "Bouton_Publication_Album"
+      And l utilisateur clique sur "JS_Bouton_Publication_Album"
       And wait 5000
 
       #Etape 3 : Vérification de la création de la publication

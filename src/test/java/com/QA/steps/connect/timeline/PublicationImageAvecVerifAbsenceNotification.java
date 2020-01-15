@@ -40,15 +40,16 @@ public class PublicationImageAvecVerifAbsenceNotification {
        String str1= ActionsCommunes.DataProvider("Champ_Input_Statut_Image");
 
         WebElement modules2 = (new WebDriverWait(driver, 50))
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(TimelineLocators.Container_Premiere_Publication )));
+                .until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(TimelineLocators.Container_Premiere_Publication )));
 
-       String str2=driver.findElement(By.xpath(TimelineLocators.Container_Premiere_Publication)).getAttribute("innerText");
+       String str2=driver.findElement(By.cssSelector(TimelineLocators.Container_Premiere_Publication)).getAttribute("innerText");
 
        Assert.assertFalse(str2.contains(str1));
 
        //Vérification de l'abscence d'une notification relative a la publication de la photo
 
-        List<WebElement> l = driver.findElements(By.cssSelector(CommonLocators.Compteur_Notification));
+
+        List<WebElement> l = driver.findElements(By.xpath(CommonLocators.Compteur_Notification));
 
 
         if(l.size()!=0) {
@@ -56,7 +57,7 @@ public class PublicationImageAvecVerifAbsenceNotification {
            boolean NotificationPresence=false;
 
             driver.findElement(By.xpath(CommonLocators.Bouton_Notifications_Portal)).click();
-            action.pause(driver,1000);
+            action.pause(driver,5000);
 
             List<WebElement> l2=driver.findElements(By.xpath(CommonLocators.Liste_Notifications));
 

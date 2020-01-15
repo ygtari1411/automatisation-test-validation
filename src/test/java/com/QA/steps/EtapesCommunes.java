@@ -442,6 +442,16 @@ public class EtapesCommunes {
                 }
                 break;
 
+            case "une image 2":
+                if (b1) {
+                    driver.findElement(By.xpath(locator)).sendKeys(System.getProperty("user.dir") + "/src/test/resources/imagespourtest/imagetest2.jpg");
+                } else if (b) {
+                    driver.findElement(By.cssSelector(locator)).sendKeys(System.getProperty("user.dir") + "/src/test/resources/imagespourtest/imagetest2.jpg");
+                } else {
+                    driver.findElement(By.id(locator)).sendKeys(System.getProperty("user.dir") + "/src/test/resources/imagespourtest/imagetest2.jpg");
+                }
+                break;
+
             default:
                 logger.info("Aucun type de fichier selectionné pour l'upload ");
         }

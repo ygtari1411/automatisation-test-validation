@@ -27,7 +27,7 @@ public class PublicationStatutAvecVerifAbsenceNotification {
     public void verifierQueLeStatutAEtaitPublie() {
 
        String str1 =ActionsCommunes.DataProvider("Champ_Input_Statut");
-       String str2=driver.findElement(By.xpath(TimelineLocators.Container_Premiere_Publication)).getAttribute("innerText");
+       String str2=driver.findElement(By.cssSelector(TimelineLocators.Container_Premiere_Publication)).getAttribute("innerText");
        Assert.assertTrue(str2.contains(str1));
        NomUser=driver.findElement(By.xpath(CommonLocators.Icone_Nom_Utilisateur)).getAttribute("innerText");
 
@@ -38,13 +38,13 @@ public class PublicationStatutAvecVerifAbsenceNotification {
 
         String str1=ActionsCommunes.DataProvider("Champ_Input_Statut");
         WebElement modules2 = (new WebDriverWait(driver, 50))
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(TimelineLocators.Container_Premiere_Publication )));
-        String str2=driver.findElement(By.xpath(TimelineLocators.Container_Premiere_Publication)).getAttribute("innerText");
+                .until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(TimelineLocators.Container_Premiere_Publication )));
+        String str2=driver.findElement(By.cssSelector(TimelineLocators.Container_Premiere_Publication)).getAttribute("innerText");
         Assert.assertFalse(str2.contains(str1));
 
         //Vérification de l'abscence d'une notification relative a la publication de la photo
 
-        List<WebElement> l = driver.findElements(By.cssSelector(CommonLocators.Compteur_Notification));
+        List<WebElement> l = driver.findElements(By.xpath(CommonLocators.Compteur_Notification));
 
 
         if(l.size()!=0) {

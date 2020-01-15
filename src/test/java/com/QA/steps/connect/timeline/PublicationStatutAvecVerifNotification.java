@@ -28,7 +28,7 @@ public class PublicationStatutAvecVerifNotification {
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath(CommonLocators.Premier_User_Nom_Notification)));
 
         String str1=driver.findElement(By.xpath(CommonLocators.Premier_User_Nom_Notification)).getAttribute("innerText");
-        Assert.assertEquals("Responsable RH MT",str1);
+        Assert.assertEquals("Blanche Beauchamp",str1);
 
 
 
@@ -36,9 +36,9 @@ public class PublicationStatutAvecVerifNotification {
        driver.findElement(By.xpath(CommonLocators.Première_Notification_Portal)).click();
 
         WebElement modules2 = (new WebDriverWait(driver, 50))
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(TimelineLocators.Premiere_Publication_Timeline)));
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(TimelineLocators.Premiere_Publication_Timeline_Notification)));
 
-       String str2= driver.findElement(By.xpath(TimelineLocators.Premiere_Publication_Timeline)).getAttribute("innerText");
+       String str2= driver.findElement(By.xpath(TimelineLocators.Premiere_Publication_Timeline_Notification)).getAttribute("innerText");
        String str3= ActionsCommunes.DataProvider("Champ_Input_Statut");
 
        Assert.assertEquals(str3,str2);
