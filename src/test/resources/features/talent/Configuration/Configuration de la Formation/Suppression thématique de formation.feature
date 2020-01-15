@@ -13,8 +13,8 @@ Feature: Configuration
   Scenario: Suppression thématique de formation
     #Etape 001: Connexion RH_Training
     Given   le navigateur est ouvert et la page d'acceuil est affichée
-      And   l'utilisateur "Lafforge.nicholas@YOPMAIL.COM" est connecté
-     Then   le nom de l utilisateur "Nicholas Lafforge" est affiche en haut a gauche
+      And   l'utilisateur "combes.caroline@YOPMAIL.COM" est connecté
+     Then   le nom de l utilisateur "Caroline Combes" est affiche en haut a gauche
     #Etape 002: Acceder  au sous module configuration
      When   l utilisateur clique sur "Bouton_menu_etendu"
       And   l utilisateur clique sur "Module_Talent"
