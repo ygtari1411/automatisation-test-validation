@@ -1,6 +1,7 @@
 package com.QA.steps;
 
 import com.QA.base.ConfigBasiqueWebDriver;
+import com.QA.base.streams;
 import cucumber.api.java.After;
 import io.cucumber.core.api.Scenario;
 import io.cucumber.java.Before;
@@ -37,7 +38,7 @@ public class GenerateurDriver {
         }
         logger.info("Fin scénario " + scenario.getName());
         driver.manage().deleteAllCookies();
-        driver.navigate().refresh();
+        driver.get(streams.readers().getProperty("testsiteurl"));
     }
 
 }

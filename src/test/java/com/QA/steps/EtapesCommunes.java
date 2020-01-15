@@ -31,6 +31,7 @@ public class EtapesCommunes {
     private static final Properties reader;
     private ActionsCommunes action = new ActionsCommunes();
     public static List<String> listededonnees = new ArrayList<>();
+    public Actions actions = new Actions(driver);
 
     static {
         reader = streams.readers();
@@ -79,27 +80,13 @@ public class EtapesCommunes {
     }
 
 
-    @And("l'utilisateur clique sur News")
-    public void lUtilisateurCliqueSurNews() throws InterruptedException {
-
-        driver.findElement(By.xpath(NewsLocators.Bouton_Module_News)).click();
-        action.pause(driver, 200);
-
-    }
-
-
-    @And("l'utilisateur clique sur portal")
-    public void lUtilisateurCliqueSurPortal() {
-        driver.findElement(By.xpath(CommonLocators.Bouton_Portal)).click();
-    }
-
-
     @And("wait {int}")
     public void wait(int arg0) throws InterruptedException {
+        logger.info("Pause de " + arg0 / 1000 + " secondes");
         synchronized (driver) {
             driver.wait(arg0);
         }
-        logger.info("Pause de " + arg0 / 1000 + " secondes");
+
     }
 
 
@@ -137,14 +124,19 @@ public class EtapesCommunes {
             JavascriptExecutor executor = (JavascriptExecutor) driver;
             executor.executeScript("arguments[0].click();", element);
         } else if (Character.toString(locator.charAt(0)).contains("/")) {
-            WebElement modules = (new WebDriverWait(driver, 20)).until(ExpectedConditions.elementToBeClickable(By.xpath(locator)));
-            driver.findElement(By.xpath(locator)).click();
+            WebElement element = driver.findElement(By.xpath(locator));
+            actions.moveToElement(element).perform();
+            WebElement modules = (new WebDriverWait(driver, 20)).until(ExpectedConditions.elementToBeClickable(element));
+            element.click();
         } else if (locator.contains("[") || Character.toString(locator.charAt(0)).contains(".")) {
-            WebElement modules = (new WebDriverWait(driver, 20)).until(ExpectedConditions.elementToBeClickable(By.cssSelector(locator)));
-            driver.findElement(By.cssSelector(locator)).click();
+            WebElement element = driver.findElement(By.cssSelector(locator));
+            actions.moveToElement(element).perform();
+            WebElement modules = (new WebDriverWait(driver, 20)).until(ExpectedConditions.elementToBeClickable(element));
+            element.click();
         } else {
-            WebElement modules = (new WebDriverWait(driver, 20)).until(ExpectedConditions.elementToBeClickable(By.id(locator)));
-            driver.findElement(By.id(locator)).click();
+            WebElement element = driver.findElement(By.id(locator));
+            WebElement modules = (new WebDriverWait(driver, 20)).until(ExpectedConditions.elementToBeClickable(element));
+            element.click();
         }
 
     }
@@ -208,7 +200,7 @@ public class EtapesCommunes {
             driver.findElement(By.id(locator)).click();
         }
 
-        /*locator = "vide";
+       /* locator = "vide";
         action.pause(driver, 500);
 
         String inputlistederoulante = listederoulante + "_IL";
@@ -223,12 +215,13 @@ public class EtapesCommunes {
                 break;
             }
         }
+        String s = Character.toString(optionlistederoulante.charAt(0));
         if (Character.toString(locator.charAt(0)).contains("/")) {
-            driver.findElement(By.xpath(locator)).sendKeys(optionlistederoulante);
+            driver.findElement(By.xpath(locator)).sendKeys(s);
         } else if (locator.contains("[") || Character.toString(locator.charAt(0)).contains(".")) {
-            driver.findElement(By.cssSelector(locator)).sendKeys(optionlistederoulante);
+            driver.findElement(By.cssSelector(locator)).sendKeys(s);
         } else {
-            driver.findElement(By.id(locator)).sendKeys(optionlistederoulante);
+            driver.findElement(By.id(locator)).sendKeys(s);
         }*/
         locator = "vide";
         action.pause(driver, 1000);
@@ -247,7 +240,7 @@ public class EtapesCommunes {
         }
 
         boolean x = true;
-        Actions actions = new Actions(driver);
+        //Actions actions = new Actions(driver);
         while (x) {
             List<WebElement> list1 = driver.findElements(By.xpath(locator));
             if (list1.size() > 1) {
@@ -310,7 +303,9 @@ public class EtapesCommunes {
             L = driver.findElements(By.id(locator));
         }
 
+        Actions actions = new Actions(driver);
         for (WebElement x : L) {
+            actions.moveToElement(x).perform();
             if (x.getText().equals(Optiondelaliste)) {
                 x.click();
                 break;
@@ -328,10 +323,10 @@ public class EtapesCommunes {
     }
 
     @And("vérifier que le titre du modal est {string} et le texte du corps du modal est {string}")
-    public void vérifierQueLeTitreDuModalEstEtLeTexteDuCorpsDuModalEst(String titremodal , String textecorpsmodal) {
+    public void vérifierQueLeTitreDuModalEstEtLeTexteDuCorpsDuModalEst(String titremodal, String textecorpsmodal) {
 
         Assert.assertEquals(driver.findElement(By.cssSelector("h4[class='modal-title']")).getAttribute("innerText"), titremodal);
-        Assert.assertEquals(driver.findElement(By.cssSelector("text-center")).getAttribute("innerText"),textecorpsmodal);
+        Assert.assertEquals(driver.findElement(By.cssSelector("text-center")).getAttribute("innerText"), textecorpsmodal);
 
     }
 
@@ -454,6 +449,40 @@ public class EtapesCommunes {
     }
 
 
+    @And("l utilisateur vérifie que {string} a la valeur {string}")
+    public void lUtilisateurVérifieQueALaValeur(String emplacement, String valeur) throws IllegalAccessException {
+
+        String locator = "vide";
+        for (List<Field> f : ListeGlobaleLocators) {
+            for (Field x : f) {
+                if (x.getName().equals(emplacement)) {
+                    locator = (String) x.get(x);
+                    break;
+                }
+            }
+            if (!locator.equals("vide")) {
+                break;
+            }
+        }
+            if (!driver.findElement(By.xpath(locator)).getAttribute("innerTexte").equals(valeur)) {
+                driver.findElement(By.xpath(locator)).click();
+                String emplacement2 = "Sauvegarde_" +emplacement;
+                locator = "vide";
+                for (List<Field> f : ListeGlobaleLocators) {
+                    for (Field x : f) {
+                        if (x.getName().equals(emplacement2)) {
+                            locator = (String) x.get(x);
+                            break;
+                        }
+                    }
+                    if (!locator.equals("vide")) {
+                        break;
+                    }
+                }
+                driver.findElement(By.xpath(locator)).click();
+            }
+
+    }
 }
 
 

@@ -1,9 +1,11 @@
 package com.QA.steps.easyRun;
 
 import com.QA.locators.AbcencesLocators;
+import com.QA.locators.CommonLocators;
 import com.QA.steps.ActionsCommunes;
 import com.QA.steps.GenerateurDriver;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -80,4 +82,19 @@ public class CollaborateurManagerValidationAbsence {
         Assert.assertTrue(driver.findElement(By.xpath(AbcencesLocators.Statut_Nouvelle_Demande_Absence)).getAttribute("innerText").contains("En cours"));
 
     }
+
+    @And("l'utilisateur vérifie que le statut de la journée type est Actif")
+    public void lUtilisateurVérifieQueLeStatutDeLaJournéeTypeEstActif() {
+
+        Assert.assertEquals("form-control input-sm ng-valid ng-touched ng-pristine", driver.findElement(By.xpath(CommonLocators.Statut_Ajout_Journée_Type)).getAttribute("className"));
+    }
+
+
+    @And("l'utilisateur vérifie que le statut du cycle de travail est Actif")
+    public void lUtilisateurVérifieQueLeStatutDuCycleDeTravailEstActif() {
+
+        Assert.assertEquals("form-control input-sm ng-untouched ng-pristine ng-valid", driver.findElement(By.xpath(CommonLocators.Statut_Ajout_Cycle_De_Travail)).getAttribute("className"));
+    }
+
+
 }
