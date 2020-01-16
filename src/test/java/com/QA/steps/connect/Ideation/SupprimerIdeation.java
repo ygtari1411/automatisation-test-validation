@@ -28,7 +28,7 @@ public class SupprimerIdeation {
                 .until(ExpectedConditions.not(ExpectedConditions.attributeToBe(By.xpath(IdeationLocators.Description_Premiere_Idee_Affichee), "innerText", str2)));
 
         String str3 = driver.findElement(By.xpath(IdeationLocators.Libelle_Premiere_Idee_Affichee)).getAttribute("innerText");
-        String str4 = driver.findElement(By.xpath(IdeationLocators.Libelle_Premiere_Idee_Affichee)).getAttribute("innerText");
+        String str4 = driver.findElement(By.xpath(IdeationLocators.Description_Premiere_Idee_Affichee)).getAttribute("innerText");
 
         Assert.assertNotEquals(str1, str3);
         Assert.assertNotEquals(str2, str4);

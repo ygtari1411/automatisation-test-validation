@@ -2,7 +2,7 @@ package com.QA.locators;
 
 public class IdeationLocators {
 
-    public static final String Widget_Ideation = "div[class='col-sm-8 text-center p0']";
+    public static final String Widget_Ideation = "/html/body/app-root/app-layout/div/section/div/acc-global-container/acc-portal-container/div/div/div[3]/acc-right-side-container/div/div[3]/div[2]";
     public static final String Proposer_une_idee = "/html/body/app-root/app-layout/div/section/div/acc-connect-ideation-container/div[1]/button[1]";
     public static final String Liste_Deroulante_Categorie_Idee = "/html/body/modal-container/div/div/acc-idea-form-modal/div[2]/acc-connect-idea-form/section/form/div[1]/div[1]/div[1]/acc-select-cr/ng-select/div/div[2]/span";
     public static final String Liste_Deroulante_Categorie_Idee_IL = "/html/body/modal-container/div/div/acc-idea-form-modal/div[2]/acc-connect-idea-form/section/form/div[1]/div[1]/div[1]/acc-select-cr/ng-select/div/input";

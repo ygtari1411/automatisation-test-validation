@@ -1,5 +1,6 @@
 package com.QA.steps.connect.Ideation;
 
+import com.QA.locators.CommonLocators;
 import com.QA.locators.EnqueteLocators;
 import com.QA.locators.IdeationLocators;
 import com.QA.locators.SondageLocators;
@@ -22,18 +23,15 @@ public class CreationIdeation {
     public void lUtilisateurAttendLApparitionDuWidget_Ideation() {
 
         WebElement modules1 = (new WebDriverWait(driver, 50))
-                .until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(IdeationLocators.Widget_Ideation)));
-
-
-        WebElement modules2 = (new WebDriverWait(driver, 100))
-                .until(ExpectedConditions.elementToBeClickable(By.cssSelector(IdeationLocators.Widget_Ideation)));
-
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(IdeationLocators.Widget_Ideation)));
 
     }
 
 
     @Then("vérifier que l idée est crée")
     public void vérifierQueLIdéeEstCrée() {
+
+
 
         String str1 = ActionsCommunes.DataProvider("Libelle_Creation_Idee");
         String str2 = ActionsCommunes.DataProvider("Description_Creation_Idee");
@@ -45,7 +43,7 @@ public class CreationIdeation {
                 .until(ExpectedConditions.attributeToBe(By.xpath(IdeationLocators.Description_Premiere_Idee_Affichee), "innerText", str2));
 
         String str3 = driver.findElement(By.xpath(IdeationLocators.Libelle_Premiere_Idee_Affichee)).getAttribute("innerText");
-        String str4 = driver.findElement(By.xpath(IdeationLocators.Libelle_Premiere_Idee_Affichee)).getAttribute("innerText");
+        String str4 = driver.findElement(By.xpath(IdeationLocators.Description_Premiere_Idee_Affichee)).getAttribute("innerText");
 
 
         Assert.assertEquals(str1, str3);
