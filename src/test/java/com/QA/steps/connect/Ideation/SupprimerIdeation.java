@@ -22,10 +22,10 @@ public class SupprimerIdeation {
         String str2 = ActionsCommunes.DataProvider("Description_Creation_Idee");
 
         Boolean modules1 = (new WebDriverWait(driver, 50))
-                .until(ExpectedConditions.not(ExpectedConditions.attributeToBe(By.xpath(IdeationLocators.Libelle_Premiere_Idee_Affichee), "innerText", str1)));
+                .until(ExpectedConditions.refreshed(ExpectedConditions.not(ExpectedConditions.attributeToBe(By.xpath(IdeationLocators.Libelle_Premiere_Idee_Affichee), "innerText", str1))));
 
         Boolean modules2 = (new WebDriverWait(driver, 50))
-                .until(ExpectedConditions.not(ExpectedConditions.attributeToBe(By.xpath(IdeationLocators.Description_Premiere_Idee_Affichee), "innerText", str2)));
+                .until(ExpectedConditions.refreshed(ExpectedConditions.not(ExpectedConditions.attributeToBe(By.xpath(IdeationLocators.Description_Premiere_Idee_Affichee), "innerText", str2))));
 
         String str3 = driver.findElement(By.xpath(IdeationLocators.Libelle_Premiere_Idee_Affichee)).getAttribute("innerText");
         String str4 = driver.findElement(By.xpath(IdeationLocators.Description_Premiere_Idee_Affichee)).getAttribute("innerText");

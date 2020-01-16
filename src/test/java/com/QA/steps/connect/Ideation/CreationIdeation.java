@@ -37,7 +37,7 @@ public class CreationIdeation {
         String str2 = ActionsCommunes.DataProvider("Description_Creation_Idee");
 
         Boolean modules1 = (new WebDriverWait(driver, 50))
-                .until(ExpectedConditions.attributeToBe(By.xpath(IdeationLocators.Libelle_Premiere_Idee_Affichee), "innerText", str1));
+                .until(ExpectedConditions.refreshed(ExpectedConditions.attributeToBe(By.xpath(IdeationLocators.Libelle_Premiere_Idee_Affichee), "innerText", str1)));
 
         Boolean modules2 = (new WebDriverWait(driver, 50))
                 .until(ExpectedConditions.attributeToBe(By.xpath(IdeationLocators.Description_Premiere_Idee_Affichee), "innerText", str2));

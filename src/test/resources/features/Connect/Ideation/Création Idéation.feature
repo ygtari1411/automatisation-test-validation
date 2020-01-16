@@ -32,6 +32,7 @@ Feature: Ideation
     And l utilisateur saisit "Ceci est la description de l'idée" dans le champs "Description_Creation_Idee"
     And l utilisateur clique sur "Bouton_Sauvegarde_Creation_Ideation"
 
+
     #Etape 3 : Vérification de la création de l'idée
 
     #Then vérifier que le message "succès" s affiche

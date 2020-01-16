@@ -36,6 +36,7 @@
       #Etape 3 : Supprimer l'idée
 
       When l utilisateur clique sur "JS_Bouton_Supprimer_Ideation"
+      And wait 2000
       And l utilisateur clique sur "Confirmer_Suppression_Ideation"
 
 
