@@ -32,6 +32,7 @@ Feature: News : Suppression News
     And l utilisateur saisit "C'est un test automatique d'ajout puis de suppression d'une news" dans le champs "Champ_Input_Texte_News"
     And l'utilisateur selectionne la date actuelle du champ date de publication
     And  l utilisateur upload "une image" dans le champs "Upload_Image_News"
+    And wait 1000
     And l utilisateur clique sur "Bouton_Enregistrer_Redimensionner_Image"
     And wait 1000
     And l utilisateur clique sur "Bouton_Sauvegarde_Creation_News"
@@ -39,7 +40,7 @@ Feature: News : Suppression News
 
     # Etape 4 : Suppression News
 
-    When l utilisateur clique sur "Bouton_Supprimer_News"
+    When l utilisateur clique sur "JS_Bouton_Supprimer_News"
     And l utilisateur clique sur "Bouton_Validation_Suppression_News"
     And wait 3000
     Then vérifier la suppression de la News

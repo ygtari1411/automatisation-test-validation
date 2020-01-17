@@ -13,7 +13,7 @@ public class NewsLocators {
     public static final String Bouton_Sauvegarde_Creation_News = "button[class='mb-sm btn btn-info btn-outline'][type='submit']";
     public static final String Premier_Element_Liste_News = "/html/body/app-root/app-layout/div/section/div/acc-connect-news-container/div/div/acc-list-entities/div/div/a[1]/span";
     public static final String Header_Section_News = "/html/body/app-root/app-layout/div/section/div/acc-connect-news-container/div/div/div/div/acc-connect-news-form/form/div/section/div[1]";
-    public static final String Bouton_Supprimer_News = "/html/body/app-root/app-layout/div/section/div/acc-connect-news-container/header/div[2]/acc-add-delete-actions/i[1]";
+    public static final String JS_Bouton_Supprimer_News = "/html/body/app-root/app-layout/div/section/div/acc-connect-news-container/header/div[2]/acc-add-delete-actions/i[1]";
     public static final String Bouton_Validation_Suppression_News = "/html/body/ngb-modal-window/div/div/acc-confirmation-modal/div[3]/button[1]";
     public static final String Champ_Input_Titre_News_Existante = "title";
     public static final String Champ_Input_Contenu_News_Existante = "/html/body/app-root/app-layout/div/section/div/acc-connect-news-container/div/div/div/div/acc-connect-news-form/form/div/section/div[2]/div[2]/div/div/acc-mention-per-timelines/quill-editor/div/div[1]";
