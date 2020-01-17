@@ -34,6 +34,8 @@ Feature: News : Commentaire avec tag collaborateur sur une news
     And l'utilisateur selectionne la date actuelle du champ date de publication
     And  l utilisateur upload "une image" dans le champs "Upload_Image_News"
     And wait 1000
+    And l utilisateur clique sur "Bouton_Enregistrer_Redimensionner_Image"
+    And wait 1000
     And l utilisateur clique sur "Bouton_Sauvegarde_Creation_News"
     And wait 1000
 
@@ -41,8 +43,9 @@ Feature: News : Commentaire avec tag collaborateur sur une news
     #Etape 4 :Ajout commentaire sur la News
 
     And l utilisateur clique sur "Bouton_Portal"
+    And wait 3000
     When l'utilisateur clique sur la news ajoutée
-    And l utilisateur saisit "@gaston.boutot@yopmail.com" dans le champs "Champs_Input_Commentaire"
+    And l utilisateur saisit "@Gaston Boutot" dans le champs "Champs_Input_Commentaire"
     And l utilisateur choisit le profil du tag du commentaire News dans la liste
     And l utilisateur clique sur "JS_Bouton_Submit_Commentaire"
 

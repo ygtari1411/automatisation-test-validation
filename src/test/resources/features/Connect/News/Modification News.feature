@@ -33,12 +33,15 @@ Feature: News : Modification News
     And l'utilisateur selectionne la date actuelle du champ date de publication
     And  l utilisateur upload "une image" dans le champs "Upload_Image_News"
     And wait 1000
+    And l utilisateur clique sur "Bouton_Enregistrer_Redimensionner_Image"
+    And wait 2000
     And l utilisateur clique sur "Bouton_Sauvegarde_Creation_News"
 
     # Etape 4 : Modification News
 
     And wait 3000
     And l utilisateur saisit " - Modifiée" dans le champs "Champ_Input_Titre_News_Existante"
+    And wait 2000
     And l utilisateur saisit " - Modification du corps de la News" dans le champs "Champ_Input_Contenu_News_Existante"
     And wait 2000
     And l utilisateur clique sur "Bouton_Sauvegrade_News"
