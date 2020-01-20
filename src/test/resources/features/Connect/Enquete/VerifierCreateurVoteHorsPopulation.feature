@@ -3,10 +3,10 @@
 # Scénario: Verif RH Voter Hors Population
 # Date de création: 06/12/2019
 
-#@ACCRETIO2
-#@ACCRETIO2-CONNECT
-#@ACCRETIO2-ENQUETE
-#@ACCRETIO2-ENQUETE-0008
+@ACCRETIO2
+@ACCRETIO2-CONNECT
+@ACCRETIO2-ENQUETE
+@ACCRETIO2-ENQUETE-0008
 
 
   Feature: Enquete
@@ -24,13 +24,14 @@
       And l utilisateur clique sur "Bouton_Menu_Etendu"
       And l utilisateur clique sur "Bouton_Module_Connect"
       And l utilisateur clique sur "Bouton_Enquete"
+      And wait 3000
 
-    #Etape3 : Remplir tous les champs d'une enquete
+     #Etape3 : Remplir tous les champs d'une enquete
 
       When l utilisateur clique sur "Bouton_Ajouter_Enquete"
       And wait 3000
       And l utilisateur saisit "Enquete vote RH" dans le champs "Libelle_Enquete_Creation"
-      And l utilisateur selectionne la population "Population sans createur" dans la liste des populations "Population_Enquete"
+      And l utilisateur selectionne la population "modification population sur enquete" dans la liste des populations "Population_Enquete"
       #Population qui ne contient pas l'utilisateur connecté
       And l utilisateur saisit "reponse 1" dans le champs "Reponse_1_enquete"
       And l utilisateur saisit "reponse 2" dans le champs "Reponse_2_enquete"
