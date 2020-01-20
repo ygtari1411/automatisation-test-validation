@@ -42,7 +42,7 @@ Feature: Enquete
 
     And l utilisateur clique sur "Bouton_Modifier_Enquete"
     And l utilisateur modifie "Enquete_modifié" dans le champs "Libelle_Enquete_Modification"
-    And l utilisateur selectionne la population "test population pour enquete modifie" dans la liste des populations "Population_Enquete"
+    And l utilisateur selectionne la population "modification population sur enquete" dans la liste des populations "Population_Enquete"
     #Timeline qui contient l'utilisateur heloise.sciverit@yopmail.com
     And l utilisateur modifie "reponse 1 oui" dans le champs "Reponse_1_enquete"
     And l utilisateur modifie "reponse 2 non" dans le champs "Reponse_2_enquete"

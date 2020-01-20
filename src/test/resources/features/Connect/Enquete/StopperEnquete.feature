@@ -22,7 +22,7 @@ Feature: Enquete
 
     When l utilisateur clique sur "Bouton_Ajouter_Enquete"
     And l utilisateur saisit "Enquete stop" dans le champs "Libelle_Enquete_Creation"
-    And l utilisateur selectionne la population "test population enquete" dans la liste des populations "Population_Enquete"
+    And l utilisateur selectionne la population "test population pour enquete" dans la liste des populations "Population_Enquete"
     #Population qui contient l'utilisateur connecté responsable@yopmail.com
     And l utilisateur saisit "reponse 1" dans le champs "Reponse_1_enquete"
     And l utilisateur saisit "reponse 2" dans le champs "Reponse_2_enquete"

@@ -29,7 +29,7 @@ Feature: Enquete
 
     When l utilisateur clique sur "Bouton_Ajouter_Enquete"
     And l utilisateur saisit "Enquete suppression" dans le champs "Libelle_Enquete_Creation"
-    And l utilisateur selectionne la population "test population enquete" dans la liste des populations "Population_Enquete"
+    And l utilisateur selectionne la population "test population pour enquete" dans la liste des populations "Population_Enquete"
     #Population qui contient l'utilisateur connecté
     And l utilisateur saisit "reponse 1" dans le champs "Reponse_1_enquete"
     And l utilisateur saisit "reponse 2" dans le champs "Reponse_2_enquete"
@@ -41,7 +41,9 @@ Feature: Enquete
     #Etape4 : Supprimer une enquete et confirmer la suppression
 
     When l utilisateur clique sur "Bouton_Supprimer_Enquete"
+    And   wait 4000
     And l utilisateur clique sur "Bouton_Confirmer_Suppression_Enquete"
+    And   wait 4000
 
     #Etape5 : Vérifier que la suppression de l'enquete a été effectuée avec succés
 

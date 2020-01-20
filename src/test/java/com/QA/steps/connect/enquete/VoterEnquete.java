@@ -27,11 +27,11 @@ public class VoterEnquete {
         String str2=ActionsCommunes.DataProvider("Libelle_Enquete_Creation");
 
         WebElement modules1 = (new WebDriverWait(driver, 50))
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(EnqueteLocators.Premiere_Enquete_Afficher)));
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(EnqueteLocators.Premiere_Enquete_Afficher_Connect)));
         Boolean modules2 = (new WebDriverWait(driver, 50))
-                .until(ExpectedConditions.attributeToBe(By.xpath(EnqueteLocators.Premiere_Enquete_Afficher), "innerText", str2));
+                .until(ExpectedConditions.attributeToBe(By.xpath(EnqueteLocators.Premiere_Enquete_Afficher_Connect), "innerText", str2));
 
-        String str3 = driver.findElement(By.xpath(EnqueteLocators.Premiere_Enquete_Afficher)).getAttribute("innerText");
+        String str3 = driver.findElement(By.xpath(EnqueteLocators.Premiere_Enquete_Afficher_Nombre_Reponse)).getAttribute("innerText");
         Assert.assertNotEquals(str1, str3);
 
 
