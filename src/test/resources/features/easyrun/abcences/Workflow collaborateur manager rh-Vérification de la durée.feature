@@ -15,7 +15,7 @@ Feature: Absences: Workflow collaborateur manager rh-Vérification de la durée
     Given le navigateur est ouvert et la page d'acceuil est affichée
 
     #Etape 1 : Ajout de cycle de travail qui considére que les samedi et dimanche ne sont pas travaillés
-    And l'utilisateur "haf03.expert@gmail.com" est connecté
+    And l'utilisateur "duval.jules@yopmail.com" est connecté
     When l utilisateur clique sur "Bouton_Role_RH"
     And l utilisateur clique sur "Bouton_Menu_Etendu"
     And l utilisateur clique sur "Module_Administration"
@@ -112,7 +112,7 @@ Feature: Absences: Workflow collaborateur manager rh-Vérification de la durée
     And l utilisateur se deconnecte
 
     #Etape 5 : Profil collaborateur-Ajout de demande d'absence
-    And l'utilisateur "haf01.collaborateur@gmail.com" est connecté
+    And l'utilisateur "berger.cosette@yopmail.com" est connecté
     And l utilisateur clique sur "Bouton_Mes_Absences"
     # Cliquer sur une journée libre représentée par une case blanche au niveau du calendrier
     And l utilisateur selectionne une case de journée libre dans le calendrier
@@ -127,7 +127,7 @@ Feature: Absences: Workflow collaborateur manager rh-Vérification de la durée
     And l utilisateur se deconnecte
 
     #Etape 6 : Profil manager-Validation de demande d'absence
-    And l'utilisateur "haf02.manager@gmail.com" est connecté
+    And l'utilisateur "marcil.valentine@yopmail.com" est connecté
     And l utilisateur clique sur "Mon_Equipe"
     And l utilisateur clique sur "Bouton_Absences"
     And l utilisateur clique sur "Bouton_Accepter_Demande_Absence_Manager"
@@ -139,7 +139,7 @@ Feature: Absences: Workflow collaborateur manager rh-Vérification de la durée
     And l utilisateur se deconnecte
 
     #Etape 7 : Profil rh-Validation de demande d'absence
-    And l'utilisateur "haf03.expert@gmail.com" est connecté
+    And l'utilisateur "duval.jules@yopmail.com" est connecté
     And l utilisateur clique sur "Bouton_Role_RH"
     And l utilisateur clique sur "Bouton_Menu_Etendu"
     And l utilisateur clique sur "Module_Easyrun"
@@ -155,7 +155,7 @@ Feature: Absences: Workflow collaborateur manager rh-Vérification de la durée
     Then Vérifier que le champ Durée a la valeur 3 jour(s)
 
     #Etape 8 : Profil Rh-Création du motif d'absence renfermant le processus de validation "Validation N+1" selectionné au niveau du motif d'absence
-    When l'utilisateur "haf03.expert@gmail.com" est connecté
+    When l'utilisateur "duval.jules@yopmail.com" est connecté
     And l utilisateur clique sur "Bouton_Role_RH"
     And l utilisateur clique sur "Bouton_Menu_Etendu"
     And l utilisateur clique sur "Module_Easyrun"
@@ -184,7 +184,7 @@ Feature: Absences: Workflow collaborateur manager rh-Vérification de la durée
     And l utilisateur se deconnecte
 
     #Etape 9 : Profil collaborateur-Ajout de demande d'absence
-    And l'utilisateur "haf01.collaborateur@gmail.com" est connecté
+    And l'utilisateur "berger.cosette@yopmail.com" est connecté
     And l utilisateur clique sur "Bouton_Mes_Absences"
     # Cliquer sur un vendredi libre représentée par une case blanche pour un vendredi au niveau du calendrier
     And l utilisateur selectionne un vendredi libre dans le calendrier
@@ -199,7 +199,7 @@ Feature: Absences: Workflow collaborateur manager rh-Vérification de la durée
     And l utilisateur se deconnecte
 
    #Etape 10 : Profil manager-Validation de demande d'absence
-    And l'utilisateur "haf02.manager@gmail.com" est connecté
+    And l'utilisateur "marcil.valentine@yopmail.com" est connecté
     And l utilisateur clique sur "Mon_Equipe"
     And l utilisateur clique sur "Bouton_Absences"
     And l utilisateur clique sur "Bouton_Accepter_Demande_Absence_Manager"
@@ -211,7 +211,7 @@ Feature: Absences: Workflow collaborateur manager rh-Vérification de la durée
     And l utilisateur se deconnecte
 
    #Etape 11 : Profil rh-Validation de demande d'absence
-    And l'utilisateur "haf03.expert@gmail.com" est connecté
+    And l'utilisateur "duval.jules@yopmail.com" est connecté
     And l utilisateur clique sur "Bouton_Role_RH"
     And l utilisateur clique sur "Bouton_Menu_Etendu"
     And l utilisateur clique sur "Module_Easyrun"
@@ -227,7 +227,7 @@ Feature: Absences: Workflow collaborateur manager rh-Vérification de la durée
     Then Vérifier que le champ Durée a la valeur 2 jour(s)
 
     #Etape 12 : Profil Rh-Création du motif d'absence renfermant le processus de validation "Validation N+1" selectionné au niveau du motif d'absence
-    When l'utilisateur "haf03.expert@gmail.com" est connecté
+    When l'utilisateur "duval.jules@yopmail.com" est connecté
     And l utilisateur clique sur "Bouton_Role_RH"
     And l utilisateur clique sur "Bouton_Menu_Etendu"
     And l utilisateur clique sur "Module_Easyrun"
@@ -256,7 +256,7 @@ Feature: Absences: Workflow collaborateur manager rh-Vérification de la durée
     And l utilisateur se deconnecte
 
     #Etape 13 : Profil collaborateur-Ajout de demande d'absence
-    And l'utilisateur "haf01.collaborateur@gmail.com" est connecté
+    And l'utilisateur "berger.cosette@yopmail.com" est connecté
     And l utilisateur clique sur "Bouton_Mes_Absences"
     # Cliquer sur un vendredi libre représentée par une case blanche pour un vendredi au niveau du calendrier
     And l utilisateur selectionne un vendredi libre dans le calendrier
@@ -271,7 +271,7 @@ Feature: Absences: Workflow collaborateur manager rh-Vérification de la durée
     And l utilisateur se deconnecte
 
    #Etape 14 : Profil manager-Validation de demande d'absence
-    And l'utilisateur "haf02.manager@gmail.com" est connecté
+    And l'utilisateur "marcil.valentine@yopmail.com" est connecté
     And l utilisateur clique sur "Mon_Equipe"
     And l utilisateur clique sur "Bouton_Absences"
     And l utilisateur clique sur "Bouton_Accepter_Demande_Absence_Manager"
@@ -283,7 +283,7 @@ Feature: Absences: Workflow collaborateur manager rh-Vérification de la durée
     And l utilisateur se deconnecte
 
    #Etape 15 : Profil rh-Validation de demande d'absence
-    And l'utilisateur "haf03.expert@gmail.com" est connecté
+    And l'utilisateur "duval.jules@yopmail.com" est connecté
     And l utilisateur clique sur "Bouton_Role_RH"
     And l utilisateur clique sur "Bouton_Menu_Etendu"
     And l utilisateur clique sur "Module_Easyrun"

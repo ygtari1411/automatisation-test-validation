@@ -14,7 +14,7 @@ Feature: Absences: Rejet d'une demande d'absence au workflow collaborateur manag
   Scenario: Rejet d'une demande d'absence au workflow collaborateur manager rh
     Given le navigateur est ouvert et la page d'acceuil est affichée
    #Etape 1 : Ajout de cycle de travail qui considére que les samedi et dimanche ne sont pas travaillés
-    And l'utilisateur "haf03.expert@gmail.com" est connecté
+    And l'utilisateur "duval.jules@yopmail.com" est connecté
     When l utilisateur clique sur "Bouton_Role_RH"
     And l utilisateur clique sur "Bouton_Menu_Etendu"
     And l utilisateur clique sur "Module_Administration"
@@ -110,7 +110,7 @@ Feature: Absences: Rejet d'une demande d'absence au workflow collaborateur manag
     And l utilisateur se deconnecte
 
     #Etape 5 : Profil collaborateur-Ajout de demande d'absence
-    And l'utilisateur "haf01.collaborateur@gmail.com" est connecté
+    And l'utilisateur "berger.cosette@yopmail.com" est connecté
     And l utilisateur clique sur "Bouton_Mes_Absences"
     # Cliquer sur une journée libre représentée par une case blanche au niveau du calendrier
     And l utilisateur selectionne une case de journée libre dans le calendrier
@@ -123,7 +123,7 @@ Feature: Absences: Rejet d'une demande d'absence au workflow collaborateur manag
     And l utilisateur se deconnecte
 
     #Etape 6 : Profil manager-Validation de demande d'absence
-    And l'utilisateur "haf02.manager@gmail.com" est connecté
+    And l'utilisateur "marcil.valentine@yopmail.com" est connecté
     And l utilisateur clique sur "Mon_Equipe"
     And l utilisateur clique sur "Bouton_Absences"
     And l utilisateur clique sur "Bouton_Accepter_Demande_Absence_Manager"
@@ -133,7 +133,7 @@ Feature: Absences: Rejet d'une demande d'absence au workflow collaborateur manag
     And l utilisateur se deconnecte
 
     #Etape 7 : Profil rh-Rejet de demande d'absence
-    And l'utilisateur "haf03.expert@gmail.com" est connecté
+    And l'utilisateur "duval.jules@yopmail.com" est connecté
     And l utilisateur clique sur "Bouton_Role_RH"
     And l utilisateur clique sur "Bouton_Menu_Etendu"
     And l utilisateur clique sur "Module_Easyrun"
@@ -149,6 +149,6 @@ Feature: Absences: Rejet d'une demande d'absence au workflow collaborateur manag
     And l utilisateur se deconnecte
 
    #Etape 8 : Profil collaborateur-Vérification du rejet de la demande d'absence
-    And l'utilisateur "haf01.collaborateur@gmail.com" est connecté
+    And l'utilisateur "berger.cosette@yopmail.com" est connecté
     Then Vérifier que l utilisateur reçoit une notification "Votre demande d'absence a été rejetée" et que le statut de la demande d absence devient Rejetée et que la demande d absence ne s affiche pas dans le calendrier
 
