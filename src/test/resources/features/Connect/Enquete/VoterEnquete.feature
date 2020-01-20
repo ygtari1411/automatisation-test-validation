@@ -28,6 +28,7 @@ Feature: Enquete
     #Etape3 : Remplir tous les champs d'une enquete
 
     When l utilisateur clique sur "Bouton_Ajouter_Enquete"
+    And wait 3000
     And l utilisateur saisit "Enquete vote" dans le champs "Libelle_Enquete_Creation"
     And l utilisateur selectionne la population "Tous les utilisateurs Connect" dans la liste des populations "Population_Enquete"
     #Population qui contient tout les utilisateurs du module connect

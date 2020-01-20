@@ -28,6 +28,7 @@
     #Etape3 : Remplir tous les champs d'une enquete
 
       When l utilisateur clique sur "Bouton_Ajouter_Enquete"
+      And wait 3000
       And l utilisateur saisit "Enquete vote RH" dans le champs "Libelle_Enquete_Creation"
       And l utilisateur selectionne la population "Population sans createur" dans la liste des populations "Population_Enquete"
       #Population qui ne contient pas l'utilisateur connecté
