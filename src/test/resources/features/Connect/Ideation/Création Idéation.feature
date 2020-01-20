@@ -26,6 +26,7 @@ Feature: Ideation
     And l utilisateur clique sur "Widget_Ideation"
     And wait 2000
     And l utilisateur clique sur "Proposer_une_idee"
+    And wait 3000
     And l utilisateur selectionne "Entreprise" dans la liste deroulante "Liste_Deroulante_Categorie_Idee"
     And l utilisateur saisit "C'est un test automatique de l'ajout d'une idée" dans le champs "Libelle_Creation_Idee"
     And l utilisateur selectionne "Tous les utilisateurs Connect" dans la liste deroulante "Liste_Deroulante_Timeline_Creation_Ideation"

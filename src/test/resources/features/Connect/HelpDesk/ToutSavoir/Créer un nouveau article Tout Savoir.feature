@@ -4,11 +4,11 @@
 # Date de création: 05/12/2019
 
 
-@ACCRETIO2
-@ACCRETIO2-CONNECT
-@ACCRETIO2-HelpDesk
-@ACCRETIO2-HelpDesk-ToutSavoir
-@ACCRETIO2-HelpDesk-ToutSavoir-0001
+#@ACCRETIO2
+#@ACCRETIO2-CONNECT
+#@ACCRETIO2-HelpDesk
+#@ACCRETIO2-HelpDesk-ToutSavoir
+#@ACCRETIO2-HelpDesk-ToutSavoir-0001
 
 
   Feature: Tout Savoir

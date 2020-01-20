@@ -3,11 +3,11 @@
 # Date de création: 05/12/2019
 
 
-@ACCRETIO2
-@ACCRETIO2-CONNECT
-@ACCRETIO2-HelpDesk
-@ACCRETIO2-HelpDesk-Ticket
-@ACCRETIO2-HelpDesk-Ticket-0001
+#@ACCRETIO2
+#@ACCRETIO2-CONNECT
+#@ACCRETIO2-HelpDesk
+#@ACCRETIO2-HelpDesk-Ticket
+#@ACCRETIO2-HelpDesk-Ticket-0001
 
   Feature: Ticket
 
