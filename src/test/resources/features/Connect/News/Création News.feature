@@ -9,7 +9,7 @@
 @ACCRETIO2-NEWS
 @ACCRETIO2-NEWS-0001
 
-Feature: News : Création nouvelle news
+Feature: News
 
   Scenario: Création nouvelle news
 

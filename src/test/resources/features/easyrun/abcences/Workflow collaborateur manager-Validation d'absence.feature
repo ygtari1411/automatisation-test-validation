@@ -9,9 +9,10 @@
 @ACCRETIO2-ABSENCES
 @ACCRETIO2-ABSENCES-0001
 
-Feature: Absences: Validation d'une demande d'absence au workflow collaborateur manager
+Feature: Absences
 
   Scenario: Validation d'une demande d'absence au workflow collaborateur manager
+
     Given le navigateur est ouvert et la page d'acceuil est affichée
 
    #Etape 1 : Ajout de cycle de travail qui considére que les samedi et dimanche ne sont pas travaillés

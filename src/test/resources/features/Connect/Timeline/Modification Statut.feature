@@ -9,7 +9,7 @@
 @ACCRETIO2-TIMELINE
 @ACCRETIO2-TIMELINE-0002
 
-Feature: Timeline : Modification d'un statut
+Feature: Timeline
 
   Scenario: Modification d'un statut
 

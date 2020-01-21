@@ -10,7 +10,7 @@
 @ACCRETIO2-NEWS-0004
 
 
-Feature: News : Commentaire avec tag collaborateur sur une news
+Feature: News
 
   Scenario: Commentaire avec tag collaborateur sur une news
 

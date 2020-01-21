@@ -10,7 +10,9 @@
 @ACCRETIO2-CONFIGURATION-0001
 
 Feature: Configuration
-  Scenario: Ajout de niveau de compétences
+
+ Scenario: Ajout de niveau de compétences
+
     #Etape 001: Connexion RH_Skills
     Given   le navigateur est ouvert et la page d'acceuil est affichée
       And   l'utilisateur "combes.caroline@YOPMAIL.COM" est connecté

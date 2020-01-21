@@ -10,7 +10,7 @@
 @ACCRETIO2-Annonces-0002
 
 
-Feature: Annonces : Modification annonce
+Feature: Annonces
 
   Scenario: Modification annonce
 

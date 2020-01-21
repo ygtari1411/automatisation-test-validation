@@ -9,7 +9,7 @@
 @ACCRETIO2-REFERENTIELS
 @ACCRETIO2-REFERENTIELS-0003
 
-Feature: Référentiels : Création Entité organisationnelle
+Feature: Référentiels
 
   Scenario: Création Entité organisationnelle
 

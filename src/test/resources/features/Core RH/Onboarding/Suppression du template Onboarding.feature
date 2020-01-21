@@ -9,13 +9,13 @@
 @ACCRETIO2-ONBOARDING
 @ACCRETIO2-ONBOARDING-003
 
-Feature: Onboarding : Modification du template Onboarding
+Feature: Onboarding
 
-  Scenario: Modification du template Onboarding
+  Scenario: Suppression du template Onboarding
 
    # Etape 1 : Connexion
     Given le navigateur est ouvert et la page d'acceuil est affichée
-    And l'utilisateur "resp-RH@mail.com" est connecté
+    And l'utilisateur "admin@accretio.io" est connecté
 
     # Etape 2 : Accès à l'espace RH
     When l utilisateur clique sur "Bouton_Role_RH"

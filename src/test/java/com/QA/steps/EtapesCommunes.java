@@ -1,7 +1,7 @@
 package com.QA.steps;
 
 import com.QA.base.streams;
-import com.QA.locators.*;
+import com.QA.locators.CommonLocators;
 import com.QA.utilités.XMLUtilities;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -12,17 +12,13 @@ import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-
 import java.lang.reflect.Field;
-import java.util.*;
-import java.util.function.Function;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Properties;
 
 import static com.QA.base.TestGenerateurDriverInit.ListeGlobaleLocators;
-import static java.util.concurrent.TimeUnit.SECONDS;
 
 public class EtapesCommunes {
 
@@ -41,14 +37,14 @@ public class EtapesCommunes {
     @Given("le navigateur est ouvert et la page d'acceuil est affichée")
     public void leNavigateurEstOuvertEtLaPageDAcceuilEstAffichée() {
 
-        driver.get(reader.getProperty("testsiteurl"));
         logger.info(" Ouverture de l'environnement : " + reader.getProperty("testsiteurl"));
+        driver.get(reader.getProperty("testsiteurl"));
     }
 
     @And("l'utilisateur {string} est connecté")
     public void lUtilisateurEstConnecté(String utilisateur) throws Exception {
 
-
+        logger.info("Connexion avec le user : " + utilisateur);
         WebElement modules1 = (new WebDriverWait(driver, 100))
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath(CommonLocators.Login_Bouton_connexion)));
 
@@ -60,16 +56,17 @@ public class EtapesCommunes {
         action.pause(driver, 500);
         driver.findElement(By.xpath(CommonLocators.Login_Bouton_connexion)).click();
         Assert.assertTrue(driver.findElements(By.cssSelector("a[class='list-group-item'][routerlink='/logout']")).size() != 0);
-        logger.info("Connexion avec le user : " + utilisateur);
+
     }
 
     @When("l'utilisateur clique sur espace-RH")
     public void lUtilisateurCliqueSurEspaceRH() throws InterruptedException {
 
+        logger.info("Changement de role vers espace-RH");
         driver.findElement(By.xpath(CommonLocators.Bouton_Role_RH)).click();
         action.pause(driver, 200);
         driver.findElement(By.xpath(CommonLocators.Bouton_Menu_Etendu)).click();
-        logger.info("Changement de role vers espace-RH");
+
     }
 
     @And("l'utilisateur clique sur le module Connect")

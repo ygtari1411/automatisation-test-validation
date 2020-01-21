@@ -10,7 +10,9 @@
 @ACCRETIO2-CONFIGURATION-0007
 
 Feature: Configuration
+
   Scenario: Suppression de classification de competences deja affectee
+
     #Etape 001: Connexion RH_Skills
     Given   le navigateur est ouvert et la page d'acceuil est affichée
       And   l'utilisateur "combes.caroline@YOPMAIL.COM" est connecté

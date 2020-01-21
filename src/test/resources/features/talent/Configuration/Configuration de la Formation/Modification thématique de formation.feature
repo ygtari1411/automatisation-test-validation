@@ -10,7 +10,9 @@
 @ACCRETIO2-CONFIGURATION-0008
 
 Feature: Configuration
+
   Scenario: Modification thématique de formation
+
     #Etape 001: Connexion RH_Training
     Given   le navigateur est ouvert et la page d'acceuil est affichée
       And   l'utilisateur "combes.caroline@YOPMAIL.COM" est connecté

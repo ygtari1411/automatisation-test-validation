@@ -9,9 +9,10 @@
 @ACCRETIO2-ABSENCES
 @ACCRETIO2-ABSENCES-0004
 
-Feature: Absences: Rejet de l'annulation au workflow collaborateur manager
+Feature: Absences
 
   Scenario: Rejet de l'annulation au workflow collaborateur manager
+
     Given le navigateur est ouvert et la page d'acceuil est affichée
 
    #Etape 1 : Ajout de cycle de travail qui considére que les samedi et dimanche ne sont pas travaillés

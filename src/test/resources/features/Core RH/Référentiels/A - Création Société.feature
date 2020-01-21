@@ -9,7 +9,7 @@
 @ACCRETIO2-REFERENTIELS
 @ACCRETIO2-REFERENTIELS-0001
 
-Feature: Référentiels : Création société
+Feature: Référentiels
 
   Scenario: Création société
 
@@ -39,7 +39,7 @@ Feature: Référentiels : Création société
 
     # Etape 4 : Ajout du secteur d'activité et immatriculation
     When l utilisateur selectionne "Service" dans la liste deroulante "Secteur_société"
-    And l utilisateur selectionne "Equimentier automobile" dans la liste deroulante "Activité_société"
+    And l utilisateur selectionne "Informatique" dans la liste deroulante "Activité_société"
     And l utilisateur selectionne "SARL" dans la liste deroulante "Statut_juridique_société"
     And l utilisateur saisit "SOCTN000000115" dans le champs "Immatriculation_société"
     And l utilisateur selectionne "Prestataires de services" dans la liste deroulante "Convention_collective_société"

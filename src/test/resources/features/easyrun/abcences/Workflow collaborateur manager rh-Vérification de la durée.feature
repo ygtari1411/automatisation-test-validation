@@ -9,7 +9,7 @@
 @ACCRETIO2-ABSENCES
 @ACCRETIO2-ABSENCES-0008
 
-Feature: Absences: Workflow collaborateur manager rh-Vérification de la durée
+Feature: Absences
 
   Scenario: Vérification de la durée au workflow collaborateur manager rh
     Given le navigateur est ouvert et la page d'acceuil est affichée

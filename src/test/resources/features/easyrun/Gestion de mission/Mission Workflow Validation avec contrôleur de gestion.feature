@@ -9,9 +9,10 @@
 @ACCRETIO2-Mission
 @ACCRETIO2-Mission-0001
 
-Feature: Gestion de mission: Validation d'une demande de mission avec le workflow qui inclut le rôle contrôleur de gestion
+Feature: Gestion de mission
 
   Scenario: Validation d'une demande de mission avec le workflow qui inclut le rôle contrôleur de gestion
+
     Given le navigateur est ouvert et la page d'acceuil est affichée
 
     #Etape 1 : Profil Rh-Création d'une devise

@@ -9,7 +9,7 @@
 @ACCRETIO2-Annonces-0001
 
 
-Feature: Annonces : Création  nouvelle annonce
+Feature: Annonces
 
   Scenario: Création  nouvelle annonce
 

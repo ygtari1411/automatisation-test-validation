@@ -9,7 +9,7 @@
 @ACCRETIO2-REFERENTIELS
 @ACCRETIO2-REFERENTIELS-0002
 
-Feature: Référentiels : Création établissement
+Feature: Référentiels
 
   Scenario: Création d'un établissement
 

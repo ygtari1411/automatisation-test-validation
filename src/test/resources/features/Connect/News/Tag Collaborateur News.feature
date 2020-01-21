@@ -10,7 +10,7 @@
 @ACCRETIO2-NEWS-0005
 
 
-Feature: News : Tag d'un collaborateur dans le corps d'une news
+Feature: News
 
   Scenario: Tag d'un collaborateur dans le corps d'une news
 

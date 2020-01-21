@@ -9,9 +9,10 @@
 @ACCRETIO2-ABSENCES
 @ACCRETIO2-ABSENCES-0007
 
-Feature: Absences: Workflow collaborateur manager-Vérification de la durée
+Feature: Absences
 
   Scenario: Vérification de la durée au workflow collaborateur manager
+
     Given le navigateur est ouvert et la page d'acceuil est affichée
 
    #Etape 1 : Ajout de cycle de travail qui considére que les samedi et dimanche ne sont pas travaillés

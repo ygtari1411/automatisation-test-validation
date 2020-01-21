@@ -10,7 +10,7 @@
 @ACCRETIO2-TIMELINE-0001
 
 
-Feature: Timeline : Ajout commentaire avec tag sur un statut
+Feature: Timeline
 
   Scenario: Ajout commentaire avec tag sur un statut
 

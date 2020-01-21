@@ -9,7 +9,7 @@
 @ACCRETIO2-REFERENTIELS
 @ACCRETIO2-REFERENTIELS-0005
 
-Feature: Référentiels : Création Poste
+Feature: Référentiels
 
   Scenario: Création Poste
 

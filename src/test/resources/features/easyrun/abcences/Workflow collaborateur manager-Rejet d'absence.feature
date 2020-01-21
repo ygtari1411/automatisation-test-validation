@@ -9,9 +9,10 @@
 @ACCRETIO2-ABSENCES
 @ACCRETIO2-ABSENCES-0002
 
-Feature: WorkflowN1Rejet
+Feature: Absences
 
   Scenario: Rejet d'une demande d'absence en workflowN1
+
     Given le navigateur est ouvert et la page d'acceuil est affichée
    #Etape 1 : Ajout de cycle de travail qui considére que les samedi et dimanche ne sont pas travaillés
     And l'utilisateur "duval.jules@yopmail.com" est connecté

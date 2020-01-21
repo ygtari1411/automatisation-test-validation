@@ -10,8 +10,10 @@
 @ACCRETIO2-CONFIGURATION-0005
 
 Feature: Configuration
+
   Scenario: Ajout thématique de formation
-    #Etape 001: Connexion RH_Skills
+
+      #Etape 001: Connexion RH_Skills
     Given   le navigateur est ouvert et la page d'acceuil est affichée
       And   l'utilisateur "combes.caroline@YOPMAIL.COM" est connecté
      Then   le nom de l utilisateur "Caroline Combes" est affiche en haut a gauche

@@ -9,9 +9,10 @@
 @ACCRETIO2-NDF
 @ACCRETIO2-NDF-0001
 
-Feature: NDF: Validation d'une note de frais avec le workflow qui inclut le rôle contrôleur de gestion
+Feature: NDF
 
   Scenario: Validation d'une note de frais avec le workflow qui inclut le rôle contrôleur de gestion
+
     Given le navigateur est ouvert et la page d'acceuil est affichée
 
     #Etape 1 : Profil Rh-Création d'une nature

@@ -9,7 +9,7 @@
 @ACCRETIO2-Annonces-0003
 
 
-Feature: Annonces : Suppression d'une annonce
+Feature: Annonces
 
   Scenario: Suppression d'une annonce
 

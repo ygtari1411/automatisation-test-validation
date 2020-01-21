@@ -4,12 +4,12 @@
 # Date de création: 04/11/2019
 
 
-@ACCRETIO2
-@ACCRETIO2-CORERH
-@ACCRETIO2-GESTIONDUPERSONNEL
-@ACCRETIO2-GESTIONDUPERSONNEL-001
+#@ACCRETIO2
+#@ACCRETIO2-CORERH
+#@ACCRETIO2-GESTIONDUPERSONNEL
+#@ACCRETIO2-GESTIONDUPERSONNEL-001
 
-Feature: Gestion du personnel : Embauche d'un employé Collaborateur
+Feature: Gestion du personnel
 
   Scenario: Embauche d'un employé Collaborateur
 

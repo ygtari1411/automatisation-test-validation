@@ -10,7 +10,7 @@
 @ACCRETIO2-TIMELINE
 @ACCRETIO2-TIMELINE-0005
 
-Feature: Timeline : Publication nouveau statut
+Feature: Timeline
 
   Scenario: Publication nouveau statut
 

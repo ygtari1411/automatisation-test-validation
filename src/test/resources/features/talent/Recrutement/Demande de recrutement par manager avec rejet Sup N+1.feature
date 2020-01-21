@@ -10,6 +10,7 @@
 @ACCRETIO2-RECRUTEMENT-0002
 
   Feature: Recrutement
+
    Scenario: Demande de recrutement par manager avec rejet Sup N+1
 
      #Etape 001: Connexion manager

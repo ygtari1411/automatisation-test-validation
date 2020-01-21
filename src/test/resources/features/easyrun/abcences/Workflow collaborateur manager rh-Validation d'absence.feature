@@ -9,7 +9,7 @@
 @ACCRETIO2-ABSENCES
 @ACCRETIO2-ABSENCES-0005
 
-Feature: Absences: Validation d'une demande d'absence au workflow collaborateur manager rh
+Feature: Absences
 
   Scenario: Validation d'une demande d'absence au workflow collaborateur manager rh
     Given le navigateur est ouvert et la page d'acceuil est affichée

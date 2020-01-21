@@ -8,7 +8,7 @@
 @ACCRETIO2-TIMELINE
 @ACCRETIO2-TIMELINE-0006
 
-Feature: Timeline : Publication nouveau statut avec Tag
+Feature: Timeline
 
   Scenario: Publication nouveau statut avec Tag
 

@@ -3,10 +3,10 @@
 # Scénario: Impossible de voter dans un sondage stoppé un message d'erreur doit s'afficher
 # Date de création: 09/01/2020
 
-@ACCRETIO2
-@ACCRETIO2-CONNECT
-@ACCRETIO2-SONDAGE
-@ACCRETIO2-SONDAGE-0010
+#@ACCRETIO2
+#@ACCRETIO2-CONNECT
+#@ACCRETIO2-SONDAGE
+#@ACCRETIO2-SONDAGE-0010
 
 
 Feature: Sondage

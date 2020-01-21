@@ -10,6 +10,7 @@
 @ACCRETIO2-RECRUTEMENT-0004
 
   Feature: Recrutement
+
    Scenario: Demande de recrutement par manager avec rejet HR_Recruitment
 
      #Etape 001: Connexion manager

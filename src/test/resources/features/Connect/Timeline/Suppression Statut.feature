@@ -12,7 +12,7 @@
 
 
 
-Feature: Timeline : Suppression statut
+Feature: Timeline
 
   Scenario: Suppression statut
 

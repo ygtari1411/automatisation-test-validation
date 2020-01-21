@@ -9,7 +9,7 @@
 @ACCRETIO2-NEWS
 @ACCRETIO2-NEWS-0002
 
-Feature: News : Suppression News
+Feature: News
 
   Scenario: Suppression News
 

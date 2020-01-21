@@ -10,7 +10,9 @@
 @ACCRETIO2-CONFIGURATION-0009
 
 Feature: Configuration
-  Scenario: Suppression thématique de formation
+
+ Scenario: Suppression thématique de formation
+
     #Etape 001: Connexion RH_Training
     Given   le navigateur est ouvert et la page d'acceuil est affichée
       And   l'utilisateur "combes.caroline@YOPMAIL.COM" est connecté

@@ -10,7 +10,8 @@
 @ACCRETIO2-RECRUTEMENT-0005
 
 Feature: Recrutement : Demande de recrutement par manager avec rejet Role_HR_Admin
-  Scenario: Demande de recrutement par manager avec rejet Role_HR_Admin
+
+ Scenario: Demande de recrutement par manager avec rejet Role_HR_Admin
 
      #Etape 001: Connexion manager
     Given   le navigateur est ouvert et la page d'acceuil est affichée

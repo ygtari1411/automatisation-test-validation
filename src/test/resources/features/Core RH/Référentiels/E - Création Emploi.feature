@@ -9,7 +9,7 @@
 @ACCRETIO2-REFERENTIELS
 @ACCRETIO2-REFERENTIELS-0004
 
-Feature: Référentiels : Création Emploi
+Feature: Référentiels
 
   Scenario: Création Emploi
 

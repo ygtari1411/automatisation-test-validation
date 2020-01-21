@@ -9,7 +9,7 @@
 @ACCRETIO2-NEWS
 @ACCRETIO2-NEWS-0003
 
-Feature: News : Modification News
+Feature: News
 
   Scenario: Modification News
 

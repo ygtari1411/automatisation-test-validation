@@ -9,7 +9,7 @@
 @ACCRETIO2-REFERENTIELS
 @ACCRETIO2-REFERENTIELS-0006
 
-Feature: Référentiels : Création Entité organisationnelle fille
+Feature: Référentiels
 
   Scenario: Création Entité organisationnelle fille
 
