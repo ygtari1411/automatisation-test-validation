@@ -23,13 +23,13 @@ public class VerifierCreateurVoteHorsPopulation {
         String str1= ActionsCommunes.DataProvider("Libelle_Enquete_Creation");
 
         WebElement modules1 = (new WebDriverWait(driver, 50))
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(EnqueteLocators.Premiere_Enquete_Afficher)));
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(EnqueteLocators.Premiere_Enquete_Afficher_Connect)));
 
         Boolean modules2 = (new WebDriverWait(driver, 50))
-                .until(ExpectedConditions.attributeToBe(By.xpath(EnqueteLocators.Premiere_Enquete_Afficher), "innerText", str1));
+                .until(ExpectedConditions.attributeToBe(By.xpath(EnqueteLocators.Premiere_Enquete_Afficher_Connect), "innerText", str1));
 
 
-        String  str2 =driver.findElement(By.xpath(EnqueteLocators.Premiere_Enquete_Afficher)).getAttribute("innerText");
+        String  str2 =driver.findElement(By.xpath(EnqueteLocators.Premiere_Enquete_Afficher_Connect)).getAttribute("innerText");
 
         Assert.assertEquals(str1,str2);
 
