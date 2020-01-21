@@ -11,7 +11,7 @@
 
   Feature: Enquete
 
-    Scenario: Verif RH Voter Hors Population
+    Scenario: Verifier créateur vote hors population
 
       #Etape1 : Se connecter au TNR
 

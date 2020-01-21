@@ -44,7 +44,7 @@ Feature: News
     And wait 2000
     And l utilisateur saisit " - Modification du corps de la News" dans le champs "Champ_Input_Contenu_News_Existante"
     And wait 2000
-    And l utilisateur clique sur "Bouton_Sauvegrade_News"
+    And l utilisateur clique sur "JS_Bouton_Sauvegrade_News"
 
     # Etape 5 : Vérification enregistrement correct de la modification
 
