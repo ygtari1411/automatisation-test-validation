@@ -124,4 +124,18 @@
         <password>accretio4</password>
     </user>
 
+    <user>
+        <username>duval.jules@yopmail.com</username>
+        <password>jules*11</password>
+    </user>
+
+    <user>
+        <username>marcil.valentine@yopmail.com</username>
+        <password>valentine*11</password>
+    </user>
+
+    <user>
+        <username>berger.cosette@yopmail.com</username>
+        <password>cosette*11</password>
+    </user>
 </users>
