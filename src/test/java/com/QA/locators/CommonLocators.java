@@ -60,5 +60,7 @@ public class CommonLocators {
     public static final String Premier_User_Nom_Notification="/html/body/app-root/app-layout/div/app-header/nav/div[2]/ul[2]/li[2]/div/notification/div[1]/div[1]/a/div/div[2]/div[1]/span[1]";
     public static final String Compteur_Notification="/html/body/app-root/app-layout/div/app-header/nav/div[2]/ul[2]/li[2]/a/div";
     public static final String  Liste_Notifications="div[class='notification-container col-md-12 col-sm-12 p0']";
+    public static final String Sous_module_Configuration_Talent="a[href='/hr-space/talent/configuration']";
+    public static final String Module_Talent="a[title='Talent']";
 
 }
