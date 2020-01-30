@@ -31,14 +31,11 @@ Feature: Configuration
     #Ajout de la thématique
 
     #And   l utilisateur saisit "Test Ajout thématique Auto 2" dans le champs "Ajout_occurrence_thematique_conf"
-    #And  wait 3000
     #And   l utilisateur clique sur "Ajouter_thematique_conf"
-    #And wait 3000
-
     And l utilisateur ajoute la thematique"Test Ajout thématique Auto 2"
     And wait 3000
     And   l utilisateur clique sur "Sauvegarder_thematique"
-    Then   vérifier que le message "succès" s affiche
+    Then   vérifier que le message "Opération effectuée avec succès" s affiche
     And wait 3000
     And   verifier que la thematique "Test Ajout thématique Auto 2" est dans la liste
 
@@ -47,5 +44,6 @@ Feature: Configuration
      #When   l utilisateur modifie "Test Ajout thématique Auto 2 modif" dans le champs "Ajout_occurrence_thematique_conf"
     When l'utilisateur modifie"Test Ajout thématique Auto 2 modif"la derniere thematique ajoutee
     And   l utilisateur clique sur "Sauvegarder_thematique"
-    Then   vérifier que le message "succès" s affiche
+    And wait 300
+    Then   vérifier que le message "Opération effectuée avec succès" s affiche
     And   verifier que la thematique "Test Ajout thématique Auto 2 modif" est dans la liste

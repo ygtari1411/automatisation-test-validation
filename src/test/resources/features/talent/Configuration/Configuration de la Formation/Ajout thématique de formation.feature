@@ -31,12 +31,9 @@ Feature: Configuration
      #Ajout de la thématique
 
       #And   l utilisateur saisit "Test Ajout thématique Auto 1" dans le champs "Ajout_occurrence_thematique_conf"
-      #And  wait 3000
       #And   l utilisateur clique sur "Ajouter_thematique_conf"
-      #And wait 3000
       And l utilisateur ajoute la thematique"Test Ajout thématique Auto 1"
       And wait 3000
-
       And   l utilisateur clique sur "Sauvegarder_thematique"
-      Then   vérifier que le message "succès" s affiche
+      Then   vérifier que le message "Opération effectuée avec succès" s affiche
       And   verifier que la thematique "Test Ajout thématique Auto 1" est dans la liste
