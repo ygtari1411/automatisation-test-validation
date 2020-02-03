@@ -31,7 +31,7 @@ Feature: Enquete
     When l utilisateur clique sur "Bouton_Ajouter_Enquete"
     And wait 3000
     And l utilisateur saisit "Enquete avancement" dans le champs "Libelle_Enquete_Creation"
-    And l utilisateur selectionne la population "Population restreinte Connect" dans la liste des populations "Population_Enquete"
+    And l utilisateur selectionne la population "Population pour Connect" dans la liste des populations "Population_Enquete"
     And l utilisateur saisit "reponse 1" dans le champs "Reponse_1_enquete"
     And l utilisateur saisit "reponse 2" dans le champs "Reponse_2_enquete"
     And l utilisateur saisit "Chapitre1" dans le champs "Axe_Enquete"
@@ -65,11 +65,12 @@ Feature: Enquete
     #Etape7 : Se connecter avec le deuxieme utilisateur et voter
 
     And l utilisateur se deconnecte
-    And l'utilisateur "heloise.sciverit@yopmail.com" est connecté
-    And l utilisateur clique sur Bouton_Sondage_Portail et verifie le chargement de la liste des sondages
-    And l utilisateur clique sur "Bouton_Reponse_1_Sondage_Portail"
-    And l utilisateur clique sur "Bouton_Voter_Sondage"
-
+    And l'utilisateur "gaston.boutot@yopmail.com" est connecté
+    And l utilisateur clique sur Bouton_Enquete_Portail et verifie le chargement de la liste des enquetes
+    And l utilisateur choisit l'enquete
+    And l utilisateur clique sur "Bouton_Axe_Enquete_Portail"
+    And l utilisateur clique sur "Bouton_Reponse_1_Enquete_Portail"
+    And l utilisateur clique sur "Bouton_Voter_Enquete"
     #Etape8 : Verifier que l avancement de l enquete est egale a 100%
 
     And l utilisateur se deconnecte
