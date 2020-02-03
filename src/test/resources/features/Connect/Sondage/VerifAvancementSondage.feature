@@ -6,7 +6,7 @@
 @ACCRETIO2
 @ACCRETIO2-CONNECT
 @ACCRETIO2-SONDAGE
-@ACCRETIO2-SONDAGE-00011
+@ACCRETIO2-SONDAGE-0011
 
 
 Feature: Sondage
@@ -32,7 +32,7 @@ Feature: Sondage
     And l utilisateur saisit "Sondage Avancement" dans le champs "Question1_Creation_Sondage"
     And l utilisateur saisit "oui" dans le champs "Reponse_1_sondage"
     And l utilisateur saisit "non" dans le champs "Reponse_2_sondage"
-    And l utilisateur selectionne la population "Population restreinte Connect" dans la liste des populations "Population_Sondage"
+    And l utilisateur selectionne la population "Population pour Connect" dans la liste des populations "Sondage_Population"
     And l utilisateur clique sur "Bouton_Confirmer_Ajout_Sondage"
     And   wait 3000
     And l utilisateur clique sur "Bouton_Options_Sondage"
@@ -58,14 +58,13 @@ Feature: Sondage
     And l utilisateur clique sur "Bouton_Menu_Etendu"
     And l utilisateur clique sur "Bouton_Module_Connect"
     And l utilisateur clique sur "Bouton_Sondage"
-    And l utilisateur clique sur "Bouton_Ajouter_Sondage"
     And   wait 3000
     Then verifier que l avancement du sondage est egale a 50%
 
     #Etape7 : Se connecter avec le deuxieme collaborateur et voter
 
     And l utilisateur se deconnecte
-    And l'utilisateur "heloise.sciverit@yopmail.com" est connecté
+    And l'utilisateur "gaston.boutot@yopmail.com" est connecté
     And l utilisateur clique sur Bouton_Sondage_Portail et verifie le chargement de la liste des sondages
     And l utilisateur clique sur "Bouton_Reponse_1_Sondage_Portail"
     And l utilisateur clique sur "Bouton_Voter_Sondage"
