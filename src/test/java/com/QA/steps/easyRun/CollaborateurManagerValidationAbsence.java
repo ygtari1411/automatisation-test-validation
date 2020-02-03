@@ -86,14 +86,14 @@ public class CollaborateurManagerValidationAbsence {
     @And("l'utilisateur vérifie que le statut de la journée type est Actif")
     public void lUtilisateurVérifieQueLeStatutDeLaJournéeTypeEstActif() {
 
-        Assert.assertEquals("form-control input-sm ng-valid ng-touched ng-pristine", driver.findElement(By.xpath(CommonLocators.Statut_Ajout_Journée_Type)).getAttribute("className"));
+        Assert.assertEquals("true",driver.findElement(By.xpath(CommonLocators.Statut_Ajout_Journée_Type)).getAttribute("checked"));
     }
 
 
     @And("l'utilisateur vérifie que le statut du cycle de travail est Actif")
     public void lUtilisateurVérifieQueLeStatutDuCycleDeTravailEstActif() {
 
-        Assert.assertEquals("form-control input-sm ng-untouched ng-pristine ng-valid", driver.findElement(By.xpath(CommonLocators.Statut_Ajout_Cycle_De_Travail)).getAttribute("className"));
+        Assert.assertEquals("true",driver.findElement(By.xpath(CommonLocators.Statut_Ajout_Cycle_De_Travail)).getAttribute("checked"));
     }
 
 

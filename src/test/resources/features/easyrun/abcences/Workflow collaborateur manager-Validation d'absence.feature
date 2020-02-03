@@ -26,10 +26,11 @@ Feature: Absences
     And l utilisateur saisit "Jtype" dans le champs "Code_Ajout_Journée_type"
     And l utilisateur saisit "Jtype" dans le champs "Libellé_Ajout_Journée_type"
     And l utilisateur selectionne "Durée" dans la liste deroulante "Type_Ajout_Journée_type"
-    And l utilisateur saisit "08" dans le champs "Nombre_Heures_Ajout_Journée_Type"
-    And l utilisateur saisit "00" dans le champs "Nombre_Minutes_Ajout_Journée_Type"
+    And l utilisateur modifie "08" dans le champs "Nombre_Heures_Ajout_Journée_Type"
+    And l utilisateur modifie "00" dans le champs "Nombre_Minutes_Ajout_Journée_Type"
     And l'utilisateur vérifie que le statut de la journée type est Actif
     And l utilisateur clique sur "Bouton_Valider_Ajout_Journée_type"
+    And wait 4000
     And l utilisateur clique sur "Onglet_Semaine_type"
     And l utilisateur clique sur "Bouton_Ajouter_Semaine_type"
     And l utilisateur saisit "Stype" dans le champs "Code_Ajout_Semaine_type"
