@@ -32,5 +32,6 @@ public class EnqueteLocators {
     public static final String Liste_Enquetes_Afficher_Bouton_Radio="i[class='fa fa-circle-o pr']";
     public static final String Premiere_Enquete_Afficher_Nombre_Reponse="/html/body/app-root/app-layout/div/section/div/acc-connect-satisfaction-survey-container/div/div/acc-connect-satisfaction-survey-table/p-datatable/div/div[1]/table/tbody/tr[1]/td[6]/span/span";
     public static final String Premiere_Enquete_Afficher_Connect="/html/body/app-root/app-layout/div/section/div/acc-connect-satisfaction-survey-container/div/div/acc-connect-satisfaction-survey-table/p-datatable/div/div[1]/table/tbody/tr[1]/td[1]/span/div/span";
+    public static final String Avancement_Premiere_Enquete="/html/body/app-root/app-layout/div/section/div/acc-connect-satisfaction-survey-container/div/div/acc-connect-satisfaction-survey-table/p-datatable/div/div[1]/table/tbody/tr[1]/td[3]/span/div/span";
 
 }
