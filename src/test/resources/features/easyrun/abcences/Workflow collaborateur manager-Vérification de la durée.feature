@@ -50,7 +50,7 @@ Feature: Absences
     And l utilisateur clique sur "Bouton_Ajout_Affectation_Population_Cycle_de_travail"
     And l utilisateur saisit "01/12/2019" dans le champs "Date_d_effet_Affectation_Population_Cycle_de_travail"
     And l utilisateur selectionne "Stype" dans la liste deroulante "Premiere_semaine_Affectation_Popultaion_Cycle_de_travail"
-    And l utilisateur selectionne la population "Wajdi Hamdi" dans la liste des populations "Population_Affectation_Population_Cycle_de_travail"
+    And l utilisateur selectionne la population "Cosette Berger" dans la liste des populations "Population_Affectation_Population_Cycle_de_travail"
     And l utilisateur clique sur "Valider_Affectation_Population_Cycle_de_travail"
 
     #Etape 2 : Profil Rh-Paramétrage de configuration
@@ -104,7 +104,7 @@ Feature: Absences
     And l utilisateur clique sur "Bouton_Affectation_Population"
     And l utilisateur clique sur "Bouton_Ajout_Affectation_Population_Motif_Abcence"
     And l utilisateur saisit "01/11/2019" dans le champs "Date_d_effet_Affectation_Population_Motif_Abcence"
-    And l utilisateur selectionne "Wajdi Hamdi" dans la liste deroulante "Population_Affectation_Population_Motif_Abcence"
+    And l utilisateur selectionne "Cosette Berger" dans la liste deroulante "Population_Affectation_Population_Motif_Abcence"
     And l utilisateur selectionne "Congé Payé" dans la liste deroulante "Règle_Affectation_Population_Motif_Abcence"
      # Choisir au niveau du paramétrage jours calendaires
     And l utilisateur selectionne "Jours calendaires" dans la liste deroulante "Type_du_calendrier_Affectation_Population_Motif_Abcence"
@@ -160,7 +160,7 @@ Feature: Absences
     And l utilisateur clique sur "Bouton_Affectation_Population"
     And l utilisateur clique sur "Bouton_Ajout_Affectation_Population_Motif_Abcence"
     And l utilisateur saisit "01/11/2019" dans le champs "Date_d_effet_Affectation_Population_Motif_Abcence"
-    And l utilisateur selectionne "Wajdi Hamdi" dans la liste deroulante "Population_Affectation_Population_Motif_Abcence"
+    And l utilisateur selectionne "Cosette Berger" dans la liste deroulante "Population_Affectation_Population_Motif_Abcence"
     And l utilisateur selectionne "Congé Payé" dans la liste deroulante "Règle_Affectation_Population_Motif_Abcence"
      # Choisir au niveau du paramétrage jours ouvrables
     And l utilisateur selectionne "Jours ouvrables" dans la liste deroulante "Type_du_calendrier_Affectation_Population_Motif_Abcence"
@@ -216,7 +216,7 @@ Feature: Absences
     And l utilisateur clique sur "Bouton_Affectation_Population"
     And l utilisateur clique sur "Bouton_Ajout_Affectation_Population_Motif_Abcence"
     And l utilisateur saisit "01/11/2019" dans le champs "Date_d_effet_Affectation_Population_Motif_Abcence"
-    And l utilisateur selectionne "Wajdi Hamdi" dans la liste deroulante "Population_Affectation_Population_Motif_Abcence"
+    And l utilisateur selectionne "Cosette Berger" dans la liste deroulante "Population_Affectation_Population_Motif_Abcence"
     And l utilisateur selectionne "Congé Payé" dans la liste deroulante "Règle_Affectation_Population_Motif_Abcence"
      # Choisir au niveau du paramétrage jours ouvrables
     And l utilisateur selectionne "Jours ouvrés" dans la liste deroulante "Type_du_calendrier_Affectation_Population_Motif_Abcence"
