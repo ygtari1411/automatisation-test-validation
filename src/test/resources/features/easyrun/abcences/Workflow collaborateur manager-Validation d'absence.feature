@@ -31,7 +31,9 @@ Feature: Absences
     And l'utilisateur vérifie que le statut de la journée type est Actif
     And l utilisateur clique sur "Bouton_Valider_Ajout_Journée_type"
     And wait 4000
+    And l'utilisateur rafraichit la page
     And l utilisateur clique sur "Onglet_Semaine_type"
+    And wait 4000
     And l utilisateur clique sur "Bouton_Ajouter_Semaine_type"
     And l utilisateur saisit "Stype" dans le champs "Code_Ajout_Semaine_type"
     And l utilisateur saisit "Stype" dans le champs "Libellé_Ajout_Semaine_type"
@@ -40,13 +42,16 @@ Feature: Absences
     And l utilisateur clique sur "Case_Dimanche_Ajout_Semaine_Type"
     And l utilisateur selectionne "Samedi" dans la liste deroulante "Jour_ouvrable_Ajout_Semaine_Type"
     And l utilisateur clique sur "Bouton_Valider_Ajout_Semaine_type"
+    And wait 4000
     And l utilisateur clique sur "Onglet_Cycles_de_travail"
+    And wait 4000
     And l utilisateur clique sur "Bouton_Ajouter_Cycles_de_travail"
     And l utilisateur saisit "CType" dans le champs "Code_Ajout_Cycle_de_travail"
     And l utilisateur saisit "Ctype" dans le champs "Libellé_Ajout_Cycle_de_travail"
     And l'utilisateur vérifie que le statut du cycle de travail est Actif
     And l utilisateur selectionne "Stype" dans la liste "Semaines_types_Ajout_Cycle_de_travail"
     And l utilisateur clique sur "Bouton_Valider_Ajout_Cycle_de_travail"
+    And wait 4000
     And l utilisateur clique sur "Bouton_Affectation_Population_Cycles_de_travail"
     And l utilisateur clique sur "Bouton_Ajout_Affectation_Population_Cycle_de_travail"
     And l utilisateur saisit "01/12/2019" dans le champs "Date_d_effet_Affectation_Population_Cycle_de_travail"
