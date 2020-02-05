@@ -40,5 +40,15 @@ public class SondageLocators {
     public static final String Nombre_De_Vote_Sondage_Anonyme="/html/body/app-root/app-layout/div/section/div/acc-connect-survey-container/div/div[2]/acc-connect-survey-table/p-datatable/div/div[1]/table/tbody/tr[1]/td[6]/span/div/div[1]/span[2]/div[2]";
     public static final String Avancement_Sondage="/html/body/app-root/app-layout/div/section/div/acc-connect-survey-container/div/div[2]/acc-connect-survey-table/p-datatable/div/div[1]/table/tbody/tr[1]/td[2]/span/div/span";
     public static final String Sondage_Population="//*[@id=\"popup\"]/div[1]/section[2]/div[2]/div[2]/acc-select-population/div/div[1]/input";
+    public static final String Bouton_Reponse_2_Sondage_Portail="//*[@id=\"sondages\"]/acc-portal-survey/div[2]/span[2]/span[2]/span/label/span";
+    public static final String Participant_Sondage_Reponse1="/html/body/app-root/app-layout/div/section/div/acc-connect-survey-container/div/div[2]/acc-connect-survey-table/p-datatable/div/div[1]/table/tbody/tr[1]/td[6]/span/div/div[1]/span[2]/div/div/div/img";
+    public static final String Participant_Sondage_Reponse2="/html/body/app-root/app-layout/div/section/div/acc-connect-survey-container/div/div[2]/acc-connect-survey-table/p-datatable/div/div[1]/table/tbody/tr[1]/td[6]/span/div/div[2]/span[2]/div/div/div/img";
+    public static final String Participant_Reponse_Afficher1="/html/body/app-root/app-layout/div/section/div/acc-connect-survey-container/div/div[2]/acc-connect-survey-table/p-datatable/div/div[1]/table/tbody/tr[1]/td[6]/span/div/div[1]/span[1]/h6";
+    public static final String Participant_Reponse_Afficher2="/html/body/app-root/app-layout/div/section/div/acc-connect-survey-container/div/div[2]/acc-connect-survey-table/p-datatable/div/div[1]/table/tbody/tr[1]/td[6]/span/div/div[2]/span[1]/h6";
+
+
+
+
+
 }
 
