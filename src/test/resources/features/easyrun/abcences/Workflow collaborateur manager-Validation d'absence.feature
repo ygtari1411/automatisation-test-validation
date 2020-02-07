@@ -16,9 +16,9 @@ Feature: Absences
     Given le navigateur est ouvert et la page d'acceuil est affichée
 
    #Etape 1 : Ajout de cycle de travail qui considére que les samedi et dimanche ne sont pas travaillés
-    And l'utilisateur "duval.jules@yopmail.com" est connecté
-    When l utilisateur clique sur "Bouton_Role_RH"
-    And l utilisateur clique sur "Bouton_Menu_Etendu"
+    #And l'utilisateur "duval.jules@yopmail.com" est connecté
+    #When l utilisateur clique sur "Bouton_Role_RH"
+    #And l utilisateur clique sur "Bouton_Menu_Etendu"
     #And l utilisateur clique sur "Module_Administration"
     #And l utilisateur clique sur "Sous_Module_Gestion_des_calendriers"
     #And l utilisateur clique sur "Onglet_Journée_type"
@@ -61,62 +61,62 @@ Feature: Absences
 
     #Etape 2 : Profil Rh-Paramétrage de configuration
 
-    And l utilisateur clique sur "Module_Easyrun"
-    And l utilisateur clique sur "Sous_Module_Absences"
-    And l utilisateur clique sur "Onglet_Paramétrage"
-    And l utilisateur clique sur "Rubrique_Configuration"
-    And wait 6000
-    And l utilisateur vérifie que "Champ_Demande_d_absence_par_le_manager" a la valeur "Oui"
-    And l utilisateur vérifie que "Champ_Le_backup_est_obligatoire" a la valeur "Non"
-    And l utilisateur vérifie que "Champ_Ajout_du_champs_backup" a la valeur "Non"
-    And l utilisateur vérifie que "Champ_Affichage_de_tous_les_managers" a la valeur "Oui"
-    And l utilisateur vérifie que "Champ_Validation_de_la_demande_d_absence_par_la_RH" a la valeur "Oui"
+    #And l utilisateur clique sur "Module_Easyrun"
+    #And l utilisateur clique sur "Sous_Module_Absences"
+    #And l utilisateur clique sur "Onglet_Paramétrage"
+    #And l utilisateur clique sur "Rubrique_Configuration"
+    #And wait 6000
+    #And l utilisateur vérifie que "Champ_Demande_d_absence_par_le_manager" a la valeur "Oui"
+    #And l utilisateur vérifie que "Champ_Le_backup_est_obligatoire" a la valeur "Non"
+    #And l utilisateur vérifie que "Champ_Ajout_du_champs_backup" a la valeur "Non"
+    #And l utilisateur vérifie que "Champ_Affichage_de_tous_les_managers" a la valeur "Oui"
+    #And l utilisateur vérifie que "Champ_Validation_de_la_demande_d_absence_par_la_RH" a la valeur "Oui"
 
       #Etape 3 : Profil Rh-Création de règle d'acquisition
 
-    And l utilisateur clique sur "Rubrique_Règles_d_acqusition"
-    And l utilisateur clique sur "Ajouter_Règle_d_aquisition"
-    And l utilisateur saisit "CP" dans le champs "Code_Ajout_Règle_d_aquisition"
-    And l utilisateur saisit "Congé Payé" dans le champs "Libellé_Ajout_Règle_d_aquisition"
-    And l utilisateur selectionne "Jour" dans la liste deroulante "Type_Ajout_Règle_Unité_d_acquisition"
-    And l utilisateur clique sur "Jour_Debut_Ajout_Regle_d_aquisition"
-    And l utilisateur selectionne "01" dans la liste "Début_d_acquisition_Jour_Ajout_Règle"
-    And l utilisateur clique sur "Mois_Debut_Ajout_Regle_d_aquisition"
-    And l utilisateur selectionne "01" dans la liste "Début_d_acquisition_Mois_Ajout_Règle"
-    And l utilisateur saisit "1" dans le champs "Durée_d_acquisition_Année_Ajout_Règle"
-    And l utilisateur saisit "12" dans le champs "Durée_d_acquisition_Mois_Ajout_Règle"
-    And l utilisateur selectionne "Mensuel" dans la liste deroulante "Type_d_acquisition_Ajout_Règle"
-    And l utilisateur saisit "22" dans le champs "Acquis_de_base_Ajout_Règle"
-    And l utilisateur saisit "1" dans le champs "Unité_de_décrémentation_Ajout_Règle"
-    And l utilisateur selectionne "Fin de période" dans la liste deroulante "Mise_à_disposition_Ajout_Règle"
-    And l utilisateur saisit "0" dans le champs "Première_consommation_après_mois_Ajout_Règle"
-    And l utilisateur selectionne "à 0,01 près" dans la liste deroulante "Voisinage_Ajout_Règle"
-    And l utilisateur selectionne "La plus proche" dans la liste deroulante "Valeur_Ajout_Règle"
-    And l utilisateur clique sur "Bouton_Valider_Ajout_Règle"
-    And vérifier que le message "Opération effectuée avec succès" s affiche
+    #And l utilisateur clique sur "Rubrique_Règles_d_acqusition"
+    #And l utilisateur clique sur "Ajouter_Règle_d_aquisition"
+    #And l utilisateur saisit "CP" dans le champs "Code_Ajout_Règle_d_aquisition"
+    #And l utilisateur saisit "Congé Payé" dans le champs "Libellé_Ajout_Règle_d_aquisition"
+    #And l utilisateur selectionne "Jour" dans la liste deroulante "Type_Ajout_Règle_Unité_d_acquisition"
+    #And l utilisateur clique sur "Jour_Debut_Ajout_Regle_d_aquisition"
+    #And l utilisateur selectionne "01" dans la liste "Début_d_acquisition_Jour_Ajout_Règle"
+    #And l utilisateur clique sur "Mois_Debut_Ajout_Regle_d_aquisition"
+    #And l utilisateur selectionne "01" dans la liste "Début_d_acquisition_Mois_Ajout_Règle"
+    #And l utilisateur saisit "1" dans le champs "Durée_d_acquisition_Année_Ajout_Règle"
+    #And l utilisateur saisit "12" dans le champs "Durée_d_acquisition_Mois_Ajout_Règle"
+    #And l utilisateur selectionne "Mensuel" dans la liste deroulante "Type_d_acquisition_Ajout_Règle"
+    #And l utilisateur saisit "22" dans le champs "Acquis_de_base_Ajout_Règle"
+    #And l utilisateur saisit "1" dans le champs "Unité_de_décrémentation_Ajout_Règle"
+    #And l utilisateur selectionne "Fin de période" dans la liste deroulante "Mise_à_disposition_Ajout_Règle"
+    #And l utilisateur saisit "0" dans le champs "Première_consommation_après_mois_Ajout_Règle"
+    #And l utilisateur selectionne "à 0,01 près" dans la liste deroulante "Voisinage_Ajout_Règle"
+    #And l utilisateur selectionne "La plus proche" dans la liste deroulante "Valeur_Ajout_Règle"
+    #And l utilisateur clique sur "Bouton_Valider_Ajout_Règle"
+    #And vérifier que le message "Opération effectuée avec succès" s affiche
 
     #Etape 4 : Profil Rh-Création du motif d'absence renfermant le processus de validation "Validation N+1" selectionné au niveau du motif d'absence
 
-    And l utilisateur clique sur "Rubrique_Motifs_absence"
-    And l utilisateur clique sur "Ajouter_motif"
-    And l utilisateur saisit "CPW1" dans le champs "Code_Ajout_Motif_Abcences"
-    And l utilisateur saisit "Congés Payés Workflow1" dans le champs "Libellé_Ajout_Motif_Abcences"
-    And l utilisateur selectionne "Règle" dans la liste deroulante "Type_Ajout_Motif_Abcences"
-    And l utilisateur selectionne "Role utilisateur" dans la liste deroulante "Utilisé_par_Ajout_Motif_Abcences"
-    And l utilisateur selectionne "Groupement par défaut" dans la liste deroulante "Groupement_de_motifs_Ajout_Motif_Abcences"
-    And l utilisateur selectionne "Validation N+1" dans la liste deroulante "Processus_de_validation_Ajout_Motif_Abcences"
+    #And l utilisateur clique sur "Rubrique_Motifs_absence"
+    #And l utilisateur clique sur "Ajouter_motif"
+    #And l utilisateur saisit "CPW1" dans le champs "Code_Ajout_Motif_Abcences"
+    #And l utilisateur saisit "Congés Payés Workflow1" dans le champs "Libellé_Ajout_Motif_Abcences"
+    #And l utilisateur selectionne "Règle" dans la liste deroulante "Type_Ajout_Motif_Abcences"
+    #And l utilisateur selectionne "Role utilisateur" dans la liste deroulante "Utilisé_par_Ajout_Motif_Abcences"
+    #And l utilisateur selectionne "Groupement par défaut" dans la liste deroulante "Groupement_de_motifs_Ajout_Motif_Abcences"
+    #And l utilisateur selectionne "Validation N+1" dans la liste deroulante "Processus_de_validation_Ajout_Motif_Abcences"
      # Case Visible à cocher
     #And l utilisateur clique sur "Case_Visible"
-    And l utilisateur clique sur "Bouton_Ajouter_Motif_Abcences"
-    And l utilisateur clique sur "Bouton_Affectation_Population"
-    And l utilisateur clique sur "Bouton_Ajout_Affectation_Population_Motif_Abcence"
-    And l utilisateur selectionne la population "Cosette Berger" dans la liste des populations "Population_Affectation_Population_Motif_Abcence"
-    And l utilisateur saisit "01/11/2019" dans le champs "Date_d_effet_Affectation_Population_Motif_Abcence"
-    And l utilisateur selectionne "Congé Payé" dans la liste deroulante "Règle_Affectation_Population_Motif_Abcence"
-    And l utilisateur selectionne "jours ouvrés" dans la liste deroulante "Type_du_calendrier_Affectation_Population_Motif_Abcence"
-    And l utilisateur clique sur "Bouton_Valider_affectation"
-    And vérifier que le message "Opération effectuée avec succès" s affiche
-    And l utilisateur se deconnecte
+    #And l utilisateur clique sur "Bouton_Ajouter_Motif_Abcences"
+    #And l utilisateur clique sur "Bouton_Affectation_Population"
+    #And l utilisateur clique sur "Bouton_Ajout_Affectation_Population_Motif_Abcence"
+    #And l utilisateur selectionne la population "Cosette Berger" dans la liste des populations "Population_Affectation_Population_Motif_Abcence"
+    #And l utilisateur saisit "01/11/2019" dans le champs "Date_d_effet_Affectation_Population_Motif_Abcence"
+    #And l utilisateur selectionne "Congé Payé" dans la liste deroulante "Règle_Affectation_Population_Motif_Abcence"
+    #And l utilisateur selectionne "jours ouvrés" dans la liste deroulante "Type_du_calendrier_Affectation_Population_Motif_Abcence"
+    #And l utilisateur clique sur "Bouton_Valider_affectation"
+    #And vérifier que le message "Opération effectuée avec succès" s affiche
+    #And l utilisateur se deconnecte
 
     #Etape 5 : Profil collaborateur-Ajout de demande d'absence
     And l'utilisateur "berger.cosette@yopmail.com" est connecté
