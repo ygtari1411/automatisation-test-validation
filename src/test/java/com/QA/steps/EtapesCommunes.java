@@ -303,7 +303,6 @@ public class EtapesCommunes {
 
         Actions actions = new Actions(driver);
         for (WebElement x : L) {
-            actions.moveToElement(x).perform();
             if (x.getText().equals(Optiondelaliste)) {
                 x.click();
                 break;
@@ -476,7 +475,7 @@ public class EtapesCommunes {
                 break;
             }
         }
-        if (!driver.findElement(By.xpath(locator)).getAttribute("innerTexte").equals(valeur)) {
+        if (driver.findElement(By.xpath(locator)).isDisplayed() && valeur.equals("Non")) {
             driver.findElement(By.xpath(locator)).click();
             String emplacement2 = "Sauvegarde_" + emplacement;
             locator = "vide";

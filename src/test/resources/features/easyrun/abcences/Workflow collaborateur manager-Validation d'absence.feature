@@ -19,45 +19,45 @@ Feature: Absences
     And l'utilisateur "duval.jules@yopmail.com" est connecté
     When l utilisateur clique sur "Bouton_Role_RH"
     And l utilisateur clique sur "Bouton_Menu_Etendu"
-    And l utilisateur clique sur "Module_Administration"
-    And l utilisateur clique sur "Sous_Module_Gestion_des_calendriers"
-    And l utilisateur clique sur "Onglet_Journée_type"
-    And l utilisateur clique sur "Bouton_Ajouter_Journée_type"
-    And l utilisateur saisit "Jtype" dans le champs "Code_Ajout_Journée_type"
-    And l utilisateur saisit "Jtype" dans le champs "Libellé_Ajout_Journée_type"
-    And l utilisateur selectionne "Durée" dans la liste deroulante "Type_Ajout_Journée_type"
-    And l utilisateur modifie "08" dans le champs "Nombre_Heures_Ajout_Journée_Type"
-    And l utilisateur modifie "00" dans le champs "Nombre_Minutes_Ajout_Journée_Type"
-    And l'utilisateur vérifie que le statut de la journée type est Actif
-    And l utilisateur clique sur "Bouton_Valider_Ajout_Journée_type"
-    And wait 4000
-    And l'utilisateur rafraichit la page
-    And l utilisateur clique sur "Onglet_Semaine_type"
-    And wait 4000
-    And l utilisateur clique sur "Bouton_Ajouter_Semaine_type"
-    And l utilisateur saisit "Stype" dans le champs "Code_Ajout_Semaine_type"
-    And l utilisateur saisit "Stype" dans le champs "Libellé_Ajout_Semaine_type"
+    #And l utilisateur clique sur "Module_Administration"
+    #And l utilisateur clique sur "Sous_Module_Gestion_des_calendriers"
+    #And l utilisateur clique sur "Onglet_Journée_type"
+    #And l utilisateur clique sur "Bouton_Ajouter_Journée_type"
+    #And l utilisateur saisit "Jtype" dans le champs "Code_Ajout_Journée_type"
+    #And l utilisateur saisit "Jtype" dans le champs "Libellé_Ajout_Journée_type"
+    #And l utilisateur selectionne "Durée" dans la liste deroulante "Type_Ajout_Journée_type"
+    #And l utilisateur modifie "08" dans le champs "Nombre_Heures_Ajout_Journée_Type"
+    #And l utilisateur modifie "00" dans le champs "Nombre_Minutes_Ajout_Journée_Type"
+    #And l'utilisateur vérifie que le statut de la journée type est Actif
+    #And l utilisateur clique sur "Bouton_Valider_Ajout_Journée_type"
+    #And wait 4000
+    #And l'utilisateur rafraichit la page
+    #And l utilisateur clique sur "Onglet_Semaine_type"
+    #And wait 4000
+    #And l utilisateur clique sur "Bouton_Ajouter_Semaine_type"
+    #And l utilisateur saisit "Stype" dans le champs "Code_Ajout_Semaine_type"
+    #And l utilisateur saisit "Stype" dans le champs "Libellé_Ajout_Semaine_type"
    #Sélection des jours de repos
-    And l utilisateur clique sur "Case_Samedi_Ajout_Semaine_Type"
-    And l utilisateur clique sur "Case_Dimanche_Ajout_Semaine_Type"
-    And l utilisateur selectionne "Samedi" dans la liste deroulante "Jour_ouvrable_Ajout_Semaine_Type"
-    And l utilisateur clique sur "Bouton_Valider_Ajout_Semaine_type"
-    And wait 4000
-    And l utilisateur clique sur "Onglet_Cycles_de_travail"
-    And wait 4000
-    And l utilisateur clique sur "Bouton_Ajouter_Cycles_de_travail"
-    And l utilisateur saisit "CType" dans le champs "Code_Ajout_Cycle_de_travail"
-    And l utilisateur saisit "Ctype" dans le champs "Libellé_Ajout_Cycle_de_travail"
-    And l'utilisateur vérifie que le statut du cycle de travail est Actif
-    And l utilisateur selectionne "Stype" dans la liste "Semaines_types_Ajout_Cycle_de_travail"
-    And l utilisateur clique sur "Bouton_Valider_Ajout_Cycle_de_travail"
-    And wait 4000
-    And l utilisateur clique sur "Bouton_Affectation_Population_Cycles_de_travail"
-    And l utilisateur clique sur "Bouton_Ajout_Affectation_Population_Cycle_de_travail"
-    And l utilisateur saisit "01/12/2019" dans le champs "Date_d_effet_Affectation_Population_Cycle_de_travail"
-    And l utilisateur selectionne "Stype" dans la liste deroulante "Premiere_semaine_Affectation_Popultaion_Cycle_de_travail"
-    And l utilisateur selectionne la population "Cosette Berger" dans la liste des populations "Population_Affectation_Population_Cycle_de_travail"
-    And l utilisateur clique sur "Valider_Affectation_Population_Cycle_de_travail"
+    #And l utilisateur clique sur "Case_Samedi_Ajout_Semaine_Type"
+    #And l utilisateur clique sur "Case_Dimanche_Ajout_Semaine_Type"
+    #And l utilisateur selectionne "Samedi" dans la liste deroulante "Jour_ouvrable_Ajout_Semaine_Type"
+    #And l utilisateur clique sur "Bouton_Valider_Ajout_Semaine_type"
+    #And wait 4000
+    #And l utilisateur clique sur "Onglet_Cycles_de_travail"
+    #And wait 4000
+    #And l utilisateur clique sur "Bouton_Ajouter_Cycles_de_travail"
+    #And l utilisateur saisit "CType" dans le champs "Code_Ajout_Cycle_de_travail"
+    #And l utilisateur saisit "Ctype" dans le champs "Libellé_Ajout_Cycle_de_travail"
+    #And l'utilisateur vérifie que le statut du cycle de travail est Actif
+    #And l utilisateur selectionne "Stype" dans la liste "Semaines_types_Ajout_Cycle_de_travail"
+    #And l utilisateur clique sur "Bouton_Valider_Ajout_Cycle_de_travail"
+    #And wait 4000
+    #And l utilisateur clique sur "Bouton_Affectation_Population_Cycles_de_travail"
+    #And l utilisateur clique sur "Bouton_Ajout_Affectation_Population_Cycle_de_travail"
+    #And l utilisateur saisit "01/12/2019" dans le champs "Date_d_effet_Affectation_Population_Cycle_de_travail"
+    #And l utilisateur selectionne "Stype" dans la liste deroulante "Premiere_semaine_Affectation_Popultaion_Cycle_de_travail"
+    #And l utilisateur selectionne la population "Cosette Berger" dans la liste des populations "Population_Affectation_Population_Cycle_de_travail"
+    #And l utilisateur clique sur "Valider_Affectation_Population_Cycle_de_travail"
 
     #Etape 2 : Profil Rh-Paramétrage de configuration
 
@@ -65,12 +65,12 @@ Feature: Absences
     And l utilisateur clique sur "Sous_Module_Absences"
     And l utilisateur clique sur "Onglet_Paramétrage"
     And l utilisateur clique sur "Rubrique_Configuration"
-    And wait 3000
+    And wait 6000
     And l utilisateur vérifie que "Champ_Demande_d_absence_par_le_manager" a la valeur "Oui"
     And l utilisateur vérifie que "Champ_Le_backup_est_obligatoire" a la valeur "Non"
     And l utilisateur vérifie que "Champ_Ajout_du_champs_backup" a la valeur "Non"
     And l utilisateur vérifie que "Champ_Affichage_de_tous_les_managers" a la valeur "Oui"
-    And l utilisateur vérifie que "Champ_Validation de la demande d'absence par la RH" a la valeur "Oui"
+    And l utilisateur vérifie que "Champ_Validation_de_la_demande_d_absence_par_la_RH" a la valeur "Oui"
 
       #Etape 3 : Profil Rh-Création de règle d'acquisition
 
@@ -110,10 +110,10 @@ Feature: Absences
     And l utilisateur clique sur "Bouton_Ajouter_Motif_Abcences"
     And l utilisateur clique sur "Bouton_Affectation_Population"
     And l utilisateur clique sur "Bouton_Ajout_Affectation_Population_Motif_Abcence"
+    And l utilisateur selectionne la population "Cosette Berger" dans la liste des populations "Population_Affectation_Population_Motif_Abcence"
     And l utilisateur saisit "01/11/2019" dans le champs "Date_d_effet_Affectation_Population_Motif_Abcence"
-    And l utilisateur selectionne "Cosette Berger" dans la liste deroulante "Population_Affectation_Population_Motif_Abcence"
     And l utilisateur selectionne "Congé Payé" dans la liste deroulante "Règle_Affectation_Population_Motif_Abcence"
-    And l utilisateur selectionne "Jours ouvrés" dans la liste deroulante "Type_du_calendrier_Affectation_Population_Motif_Abcence"
+    And l utilisateur selectionne "jours ouvrés" dans la liste deroulante "Type_du_calendrier_Affectation_Population_Motif_Abcence"
     And l utilisateur clique sur "Bouton_Valider_affectation"
     And vérifier que le message "Opération effectuée avec succès" s affiche
     And l utilisateur se deconnecte
