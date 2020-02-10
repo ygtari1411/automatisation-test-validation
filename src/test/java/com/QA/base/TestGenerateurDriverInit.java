@@ -53,8 +53,11 @@ public class TestGenerateurDriverInit {
         ListeGlobaleLocators.add(Arrays.stream(OnboardingLocators.class.getFields()).collect(Collectors.toList()));
         ListeGlobaleLocators.add(Arrays.stream(ConfigurationTalentLocators.class.getFields()).collect(Collectors.toList()));
         ListeGlobaleLocators.add(Arrays.stream(LiensUtilesLocators.class.getFields()).collect(Collectors.toList()));
+        ListeGlobaleLocators.add(Arrays.stream(AnniversaireLocators.class.getFields()).collect(Collectors.toList()));
+
 
         logger.info("Configuration terminée");
+
     }
 
     @AfterClass

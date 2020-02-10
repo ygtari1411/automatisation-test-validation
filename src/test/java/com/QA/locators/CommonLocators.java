@@ -63,6 +63,11 @@ public class CommonLocators {
     public static final String Sous_module_Configuration_Talent="a[href='/hr-space/talent/configuration']";
     public static final String Module_Talent="a[title='Talent']";
     public static final String Bouton_Lien_Utile="/html/body/app-root/app-layout/div/app-sidebar/nav/ul/li[6]/ul/li[4]";
-
+    public static final String Bouton_Administration="a[title='Administration']";
+    public static final String Bouton_Configuration_Systeme="a[href='/hr-space/administration/system-config']";
+    public static final String Bouton_Autres_Parametres="/html/body/app-root/app-layout/div/section/div/app-system-config-container/div/div/div[1]/system-config-list/div/div[2]/a[6]";
+    public static final String Bouton_Autres_Parametres_Enregistrer="/html/body/app-root/app-layout/div/section/div/app-system-config-container/div/div/div[2]/app-system-config/echelon-config/div/div[2]/div/form/div/div/button[2]";
+    public static final String Bouton_Configuration="em[title='Configuration']";
+    public static final String Bouton_Profil="a[href='#profileConfig']";
 
 }

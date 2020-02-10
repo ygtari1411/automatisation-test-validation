@@ -22,10 +22,14 @@ Feature: Anniversaire
 
     When l utilisateur clique sur "Bouton_Role_RH"
     And l utilisateur clique sur "Bouton_Menu_Etendu"
-    And l utilisateur clique sur "Bouton_Module_Connect"
     And l utilisateur clique sur "Bouton_Administration"
+    And l utilisateur clique sur "Bouton_Configuration_Systeme"
     And l utilisateur clique sur "Bouton_Autres_Parametres"
-    Then l administrateur va decocher le bouton d'affichage de l'anniversaire personnel
+    And wait 3000
+    Then l administrateur va decocher le bouton d affichage de l anniversaire personnel
+    And wait 3000
+    And l utilisateur clique sur "Bouton_Autres_Parametres_Enregistrer"
+    And wait 3000
 
     #Etape3 : L utilisateur va se connecter et cocher le bouton d'affichage de l anniversaire personnel
 
@@ -33,8 +37,14 @@ Feature: Anniversaire
     And l'utilisateur "gaston.boutot@yopmail.com" est connecté
     And l utilisateur clique sur "Bouton_Configuration"
     And l utilisateur clique sur "Bouton_Profil"
-    Then l utilisateur va cocher le bouton d'affichage d'anniversaire personnel
+    And wait 3000
+    And l utilisateur clique sur "Bouton_Afficher_AnniversairePersonnel"
+    And wait 3000
+    Then l utilisateur va cocher le bouton d affichage d anniversaire personnel
 
     #Etape4 : Verifier que la date d'anniversaire personnel n'est pas affichée
 
+    When l utilisateur clique sur "Bouton_Configuration"
+    And l utilisateur clique sur "Icone_Nom_Utilisateur"
+    And wait 3000
     Then verifier que la date n est pas affichée dans le profil enrichi
