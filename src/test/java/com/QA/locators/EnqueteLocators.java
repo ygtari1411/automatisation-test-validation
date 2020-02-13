@@ -40,6 +40,9 @@ public class EnqueteLocators {
     public static final String Axe_Enquete_Reponse="/html/body/ngb-modal-window/div/div/acc-connect-satisfaction-survey-response/div/div[2]/acc-satisfaction-survey-response/div/div[2]/form/section/div[1]";
     public static final String Participant_Reponse1_Enquete="/html/body/ngb-modal-window/div/div/acc-connect-satisfaction-survey-response/div/div[2]/acc-satisfaction-survey-response/div/div[2]/form/section/div[2]/ul/li/ul/li[1]/label/input";
     public static final String Participant_Reponse2_Enquete="/html/body/ngb-modal-window/div/div/acc-connect-satisfaction-survey-response/div/div[2]/acc-satisfaction-survey-response/div/div[2]/form/section/div[2]/ul/li/ul/li[2]/label/input";
-
+    public static final String Bouton_Dupliquer_Enquete="i[class='icons8-copy']";
+    public static final String Libelle_Enquete_Duplication="/html/body/ngb-modal-window/div/div/acc-satisfaction-survey-form/div/form/div[2]/div/div/div/section/div[2]/div[1]/input";
+    public static final String Bouton_Confirmer_Dupliquer_Enquete="/html/body/ngb-modal-window/div/div/acc-satisfaction-survey-form/div/form/div[3]/button[2]";
+    public static final String Avancement_Deuxieme_Enquete="/html/body/app-root/app-layout/div/section/div/acc-connect-satisfaction-survey-container/div/div/acc-connect-satisfaction-survey-table/p-datatable/div/div[1]/table/tbody/tr[2]/td[3]/span/div";
 
 }
