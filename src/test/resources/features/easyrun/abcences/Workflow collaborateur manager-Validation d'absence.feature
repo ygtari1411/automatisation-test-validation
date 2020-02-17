@@ -21,16 +21,16 @@ Feature: Absences
     #And l utilisateur clique sur "Bouton_Menu_Etendu"
     #And l utilisateur clique sur "Module_Administration"
     #And l utilisateur clique sur "Sous_Module_Gestion_des_calendriers"
-    And l utilisateur clique sur "Onglet_Jours_fériés"
-    And l utilisateur clique sur "Bouton_Ajouter_Calendrier"
-    And l utilisateur saisit "CAtype" dans le champs "Code_Ajout_Calendrier"
-    And l utilisateur saisit "CAtype" dans le champs "Libellé_Ajout_Calendrier"
-    And l utilisateur clique sur "Bouton_Valider_Ajout_Calendrier"
-    And l utilisateur clique sur "Bouton_Affectation_Population_Calendrier"
-    And l utilisateur clique sur "Bouton_Ajout_Affectation_Population_Calendrier"
-    And l utilisateur saisit "01/01/2020" dans le champs "Date_d_effet_Affectation_Population_Calendrier"
-    And l utilisateur selectionne la population "Cosette Berger" dans la liste des populations "Population_Affectation_Population_Calendrier"
-    And l utilisateur clique sur "Valider_Affectation_Population_Calendrier"
+    #And l utilisateur clique sur "Onglet_Jours_fériés"
+    #And l utilisateur clique sur "Bouton_Ajouter_Calendrier"
+    #And l utilisateur saisit "CAtype" dans le champs "Code_Ajout_Calendrier"
+    #And l utilisateur saisit "CAtype" dans le champs "Libellé_Ajout_Calendrier"
+    #And l utilisateur clique sur "Bouton_Valider_Ajout_Calendrier"
+    #And l utilisateur clique sur "Bouton_Affectation_Population_Calendrier"
+    #And l utilisateur clique sur "Bouton_Ajout_Affectation_Population_Calendrier"
+    #And l utilisateur saisit "01/01/2020" dans le champs "Date_d_effet_Affectation_Population_Calendrier"
+    #And l utilisateur selectionne la population "Cosette Berger" dans la liste des populations "Population_Affectation_Population_Calendrier"
+    #And l utilisateur clique sur "Valider_Affectation_Population_Calendrier"
     #And l utilisateur clique sur "Onglet_Journée_type"
     #And l utilisateur clique sur "Bouton_Ajouter_Journée_type"
     #And l utilisateur saisit "Jtype" dans le champs "Code_Ajout_Journée_type"
@@ -115,7 +115,7 @@ Feature: Absences
     #And l utilisateur selectionne "Role utilisateur" dans la liste deroulante "Utilisé_par_Ajout_Motif_Abcences"
     #And l utilisateur selectionne "Groupement par défaut" dans la liste deroulante "Groupement_de_motifs_Ajout_Motif_Abcences"
     #And l utilisateur selectionne "Validation N+1" dans la liste deroulante "Processus_de_validation_Ajout_Motif_Abcences"
-     # Case Visible à cocher
+    # Case Visible à cocher
     #And l utilisateur clique sur "Case_Visible"
     #And l utilisateur clique sur "Bouton_Ajouter_Motif_Abcences"
     #And l utilisateur clique sur "Bouton_Affectation_Population"
@@ -138,6 +138,7 @@ Feature: Absences
     And l'utilisateur upload un justificatif
     And l utilisateur clique sur "Bouton_Envoyer_Ajout_Demande_Absence_Collaborateur"
     And vérifier que le message "Opération effectuée avec succès" s affiche
+    And wait 2000
     And vérifier que le statut de la demande devient En cours
     And l utilisateur se deconnecte
 
@@ -154,4 +155,4 @@ Feature: Absences
 
     #Etape 7 : Profil collaborateur-Vérification de la validation de la demande d'absence
     And l'utilisateur "berger.cosette@yopmail.com" est connecté
-    Then Vérifier que l utilisateur reçoit une notification "Votre demande d'absence a été acceptée" et que le statut de la demande d absence devient Validée et que la demande d absence s affiche dans le calendrier
+    Then Vérifier que l utilisateur reçoit une notification "a accepté votre demande d'absence" et que le statut de la demande d absence devient Validée et que la demande d absence s affiche dans le calendrier

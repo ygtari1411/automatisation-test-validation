@@ -106,7 +106,7 @@ public class ReferentielsLocators {
     public static final String Société_établissement_IL = "//*[@id=\"popup\"]/div/section[3]/div[2]/div[1]/acc-select-list/ng-select/div/input";
     public static final String Société_établissement_CL = "//*[@id=\"popup\"]/div/section[3]/div[2]/div[1]/acc-select-list/ng-select/div/ul/li";
     public static final String Etablissement_principal = "//*[@id=\"popup\"]/div/section[3]/div[2]/div[2]/label/span";
-
+    public static final String Valider_Entité_mère = "button[class='mb-sm btn btn-info btn-outline'][type='submit']";
     public static final String Enregistrer_établissement = "//*[@id=\"popup\"]/div/div/button[2]";
     public static final String Ajouter_contact_établissement = "/html/body/app-root/app-layout/div/section/div/acc-referential/div/div/acc-core-rh-referential-establishment-container/div/acc-core-rh-referential-establishment-form/form/acc-core-rh-referential-establishment-contacts-form/acc-table/section/div[2]/ul/li[2]";
     public static final String Contact_établissement = "/html/body/app-root/app-layout/div/section/div/acc-referential/div/div/acc-core-rh-referential-establishment-container/div/acc-core-rh-referential-establishment-form/form/acc-core-rh-referential-establishment-contacts-form/acc-table/section/div[2]/div/form/div[1]/acc-table-form/div[1]/div[1]/input";
