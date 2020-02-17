@@ -26,25 +26,26 @@ Feature: Anniversaire
     And l utilisateur clique sur "Bouton_Configuration_Systeme"
     And l utilisateur clique sur "Bouton_Autres_Parametres"
     And wait 3000
-    Then l administrateur va cocher le bouton d affichage de l anniversaire personnel
+    Then l administrateur va cocher le bouton d affichage de l anniversaire professionnel
     And wait 3000
     And l utilisateur clique sur "Bouton_Autres_Parametres_Enregistrer"
     And wait 3000
 
-    #Etape3 : Le collaborateur va se connecter et verifier que les deux anniversaires affichés sont differents
+    #Etape3 : Verifier que l'anniversaire professionnel est le meme dans la gestion du personnel
+
+    When l utilisateur clique sur "Bouton_Menu_Etendu"
+    And wait 3000
+    And l utilisateur clique sur "Core_RH"
+    And l utilisateur clique sur "Gestion_du_personnel"
+    And wait 3000
+    And l utilisateur saisit "Gaston Boutot" dans le champs "Rechercher_Employe"
+    And l utilisateur clique sur "Dossier_administratif_collaborateur"
+    And l utilisateur verifie la date d'anniversaire personnel et professionnel
+
+   #Etape4 :  # Le collaborateur va se connecter et verifier que les deux anniversaires affichés sont differents
 
     And l utilisateur se deconnecte
     And l'utilisateur "gaston.boutot@yopmail.com" est connecté
-    And l utilisateur clique sur "Lien_Nom_Utilisateur"
-    Then verifier que les deux anniversaires affichés sont differents
-
-    #Etape4 : Verifier que l'anniversaire professionnel est le meme dans la gestion du personnel
-
-    And l utilisateur se deconnecte
-    And l'utilisateur "responsable@yopmail.com" est connecté
-    When l utilisateur clique sur "Bouton_Role_RH"
-    And l utilisateur clique sur "Bouton_Menu_Etendu"
-    And l utilisateur clique sur "Core_RH"
-    And l utilisateur clique sur "Gestion_du_personnel"
-    And l utilisateur saisit "Gaston Boutot" dans le champs "Rechercher_Employé"
-    #And l utilisateur clique sur "Premier_Nom_Affiché"
+    And l utilisateur clique sur "Icone_Nom_Utilisateur"
+    And wait 3000
+    Then verifier que la date danniversaire professionnel est la meme

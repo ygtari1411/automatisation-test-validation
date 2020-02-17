@@ -66,5 +66,6 @@ public class GestionDuPersonnel {
     public static final String Valider_salaire_collaborateur = "//*[@id=\"remuneration\"]/div/acc-core-rh-employee-remuneration-file-page/acc-core-rh-employee-salary-form/acc-table/section/div[2]/div/form/div[2]/button[2]";
     public static final String Rechercher_Employe="/html/body/app-root/app-layout/div/section/div/ng-component/header/div/div/input";
     public static final String DateDeNaissance_DossierIndividuel="//*[@id=\"individuel\"]/div/acc-core-rh-employee-individual-file-page/acc-core-rh-employee-identity-form/section/div[2]/div/div[3]/div[1]/acc-date-picker/my-date-picker/div/div/input";
+    public static final String DateDentree="//*[@id=\"administrative\"]/div/acc-core-rh-employee-administrative-file-page/acc-core-rh-employee-hiring-exit-form/acc-table/section/div[2]/div/div/div/div/table/tbody/tr/td[1]/span";
 
 }
