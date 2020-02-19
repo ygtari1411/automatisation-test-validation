@@ -3,10 +3,10 @@
 # Scénario: Anniversaire Professionnel Different Du Personnel Dans Profil Enrichi
 # Date de création: 05/02/2020
 
-#@ACCRETIO2
-#@ACCRETIO2-CONNECT
-#@ACCRETIO2-ANNIVERSAIRE
-#@ACCRETIO2-ANNIVERSAIRE-0004
+@ACCRETIO2
+@ACCRETIO2-CONNECT
+@ACCRETIO2-ANNIVERSAIRE
+@ACCRETIO2-ANNIVERSAIRE-0004
 
 
 Feature: Anniversaire
@@ -40,7 +40,7 @@ Feature: Anniversaire
     And wait 3000
     And l utilisateur saisit "Gaston Boutot" dans le champs "Rechercher_Employe"
     And l utilisateur clique sur "Dossier_administratif_collaborateur"
-    And l utilisateur verifie la date d'anniversaire personnel et professionnel
+    And l utilisateur verifie la date d'anniversaire professionnel
 
    #Etape4 :  # Le collaborateur va se connecter et verifier que les deux anniversaires affichés sont differents
 
