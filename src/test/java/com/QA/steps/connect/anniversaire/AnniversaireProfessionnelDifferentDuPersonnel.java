@@ -5,8 +5,10 @@ import com.QA.locators.GestionDuPersonnel;
 import com.QA.steps.GenerateurDriver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 
 import static java.lang.System.*;
@@ -19,7 +21,8 @@ public class AnniversaireProfessionnelDifferentDuPersonnel {
     public String mois_embauche;
     public String mois_embauche_l;
     public static String date_embauche_l;
-
+    private Throwable NoSuchElementException;
+    private static final Logger logger = Logger.getLogger(GenerateurDriver.class);
     @Then("l administrateur va cocher le bouton d affichage de l anniversaire professionnel")
     public void lAdministrateurVaCocherLeBoutonDAffichageDeLAnniversaireProfessionnel() {
 
@@ -30,57 +33,64 @@ public class AnniversaireProfessionnelDifferentDuPersonnel {
 
     }
 
-    @And("l utilisateur verifie la date d'anniversaire personnel et professionnel")
-    public void lUtilisateurVerifieLaDateDAnniversairePersonnelEtProfessionnel() {
+    @And("l utilisateur verifie la date d'anniversaire professionnel")
+    public void lUtilisateurVerifieLaDateDAnniversaireProfessionnel() throws Throwable {
 
     date_embauche = driver.findElement(By.xpath(GestionDuPersonnel.DateDentree)).getAttribute("innerText");
+        if (date_embauche.isEmpty()) {
+            logger.info("Date d'entrée est obligatoire");
+            throw NoSuchElementException;
+        }
+        else {
 
-    jour_embauche=date_embauche.substring(0 , 2);
-    mois_embauche=date_embauche.substring(3,5);
+            jour_embauche = date_embauche.substring(0, 2);
+            mois_embauche = date_embauche.substring(3, 5);
 
-    switch (mois_embauche)
-    {
+    switch (mois_embauche) {
         case "01":
-            mois_embauche_l="Janvier";
+            mois_embauche_l = "Janvier";
             break;
         case "02":
-            mois_embauche_l="Fevrier";
+            mois_embauche_l = "Fevrier";
             break;
         case "03":
-            mois_embauche_l="Mars";
+            mois_embauche_l = "Mars";
             break;
         case "04":
-            mois_embauche_l="Avril";
+            mois_embauche_l = "Avril";
             break;
         case "05":
-            mois_embauche_l="Mai";
+            mois_embauche_l = "Mai";
             break;
         case "06":
-            mois_embauche_l="Juin";
+            mois_embauche_l = "Juin";
             break;
         case "07":
-            mois_embauche_l="Juillet";
+            mois_embauche_l = "Juillet";
             break;
         case "08":
-            mois_embauche_l="Aout";
+            mois_embauche_l = "Aout";
             break;
         case "09":
-            mois_embauche_l="Septembre";
+            mois_embauche_l = "Septembre";
             break;
         case "10":
-        mois_embauche_l="Octobre";
+            mois_embauche_l = "Octobre";
             break;
         case "11":
-            mois_embauche_l="Novembre";
+            mois_embauche_l = "Novembre";
             break;
+        case "12":
+            mois_embauche = "Decembre";
+
         default:
-            mois_embauche="Decembre";
-
-    }
-    date_embauche_l=jour_embauche + " " + mois_embauche_l;
+    }}
 
 
-    }
+            date_embauche_l = jour_embauche + " " + mois_embauche_l;
+
+        }
+
 
     @Then("verifier que la date danniversaire professionnel est la meme")
     public void verifierQueLaDateDanniversaireProfessionnelEstLaMeme() {
