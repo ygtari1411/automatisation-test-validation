@@ -84,6 +84,8 @@ public class AnniversaireProfessionnelDifferentDuPersonnel {
             mois_embauche = "Decembre";
 
         default:
+            logger.info("Date d'entrée est vide");
+            throw NoSuchElementException;
     }}
 
 
