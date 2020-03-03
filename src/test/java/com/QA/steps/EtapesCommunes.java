@@ -303,8 +303,8 @@ public class EtapesCommunes {
             L = driver.findElements(By.id(locator));
         }
 
-        Actions actions = new Actions(driver);
         for (WebElement x : L) {
+            actions.moveToElement(x).perform();
             if (x.getText().equals(Optiondelaliste)) {
                 x.click();
                 break;
