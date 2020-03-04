@@ -335,5 +335,24 @@ public class ReferentielsLocators {
     public static final String Entité_mère_EO_IL = "//*[@id=\"organizationalEntityForm\"]/acc-core-rh-referential-organizational-entity-form/form/acc-core-rh-referential-organizational-entity-parententity-form/acc-table/section/div[2]/div/form/div[1]/acc-table-form/div/div/div[3]/acc-custom-select/ng-select/div/input";
     public static final String Entité_mère_EO_CL = "//*[@id=\"organizationalEntityForm\"]/acc-core-rh-referential-organizational-entity-form/form/acc-core-rh-referential-organizational-entity-parententity-form/acc-table/section/div[2]/div/form/div[1]/acc-table-form/div/div/div[3]/acc-custom-select/ng-select/div/ul/li";
 
+    public static final String Liste_Societe ="/html[1]/body[1]/app-root[1]/app-layout[1]/div[1]/section[1]/div[1]/acc-referential[1]/div[1]/div[1]/acc-core-rh-referential-company-container[1]/div[1]/div[1]/acc-core-rh-referential-list[1]/div[1]/div[1]/ul/li";
+    public static final String BoutonSupprimerSociete="/html[1]/body[1]/app-root[1]/app-layout[1]/div[1]/section[1]/div[1]/acc-referential[1]/div[1]/div[1]/acc-core-rh-referential-company-container[1]/header[1]/div[2]/acc-core-rh-referential-add-delete-actions[1]/i[1]";
+    public static final String Bouton_Confirmer_Suppression_Societe="/html[1]/body[1]/ngb-modal-window[1]/div[1]/div[1]/acc-confirmation-modal[1]/div[3]/button[1]";
+
+    public static final String Liste_Etablissement="/html[1]/body[1]/app-root[1]/app-layout[1]/div[1]/section[1]/div[1]/acc-referential[1]/div[1]/div[1]/acc-core-rh-referential-establishment-container[1]/div[1]/acc-core-rh-referential-list[1]/div[1]/div[1]/ul/li";
+    public static final String Bouton_Supprimer_Etablissement="/html[1]/body[1]/app-root[1]/app-layout[1]/div[1]/section[1]/div[1]/acc-referential[1]/div[1]/div[1]/acc-core-rh-referential-establishment-container[1]/header[1]/acc-core-rh-referential-add-delete-actions[1]/i[1]";
+    public static final String Bouton_Confirmer_Suppression_Etablissement="/html[1]/body[1]/ngb-modal-window[1]/div[1]/div[1]/acc-confirmation-modal[1]/div[3]/button[1]";
+
+    public static final String Liste_Postes="/html[1]/body[1]/app-root[1]/app-layout[1]/div[1]/section[1]/div[1]/acc-referential[1]/div[1]/div[1]/acc-core-rh-referential-position-container[1]/div[1]/acc-core-rh-referential-list[1]/div[1]/div[1]/ul/li";
+    public static final String Bouton_Supprimer_Poste="/html[1]/body[1]/app-root[1]/app-layout[1]/div[1]/section[1]/div[1]/acc-referential[1]/div[1]/div[1]/acc-core-rh-referential-position-container[1]/header[1]/div[2]/acc-core-rh-referential-add-delete-actions[1]/i[1]";
+    public static final String Bouton_Confirmer_Suppression_Poste="/html[1]/body[1]/ngb-modal-window[1]/div[1]/div[1]/acc-confirmation-modal[1]/div[3]/button[1]";
+
+    public static final String Liste_Entités="/html[1]/body[1]/app-root[1]/app-layout[1]/div[1]/section[1]/div[1]/acc-referential[1]/div[1]/div[1]/acc-core-rh-referential-organizationalentity-container[1]/div[1]/div[1]/acc-core-rh-referential-list[1]/div[1]/div[1]/ul/li";
+    public static final String Bouton_Supprimer_Entité="/html[1]/body[1]/app-root[1]/app-layout[1]/div[1]/section[1]/div[1]/acc-referential[1]/div[1]/div[1]/acc-core-rh-referential-organizationalentity-container[1]/header[1]/div[1]/acc-core-rh-referential-add-delete-actions[1]/i[1]";
+    public static final String Bouton_Confirmer_Suppression_Entité="/html[1]/body[1]/ngb-modal-window[1]/div[1]/div[1]/acc-confirmation-modal[1]/div[3]/button[1]";
+
+    public static final String Liste_Emplois="/html[1]/body[1]/app-root[1]/app-layout[1]/div[1]/section[1]/div[1]/acc-referential[1]/div[1]/div[1]/acc-core-rh-referential-profession-container[1]/div[1]/acc-core-rh-referential-list[1]/div[1]/div[1]/ul/li";
+    public static final String Bouton_Supprimer_Emploi="/html[1]/body[1]/app-root[1]/app-layout[1]/div[1]/section[1]/div[1]/acc-referential[1]/div[1]/div[1]/acc-core-rh-referential-profession-container[1]/header[1]/div[2]/acc-core-rh-referential-add-delete-actions[1]/i[1]";
+    public static final String Bouton_Confirmer_Suppression_Emploi="/html[1]/body[1]/ngb-modal-window[1]/div[1]/div[1]/acc-confirmation-modal[1]/div[3]/button[1]";
 
 }
