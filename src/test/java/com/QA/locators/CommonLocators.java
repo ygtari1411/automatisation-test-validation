@@ -65,9 +65,9 @@ public class CommonLocators {
     public static final String Bouton_Lien_Utile="/html/body/app-root/app-layout/div/app-sidebar/nav/ul/li[6]/ul/li[4]";
     public static final String Bouton_Administration="a[title='Administration']";
     public static final String Bouton_Configuration_Systeme="a[href='/hr-space/administration/system-config']";
-    public static final String Bouton_Autres_Parametres="/html/body/app-root/app-layout/div/section/div/app-system-config-container/div/div/div[1]/system-config-list/div/div[2]/a[6]";
-    public static final String Bouton_Autres_Parametres_Enregistrer="/html/body/app-root/app-layout/div/section/div/app-system-config-container/div/div/div[2]/app-system-config/echelon-config/div/div[2]/div/form/div/div/button[2]";
     public static final String Bouton_Configuration="em[title='Configuration']";
-    public static final String Bouton_Profil="a[href='#profileConfig']";
+    public static final String Bouton_Profil="/html/body/app-root/app-layout/div/app-offsidebar/div/div[1]/div/a[3]/span";
+    public static final String Bouton_Configuration_Connect="/html/body/app-root/app-layout/div/app-sidebar/nav/ul/li[6]/ul/li[5]/a";
+    public static final String Bouton_Configuration_Core="/html/body/app-root/app-layout/div/app-sidebar/nav/ul/li[3]/ul/li[5]/a";
 
 }

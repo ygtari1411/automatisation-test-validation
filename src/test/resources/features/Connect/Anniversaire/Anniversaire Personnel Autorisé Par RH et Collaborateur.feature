@@ -22,8 +22,9 @@ Feature: Anniversaire
 
     When l utilisateur clique sur "Bouton_Role_RH"
     And l utilisateur clique sur "Bouton_Menu_Etendu"
-    And l utilisateur clique sur "Bouton_Administration"
-    And l utilisateur clique sur "Bouton_Configuration_Systeme"
+    And l utilisateur clique sur "Core_RH"
+    And l utilisateur clique sur "Bouton_Configuration_Core"
+    And wait 3000
     And l utilisateur clique sur "Bouton_Autres_Parametres"
     And wait 3000
     Then l administrateur va cocher le bouton d affichage de l anniversaire personnel
@@ -57,4 +58,3 @@ Feature: Anniversaire
     And l utilisateur saisit "Gaston Boutot" dans le champs "Rechercher_Employe"
     And wait 5000
     Then verifier que la date d anniversaire personnel est la meme dans la gestion du personnel
-

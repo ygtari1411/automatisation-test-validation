@@ -1,7 +1,7 @@
 package com.QA.steps.connect.anniversaire;
 
 import com.QA.locators.AnniversaireLocators;
-import com.QA.locators.SondageLocators;
+import com.QA.locators.ConfigurationCoreLocators;
 import com.QA.steps.GenerateurDriver;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
@@ -36,7 +36,7 @@ public class AnniversairePersonnelAutoriseParCollaborateurRefuseParRH {
 
 
 
-       Boolean test=driver.findElement(By.xpath("//*[@id=\"bithPerso\"]/div/div/p-inputswitch/div/div[2]/span")).isDisplayed();
+       Boolean test=driver.findElement(By.xpath("//*[@id=\"configTable\"]/tbody/tr[8]/td[2]/acc-switch/div/label/span")).isDisplayed();
 
        if(!test){
            driver.findElement(By.xpath(AnniversaireLocators.Bouton_Collaborateur_Anniversaire_Personnel)).click();
