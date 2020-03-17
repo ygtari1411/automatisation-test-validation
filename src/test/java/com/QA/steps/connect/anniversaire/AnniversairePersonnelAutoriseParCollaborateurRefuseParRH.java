@@ -1,15 +1,12 @@
 package com.QA.steps.connect.anniversaire;
 
 import com.QA.locators.AnniversaireLocators;
-import com.QA.locators.ConfigurationCoreLocators;
 import com.QA.steps.GenerateurDriver;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 

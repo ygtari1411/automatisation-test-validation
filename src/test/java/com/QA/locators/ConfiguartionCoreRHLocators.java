@@ -18,4 +18,6 @@ public class ConfiguartionCoreRHLocators {
     public static final String Liste_Marques_CL = "/html[1]/body[1]/app-root[1]/app-layout[1]/div[1]/section[1]/div[1]/acc-core-config-container[1]/div[1]/div[2]/acc-generic-cr-container[1]/div[1]/div[2]/div[1]/div[2]/div[1]/acc-vehiclemodel-container[1]/div[2]/section[1]/div[2]/div[1]/div[2]/vehiclemodel-form[1]/div[1]/form[1]/div[1]/div[3]/acc-select-cr[1]/ng-select[1]/div[1]/ul/li";
     public static final String Bouton_Valider_Modèle = "/html[1]/body[1]/app-root[1]/app-layout[1]/div[1]/section[1]/div[1]/acc-core-config-container[1]/div[1]/div[2]/acc-generic-cr-container[1]/div[1]/div[2]/div[1]/div[2]/div[1]/acc-vehiclemodel-container[1]/div[2]/section[1]/div[2]/div[1]/div[2]/vehiclemodel-form[1]/div[1]/form[1]/div[2]/button[2]";
     public static final String Bouton_Enregistrer_Modéle = "/html/body/app-root/app-layout/div/section/div/acc-core-config-container/div/div[2]/acc-generic-cr-container/div/div[2]/div/div[2]/div/acc-vehiclemodel-container/div[2]/acc-header-revert-save/div/a[1]/i";
+    public static final String Bouton_Autres_Parametres="//a[contains(text(),'Autres paramètres')]";
+    public static final String Bouton_Autres_Parametres_Enregistrer="//*[@id=\"configTable\"]/tbody/tr[10]/td/div/button[2]";
 }
