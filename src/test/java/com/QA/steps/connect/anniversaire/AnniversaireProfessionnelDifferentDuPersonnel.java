@@ -81,7 +81,7 @@ public class AnniversaireProfessionnelDifferentDuPersonnel {
             mois_embauche_l = "Novembre";
             break;
         case "12":
-            mois_embauche = "Decembre";
+            mois_embauche_l = "Decembre";
 
         default:
             logger.info("Date d'entrée est vide");
@@ -101,4 +101,8 @@ public class AnniversaireProfessionnelDifferentDuPersonnel {
 
 
     }
+
+
+
+
 }

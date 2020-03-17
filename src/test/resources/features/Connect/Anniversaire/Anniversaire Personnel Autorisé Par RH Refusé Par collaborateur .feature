@@ -22,8 +22,9 @@ Feature: Anniversaire
 
     When l utilisateur clique sur "Bouton_Role_RH"
     And l utilisateur clique sur "Bouton_Menu_Etendu"
-    And l utilisateur clique sur "Bouton_Administration"
-    And l utilisateur clique sur "Bouton_Configuration_Systeme"
+    And l utilisateur clique sur "Core_RH"
+    And l utilisateur clique sur "Bouton_Configuration_Core"
+    And wait 3000
     And l utilisateur clique sur "Bouton_Autres_Parametres"
     And wait 3000
     Then l administrateur va cocher le bouton d affichage de l anniversaire personnel

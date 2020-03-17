@@ -71,6 +71,7 @@ Feature: Enquete
     And l utilisateur clique sur "Bouton_Axe_Enquete_Portail"
     And l utilisateur clique sur "Bouton_Reponse_1_Enquete_Portail"
     And l utilisateur clique sur "Bouton_Voter_Enquete"
+
     #Etape8 : Verifier que l avancement de l enquete est egale a 100%
 
     And l utilisateur se deconnecte
