@@ -3,10 +3,10 @@
 # Scénario: Anniversaire Professionnel Different Du Personnel Dans Profil Enrichi
 # Date de création: 05/02/2020
 
-@ACCRETIO2
-@ACCRETIO2-CONNECT
-@ACCRETIO2-ANNIVERSAIRE
-@ACCRETIO2-ANNIVERSAIRE-0004
+#@ACCRETIO2
+#@ACCRETIO2-CONNECT
+#@ACCRETIO2-ANNIVERSAIRE
+#@ACCRETIO2-ANNIVERSAIRE-0004
 
 
 Feature: Anniversaire

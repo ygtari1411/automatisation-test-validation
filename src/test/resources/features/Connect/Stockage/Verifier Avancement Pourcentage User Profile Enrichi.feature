@@ -3,10 +3,10 @@
 # Scénario: Verifier Avancement Pourcentage User Profile Enrichi
 # Date de création: 11/12/2019
 
-@ACCRETIO2
-@ACCRETIO2-CONNECT
-@ACCRETIO2-STOCKAGE
-@ACCRETIO2-STOCKAGE-0005
+#@ACCRETIO2
+#@ACCRETIO2-CONNECT
+#@ACCRETIO2-STOCKAGE
+#@ACCRETIO2-STOCKAGE-0005
 
 
 Feature: Stockage

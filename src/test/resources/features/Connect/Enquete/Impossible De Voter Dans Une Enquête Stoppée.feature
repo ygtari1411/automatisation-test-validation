@@ -3,10 +3,10 @@
 # Scénario: Impossible de voter dans une enquête stoppée , un message d'erreur doit s'afficher
 # Date de création: 10/01/2020
 
-@ACCRETIO2
-@ACCRETIO2-CONNECT
-@ACCRETIO2-ENQUETE
-@ACCRETIO2-ENQUETE-0010
+#@ACCRETIO2
+#@ACCRETIO2-CONNECT
+#@ACCRETIO2-ENQUETE
+#@ACCRETIO2-ENQUETE-0010
 
 
 Feature: Enquete

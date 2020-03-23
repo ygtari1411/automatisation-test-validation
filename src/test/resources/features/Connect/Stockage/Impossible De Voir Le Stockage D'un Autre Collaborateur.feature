@@ -3,10 +3,10 @@
 # Scénario: Impossible de voir le stockage d'un autre collaborateur dans son profil
 # Date de création: 09/01/2020
 
-@ACCRETIO2
-@ACCRETIO2-CONNECT
-@ACCRETIO2-STOCKAGE
-@ACCRETIO2-STOCKAGE-0006
+#@ACCRETIO2
+#@ACCRETIO2-CONNECT
+#@ACCRETIO2-STOCKAGE
+#@ACCRETIO2-STOCKAGE-0006
 
 
 Feature: Stockage

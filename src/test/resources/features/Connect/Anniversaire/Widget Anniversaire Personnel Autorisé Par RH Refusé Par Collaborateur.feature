@@ -3,10 +3,10 @@
 # Scénario: Widget Anniversaire Personnel Autorisé Par RH Refusé Par Collaborateur
 # Date de création: 04/03/2020
 
-@ACCRETIO2
-@ACCRETIO2-CONNECT
-@ACCRETIO2-ANNIVERSAIRE
-@ACCRETIO2-ANNIVERSAIRE-0008
+#@ACCRETIO2
+#@ACCRETIO2-CONNECT
+#@ACCRETIO2-ANNIVERSAIRE
+#@ACCRETIO2-ANNIVERSAIRE-0008
 
 
 Feature: Anniversaire Professionnel

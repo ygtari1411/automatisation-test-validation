@@ -3,10 +3,10 @@
 # Scénario: Modifier article tout savoir
 # Date de création: 30/01/2020
 
-@ACCRETIO2
-@ACCRETIO2-CONNECT
-@ACCRETIO2-HelpDesk
-@ACCRETIO2-HelpDesk-ToutSavoir-0003
+#@ACCRETIO2
+#@ACCRETIO2-CONNECT
+#@ACCRETIO2-HelpDesk
+#@ACCRETIO2-HelpDesk-ToutSavoir-0003
 
 
 Feature: Tout Savoir
