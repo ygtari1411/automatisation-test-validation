@@ -32,7 +32,7 @@ Feature: Référentiels
     And l utilisateur selectionne "France" dans la liste deroulante "Pays_établissement"
     And l utilisateur selectionne "Paris" dans la liste deroulante "Ville_établissement"
     And l utilisateur saisit "15 Rue de la liberté" dans le champs "Adresse_Ajout_établissement"
-    And l utilisateur selectionne "Société de service" dans la liste deroulante "Société_établissement"
+    And l utilisateur selectionne "Delfingen QA" dans la liste deroulante "Société_établissement"
     And l utilisateur clique sur "Enregistrer_établissement"
     Then vérifier que le message "Opération effectuée avec succès" s affiche
 

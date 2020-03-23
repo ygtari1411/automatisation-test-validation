@@ -31,7 +31,7 @@ Feature: Référentiels
     And l utilisateur saisit "01/01/2019" dans le champs "Date_d_effet_poste"
     # And l utilisateur selectionne "Actif" dans la liste deroulante "Statut_poste"
     #And l utilisateur selectionne "Entité 1" dans la liste deroulante "Entite_organisationnelle_poste"
-    And l utilisateur selectionne "Emploi1" dans la liste deroulante "Emploi_poste"
+    And l utilisateur selectionne "DFG_Direction" dans la liste deroulante "Emploi_poste"
     And l utilisateur clique sur "Enregistrer_Poste"
     And vérifier que le message "Opération effectuée avec succès" s affiche
 

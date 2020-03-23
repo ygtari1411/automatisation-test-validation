@@ -366,7 +366,7 @@ public class ReferentielsLocators {
     public static final String Pneus_Véhicule_IL = "/html[1]/body[1]/app-root[1]/app-layout[1]/div[1]/section[1]/div[1]/acc-referential[1]/div[1]/div[1]/acc-core-rh-referential-company-container[1]/div[1]/div[1]/acc-core-rh-referential-company-form[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/core-rh-referential-company-vehicles-file-page[1]/acc-core-rh-referential-vehicles-form[1]/acc-table[1]/section[1]/div[2]/div[1]/form[1]/div[1]/acc-table-form[1]/div[2]/div[2]/acc-select-cr[1]/ng-select[1]/div[1]/input";
     public static final String Pneus_Véhicule_CL = "/html[1]/body[1]/app-root[1]/app-layout[1]/div[1]/section[1]/div[1]/acc-referential[1]/div[1]/div[1]/acc-core-rh-referential-company-container[1]/div[1]/div[1]/acc-core-rh-referential-company-form[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/core-rh-referential-company-vehicles-file-page[1]/acc-core-rh-referential-vehicles-form[1]/acc-table[1]/section[1]/div[2]/div[1]/form[1]/div[1]/acc-table-form[1]/div[2]/div[2]/acc-select-cr[1]/ng-select[1]/div[1]/ul[1]/li";
     public static final String Bouton_Enregistrer_Ajout_Véhicule = "/html[1]/body[1]/app-root[1]/app-layout[1]/div[1]/section[1]/div[1]/acc-referential[1]/div[1]/div[1]/acc-core-rh-referential-company-container[1]/div[1]/div[1]/acc-core-rh-referential-company-form[1]/form[1]/acc-core-rh-referential-update-revert-actions[1]/i[2]";
-
+    public static final String Recherche_Sociétés="/html/body/app-root/app-layout/div/section/div/acc-referential/div/div/acc-core-rh-referential-company-container/header/acc-filter/div/div/input";
 
 
 

@@ -30,7 +30,7 @@ Feature: Référentiels
     And l utilisateur saisit "Entité A Supprimer" dans le champs "Libellé_EO"
     And l utilisateur saisit "01/01/2019" dans le champs "Date_d_effet_EO"
     # And l utilisateur selectionne "Actif" dans la liste deroulante "Statut_EO"
-    And l utilisateur selectionne "Société de service" dans la liste deroulante "Société_EO"
+    And l utilisateur selectionne "Delfingen QA" dans la liste deroulante "Société_EO"
     And l utilisateur selectionne "Direction" dans la liste deroulante "Type_EO"
     And l utilisateur clique sur "Enregistrer_EO"
     Then vérifier que le message "Opération effectuée avec succès" s affiche
