@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-//import static com.QA.steps.connect.enquete.VerifAvancementEnquete.avancement;
+import static com.QA.steps.connect.enquete.VerifAvancementEnquete.avancement;
 
 public class DupliquerEnqueteLancee {
 
@@ -21,7 +21,6 @@ public class DupliquerEnqueteLancee {
         WebElement modules1 = (new WebDriverWait(driver, 50))
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath(EnqueteLocators.Avancement_Deuxieme_Enquete)));
         String str1=driver.findElement(By.xpath(EnqueteLocators.Avancement_Deuxieme_Enquete)).getAttribute("innerText");
-        //System.out.print(avancement);
-        // Assert.assertEquals(str1,avancement);
+         Assert.assertEquals(str1,avancement);
     }
 }
