@@ -30,9 +30,6 @@ Feature: Enquete
     When l utilisateur clique sur "Bouton_Ajouter_Enquete"
     And wait 3000
     And l utilisateur saisit "Enquete verifier resultat enquete" dans le champs "Libelle_Enquete_Creation"
-
-    And  l utilisateur clique sur "test"
-
     And l utilisateur selectionne la population "Population pour Connect" dans la liste des populations "Population_Enquete"
     #Population qui contient tout les utilisateurs du module connect
     And l utilisateur saisit "reponse 1" dans le champs "Reponse_1_enquete"
