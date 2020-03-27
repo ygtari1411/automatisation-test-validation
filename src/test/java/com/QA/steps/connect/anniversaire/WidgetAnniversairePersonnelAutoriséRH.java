@@ -32,12 +32,10 @@ public class WidgetAnniversairePersonnelAutoriséRH {
         {
             jour_birthday_perso= String.valueOf(Date_Anniv_Perso_User.charAt(1));
 
-            System.out.println("LE JOUR DEBUT EST"+jour_birthday_perso);
         }
         else
         {
             jour_birthday_perso = Date_Anniv_Perso_User.substring(0,2);
-            System.out.println("LE JOUR FIN EST"+jour_birthday_perso);
         }
         mois_birthday_perso = Date_Anniv_Perso_User.substring(3, 5);
         switch (mois_birthday_perso) {
@@ -82,7 +80,6 @@ public class WidgetAnniversairePersonnelAutoriséRH {
                 throw NoSuchElementException;
         }
      date_birthday_perso_widget=jour_birthday_perso+" "+mois_birthday_perso;
-        System.out.println("DATE WIDGET EST"+date_birthday_perso_widget);
         List<WebElement> listeannivperso = driver.findElements(By.cssSelector(AnniversaireLocators.Liste_Anniversaire));
         boolean exist=false;
         for (WebElement lap :listeannivperso)

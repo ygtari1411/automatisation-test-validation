@@ -69,13 +69,10 @@ public class AnniversaireProfessWidget {
         if (demain_date_pro.charAt(0)=='0')
         {
             jour_anniversaire_pro= String.valueOf(demain_date_pro.charAt(1));
-
-            System.out.println("LE JOUR DEBUT EST"+jour_anniversaire_pro);
         }
         else
         {
             jour_anniversaire_pro = demain_date_pro.substring(0,2);
-            System.out.println("LE JOUR FIN EST"+jour_anniversaire_pro);
         }
         mois_anniversaire_pro = demain_date_pro.substring(3, 5);
         switch (mois_anniversaire_pro) {
@@ -122,7 +119,6 @@ public class AnniversaireProfessWidget {
 
 
 
-         System.out.println("LE JOUR EST"+jour_anniversaire_pro);
         date_anniversaire_portal=jour_anniversaire_pro + " " + mois_anniversaire_pro_l;
 
         System.out.println("DATE PRO "+date_anniversaire_portal);
@@ -143,7 +139,6 @@ public class AnniversaireProfessWidget {
             i++;
         }
         actual_css=before_css+emplacement+after_css;
-        System.out.println("le css est "+actual_css);
         List<WebElement> listeBirthdayCakepro=driver.findElements(By.cssSelector(actual_css));
         action.pause(driver, 2000);
         Assert.assertEquals(1,listeBirthdayCakepro.size());
