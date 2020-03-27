@@ -11,7 +11,7 @@
 
 Feature: Référentiels
 
-  Scenario: Création Emploi
+  Scenario: Suppression Emploi
 
     # Etape 1 : Connexion :
     Given le navigateur est ouvert et la page d'acceuil est affichée

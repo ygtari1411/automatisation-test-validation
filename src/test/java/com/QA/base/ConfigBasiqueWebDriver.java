@@ -84,6 +84,7 @@ public class ConfigBasiqueWebDriver {
                     optionsCh.addArguments("--disable-gpu");
                     logger.info("Lancement d'un navigateur chrome en mode Headless dans un docker container");
                     driver = new RemoteWebDriver(grid, optionsCh);
+                    ((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
                     break;
 
                 default:

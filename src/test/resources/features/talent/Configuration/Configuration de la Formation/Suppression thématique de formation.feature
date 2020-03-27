@@ -17,7 +17,7 @@ Feature: Configuration
 
     Given   le navigateur est ouvert et la page d'acceuil est affichée
       And   l'utilisateur "Dupont.Cedric@yopmail.com" est connecté
-     Then   le nom de l utilisateur "Cédric DUPONT" est affiche en haut a gauche
+     Then   le nom de l utilisateur "Cédric Dupont" est affiche en haut a gauche
 
     #Etape 002: Acceder  au sous module configuration
 
