@@ -85,7 +85,7 @@ Feature: Gestion du personnel
     And wait 2000
     And l utilisateur clique sur "Valider_salaire_collaborateur"
     And wait 8000
-    And l utilisateur clique sur "Sauvegarder_Collaborateur"
+    And l utilisateur clique sur "Enregistrer_Collaborateur"
     Then vérifier que le message "Opération effectuée avec succès" s affiche
     And wait 2000
 
