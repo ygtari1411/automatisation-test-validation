@@ -556,7 +556,40 @@ public class EtapesCommunes {
     }
 
 
+    @And("l utilisateur  {string} l'option {string}")
+    public void lUtilisateurActiveDésactiveLOption(String choix, String option) throws IllegalAccessException {
+        logger.info("L'utilisateur "+choix+" l'option "+option);
+        String locator = "vide";
+        listededonnees.add(option);
+        listededonnees.add(choix);
+        for (List<Field> f : ListeGlobaleLocators) {
+            for (Field x : f) {
+                if (x.getName().equals(option)) {
+                    locator = (String) x.get(x);
+                    break;
+                }
+            }
+            if (!locator.equals("vide")) {
+                break;
+            }
+        }
+        Boolean optionChecked;
+        if (option.contains("JS_")) {
+            WebElement elementChoix = driver.findElement(By.xpath(locator));
+            optionChecked = elementChoix.isSelected();
+            JavascriptExecutor executor = (JavascriptExecutor) driver;
+            if ((choix.equals("active") && !optionChecked) || (choix.equals("désactive") && optionChecked)) {
+                executor.executeScript("arguments[0].click();", elementChoix);
+            }
+        }
+    }
+
+
 }
+
+
+
+
 
 
 
