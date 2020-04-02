@@ -16,7 +16,7 @@ public class GestionDuPersonnel {
     public static final String Prénom_collaborateur = "firstName";
     public static final String Date_de_naissance_collaborateur = "//*[@id=\"formStep1\"]/div[3]/div[1]/acc-date-picker/my-date-picker/div/div/input";
     public static final String Pays_de_naissance_collaborateur = "//*[@id=\"formStep1\"]/div[3]/div[2]/acc-select-cr/ng-select/div/div[2]/span";
-    public static final String Pays_de_naissance_collaborateur_IL = "//*[@id=\"formStep1\"]/div[3]/div[2]/acc-select-cr/ng-select/div/input";
+    public static final String Pays_de_naissance_collaborateur_IL =  "//*[@id=\"formStep1\"]/div[3]/div[2]/acc-select-cr/ng-select/div/input";
     public static final String Pays_de_naissance_collaborateur_CL = "//*[@id=\"formStep1\"]/div[3]/div[2]/acc-select-cr/ng-select/div/ul/li";
     public static final String Situation_familiale_collaborateur = "//*[@id=\"formStep1\"]/div[3]/div[3]/acc-select-cr/ng-select/div/div[2]/span";
     public static final String Situation_familiale_collaborateur_IL = "//*[@id=\"formStep1\"]/div[3]/div[3]/acc-select-cr/ng-select/div/input";
