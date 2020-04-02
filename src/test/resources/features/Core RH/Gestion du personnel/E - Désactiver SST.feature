@@ -54,6 +54,7 @@ Feature: Gestion du personnel
     # Etape 4 : Désactiver SST
     And l utilisateur clique sur "Core_RH"
     And l utilisateur clique sur "Configuration_Core_RH"
+    And wait 2000
     And l utilisateur clique sur "Autres_Paramètres"
     And l utilisateur  "active" l'option "JS_optiontest"
 
