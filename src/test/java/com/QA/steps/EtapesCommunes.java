@@ -540,7 +540,7 @@ public class EtapesCommunes {
             L = driver.findElements(By.id(locator));
         }
 
-        boolean  elementExiste=false;
+        boolean elementExiste = false;
 
         for (WebElement x : L) {
             actions.moveToElement(x).perform();

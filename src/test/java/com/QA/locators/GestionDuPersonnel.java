@@ -113,6 +113,8 @@ public class GestionDuPersonnel {
     public static final String Message_Erreur_Date_Sortie = "//*[@id=\"administrative\"]/div/acc-core-rh-employee-administrative-file-page/acc-core-rh-employee-hiring-exit-form/acc-table/section/div[2]/div/form/div[1]/acc-table-form/div[2]/div[2]/div";
     public static final String JS_Icone_Suppression_Motif_Sortie = "//*[@id=\"administrative\"]/div/acc-core-rh-employee-administrative-file-page/acc-core-rh-employee-hiring-exit-form/acc-table/section/div[2]/div/form/div[1]/acc-table-form/div[2]/div[3]/acc-select-cr/ng-select/div/div[2]/span/a/i";
     public static final String Icone_Suppression_Date_Sortie = "//*[@id=\"administrative\"]/div/acc-core-rh-employee-administrative-file-page/acc-core-rh-employee-hiring-exit-form/acc-table/section/div[2]/div/form/div[1]/acc-table-form/div[2]/div[2]/acc-date-picker/my-date-picker/div/div/div/button[1]/span";
+    public static final String Autres_Paramètres="/html/body/app-root/app-layout/div/section/div/acc-core-config-container/div/div[1]/div/div[2]/a[4]";
+    public static final String JS_optiontest="//input[@name='activateEchelon']";
     public static final String Onglet_SST="//a[contains(@title,'Santé et sécurité au travail')]";
     public static final String Ajouter_Travailleur_Designe="//*[@id=\"sst\"]/acc-core-rh-employee-stt-form/acc-core-rh-employee-stt-designated-employee-form/acc-table/section/div[2]/ul/li[2]/a";
     public static final String Diplome_Travailleur_Designe="//*[@id=\"sst\"]/acc-core-rh-employee-stt-form/acc-core-rh-employee-stt-designated-employee-form/acc-table/section/div[2]/div/form/div[1]/acc-table-form/div/div[1]/acc-select-cr/ng-select/div/div[2]/span";
