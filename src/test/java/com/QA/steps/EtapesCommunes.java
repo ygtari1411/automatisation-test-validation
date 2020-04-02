@@ -574,7 +574,7 @@ public class EtapesCommunes {
     }
 
 
-@And("l utilisateur  {string} l'option {string}")
+    @And("l utilisateur  {string} l'option {string}")
     public void lUtilisateurActiveDésactiveLOption(String choix, String option) throws IllegalAccessException {
         logger.info("L'utilisateur "+choix+" l'option "+option);
         String locator = "vide";
