@@ -667,7 +667,3 @@ public class EtapesCommunes {
 }
 
 
-
-
-
-
