@@ -552,6 +552,7 @@ public class EtapesCommunes {
         String locator = "vide";
         listededonnees.add(option);
         listededonnees.add(choix);
+        // The element to be activated / deactivated must have the "checked" property when inspected
         for (List<Field> f : ListeGlobaleLocators) {
             for (Field x : f) {
                 if (x.getName().equals(option)) {
@@ -563,6 +564,7 @@ public class EtapesCommunes {
                 break;
             }
         }
+        // The click on the element is only feasible with the use of javascript
         Boolean optionChecked;
         if (option.contains("JS_")) {
             WebElement elementChoix = driver.findElement(By.xpath(locator));
