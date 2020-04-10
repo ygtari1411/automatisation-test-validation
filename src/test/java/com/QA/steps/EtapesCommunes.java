@@ -336,8 +336,8 @@ public class EtapesCommunes {
         WebElement modules = (new WebDriverWait(driver, 300))
                 .until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(CommonLocators.Notification_Simple)));
         Boolean veriftxtnotif = (new WebDriverWait(driver, 20))
-                .until(ExpectedConditions.refreshed(ExpectedConditions.attributeToBeNotEmpty(modules,"innerText")));
-        action.pause(driver,1000);
+                .until(ExpectedConditions.refreshed(ExpectedConditions.attributeToBeNotEmpty(modules, "innerText")));
+        action.pause(driver, 1000);
         Assert.assertTrue(modules.getAttribute("innerText").contains(textenotification));
         action.pause(driver, 100);
         modules.click();
@@ -574,7 +574,7 @@ public class EtapesCommunes {
     }
 
 
-    @And("l utilisateur  {string} l'option {string}")
+@And("l utilisateur  {string} l'option {string}")
     public void lUtilisateurActiveDésactiveLOption(String choix, String option) throws IllegalAccessException {
         logger.info("L'utilisateur "+choix+" l'option "+option);
         String locator = "vide";
