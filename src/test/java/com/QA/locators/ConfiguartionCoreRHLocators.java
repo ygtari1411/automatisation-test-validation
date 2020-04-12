@@ -20,4 +20,7 @@ public class ConfiguartionCoreRHLocators {
     public static final String Bouton_Enregistrer_Modéle = "/html/body/app-root/app-layout/div/section/div/acc-core-config-container/div/div[2]/acc-generic-cr-container/div/div[2]/div/div[2]/div/acc-vehiclemodel-container/div[2]/div/button[2]";
     public static final String Bouton_Autres_Parametres="//a[contains(text(),'Autres paramètres')]";
     public static final String Bouton_Autres_Parametres_Enregistrer="//*[@id=\"configTable\"]/tbody/tr[10]/td/div/button[2]";
+    public static final String Autres_Paramètres="/html/body/app-root/app-layout/div/section/div/acc-core-config-container/div/div[1]/div/div[2]/a[4]";
+    public static final String JS_Option_SST="//input[@name='activateSTT']";
+    public static final String Enregistrer_Autres_Paramétres="//button[contains(text(),'Enregistrer')]";
 }
