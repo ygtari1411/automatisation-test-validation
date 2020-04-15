@@ -19,7 +19,7 @@ import java.util.concurrent.TimeUnit;
 public class ConfigBasiqueWebDriver {
 
     private static final Logger logger = Logger.getLogger(ConfigBasiqueWebDriver.class);
-    private static WebDriver driver = null;
+    public static WebDriver driver = null;
 
 
     public static WebDriver get() {
