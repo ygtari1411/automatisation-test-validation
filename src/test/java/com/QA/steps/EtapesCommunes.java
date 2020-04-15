@@ -664,7 +664,12 @@ public class EtapesCommunes {
         Assert.assertTrue(Recherche_KO.isDisplayed());
     }
 
+    @Then("l utilisateur ferme la fenetre du navigateur")
+    public void lUtilisateurFermeLaFenetreDuNavigateur() {
+        logger.info("Fermeture de la fenêtre actuelle du navigateur");
+        GenerateurDriver.restartSession = true;
     }
+}
 
 
 
