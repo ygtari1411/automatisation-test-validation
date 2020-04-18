@@ -45,7 +45,7 @@ Feature: Gestion du personnel
     And l utilisateur selectionne "DFG_Siège social" dans la liste deroulante "Etablissement_collaborateur"
     And l utilisateur selectionne "DFG_Direction générale" dans la liste deroulante "Entité_organisationnelle_collaborateur"
     And l utilisateur selectionne "DFG_Direction" dans la liste deroulante "Emploi_collaborateur"
-    And l utilisateur selectionne "DFG_Responsable recrutement" dans la liste deroulante "Poste_collaborateur"
+    And l utilisateur selectionne "DFG_PDG" dans la liste deroulante "Poste_collaborateur"
     And l utilisateur selectionne "Contrat à durée indéterminée" dans la liste deroulante "Type_du_contrat_collaborateur"
     #And l utilisateur modifie "01/01/2019" dans le champs "Date de début du contrat"
     And l utilisateur clique sur "Enregistrer_Collaborateur"

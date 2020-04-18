@@ -39,6 +39,7 @@ Feature: Référentiels
     And wait 2000
     And l utilisateur clique sur "Ajouter_competence_Emploi"
     And l utilisateur selectionne "Change Management" dans la liste deroulante "Compétence_emploi"
+    And wait 1000
     And l utilisateur selectionne "3" dans la liste deroulante "Niveau_compétence_emploi"
     And l utilisateur selectionne "Requise" dans la liste deroulante "Importance_compétence_emploi"
     And l utilisateur clique sur "Valider_competence_Emploi"

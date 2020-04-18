@@ -170,7 +170,7 @@ public class EtapesCommunes {
 
 
     @And("l utilisateur selectionne {string} dans la liste deroulante {string}")
-    public void lutilisateurSelectionneDansLaListeDeroulante(String optionlistederoulante, String listederoulante) throws IllegalAccessException, InterruptedException {
+    public void lutilisateurSelectionneDansLaListeDeroulante(String optionlistederoulante, String listederoulante) throws Throwable {
         logger.info("L'utilisateur selectionne : " + optionlistederoulante + " dans la liste déroulante : " + listederoulante);
         listededonnees.add(listederoulante);
         listededonnees.add(optionlistederoulante);
@@ -244,7 +244,7 @@ public class EtapesCommunes {
         //Actions actions = new Actions(driver);
         while (x) {
             List<WebElement> list1 = driver.findElements(By.xpath(locator));
-            if (list1.size() > 1) {
+            if (!list1.isEmpty()) {
                 try {
                     for (WebElement element1 : list1) {
                         actions.moveToElement(element1).perform();
@@ -254,14 +254,15 @@ public class EtapesCommunes {
                             break;
                         }
                     }
-                    x = false;
                 } catch (StaleElementReferenceException ignored) {
                 }
+                if (x) {
+                    logger.info("L'option " + optionlistederoulante + " n'éxiste pas dans la liste déroulante " + listederoulante);
+                    throw new Exception("L'option " + optionlistederoulante + " n'éxiste pas dans la liste déroulante " + listederoulante);
+                }
             } else {
-                actions.moveToElement(driver.findElement(By.xpath(locator))).perform();
-                action.pause(driver,2000);
-                driver.findElement(By.xpath(locator)).click();
-                x = false;
+                logger.info("La liste déroulante " + listederoulante + " est vide");
+                throw new Exception("La liste déroulante " + listederoulante + " est vide");
             }
         }
 
@@ -317,7 +318,7 @@ public class EtapesCommunes {
                     break;
                 }
             }
-            action.pause(driver,2000);
+            action.pause(driver, 2000);
             if (Character.toString(locator.charAt(0)).contains("/")) {
                 L1 = driver.findElements(By.xpath(locator));
             } else if (locator.contains("[") || Character.toString(locator.charAt(0)).contains(".")) {
@@ -325,8 +326,11 @@ public class EtapesCommunes {
             } else {
                 L1 = driver.findElements(By.id(locator));
             }
-            if (L1.size() > L.size()){ L = L1;}
-            else {state = false;}
+            if (L1.size() > L.size()) {
+                L = L1;
+            } else {
+                state = false;
+            }
         }
     }
 
@@ -576,7 +580,7 @@ public class EtapesCommunes {
 
     @And("l utilisateur  {string} l'option {string}")
     public void lUtilisateurActiveDésactiveLOption(String choix, String option) throws IllegalAccessException {
-        logger.info("L'utilisateur "+choix+" l'option "+option);
+        logger.info("L'utilisateur " + choix + " l'option " + option);
         String locator = "vide";
         listededonnees.add(option);
         listededonnees.add(choix);
@@ -606,7 +610,7 @@ public class EtapesCommunes {
 
     @And("vérifier que l element {string} n est pas affiché")
     public void vérifierQueLElementNEstPasAffiché(String element) throws IllegalAccessException {
-        logger.info("vérifier que l'élement "+element+" est affiché");
+        logger.info("vérifier que l'élement " + element + " est affiché");
         String locator = "vide";
         for (List<Field> f : ListeGlobaleLocators) {
             for (Field x : f) {
@@ -621,10 +625,10 @@ public class EtapesCommunes {
         }
         Boolean elementAffiché;
         try {
-            WebElement element1=(new WebDriverWait(driver,20)).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
-            elementAffiché=true;
+            WebElement element1 = (new WebDriverWait(driver, 20)).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
+            elementAffiché = true;
         } catch (NoSuchElementException | TimeoutException e) {
-            elementAffiché=false;
+            elementAffiché = false;
         }
         Assert.assertFalse(elementAffiché);
 
@@ -633,7 +637,7 @@ public class EtapesCommunes {
 
     @And("vérifier que l' element {string} est affiché")
     public void vérifierQueLElementEstAffiché(String element) throws IllegalAccessException {
-        logger.info("vérifier que l'élement "+element+" n'est pas affiché");
+        logger.info("vérifier que l'élement " + element + " n'est pas affiché");
         String locator = "vide";
         for (List<Field> f : ListeGlobaleLocators) {
             for (Field x : f) {
@@ -648,19 +652,20 @@ public class EtapesCommunes {
         }
         Boolean elementAffiché;
         try {
-            WebElement element1=(new WebDriverWait(driver,20)).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
-            elementAffiché=true;
+            WebElement element1 = (new WebDriverWait(driver, 20)).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
+            elementAffiché = true;
         } catch (NoSuchElementException | TimeoutException e) {
-            elementAffiché=false;
+            elementAffiché = false;
         }
 
         Assert.assertTrue(elementAffiché);
 
     }
+
     @And("verifier que la recherche est KO")
     public void verifierQueLaRechercheEstKO() {
         logger.info("verifier que la recherche du collaborateur inactif est KO");
-        WebElement Recherche_KO=(new WebDriverWait(driver,10)).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(GestionDuPersonnel.Recherche_KO)));
+        WebElement Recherche_KO = (new WebDriverWait(driver, 10)).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(GestionDuPersonnel.Recherche_KO)));
         Assert.assertTrue(Recherche_KO.isDisplayed());
     }
 

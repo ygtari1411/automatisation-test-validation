@@ -37,17 +37,15 @@ Feature: Référentiels
 
     # Etape 4 : Ajout d'un responsable de l'entité
     When l utilisateur clique sur "Ajouter_responsable_EO"
-    And l utilisateur saisit "03/01/2019" dans le champs "Date_de_début_responsable_EO"
+    And l utilisateur saisit "03/01/2020" dans le champs "Date_de_début_responsable_EO"
     And l utilisateur selectionne "Admin Accretio" dans la liste deroulante "Responsable_EO"
     And l utilisateur clique sur "Valider_Responsable_EO"
-    Then vérifier que le message "Opération effectuée avec succès" s affiche
 
      # Etape 5 : Ajout d'une entité mère
     When l utilisateur clique sur "Ajouter_Entité_mère"
     And l utilisateur selectionne "Entité 1" dans la liste deroulante "Entité_mère_EO"
     And l utilisateur saisit "03/02/2019" dans le champs "Date_de_début_Entité_mère"
     And l utilisateur clique sur "Valider_Entité_mère"
-    Then vérifier que le message "Opération effectuée avec succès" s affiche
 
     # Etape 6 : Ajout d'une adresse EO
     When l utilisateur saisit "9 Avenue des martyres" dans le champs "Adresse_EO"

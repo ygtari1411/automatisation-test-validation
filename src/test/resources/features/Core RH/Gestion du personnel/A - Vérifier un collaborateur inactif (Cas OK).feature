@@ -57,6 +57,7 @@ Feature: Gestion du personnel
     And wait 2000
     And l utilisateur selectionne "Collaborateur Inactif" dans la liste "Liste_Collaborateurs"
     And  l utilisateur clique sur "Onglet_Dossier_Administratif"
+    And wait 2000
     And  l utilisateur clique sur "Icone_Modifier_Entrées_Sorties"
     And l utilisateur choisit une date de sortie
     And l utilisateur selectionne "Démission" dans la liste deroulante "Motif_Sortie_Entrées_Sorties"
@@ -65,7 +66,7 @@ Feature: Gestion du personnel
     And vérifier que le message "Opération effectuée avec succès" s affiche
     And wait 2000
     And vérifier que l'utilisateur est inactif
-    
+
 
 
 

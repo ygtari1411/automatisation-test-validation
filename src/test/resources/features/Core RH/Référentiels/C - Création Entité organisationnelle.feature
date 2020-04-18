@@ -40,7 +40,6 @@ Feature: Référentiels
     And l utilisateur saisit "03/03/2019" dans le champs "Date_de_début_responsable_EO"
     And l utilisateur selectionne "Admin Accretio" dans la liste deroulante "Responsable_EO"
     And l utilisateur clique sur "Valider_Responsable_EO"
-    Then vérifier que le message "Opération effectuée avec succès" s affiche
 
     # Etape 5 : Ajout d'une adresse EO
     When l utilisateur saisit "11 Avenue des martyres" dans le champs "Adresse_EO"
