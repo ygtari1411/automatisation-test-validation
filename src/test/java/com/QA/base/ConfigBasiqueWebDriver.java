@@ -6,6 +6,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
@@ -101,6 +102,7 @@ public class ConfigBasiqueWebDriver {
                     if (System.getProperty("os.name").toLowerCase().contains("wind")) {
                         System.setProperty("webdriver.chrome.driver", streams.readers().getProperty("ChromeDriverPath"));
                     } else {
+                        System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY,"true");
                         WebDriverManager.chromedriver().setup();
                     }
                     driver = new ChromeDriver(optionsC);
@@ -124,6 +126,7 @@ public class ConfigBasiqueWebDriver {
                         System.setProperty("webdriver.chrome.driver", streams.readers().getProperty("ChromeDriverPath"));
                         driver = new ChromeDriver(optionsCh);
                     } else {
+                        System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY,"true");
                         WebDriverManager.chromedriver().setup();
                         driver = new ChromeDriver(optionsCh);
                     }
