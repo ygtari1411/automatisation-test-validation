@@ -63,7 +63,7 @@ Feature: Onboarding
     # Etape 6 : Paramétrage de la rubrique Informations utiles
     And l utilisateur selectionne "Informations utiles" dans la liste "Paramétrage_Template_Onboarding"
     # And l utilisateur selectionne "Français" dans la liste deroulante "Langue_informations_utiles_onboarding"
-    And l utilisateur selectionne "Admin  Accretio" dans la liste deroulante "Interlocuteur_onboarding"
+    And l utilisateur selectionne "Admin Accretio" dans la liste deroulante "Interlocuteur_onboarding"
     And l utilisateur selectionne "Blanche Beauchamp" dans la liste deroulante "Interlocuteur_onboarding"
     Then l utilisateur clique sur "Organnigramme_onboarding"
     And l utilisateur saisit "Notre mission est de conduire les transformations créatrices de valeur pour nos clients et faire du système d’information un véritable levier de performance au service de leur stratégie" dans le champs "Présentation_informations_utiles_onboarding"

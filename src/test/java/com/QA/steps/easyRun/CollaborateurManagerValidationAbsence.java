@@ -30,6 +30,7 @@ public class CollaborateurManagerValidationAbsence {
     private ActionsCommunes action = new ActionsCommunes();
 
     public static String Jourlibre;
+    public static String DateJourAbsence;
     List<WebElement> listejours = null;
     public Actions actions = new Actions(driver);
     Wait wait = new FluentWait<WebDriver>(driver)
@@ -49,14 +50,14 @@ public class CollaborateurManagerValidationAbsence {
         String locator;
         String locator1;
         String locator2;
-        Object jourabsence = null;
-        Object jourabsence1 = null;
+        WebElement jourabsence = null;
+        WebElement jourabsence1 = null;
         String[] joursdelasemaine = new String[]{" ", ".fc-mon", ".fc-tue", ".fc-wed", ".fc-thu", ".fc-fri", ".fc-sat", ".fc-sun"};
 
         while (etat.equals("Pas encore")) {
             for (semaine = 1; semaine < 7; semaine++) {
+                action.pause(driver, 3000);
                 for (jour = 1; jour < 8; jour++) {
-                    action.pause(driver, 3000);
                     locator = (".fc-week:nth-child(" + semaine + ") > .fc-bg .fc-day:not([style]):nth-child(" + jour + ")");
                     locator1 = (".fc-week:nth-child(" + semaine + ") > .fc-bg .fc-day:not([style]):nth-child(" + jour + ") .absence-wrapper");
                     try {
@@ -68,8 +69,8 @@ public class CollaborateurManagerValidationAbsence {
                     if (!(jourabsence == null)) {
                         if (jourabsence1 == null) {
                             locator2 = ".fc-row:nth-child(" + semaine + ") > .fc-content-skeleton " + joursdelasemaine[jour];
-                            System.out.println(locator2);
                             Jourlibre = locator1;
+                            DateJourAbsence = jourabsence.getAttribute("data-date");
                             actions.moveToElement(driver.findElement(By.cssSelector(locator2))).clickAndHold().perform();
                             driver.findElement(By.cssSelector(".fc-highlight")).click();
                             WebElement modules1 = (new WebDriverWait(driver, 10))
@@ -85,11 +86,12 @@ public class CollaborateurManagerValidationAbsence {
                     break;
                 }
             }
-            driver.findElement(By.xpath(AbcencesLocators.Bouton_Avance_Mois_Calendrier_Ajout_Abcence)).click();
+            if (etat.equals("Pas encore")) {
+                driver.findElement(By.xpath(AbcencesLocators.Bouton_Avance_Mois_Calendrier_Ajout_Abcence)).click();
+            }
         }
         driver.manage().timeouts().implicitlyWait(Long.parseLong(streams.readers().getProperty("Implicitwait")), TimeUnit.SECONDS);
-
-        logger.info("Journée libre trouvée");
+        logger.info("Journée libre trouvée: " + DateJourAbsence);
     }
 
     @And("l'utilisateur upload un justificatif")

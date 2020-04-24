@@ -34,11 +34,14 @@ Feature: Gestion du personnel
     And l utilisateur selectionne "A" dans la liste deroulante "Diplome_Travailleur_Designe"
     And l utilisateur selectionne "B" dans la liste deroulante "Categorie_Travailleur_Designe"
     And l utilisateur saisit une date d'obtention inférieure a la date de naissance
+    And wait 2000
     And l utilisateur saisit "01/05/2022" dans le champs "Date_Recyclage"
     And l utilisateur clique sur "Valider_Travailleur_Designe"
     And l utilisateur clique sur "Bouton_Enregistrer_Modification"
+    And vérifier que le message "La date de naissance de l'employé doit être supérieure à la date d'obtention de diplome travailleur désigné" s affiche
+    And wait 3000
+    And l utilisateur clique sur "Bouton_Modifier_Travailleur_Designe_SST"
     And wait 2000
-    And vérifier que le message "La date de naissance de l'employé doit être supérieure à la date d'obtention de diplome travailleur désigné↵" s affiche
     And l utilisateur modifie "01/01/2020" dans le champs "Date_Obtention"
     And l utilisateur clique sur "Valider_Travailleur_Designe"
     And l utilisateur clique sur "Bouton_Enregistrer_Modification"

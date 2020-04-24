@@ -17,7 +17,7 @@ public class ModifierLien {
     @Then("verifier que le lien a été modifié avec succes")
     public void verifierQueLeLienAÉtéModifiéAvecSucces() {
 
-        Boolean modules1 = (new WebDriverWait(driver, 10))
+        Boolean modules1 = (new WebDriverWait(driver, 40))
                 .until(ExpectedConditions.not(ExpectedConditions.attributeToBe(By.xpath(LiensUtilesLocators.Premier_Lien_Afficher_Titre), "innerText", ActionsCommunes.DataProvider("Titre_Lien_Creation") )));
 
         Boolean modules2 = (new WebDriverWait(driver, 10))

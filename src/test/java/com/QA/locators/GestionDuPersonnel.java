@@ -154,7 +154,7 @@ public class GestionDuPersonnel {
     public static final String Valider_Personnel_GuideFile_SerreFile="//*[@id=\"sst\"]/acc-core-rh-employee-stt-form/acc-core-rh-employee-stt-guide-employee-form/acc-table/section/div[2]/div/form/div[2]/button[2]";
     public static final String DateObtention_Personnel_GuideFile_SerreFile="//*[@id=\"sst\"]/acc-core-rh-employee-stt-form/acc-core-rh-employee-stt-guide-employee-form/acc-table/section/div[2]/div/form/div[1]/acc-table-form/div/div[3]/acc-date-picker/my-date-picker/div/div/input";
     public static final String DateRecyclage_Personnel_GuideFile_SerreFile="//*[@id=\"sst\"]/acc-core-rh-employee-stt-form/acc-core-rh-employee-stt-guide-employee-form/acc-table/section/div[2]/div/form/div[1]/acc-table-form/div/div[4]/acc-date-picker/my-date-picker/div/div/input";
-
+    public static final String Bouton_Modifier_Travailleur_Designe_SST = "//*[@id=\"sst\"]/acc-core-rh-employee-stt-form/acc-core-rh-employee-stt-designated-employee-form/acc-table/section/div[2]/div/div/div/div/table/tbody/tr/td[6]/i";
 
 
 

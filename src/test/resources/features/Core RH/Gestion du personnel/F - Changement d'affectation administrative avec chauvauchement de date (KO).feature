@@ -36,6 +36,6 @@ Feature: Gestion du personnel
     And l utilisateur selectionne "DFG_Responsable marketing" dans la liste deroulante "Poste_Affectation"
     And l utilisateur clique sur "Bouton_Valider_Affectation"
     And l utilisateur clique sur "Bouton_Enregistrer_Modification"
-    And vérifier que le message "La date de début de l'affectation doit être supérieure à la date de fin de l'affectation précédente" s affiche
+    And vérifier que le message "Section Affectation: La date de début doit être strictement supérieure aux dates précédentes" s affiche
 
 
