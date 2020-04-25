@@ -44,5 +44,6 @@ Feature: Lien Utile
    And l utilisateur modifie "lien modifie" dans le champs "Champ_Lien_Creation"
    And l utilisateur modifie "description lien modifie" dans le champs "Description_Lien_Creation"
    And l utilisateur clique sur "Bouton_Confirmer_Ajout_Lien"
+    And wait 3000
    Then verifier que le lien a été modifié avec succes
 

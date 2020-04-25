@@ -39,8 +39,8 @@ Feature: Référentiels
     When l utilisateur clique sur "Exigences_Poste"
     And wait 2000
     And l utilisateur clique sur "Ajouter_competence_Poste"
-    And l utilisateur selectionne "Change Management" dans la liste deroulante "Compétence_poste"
-    And l utilisateur selectionne "3" dans la liste deroulante "Niveau_compétence_poste"
+    And l utilisateur selectionne "Responsabiliser les autres et soi-même" dans la liste deroulante "Compétence_poste"
+    And l utilisateur selectionne "Confirmé" dans la liste deroulante "Niveau_compétence_poste"
     And l utilisateur selectionne "Requise" dans la liste deroulante "Importance_compétence_poste"
     And l utilisateur clique sur "Aquise_dans_le_travail"
     And l utilisateur clique sur "Valider_competence_Poste"
