@@ -107,6 +107,9 @@ public class AbcencesLocators {
     public static final String Consommable_Apres_Ajout_Regle_IL = "//*[@id=\"consommation\"]/div[2]/div[1]/acc-select-cr/ng-select/div/input";
     public static final String Consommable_Apres_Ajout_Regle_CL = "//*[@id=\"consommation\"]/div[2]/div[1]/acc-select-cr/ng-select/div/ul/li";
     public static final String Case_Visible = "//*[@id=\"identification\"]/div[3]/div[2]/acc-switch/div/label/span";
+    public static final String Bouton_Rejeter_Demande_Absence = "//em[contains(@class,'cursor text-danger')]";
+    public static final String Commentaire_Rejet_Absence = "textarea-input";
+    public static final String Bouton_Valider_rejet_Absence = "//button[contains(@class,'mb-sm btn btn-info btn-outline')]";
 
 
 }

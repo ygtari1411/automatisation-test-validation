@@ -1,4 +1,4 @@
-package com.QA.steps.easyRun;
+package com.QA.steps.easyRun.absence;
 
 import com.QA.base.streams;
 import com.QA.locators.AbcencesLocators;
@@ -21,7 +21,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-import java.util.function.Function;
 
 public class CollaborateurManagerValidationAbsence {
 
@@ -61,7 +60,7 @@ public class CollaborateurManagerValidationAbsence {
                     locator = (".fc-week:nth-child(" + semaine + ") > .fc-bg .fc-day:not([style]):nth-child(" + jour + ")");
                     locator1 = (".fc-week:nth-child(" + semaine + ") > .fc-bg .fc-day:not([style]):nth-child(" + jour + ") .absence-wrapper");
                     try {
-                        action.pause(driver, 3000);
+                        action.pause(driver, 1700);
                         jourabsence = driver.findElement(By.cssSelector(locator));
                         jourabsence1 = driver.findElement(By.cssSelector(locator1));
                     } catch (NoSuchElementException ignore) {

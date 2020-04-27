@@ -1,4 +1,4 @@
-package com.QA.steps.easyRun;
+package com.QA.steps.easyRun.absence;
 
 import com.QA.locators.AbcencesLocators;
 import com.QA.locators.CommonLocators;
