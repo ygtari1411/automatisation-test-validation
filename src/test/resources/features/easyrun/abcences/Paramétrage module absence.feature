@@ -23,9 +23,10 @@ Feature: Absences
     And l utilisateur clique sur "Module_Administration"
     And l utilisateur clique sur "Sous_Module_Gestion_des_calendriers"
     And l utilisateur clique sur "Onglet_Jours_fériés"
+    And wait 3000
     And l utilisateur clique sur "Bouton_Ajouter_Calendrier"
-    And l utilisateur saisit "TestAjoutCal" dans le champs "Code_Ajout_Calendrier"
-    And l utilisateur saisit "TestAjoutCal" dans le champs "Libellé_Ajout_Calendrier"
+    And l utilisateur saisit "TestCal" dans le champs "Code_Ajout_Calendrier"
+    And l utilisateur saisit "TestCal" dans le champs "Libellé_Ajout_Calendrier"
     And l utilisateur clique sur "Bouton_Valider_Ajout_Calendrier"
     And vérifier que le message "Opération effectuée avec succès" s affiche
     And wait 2000
@@ -37,8 +38,8 @@ Feature: Absences
     And l utilisateur clique sur "Valider_Affectation_Population_Calendrier"
     And l utilisateur clique sur "Onglet_Journée_type"
     And l utilisateur clique sur "Bouton_Ajouter_Journée_type"
-    And l utilisateur saisit "TestAjoutJtype" dans le champs "Code_Ajout_Journée_type"
-    And l utilisateur saisit "TestAjoutJtype" dans le champs "Libellé_Ajout_Journée_type"
+    And l utilisateur saisit "TestJtype" dans le champs "Code_Ajout_Journée_type"
+    And l utilisateur saisit "TestJtype" dans le champs "Libellé_Ajout_Journée_type"
     And l utilisateur selectionne "Durée" dans la liste deroulante "Type_Ajout_Journée_type"
     And l utilisateur modifie "08" dans le champs "Nombre_Heures_Ajout_Journée_Type"
     And l utilisateur modifie "00" dans le champs "Nombre_Minutes_Ajout_Journée_Type"
@@ -49,8 +50,8 @@ Feature: Absences
     And l utilisateur clique sur "Onglet_Semaine_type"
     And wait 4000
     And l utilisateur clique sur "Bouton_Ajouter_Semaine_type"
-    And l utilisateur saisit "TestAjoutStype" dans le champs "Code_Ajout_Semaine_type"
-    And l utilisateur saisit "TestAjoutStype" dans le champs "Libellé_Ajout_Semaine_type"
+    And l utilisateur saisit "TestStype" dans le champs "Code_Ajout_Semaine_type"
+    And l utilisateur saisit "TestStype" dans le champs "Libellé_Ajout_Semaine_type"
    #Sélection des jours de repos
     And l utilisateur clique sur "Case_Samedi_Ajout_Semaine_Type"
     And l utilisateur clique sur "Case_Dimanche_Ajout_Semaine_Type"
@@ -60,16 +61,17 @@ Feature: Absences
     And l utilisateur clique sur "Onglet_Cycles_de_travail"
     And wait 4000
     And l utilisateur clique sur "Bouton_Ajouter_Cycles_de_travail"
-    And l utilisateur saisit "TestAjoutCType" dans le champs "Code_Ajout_Cycle_de_travail"
-    And l utilisateur saisit "TestAjoutCtype" dans le champs "Libellé_Ajout_Cycle_de_travail"
+    And wait 2000
+    And l utilisateur saisit "TestCType" dans le champs "Code_Ajout_Cycle_de_travail"
+    And l utilisateur saisit "TestCtype" dans le champs "Libellé_Ajout_Cycle_de_travail"
     And l'utilisateur vérifie que le statut du cycle de travail est Actif
-    And l utilisateur selectionne "TestAjoutStype" dans la liste "Semaines_types_Ajout_Cycle_de_travail"
+    And l utilisateur selectionne "TestStype" dans la liste "Semaines_types_Ajout_Cycle_de_travail"
     And l utilisateur clique sur "Bouton_Valider_Ajout_Cycle_de_travail"
     And wait 4000
     And l utilisateur clique sur "Bouton_Affectation_Population_Cycles_de_travail"
     And l utilisateur clique sur "Bouton_Ajout_Affectation_Population_Cycle_de_travail"
     And l utilisateur saisit "01/12/2019" dans le champs "Date_d_effet_Affectation_Population_Cycle_de_travail"
-    And l utilisateur selectionne "TestAjoutStype" dans la liste deroulante "Premiere_semaine_Affectation_Popultaion_Cycle_de_travail"
+    And l utilisateur selectionne "TestStype" dans la liste deroulante "Premiere_semaine_Affectation_Popultaion_Cycle_de_travail"
     And l utilisateur selectionne la population "Berger Cosette" dans la liste des populations "Population_Affectation_Population_Cycle_de_travail"
     And l utilisateur clique sur "Valider_Affectation_Population_Cycle_de_travail"
 
@@ -104,9 +106,9 @@ Feature: Absences
     And l utilisateur clique sur "Rubrique_Règles_d_acqusition"
     And l utilisateur clique sur "Ajouter_Règle_d_aquisition"
     And wait 2000
-    And l utilisateur saisit "TestAjoutCP" dans le champs "Code_Ajout_Règle_d_aquisition"
+    And l utilisateur saisit "TestCP" dans le champs "Code_Ajout_Règle_d_aquisition"
     And wait 1500
-    And l utilisateur saisit "TestAjoutCongé Payé" dans le champs "Libellé_Ajout_Règle_d_aquisition"
+    And l utilisateur saisit "TestCongé Payé" dans le champs "Libellé_Ajout_Règle_d_aquisition"
     And wait 1500
     #And l utilisateur clique sur "Jour_Debut_Ajout_Regle_d_aquisition"
     #And wait 1500
@@ -136,8 +138,8 @@ Feature: Absences
     And l utilisateur clique sur "Rubrique_Motifs_absence"
     And wait 4000
     And l utilisateur clique sur "Ajouter_motif"
-    And l utilisateur saisit "TestAjoutCPW1" dans le champs "Code_Ajout_Motif_Abcences"
-    And l utilisateur saisit "TestAjoutCongés Payés Workflow1" dans le champs "Libellé_Ajout_Motif_Abcences"
+    And l utilisateur saisit "TCPW1" dans le champs "Code_Ajout_Motif_Abcences"
+    And l utilisateur saisit "TestCongés Payés Workflow1" dans le champs "Libellé_Ajout_Motif_Abcences"
     And l utilisateur selectionne "Groupement par défaut" dans la liste deroulante "Groupement_de_motifs_Ajout_Motif_Abcences"
     And l utilisateur selectionne "Règle" dans la liste deroulante "Type_Ajout_Motif_Abcences"
     And l utilisateur selectionne "Role utilisateur" dans la liste deroulante "Utilisé_par_Ajout_Motif_Abcences"
@@ -150,7 +152,7 @@ Feature: Absences
     And l utilisateur clique sur "Bouton_Ajout_Affectation_Population_Motif_Abcence"
     And l utilisateur selectionne la population "Berger Cosette" dans la liste des populations "Population_Affectation_Population_Motif_Abcence"
     And l utilisateur saisit "01/11/2019" dans le champs "Date_d_effet_Affectation_Population_Motif_Abcence"
-    And l utilisateur selectionne "TestAjoutCongé Payé" dans la liste deroulante "Règle_Affectation_Population_Motif_Abcence"
+    And l utilisateur selectionne "TestCongé Payé" dans la liste deroulante "Règle_Affectation_Population_Motif_Abcence"
     And l utilisateur selectionne "jours ouvrés" dans la liste deroulante "Type_du_calendrier_Affectation_Population_Motif_Abcence"
     And l utilisateur clique sur "Bouton_Valider_affectation"
     And vérifier que le message "Opération effectuée avec succès" s affiche
@@ -159,8 +161,8 @@ Feature: Absences
      #Etape 4 : Profil Rh-Création du motif d'absence renfermant le processus de validation "Validation N+1 et Rh" selectionné au niveau du motif d'absence
 
     And l utilisateur clique sur "Ajouter_motif"
-    And l utilisateur saisit "TestAjoutCPW2" dans le champs "Code_Ajout_Motif_Abcences"
-    And l utilisateur saisit "TestAjoutCongés Payés Workflow2" dans le champs "Libellé_Ajout_Motif_Abcences"
+    And l utilisateur saisit "TCPW2" dans le champs "Code_Ajout_Motif_Abcences"
+    And l utilisateur saisit "TestCongés Payés Workflow2" dans le champs "Libellé_Ajout_Motif_Abcences"
     And l utilisateur selectionne "Règle" dans la liste deroulante "Type_Ajout_Motif_Abcences"
     And l utilisateur selectionne "Role utilisateur" dans la liste deroulante "Utilisé_par_Ajout_Motif_Abcences"
     And l utilisateur selectionne "Groupement par défaut" dans la liste deroulante "Groupement_de_motifs_Ajout_Motif_Abcences"
@@ -173,7 +175,7 @@ Feature: Absences
     And l utilisateur clique sur "Bouton_Ajout_Affectation_Population_Motif_Abcence"
     And l utilisateur saisit "01/11/2019" dans le champs "Date_d_effet_Affectation_Population_Motif_Abcence"
     And l utilisateur selectionne la population "Berger Cosette" dans la liste des populations "Population_Affectation_Population_Motif_Abcence"
-    And l utilisateur selectionne "TestAjoutCongé Payé" dans la liste deroulante "Règle_Affectation_Population_Motif_Abcence"
+    And l utilisateur selectionne "TestCongé Payé" dans la liste deroulante "Règle_Affectation_Population_Motif_Abcence"
     And l utilisateur selectionne "jours ouvrés" dans la liste deroulante "Type_du_calendrier_Affectation_Population_Motif_Abcence"
     And l utilisateur clique sur "Bouton_Valider_affectation"
     And vérifier que le message "Opération effectuée avec succès" s affiche
