@@ -674,6 +674,13 @@ public class EtapesCommunes {
         logger.info("Fermeture de la fenêtre actuelle du navigateur");
         GenerateurDriver.restartSession = true;
     }
+
+    @And("l utilisateur reçoit une notification {string}")
+    public void lUtilisateurReçoitUneNotification(String textenotif) {
+        driver.findElement(By.xpath(CommonLocators.Bouton_Notifications_Portal)).click();
+        WebElement modules = (new WebDriverWait(driver, 40)).until(ExpectedConditions.presenceOfElementLocated(By.xpath(CommonLocators.Première_Notification_Portal)));
+        Assert.assertTrue(driver.findElement(By.xpath(CommonLocators.Première_Notification_Portal)).getAttribute("innerText").contains(textenotif));
+    }
 }
 
 

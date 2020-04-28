@@ -127,7 +127,7 @@ Feature: Absences
     And l utilisateur clique sur "Onglet_Consommation_Ajout_Règle"
     And l utilisateur saisit "12" dans le champs "Durée_d_acquisition_Mois_Ajout_Règle"
     #And l utilisateur saisit "1" dans le champs "Unité_de_décrémentation_Ajout_Règle"
-    And l utilisateur selectionne "Première consommation après (mois)" dans la liste deroulante "Consommable_Apres_Ajout_Regle"
+    And l utilisateur selectionne "Dès l'acquisition" dans la liste deroulante "Consommable_Apres_Ajout_Regle"
     And l utilisateur saisit "0" dans le champs "Première_consommation_après_mois_Ajout_Règle"
     And l utilisateur clique sur "Bouton_Valider_Ajout_Règle"
     And vérifier que le message "Opération effectuée avec succès" s affiche
@@ -153,7 +153,7 @@ Feature: Absences
     And l utilisateur selectionne la population "Berger Cosette" dans la liste des populations "Population_Affectation_Population_Motif_Abcence"
     And l utilisateur saisit "01/11/2019" dans le champs "Date_d_effet_Affectation_Population_Motif_Abcence"
     And l utilisateur selectionne "TestCongé Payé" dans la liste deroulante "Règle_Affectation_Population_Motif_Abcence"
-    And l utilisateur selectionne "jours ouvrés" dans la liste deroulante "Type_du_calendrier_Affectation_Population_Motif_Abcence"
+    And l utilisateur selectionne "Jours ouvrés" dans la liste deroulante "Type_du_calendrier_Affectation_Population_Motif_Abcence"
     And l utilisateur clique sur "Bouton_Valider_affectation"
     And vérifier que le message "Opération effectuée avec succès" s affiche
     And wait 3000
@@ -176,6 +176,6 @@ Feature: Absences
     And l utilisateur saisit "01/11/2019" dans le champs "Date_d_effet_Affectation_Population_Motif_Abcence"
     And l utilisateur selectionne la population "Berger Cosette" dans la liste des populations "Population_Affectation_Population_Motif_Abcence"
     And l utilisateur selectionne "TestCongé Payé" dans la liste deroulante "Règle_Affectation_Population_Motif_Abcence"
-    And l utilisateur selectionne "jours ouvrés" dans la liste deroulante "Type_du_calendrier_Affectation_Population_Motif_Abcence"
+    And l utilisateur selectionne "Jours ouvrés" dans la liste deroulante "Type_du_calendrier_Affectation_Population_Motif_Abcence"
     And l utilisateur clique sur "Bouton_Valider_affectation"
     And vérifier que le message "Opération effectuée avec succès" s affiche

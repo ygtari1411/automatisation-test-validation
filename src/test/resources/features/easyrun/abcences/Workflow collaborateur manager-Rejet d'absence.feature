@@ -2,6 +2,7 @@
 # Feature: WorkflowN1Rejet
 # Scénario: Rejet d'une demande d'absence en workflowN1
 # Date de création: 01/11/2019
+# Date de modification: 21/04/2020
 
 
 @ACCRETIO2
@@ -11,7 +12,7 @@
 
 Feature: Absences
 
-  Scenario: Rejet d'une demande d'absence en workflow1
+  Scenario: Rejet d'une demande d'absence en workflow collaborateur manager
 
     Given le navigateur est ouvert et la page d'acceuil est affichée
 
@@ -34,11 +35,11 @@ Feature: Absences
     # Etape 2 : Profil manager-Rejet de demande d'absence
 
     And l'utilisateur "marcil.valentine@yopmail.com" est connecté
-    And wait 1500
+    And wait 2000
     And l utilisateur clique sur "Mon_Equipe"
-    And wait 1500
+    And wait 2000
     And l utilisateur clique sur "Bouton_Absences"
-    And wait 1500
+    And wait 6000
     And l utilisateur clique sur "Bouton_Rejeter_Demande_Absence"
     And vérifier que le titre du modal est "Confirmation de rejet" et le texte du corps du modal est "Voulez vous vraiment rejeter cette demande ?"
     And l utilisateur saisit "Rejet" dans le champs "Commentaire_Rejet_Absence"

@@ -154,7 +154,7 @@ Feature: Absences
     And l utilisateur clique sur "Référence_Absence"
     And l utilisateur clique sur "Bouton_Annuler_Demande_Absence"
     And la fenêtre de confirmation de l'annulation de la demande d'absence s'affiche à l'écran
-    And l utilisateur clique sur "Bouton_Valider_Annulation"
+    And l utilisateur clique sur "JS_Bouton_Valider_Annulation_Absence"
     And vérifier que le message "Opération effectuée avec succès" s affiche
 
     #Etape 9 : Profil manager-Rejet de l'Annulation de la demande d'absence
