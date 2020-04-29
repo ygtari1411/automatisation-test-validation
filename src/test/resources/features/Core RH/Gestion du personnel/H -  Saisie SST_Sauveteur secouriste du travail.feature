@@ -31,7 +31,7 @@ Feature: Gestion du personnel
     And l utilisateur clique sur "Onglet_SST"
     And wait 2000
     And l utilisateur clique sur "Ajouter_Saveteur_Secouriste"
-    And l utilisateur selectionne "A" dans la liste deroulante "Diplome_Sauveteur_Secouriste"
+    And l utilisateur selectionne "Diplôme d'études supérieures spécialisées" dans la liste deroulante "Diplome_Sauveteur_Secouriste"
     And l utilisateur saisit "01/01/2020" dans le champs "Date_Obtention_Sauveteur_Secouriste"
     And wait 5000
     And l utilisateur saisit "01/12/2020" dans le champs "Date_Recyclage_Sauveteur_Secouriste"

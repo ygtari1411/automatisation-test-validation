@@ -31,7 +31,7 @@ Feature: Gestion du personnel
     And l utilisateur clique sur "Onglet_SST"
     And wait 2000
     And l utilisateur clique sur "Ajouter_Travailleur_Designe"
-    And l utilisateur selectionne "A" dans la liste deroulante "Diplome_Travailleur_Designe"
+    And l utilisateur selectionne "Diplôme d'études supérieures spécialisées" dans la liste deroulante "Diplome_Travailleur_Designe"
     And l utilisateur selectionne "B" dans la liste deroulante "Categorie_Travailleur_Designe"
     And l utilisateur saisit une date d'obtention inférieure a la date de naissance
     And wait 2000

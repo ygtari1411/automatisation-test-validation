@@ -35,18 +35,10 @@ Feature: Référentiels
     And l utilisateur clique sur "Enregistrer_Poste"
     And vérifier que le message "Opération effectuée avec succès" s affiche
 
-    # Etape 4 : Ajout d'une compétence
+    # Etape 5 : Ajout d'une langue
+
     When l utilisateur clique sur "Exigences_Poste"
     And wait 2000
-    And l utilisateur clique sur "Ajouter_competence_Poste"
-    And l utilisateur selectionne "Responsabiliser les autres et soi-même" dans la liste deroulante "Compétence_poste"
-    And l utilisateur selectionne "Confirmé" dans la liste deroulante "Niveau_compétence_poste"
-    And l utilisateur selectionne "Requise" dans la liste deroulante "Importance_compétence_poste"
-    And l utilisateur clique sur "Aquise_dans_le_travail"
-    And l utilisateur clique sur "Valider_competence_Poste"
-    And l utilisateur clique sur "Sauvegarder_Poste"
-
-    # Etape 5 : Ajout d'une langue
     When l utilisateur clique sur "Ajouter_langue_Poste"
     And l utilisateur selectionne "Français" dans la liste deroulante "Langue_poste"
     And l utilisateur selectionne "Confirmé" dans la liste deroulante "Niveau_langue_poste"
@@ -55,6 +47,7 @@ Feature: Référentiels
     And l utilisateur clique sur "Sauvegarder_Poste"
 
     # Etape 6 : Ajout d'une habilitation
+
     When l utilisateur clique sur "Ajouter_habilitation_Poste"
     And l utilisateur selectionne "Permis de conduire" dans la liste deroulante "Type_habilitation_poste"
     And l utilisateur selectionne "Permis A" dans la liste deroulante "Modèle_habilitation_poste"
@@ -62,6 +55,7 @@ Feature: Référentiels
     And l utilisateur clique sur "Valider_habilitation_Poste"
 
      # Etape 7 : Ajout d'un diplôme
+
     When l utilisateur clique sur "Ajouter_diplome_Poste"
     And l utilisateur selectionne "Ingénieur" dans la liste deroulante "Diplôme_poste"
     And l utilisateur selectionne "Informatique" dans la liste deroulante "Discipline_diplôme_poste"
@@ -69,6 +63,7 @@ Feature: Référentiels
     And l utilisateur clique sur "Valider_diplome_Poste"
 
      # Etape 8 : Ajout d'une expérience professionnelle
+
     When l utilisateur clique sur "Ajouter_experience_Poste"
     And l utilisateur saisit "Ingénieur de test junior" dans le champs "Emploi_expérience_poste"
     And l utilisateur selectionne "Service" dans la liste deroulante "Secteur_expérience_poste"
@@ -77,6 +72,7 @@ Feature: Référentiels
     And l utilisateur clique sur "Valider_annees_experience_poste"
 
     # Etape 9 : Validation finale
+
     And l utilisateur clique sur "Sauvegarder_Poste"
     Then vérifier que le message "Opération effectuée avec succès" s affiche
 
