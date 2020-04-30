@@ -224,7 +224,7 @@ public class ReferentielsLocators {
     public static final String Importance_langue_emploi_IL = "/html/body/ngb-modal-window/div/div/acc-language-add/div[2]/section/form/div/div[3]/acc-select-cr/ng-select/div/input";
     public static final String Importance_langue_emploi_CL = "/html/body/ngb-modal-window/div/div/acc-language-add/div[2]/section/form/div/div[3]/acc-select-cr/ng-select/div/ul/li";
     public static final String Valider_langue_Emploi = "/html/body/ngb-modal-window/div/div/acc-language-add/div[3]/button[2]";
-    public static final String Ajouter_habilitation_Emploi = "//*[@id=\"requirements\"]/acc-core-rh-referential-profession-requierement-page/div[6]/button[2]";
+    public static final String Ajouter_habilitation_Emploi = "//div[@id='requirements']//div[4]//button[2]";
     public static final String Type_habilitation_emploi = "/html/body/ngb-modal-window/div/div/acc-auth-add/div[2]/section/form/div/div[1]/acc-select-cr/ng-select/div/div[2]/span";
     public static final String Type_habilitation_emploi_IL = "/html/body/ngb-modal-window/div/div/acc-auth-add/div[2]/section/form/div/div[1]/acc-select-cr/ng-select/div/input";
     public static final String Type_habilitation_emploi_CL = "/html/body/ngb-modal-window/div/div/acc-auth-add/div[2]/section/form/div/div[1]/acc-select-cr/ng-select/div/ul/li";
@@ -285,7 +285,7 @@ public class ReferentielsLocators {
     public static final String Importance_compétence_poste_CL = "/html/body/ngb-modal-window/div/div/acc-skills-add/div[2]/section/form/div/div[3]/acc-select-cr/ng-select/div/ul/li";
     public static final String Aquise_dans_le_travail = "/html/body/ngb-modal-window/div/div/acc-skills-add/div[2]/section/form/div/div[4]/div/label/span/span";
     public static final String Valider_competence_Poste = "/html/body/ngb-modal-window/div/div/acc-skills-add/div[3]/button[2]";
-    public static final String Ajouter_langue_Poste = "//*[@id=\"requirements\"]/acc-core-rh-referential-position-exigence-page/div[4]/button";
+    public static final String Ajouter_langue_Poste = "//div[@id='requirements']//div[2]//button[2]";
     public static final String Langue_poste = "/html/body/ngb-modal-window/div/div/acc-language-add/div[2]/section/form/div/div[1]/acc-select-cr/ng-select/div/div[2]/span";
     public static final String Langue_poste_IL = "/html/body/ngb-modal-window/div/div/acc-language-add/div[2]/section/form/div/div[1]/acc-select-cr/ng-select/div/input";
     public static final String Langue_poste_CL = "/html/body/ngb-modal-window/div/div/acc-language-add/div[2]/section/form/div/div[1]/acc-select-cr/ng-select/div/ul/li";
@@ -296,7 +296,7 @@ public class ReferentielsLocators {
     public static final String Importance_langue_poste_IL = "/html/body/ngb-modal-window/div/div/acc-language-add/div[2]/section/form/div/div[3]/acc-select-cr/ng-select/div/input";
     public static final String Importance_langue_poste_CL = "/html/body/ngb-modal-window/div/div/acc-language-add/div[2]/section/form/div/div[3]/acc-select-cr/ng-select/div/ul/li";
     public static final String Valider_langue_Poste = "/html/body/ngb-modal-window/div/div/acc-language-add/div[3]/button[2]";
-    public static final String Ajouter_diplome_Poste = "//*[@id=\"requirements\"]/acc-core-rh-referential-position-exigence-page/div[8]/button";
+    public static final String Ajouter_diplome_Poste = "//div[@id='requirements']//div[6]//button[2]";
     public static final String Diplôme_poste = "/html/body/ngb-modal-window/div/div/acc-diplome-add/div[2]/section/form/div/div[1]/acc-select-cr/ng-select/div/div[2]/span";
     public static final String Diplôme_poste_IL = "/html/body/ngb-modal-window/div/div/acc-diplome-add/div[2]/section/form/div/div[1]/acc-select-cr/ng-select/div/input";
     public static final String Diplôme_poste_CL = "/html/body/ngb-modal-window/div/div/acc-diplome-add/div[2]/section/form/div/div[1]/acc-select-cr/ng-select/div/ul/li";
@@ -307,7 +307,7 @@ public class ReferentielsLocators {
     public static final String Importance_diplôme_poste_IL = "/html/body/ngb-modal-window/div/div/acc-diplome-add/div[2]/section/form/div/div[3]/acc-select-cr/ng-select/div/input";
     public static final String Importance_diplôme_poste_CL = "/html/body/ngb-modal-window/div/div/acc-diplome-add/div[2]/section/form/div/div[3]/acc-select-cr/ng-select/div/ul/li";
     public static final String Valider_diplome_Poste = "/html/body/ngb-modal-window/div/div/acc-diplome-add/div[3]/button[2]";
-    public static final String Ajouter_experience_Poste = "//*[@id=\"requirements\"]/acc-core-rh-referential-position-exigence-page/div[10]/button";
+    public static final String Ajouter_experience_Poste = "//div[8]//button[2]";
     public static final String Emploi_expérience_poste = "/html/body/ngb-modal-window/div/div/acc-experience-add/div[2]/section/form/div/div[1]/input";
     public static final String Secteur_expérience_poste = "/html/body/ngb-modal-window/div/div/acc-experience-add/div[2]/section/form/div/div[2]/acc-select-cr/ng-select/div/div[2]/span";
     public static final String Secteur_expérience_poste_IL = "/html/body/ngb-modal-window/div/div/acc-experience-add/div[2]/section/form/div/div[2]/acc-select-cr/ng-select/div/input";
@@ -318,7 +318,7 @@ public class ReferentielsLocators {
     public static final String Importance_expérience_poste_CL = "/html/body/ngb-modal-window/div/div/acc-experience-add/div[2]/section/form/div/div[4]/acc-select-cr/ng-select/div/ul/li";
     public static final String Valider_annees_experience_poste = "/html/body/ngb-modal-window/div/div/acc-experience-add/div[3]/button[2]";
     public static final String Sauvegarder_Poste = "/html/body/app-root/app-layout/div/section/div/acc-referential/div/div/acc-core-rh-referential-position-container/div/acc-core-rh-referential-position-form/div/form/acc-core-rh-referential-update-revert-actions/i[2]";
-    public static final String Ajouter_habilitation_Poste = "//*[@id=\"requirements\"]/acc-core-rh-referential-position-exigence-page/div[6]/button";
+    public static final String Ajouter_habilitation_Poste = "//div[@id='requirements']//div[4]//button[2]";
     public static final String Type_habilitation_poste = "/html/body/ngb-modal-window/div/div/acc-auth-add/div[2]/section/form/div/div[1]/acc-select-cr/ng-select/div/div[2]/span";
     public static final String Type_habilitation_poste_IL = "/html/body/ngb-modal-window/div/div/acc-auth-add/div[2]/section/form/div/div[1]/acc-select-cr/ng-select/div/input";
     public static final String Type_habilitation_poste_CL = "/html/body/ngb-modal-window/div/div/acc-auth-add/div[2]/section/form/div/div[1]/acc-select-cr/ng-select/div/ul/li";
