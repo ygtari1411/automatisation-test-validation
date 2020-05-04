@@ -114,6 +114,11 @@ public class AbcencesLocators {
     public static final String JS_Bouton_Valider_Annulation_Absence = "//button[@class='mb-sm btn btn-info btn-outline']";
     public static final String Bouton_Accepter_Demande_Annulation = "//i[contains(@class,'cursor text-success a')]";
     public static final String Bouton_Confirmation_Validation_Demande_Annulation = "//button[contains(@class,'mb-sm btn btn-info btn-outline')]";
+    public static final String Bouton_Rejeter_Demande_Annulation = "//em[contains(@class,'cursor text-danger')]";
+    public static final String Bouton_Confirmation_Rejet_Demande_Annulation = "//button[contains(@class,'mb-sm btn btn-info btn-outline')]";
+    public static final String Commentaire_Rejet_Annulation_Absence = "textarea-input";
+
+
 
 
 }
