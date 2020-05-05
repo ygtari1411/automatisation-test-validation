@@ -9,7 +9,7 @@
 @ACCRETIO2-CONFIGURATIONTALENT
 @ACCRETIO2-CONFIGURATIONTALENT-0008
 
-Feature: Configuration
+Feature: Configuration-Talent
 
   Scenario: Modification thématique de formation
 

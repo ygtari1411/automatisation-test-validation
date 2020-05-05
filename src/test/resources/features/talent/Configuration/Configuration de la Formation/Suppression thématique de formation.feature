@@ -9,7 +9,7 @@
 @ACCRETIO2-CONFIGURATIONTALENT
 @ACCRETIO2-CONFIGURATIONTALENT-0009
 
-Feature: Configuration
+Feature: Configuration-Talent
 
  Scenario: Suppression thématique de formation
 

@@ -9,7 +9,7 @@
 #@ACCRETIO2-CONFIGURATIONTALENT
 #@ACCRETIO2-CONFIGURATIONTALENT-0001
 
-Feature: Configuration
+Feature: Configuration-Talent
 
  Scenario: Ajout de niveau de compétences
 

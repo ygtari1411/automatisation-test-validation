@@ -9,7 +9,7 @@
 #@ACCRETIO2-CONFIGURATIONTALENT
 #@ACCRETIO2-CONFIGURATIONTALENT-0007
 
-Feature: Configuration
+Feature: Configuration-Talent
 
   Scenario: Suppression de classification de competences deja affectee
 

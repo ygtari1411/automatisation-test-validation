@@ -9,7 +9,7 @@
 @ACCRETIO2-CONFIGURATIONTALENT
 @ACCRETIO2-CONFIGURATIONTALENT-0002
 
-Feature: Configuration
+Feature: Configuration-Talent
 
   Scenario: Ajout classification de compétences
 

@@ -9,7 +9,7 @@
 @ACCRETIO2-CONFIGURATIONTALENT
 @ACCRETIO2-CONFIGURATIONTALENT-0004
 
-Feature: Configuration
+Feature: Configuration-Talent
 
  Scenario: Suppression de niveau de compétences
 

@@ -51,4 +51,24 @@ public class CreationIdeation {
 
     }
 
+    @Then("verifier que l idéation créé n est pas affichée")
+    public void verifierQueLIdéationCrééNEstPasAffichée() {
+
+        String str1 = ActionsCommunes.DataProvider("Libelle_Creation_Idee");
+        String str2 = ActionsCommunes.DataProvider("Description_Creation_Idee");
+
+        Boolean modules1 = (new WebDriverWait(driver, 100))
+                .until(ExpectedConditions.refreshed(ExpectedConditions.attributeToBeNotEmpty(driver.findElement(By.xpath(IdeationLocators.Libelle_Premiere_Idee_Affichee)),"innerText")));
+
+        Boolean modules2 = (new WebDriverWait(driver, 100))
+                .until(ExpectedConditions.refreshed(ExpectedConditions.attributeToBeNotEmpty(driver.findElement(By.xpath(IdeationLocators.Description_Premiere_Idee_Affichee)), "innerText")));
+
+        String str3 = driver.findElement(By.xpath(IdeationLocators.Libelle_Premiere_Idee_Affichee)).getAttribute("innerText");
+        String str4 = driver.findElement(By.xpath(IdeationLocators.Description_Premiere_Idee_Affichee)).getAttribute("innerText");
+
+
+        Assert.assertNotEquals(str1, str3);
+        Assert.assertNotEquals(str2, str4);
+
+    }
 }
