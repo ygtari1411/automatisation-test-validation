@@ -35,6 +35,7 @@ Feature: Absences
     #Etape 2 : Profil manager-Validation de demande d'absence
 
     And l'utilisateur "marcil.valentine@yopmail.com" est connecté
+    And l utilisateur reçoit une notification "a envoyé une demande d'absence"
     And wait 2000
     And l utilisateur clique sur "Mon_Equipe"
     And wait 2000

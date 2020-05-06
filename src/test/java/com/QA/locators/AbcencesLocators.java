@@ -49,7 +49,7 @@ public class AbcencesLocators {
     public static final String Bouton_Accepter_Demande_Absence_Manager = "i[class*=icons8-like-it][title=Accepter]";
     public static final String JS_Bouton_Valider_Acceptation = "//button[@class='mb-sm btn btn-info btn-outline']";
     public static final String Onglet_Suivi_des_absences = "/html/body/app-root/app-layout/div/section/div/ng-component/div/ul/li[1]";
-    public static final String Bouton_Accepter_Demande_Absence_Rh = "//*[@id=\"follow\"]/acc-absences-requests/div/div[2]/form/p-datatable/div/div[1]/table/tbody/tr[1]/td[13]/span[2]/i[2]";
+    public static final String Bouton_Accepter_Demande_Absence_Rh = "//i[contains(@class,'cursor text-success a')]";
     public static final String Bouton_Historique_Demandes_Absences = "a[class=cursor]";
     public static final String Statut_Première_Absence_Liste_Historique = ".ui-datatable-even .label";
     public static final String Statut_Première_Absence_Mes_Absences = "/html/body/app-root/app-layout/div/section/div/acc-global-container/ng-component/ng-component/ng-component/div[2]/div[3]/acc-absences-history/div/div[2]/form/p-datatable/div/div[1]/table/tbody/tr[1]/td[10]/span[2]/span";
