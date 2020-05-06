@@ -28,7 +28,7 @@ Feature: Gestion du personnel
     # Etape 3 : Saisie SST_Equipier de première intervention
 
     And l utilisateur saisit "Collaborateur SST" dans le champs "Recherche_Collaborateur"
-    And wait 2000
+    And wait 3000
     And l utilisateur selectionne "Collaborateur SST" dans la liste "Liste_Collaborateurs"
     And wait 2000
     And l utilisateur clique sur "Onglet_SST"

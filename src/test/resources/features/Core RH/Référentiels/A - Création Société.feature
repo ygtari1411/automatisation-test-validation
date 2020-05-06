@@ -51,7 +51,7 @@ Feature: Référentiels
 
     # Etape 5 : Ajout d'un contact société
     When l utilisateur clique sur "Ajouter_contact_société"
-    And l utilisateur clique sur "Externe"
+    And l utilisateur clique sur "Externe_Création_Société"
     And l utilisateur saisit "Walid Sahli" dans le champs "Contact_société"
     And l utilisateur selectionne "Chef de projet" dans la liste deroulante "Fonction_société"
     And l utilisateur saisit "0021671381000" dans le champs "Téléphone_contact_société"
