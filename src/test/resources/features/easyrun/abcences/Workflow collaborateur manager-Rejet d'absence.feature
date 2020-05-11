@@ -19,13 +19,15 @@ Feature: Absences
   #Etape 1 : Profil collaborateur-Ajout de demande d'absence
 
     And l'utilisateur "berger.cosette@yopmail.com" est connecté
+    And wait 4000
     And l utilisateur clique sur "Bouton_Mes_Absences"
-    And wait 3000
+    And wait 6000
     # Cliquer sur une journée libre représentée par une case blanche au niveau du calendrier
     And l utilisateur selectionne une case de journée libre dans le calendrier
     And l utilisateur selectionne "Congés Payés Workflow1" dans la liste deroulante "Motif_d_absence_Ajout_Demande_Absence_Collaborateur"
    # And l utilisateur selectionne "Mehrez Somrani" dans la liste deroulante "Backup_Ajout_Demande_Absence_Collaborateur"
     And l'utilisateur upload un justificatif
+    And wait 3000
     And l utilisateur clique sur "Bouton_Envoyer_Ajout_Demande_Absence_Collaborateur"
     And vérifier que le message "Opération effectuée avec succès" s affiche
     And wait 2000

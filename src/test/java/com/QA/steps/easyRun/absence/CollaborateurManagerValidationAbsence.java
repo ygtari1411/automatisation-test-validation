@@ -112,7 +112,9 @@ public class CollaborateurManagerValidationAbsence {
         Boolean modules1 = (new WebDriverWait(driver, 40))
                 .until(ExpectedConditions.attributeToBe(driver.findElement(By.xpath(AbcencesLocators.Statut_Nouvelle_Demande_Absence)), "title", "En cours"));
         Assert.assertTrue(driver.findElement(By.xpath(AbcencesLocators.Statut_Nouvelle_Demande_Absence)).getAttribute("title").contains("En cours"));
-
+        WebElement modules2 = (new WebDriverWait(driver, 40))
+                .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(CollaborateurManagerValidationAbsence.Jourlibre)));
+        Assert.assertTrue(driver.findElement(By.cssSelector(CollaborateurManagerValidationAbsence.Jourlibre)).getAttribute("style").contains("repeating-linear-gradient"));
     }
 
     @And("l'utilisateur vérifie que le statut de la journée type est Actif")
