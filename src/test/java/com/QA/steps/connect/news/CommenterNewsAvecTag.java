@@ -8,10 +8,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -50,9 +47,11 @@ public class CommenterNewsAvecTag {
     public void lUtilisateurChoisitLeProfilDuTagDuCommentaireNewsDansLaListe() throws InterruptedException {
 
         String str = ActionsCommunes.DataProvider("Champs_Input_Commentaire").substring(1);
-        Boolean modules1 = (new WebDriverWait(driver, 50))
-                .until(ExpectedConditions.not(ExpectedConditions.stalenessOf(driver.findElement(By.cssSelector(CommonLocators.Option_Liste_Profil_Tag)))));
-
+        try {
+            Boolean modules1 = (new WebDriverWait(driver, 50))
+                    .until(ExpectedConditions.not(ExpectedConditions.stalenessOf(driver.findElement(By.cssSelector(CommonLocators.Option_Liste_Profil_Tag)))));
+        }
+        catch(TimeoutException ignored) {}
         Boolean modules = (new WebDriverWait(driver, 50))
                 .until(ExpectedConditions.refreshed(ExpectedConditions.attributeContains(By.cssSelector(CommonLocators.Option_Liste_Profil_Tag), "innerText", str)));
         WebElement element = driver.findElement(By.cssSelector(CommonLocators.Option_Liste_Profil_Tag));
