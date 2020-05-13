@@ -57,7 +57,7 @@ public class GestionDuPersonnel {
     public static final String Date_d_effet_collaborateur = "//*[@id=\"administrative\"]/div/acc-core-rh-employee-administrative-file-page/acc-core-rh-employee-work-cycle-form/acc-table/section/div[2]/div/form/div[1]/acc-table-form/div/div[3]/acc-date-picker/my-date-picker/div/div/input";
     public static final String Valider_cycle_de_travail_collaborateur = "//*[@id=\"administrative\"]/div/acc-core-rh-employee-administrative-file-page/acc-core-rh-employee-work-cycle-form/acc-table/section/div[2]/div/form/div[2]/button[2]";
     public static final String Rémunération_collaborateur = "//*[@id=\"cover\"]/ul[1]/li[3]";
-    public static final String Ajouter_un_salaire_collaborateur = "//*[@id=\"remuneration\"]/div/acc-core-rh-employee-remuneration-file-page/acc-core-rh-employee-salary-form/acc-table/section/div[2]/ul/li[2]";
+    public static final String Ajouter_un_salaire_collaborateur = "//div[@id='remuneration']//div[2]//button[2]";
     public static final String Montant_collaborateur = "/html/body/app-root/app-layout/div/section/div/ng-component/div[1]/div/acc-core-rh-employee-form/form/div[2]/div[3]/div/acc-core-rh-employee-remuneration-file-page/acc-core-rh-employee-salary-form/acc-table/section/div[2]/div/form/div[1]/acc-table-form/div[1]/div[1]/input";
     public static final String Devise_collaborateur = "//*[@id=\"remuneration\"]/div/acc-core-rh-employee-remuneration-file-page/acc-core-rh-employee-salary-form/acc-table/section/div[2]/div/form/div[1]/acc-table-form/div[1]/div[2]/acc-select-cr/ng-select/div/div[2]/span";
     public static final String Devise_collaborateur_IL = "//*[@id=\"remuneration\"]/div/acc-core-rh-employee-remuneration-file-page/acc-core-rh-employee-salary-form/acc-table/section/div[2]/div/form/div[1]/acc-table-form/div[1]/div[2]/acc-select-cr/ng-select/div/input";
@@ -78,7 +78,7 @@ public class GestionDuPersonnel {
     public static final String Recherche_Collaborateur = "/html/body/app-root/app-layout/div/section/div/ng-component/header/div/div/input";
     public static final String Liste_Collaborateurs = "/html/body/app-root/app-layout/div/section/div/ng-component/div[1]/app-acc-list/div/div/a";
     public static final String Onglet_Rénumération = "//*[@id=\"cover\"]/ul[1]/li[3]";
-    public static final String Bouton_Ajouter_Affectation_Véhicule = "//*[contains(text(),' Véhicule de fonction')]/following-sibling::div/ul/li[2]";
+    public static final String Bouton_Ajouter_Affectation_Véhicule = "//div[@id='remuneration']//div[6]//button[2]";
     public static final String Liste_Immatriculation = "//*[@id=\"remuneration\"]/div/acc-core-rh-employee-remuneration-file-page/acc-core-rh-employee-function-vehicle-form/acc-table/section/div[2]/div/form/div[1]/acc-table-form/div[1]/div[1]/acc-select-cr/ng-select/div/div[2]/span";
     public static final String Liste_Immatriculation_IL = "//*[@id=\"remuneration\"]/div/acc-core-rh-employee-remuneration-file-page/acc-core-rh-employee-function-vehicle-form/acc-table/section/div[2]/div/form/div[1]/acc-table-form/div[1]/div[1]/acc-select-cr/ng-select/div/input";
     public static final String Liste_Immatriculation_CL = "//*[@id=\"remuneration\"]/div/acc-core-rh-employee-remuneration-file-page/acc-core-rh-employee-function-vehicle-form/acc-table/section/div[2]/div/form/div[1]/acc-table-form/div[1]/div[1]/acc-select-cr/ng-select/div/ul/li";

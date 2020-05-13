@@ -46,6 +46,7 @@ Feature: News
     And wait 3000
     When l'utilisateur clique sur la news ajoutée
     And l utilisateur saisit "@Gaston Boutot" dans le champs "Champs_Input_Commentaire"
+    And wait 3000
     And l utilisateur choisit le profil du tag du commentaire News dans la liste
     And l utilisateur clique sur "JS_Bouton_Submit_Commentaire"
 

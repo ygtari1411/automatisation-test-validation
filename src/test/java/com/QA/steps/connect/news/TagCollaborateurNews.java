@@ -25,7 +25,10 @@ public class TagCollaborateurNews {
     public void lUtilisateurChoisitLeProfilDuTagDansLeCorpsDeLaNews() throws InterruptedException {
 
         String str = ActionsCommunes.DataProvider("Champ_Input_Texte_News").substring(1);
-        Boolean modules = (new WebDriverWait(driver, 10))
+
+        Boolean modules1 = (new WebDriverWait(driver, 50))
+                .until(ExpectedConditions.not(ExpectedConditions.stalenessOf(driver.findElement(By.cssSelector(CommonLocators.Option_Liste_Profil_Tag)))));
+        Boolean modules = (new WebDriverWait(driver, 50))
                 .until(ExpectedConditions.refreshed(ExpectedConditions.attributeContains(By.cssSelector(CommonLocators.Option_Liste_Profil_Tag), "innerText", str)));
         WebElement element = driver.findElement(By.cssSelector(CommonLocators.Option_Liste_Profil_Tag));
         JavascriptExecutor executor = (JavascriptExecutor) driver;
