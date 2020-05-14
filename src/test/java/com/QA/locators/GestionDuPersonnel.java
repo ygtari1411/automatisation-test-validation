@@ -62,7 +62,7 @@ public class GestionDuPersonnel {
     public static final String Devise_collaborateur = "/html[1]/body[1]/ngb-modal-window[1]/div[1]/div[1]/acc-salary-add[1]/div[1]/div[2]/section[1]/form[1]/div[2]/div[1]/acc-select-cr[1]/ng-select[1]/div[1]/div[2]/span[1]";
     public static final String Devise_collaborateur_IL = "//input[@placeholder='Sélectionner une devise']";
     public static final String Devise_collaborateur_CL = "//ngb-modal-window[@class='modal fade show in']//li";
-    public static final String Date_de_début_collaborateur = "//input[@class='selection ng-pristine ng-valid ng-touched']";
+    public static final String Date_de_début_collaborateur = "//acc-date-picker[@name='start_date']//my-date-picker//div//div//input";
     public static final String Valider_salaire_collaborateur = "//button[@class='btn btn-info']";
     public static final String Rechercher_Employe = "/html/body/app-root/app-layout/div/section/div/ng-component/header/div/div/input";
     public static final String DateDeNaissance_DossierIndividuel = "//*[@id=\"individuel\"]/div/acc-core-rh-employee-individual-file-page/acc-core-rh-employee-identity-form/section/div[2]/div/div[3]/div[1]/acc-date-picker/my-date-picker/div/div/input";
@@ -78,7 +78,7 @@ public class GestionDuPersonnel {
     public static final String Recherche_Collaborateur = "/html/body/app-root/app-layout/div/section/div/ng-component/header/div/div/input";
     public static final String Liste_Collaborateurs = "/html/body/app-root/app-layout/div/section/div/ng-component/div[1]/app-acc-list/div/div/a";
     public static final String Onglet_Rénumération = "//*[@id=\"cover\"]/ul[1]/li[3]";
-    public static final String Bouton_Ajouter_Affectation_Véhicule = "/div[@id='remuneration']//div[6]//button[2]";
+    public static final String Bouton_Ajouter_Affectation_Véhicule = "//div[@id='remuneration']//div[6]//button[2]";
     public static final String Liste_Immatriculation = "/html[1]/body[1]/ngb-modal-window[1]/div[1]/div[1]/acc-function-vehicles-add[1]/div[1]/div[2]/section[1]/form[1]/div[1]/div[1]/acc-select-cr[1]/ng-select[1]/div[1]/div[2]/span[1]";
     public static final String Liste_Immatriculation_IL = "/html[1]/body[1]/ngb-modal-window[1]/div[1]/div[1]/acc-function-vehicles-add[1]/div[1]/div[2]/section[1]/form[1]/div[1]/div[1]/acc-select-cr[1]/ng-select[1]/div[1]/input[1]";
     public static final String Liste_Immatriculation_CL = "//ul[@class='ui-select-choices dropdown-menu']//li";
