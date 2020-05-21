@@ -15,17 +15,22 @@ import org.openqa.selenium.remote.LocalFileDetector;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 public class ConfigBasiqueWebDriver {
 
     private static final Logger logger = Logger.getLogger(ConfigBasiqueWebDriver.class);
     public static WebDriver driver = null;
+    static Map<String, Object> prefs = new HashMap<String, Object>();
+
+
 
 
     public static WebDriver get() {
 
-
+        prefs.put("profile.default_content_setting_values.notifications", 2);
         FirefoxOptions optionsF = new FirefoxOptions();
         optionsF.addArguments("start-maximized");
         optionsF.addArguments("enable-automation");
@@ -34,6 +39,12 @@ public class ConfigBasiqueWebDriver {
         optionsF.addArguments("--disable-dev-shm-usage");
         optionsF.addArguments("--disable-browser-side-navigation");
         optionsF.addArguments("--disable-gpu");
+        optionsF.addPreference("permissions.default.desktop-notification", 2);
+
+        //Ajout clé et valeur pour mapper la préférence du switch notification
+        //Valeur 1 pour accept notif et valeur 2 pour dismiss notif
+        prefs.put("profile.default_content_setting_values.notifications", 2);
+
 
         ChromeOptions optionsC = new ChromeOptions();
         optionsC.addArguments("start-maximized");
@@ -43,6 +54,7 @@ public class ConfigBasiqueWebDriver {
         optionsC.addArguments("--disable-dev-shm-usage");
         optionsC.addArguments("--disable-browser-side-navigation");
         optionsC.addArguments("--disable-gpu");
+        optionsC.setExperimentalOption("prefs", prefs);
 
 
 
