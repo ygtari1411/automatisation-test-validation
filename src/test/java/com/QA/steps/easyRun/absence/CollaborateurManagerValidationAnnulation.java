@@ -1,9 +1,10 @@
-package com.QA.steps;
+package com.QA.steps.easyRun.absence;
 
 import com.QA.base.streams;
 import com.QA.locators.AbcencesLocators;
 import com.QA.locators.CommonLocators;
-import com.QA.steps.easyRun.absence.CollaborateurManagerValidationAbsence;
+import com.QA.steps.ActionsCommunes;
+import com.QA.steps.GenerateurDriver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.apache.log4j.Logger;

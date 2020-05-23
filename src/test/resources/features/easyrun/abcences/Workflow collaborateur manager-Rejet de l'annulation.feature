@@ -40,7 +40,7 @@
     And l utilisateur clique sur "Mon_Equipe"
     And wait 2000
     And l utilisateur clique sur "Bouton_Absences"
-    And wait 6000
+    And wait 8000
     And l utilisateur clique sur "Bouton_Accepter_Demande_Absence_Manager"
     And vérifier que le titre du modal est "Confirmation de la validation" et le texte du corps du modal est "Voulez vous vraiment valider cette demande ?"
     And l utilisateur clique sur "JS_Bouton_Valider_Acceptation"
@@ -59,7 +59,7 @@
 
     And l utilisateur clique sur "Bouton_Annuler_Demande_Absence"
     And wait 1700
-    And vérifier que le titre du modal est "Annulation de la demande d'absence" et le texte du corps du modal est "Voulez-vous vraiment annuler cette demande d'absence"
+    And vérifier que le titre du modal est "Annulation de la demande d'absence" et le texte du corps du modal est "Voulez-vous vraiment annuler cette demande d'absence?"
     And l utilisateur clique sur "JS_Bouton_Valider_Annulation_Absence"
     And vérifier que le message "Opération effectuée avec succès" s affiche
     And verifier le changement de statut de la de la demande vers "Annulation"
@@ -72,7 +72,7 @@
     And l utilisateur clique sur "Mon_Equipe"
     And wait 2000
     And l utilisateur clique sur "Bouton_Absences"
-    And wait 6000
+    And wait 8000
     And l utilisateur clique sur "Bouton_Rejeter_Demande_Annulation"
     And vérifier que le titre du modal est "Confirmation de rejet" et le texte du corps du modal est "Voulez-vous vraiment rejeter cette demande d'annulation ?"
     And l utilisateur saisit "Rejet" dans le champs "Commentaire_Rejet_Annulation_Absence"

@@ -42,7 +42,7 @@ Feature: Absences
     And l utilisateur clique sur "Mon_Equipe"
     And wait 2000
     And l utilisateur clique sur "Bouton_Absences"
-    And wait 6000
+    And wait 8000
     And l utilisateur clique sur "Bouton_Rejeter_Demande_Absence"
     And vérifier que le titre du modal est "Confirmation de rejet" et le texte du corps du modal est "Voulez vous vraiment rejeter cette demande ?"
     And l utilisateur saisit "Rejet" dans le champs "Commentaire_Rejet_Absence"

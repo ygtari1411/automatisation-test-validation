@@ -32,7 +32,7 @@ Feature: Absences
     And wait 2000
     And l utilisateur clique sur "Bouton_Affectation_Population_Calendrier"
     And l utilisateur clique sur "Bouton_Ajout_Affectation_Population_Calendrier"
-    And l utilisateur saisit "01/01/2020" dans le champs "Date_d_effet_Affectation_Population_Calendrier"
+    And l utilisateur saisit "01/06/2019" dans le champs "Date_d_effet_Affectation_Population_Calendrier"
     And wait 3000
     And l utilisateur selectionne la population "Berger Cosette" dans la liste des populations "Population_Affectation_Population_Calendrier"
     And l utilisateur clique sur "Valider_Affectation_Population_Calendrier"
@@ -150,7 +150,7 @@ Feature: Absences
     And l utilisateur selectionne "Role utilisateur" dans la liste deroulante "Utilisé_par_Ajout_Motif_Abcences"
     And l utilisateur selectionne "Validation N+1" dans la liste deroulante "Processus_de_validation_Ajout_Motif_Abcences"
     # Case Visible à cocher
-    And l utilisateur clique sur "Case_Visible"
+    And l utilisateur selectionne "Employé" dans la liste deroulante "Motif_Absence_Visible"
     And l utilisateur clique sur "Bouton_Ajouter_Motif_Abcences"
     And wait 3000
     And l utilisateur clique sur "Bouton_Affectation_Population"
@@ -163,7 +163,7 @@ Feature: Absences
     And vérifier que le message "Opération effectuée avec succès" s affiche
     And wait 3000
 
-     #Etape 4 : Profil Rh-Création du motif d'absence renfermant le processus de validation "Validation N+1 et Rh" selectionné au niveau du motif d'absence
+     #Etape 5 : Profil Rh-Création du motif d'absence renfermant le processus de validation "Validation N+1 et Rh" selectionné au niveau du motif d'absence
 
     And l utilisateur clique sur "Ajouter_motif"
     And l utilisateur saisit "TCPW2" dans le champs "Code_Ajout_Motif_Abcences"
@@ -173,7 +173,7 @@ Feature: Absences
     And l utilisateur selectionne "Groupement par défaut" dans la liste deroulante "Groupement_de_motifs_Ajout_Motif_Abcences"
     And l utilisateur selectionne "Validation N+1 et Rh" dans la liste deroulante "Processus_de_validation_Ajout_Motif_Abcences"
      # Case Visible à cocher
-    And l utilisateur clique sur "Case_Visible"
+    And l utilisateur selectionne "Employé" dans la liste deroulante "Motif_Absence_Visible"
     And l utilisateur clique sur "Bouton_Ajouter_Motif_Abcences"
     And wait 3000
     And l utilisateur clique sur "Bouton_Affectation_Population"

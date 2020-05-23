@@ -21,7 +21,7 @@ public class AbcencesLocators {
     public static final String Processus_de_validation_Ajout_Motif_Abcences_IL = "//*[@id=\"identification\"]/div[2]/div[2]/acc-select-cr/ng-select/div/input";
     public static final String Processus_de_validation_Ajout_Motif_Abcences_CL = "//*[@id=\"identification\"]/div[2]/div[2]/acc-select-cr/ng-select/div/ul/li";
     public static final String Bouton_Ajouter_Motif_Abcences = "/html/body/ngb-modal-window/div/div/acc-add-pattern/form/div[3]/div/button[2]";
-    public static final String Bouton_Affectation_Population = "/html/body/app-root/app-layout/div/section/div/ng-component/div/div/absence-setting-component/absence-pattern-setting-component/acc-pattern-list/div/p-datatable/div/div[1]/table/tbody/tr[1]/td[10]/span[2]/span/i[3]";
+    public static final String Bouton_Affectation_Population = "//tr[1]//td[9]//span[2]//span[1]//i[3]";
     public static final String Bouton_Ajout_Affectation_Population_Motif_Abcence = "/html/body/ngb-modal-window/div/div/acc-absence-parametres-pattern-assignment/div/header/a[2]";
     public static final String Date_d_effet_Affectation_Population_Motif_Abcence = "/html/body/ngb-modal-window/div/div/acc-absence-parametres-pattern-assignment/div/form/section/div/div[1]/acc-date-picker/my-date-picker/div/div/input";
     public static final String Population_Affectation_Population_Motif_Abcence = "/html/body/ngb-modal-window/div/div/acc-absence-parametres-pattern-assignment/div/form/section/div/div[2]/acc-select-population/div/div[1]/input";
@@ -117,6 +117,9 @@ public class AbcencesLocators {
     public static final String Bouton_Rejeter_Demande_Annulation = "//em[contains(@class,'cursor text-danger')]";
     public static final String Bouton_Confirmation_Rejet_Demande_Annulation = "//button[contains(@class,'mb-sm btn btn-info btn-outline')]";
     public static final String Commentaire_Rejet_Annulation_Absence = "textarea-input";
+    public static final String Motif_Absence_Visible = "//div//div//div//div[2]//acc-select-cr[1]//ng-select[1]//div[1]//input[1]";
+    public static final String Motif_Absence_Visible_IL = "//div//div//div//div[2]//acc-select-cr[1]//ng-select[1]//div[1]//input[1]";
+    public static final String Motif_Absence_Visible_CL = "//ul[@class='ui-select-choices dropdown-menu']//li";
 
 
 
