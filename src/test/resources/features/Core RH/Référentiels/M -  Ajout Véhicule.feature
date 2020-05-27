@@ -52,8 +52,6 @@ Feature: Référentiels
     And l utilisateur selectionne "Ford" dans la liste deroulante "Liste_Marques"
     And wait 3000
     And l utilisateur clique sur "Bouton_Valider_Modèle"
-    And wait 3000
-    And l utilisateur clique sur "Bouton_Enregistrer_Modéle"
     And vérifier que le message "Opération effectuée avec succès" s affiche
     And wait 3000
 

@@ -11,7 +11,7 @@
 
 Feature: Configuration-Talent
 
-  Scenario: Suppression de classification de competences deja affectee
+  Scenario: Modification de classification de competences deja affectee
 
     #Etape 001: Connexion RH_Skills
 

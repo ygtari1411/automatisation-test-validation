@@ -313,7 +313,10 @@ public class EtapesCommunes {
             for (WebElement x : L) {
                 actions.moveToElement(x).perform();
                 if (x.getText().contains(Optiondelaliste)) {
-                    x.click();
+                    JavascriptExecutor executor = (JavascriptExecutor) driver;
+                    executor.executeScript("arguments[0].click();", x);
+                    //TODO get this back to a normal click after resolving chrome 83 bug on clicking on elements with size 200 x 0
+                    //x.click();
                     state = false;
                     break;
                 }

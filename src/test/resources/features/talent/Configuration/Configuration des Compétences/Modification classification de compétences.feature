@@ -32,7 +32,7 @@ Feature: Configuration-Talent
       And   l utilisateur clique sur "Classification_conf"
       And   l utilisateur clique sur "Ajouter_classification"
       And   l utilisateur saisit "Ajout Classification Test auto 2" dans le champs "Libelle_Classif_ajout"
-      And   l utilisateur selectionne "Communication" dans la liste deroulante "Classification_parent"
+      And   l utilisateur selectionne "Technique" dans la liste deroulante "Classification_parent"
       And   l utilisateur selectionne "Chiffre" dans la liste deroulante "Chiffre_ajout_classification"
       And   l utilisateur selectionne "Coefficient" dans la liste deroulante "Coefficient_ajout_classification"
       And   l utilisateur clique sur "Valider_ajout_classification"
