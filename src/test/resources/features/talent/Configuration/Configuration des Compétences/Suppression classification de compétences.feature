@@ -38,7 +38,7 @@ Feature: Configuration-Talent
       And   l utilisateur clique sur "Sauvegarder_classification"
      Then   vérifier que le message "Opération effectuée avec succès" s affiche
       And   verifier que le dernier libelle "Ajout Classification Test auto 3"
-      And   verifier que la derniere classification parent "Communication"
+      And   verifier que la derniere classification parent "Technique"
       And   verifier que la derniere echelle "Chiffre"
       And wait 3000
       When  l utilisateur modifie la classification cree
