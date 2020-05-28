@@ -11,7 +11,7 @@ public class CommonLocators {
     public static final String Notification_Simple = "div[class='sn-content']";
     public static final String Core_RH = "/html/body/app-root/app-layout/div/app-sidebar/nav/ul/li[3]";
     public static final String Bouton_Annonce="/html/body/app-root/app-layout/div/app-sidebar/nav/ul/li[6]/ul/li[6]/a";
-    public static final String Bouton_Portal = "/html/body/app-root/app-layout/div/app-header/nav/div[2]/ul[1]/li[2]/a/em";
+    public static final String Bouton_Portal = "div[class='brand-logo-collapsed']";
     public static final String Option_Liste_Profil_Tag = "li[class='ql-mention-list-item selected']";
     public static final String Mon_Equipe ="/html/body/app-root/app-layout/div/section/div/acc-global-container/acc-portal-container/div/div/div[1]/acc-left-side-container/div/acc-user-widget/div/div[3]/ul/li[2]";
     public static final String Icone_Nom_Utilisateur="/html/body/app-root/app-layout/div/section/div/acc-global-container/acc-portal-container/div/div/div[1]/acc-left-side-container/div/acc-user-widget/div/div[2]/span/span";
@@ -66,7 +66,7 @@ public class CommonLocators {
     public static final String Bouton_Administration="a[title='Administration']";
     public static final String Bouton_Configuration_Systeme="a[href='/hr-space/administration/system-config']";
     public static final String Bouton_Configuration="em[title='Configuration']";
-    public static final String Bouton_Profil="/html/body/app-root/app-layout/div/app-offsidebar/div/div[1]/div/a[3]/span";
+    public static final String Bouton_Profil="/html/body/app-root/app-layout/div/app-offsidebar/div/div[1]/div/a[4]/span";
     public static final String Bouton_Configuration_Connect="/html/body/app-root/app-layout/div/app-sidebar/nav/ul/li[6]/ul/li[5]/a";
     public static final String Bouton_Configuration_Core="/html/body/app-root/app-layout/div/app-sidebar/nav/ul/li[3]/ul/li[5]/a";
     public static final String Onglet_Jours_fériés = "/html/body/app-root/app-layout/div/section/div/ng-component/div/ul/li/ul/li[1]";

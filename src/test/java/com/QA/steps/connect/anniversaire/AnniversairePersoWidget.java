@@ -36,6 +36,9 @@ public class AnniversairePersoWidget {
 
     @And("l utilisateur modifie la date de l anniversaire")
     public void lUtilisateurModifieLaDateDeLAnniversaire() throws InterruptedException {
+        driver.findElement(By.xpath(GestionDuPersonnel.DateDeNaissance_DossierIndividuel)).clear();
+
+
         String str="Opération effectuée avec succès";
         Calendar calendar = Calendar.getInstance();
         calendar.add(Calendar.DATE, 247);
@@ -43,7 +46,6 @@ public class AnniversairePersoWidget {
         formatter = new SimpleDateFormat("dd/MM/yyyy");
         demain_date= formatter.format(date);
         date_anniversaire=demain_date.substring(0, 5)+annee_anniversaire;
-        System.out.println(date_anniversaire);
         action.pause(driver, 1000);
         driver.findElement(By.xpath(GestionDuPersonnel.DateDeNaissance_DossierIndividuel)).clear();
         action.pause(driver,500);
@@ -74,12 +76,10 @@ public class AnniversairePersoWidget {
         {
             jour_anniversaire= String.valueOf(demain_date.charAt(1));
 
-            System.out.println("LE JOUR DEBUT EST"+jour_anniversaire);
         }
         else
         {
             jour_anniversaire = demain_date.substring(0,2);
-            System.out.println("LE JOUR FIN EST"+jour_anniversaire);
         }
         mois_anniversaire = demain_date.substring(3, 5);
 
@@ -125,40 +125,35 @@ public class AnniversairePersoWidget {
                 throw NoSuchElementException;
         }
         date_anniversaire_portal = jour_anniversaire + " " + mois_anniversaire_l;
-        System.out.println("LE JOUR EST"+jour_anniversaire);
         List<WebElement> l = driver.findElements(By.cssSelector(AnniversaireLocators.Liste_Anniversaire));
         int i = 0;
         for (WebElement x : l)
         {
             x.getAttribute("innerText");
-            System.out.println("LA DATE ET LE NOM DE L'UTILISATEUR"+x.getAttribute("innerText"));
+
            if (x.getAttribute("innerText").contains(nom) && x.getAttribute("innerText").contains(date_anniversaire_portal) && condition == 1)
             {
                emplacement1 = i + 1;
-                System.out.println("EMPLACEMENT"+emplacement1);
+
                 condition ++;
-                System.out.println("CONDITION1 est "+condition);
             }
            else {
 
                if ( x.getAttribute("innerText").contains(nom) && x.getAttribute("innerText").contains(date_anniversaire_portal) && condition == 2)
                {
                    emplacement2 = i + 1 ;
-                   System.out.println("EMPLACEMENT"+emplacement2);
                    condition ++;
-                   System.out.println("CONDITION2 est "+condition);
 
                }
            }
            i++;
         }
-        System.out.println("CONDITION"+condition);
+
          if (condition==2)
            {
-            actual_css_perso=before_css+emplacement1+after_css_perso;
-            List<WebElement> listeBirthdayCake=driver.findElements(By.cssSelector(actual_css_perso));
-            System.out.println("XPATH"+actual_css_perso);
-        Assert.assertEquals(1,listeBirthdayCake.size());
+             actual_css_perso=before_css+emplacement1+after_css_perso;
+             List<WebElement> listeBirthdayCake=driver.findElements(By.cssSelector(actual_css_perso));
+             Assert.assertEquals(1,listeBirthdayCake.size());
            }
          else if (condition == 3)
            {
@@ -166,7 +161,6 @@ public class AnniversairePersoWidget {
             actual_css_perso=before_css+emplacement2+after_css_perso;
             List<WebElement> listeBirthdayCake=driver.findElements(By.cssSelector(actual_css_perso));
             List<WebElement> listeBirthdayCalendar=driver.findElements(By.cssSelector(actual_css_pro));
-            System.out.println("XPATH"+actual_css_perso);
             Assert.assertEquals(1,listeBirthdayCake.size());
             Assert.assertEquals(1,listeBirthdayCalendar.size());
            }

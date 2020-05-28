@@ -3,10 +3,10 @@
 # Scénario: Anniversaire Personnel Widget
 # Date de création: 20/02/2020
 
-#@ACCRETIO2
-#@ACCRETIO2-CONNECT
-#@ACCRETIO2-ANNIVERSAIRE
-#@ACCRETIO2-ANNIVERSAIRE-0005
+@ACCRETIO2
+@ACCRETIO2-CONNECT
+@ACCRETIO2-ANNIVERSAIRE
+@ACCRETIO2-ANNIVERSAIRE-0005
 
 
 Feature: Anniversaire Personnel
@@ -27,8 +27,9 @@ Feature: Anniversaire Personnel
      And l utilisateur clique sur "Bouton_Configuration_Core"
      And wait 3000
      And l utilisateur clique sur "Bouton_Autres_Parametres"
-     And wait 3000
-     Then l administrateur va cocher le bouton d affichage de l anniversaire personnel
+     And wait 10000
+     #Then l administrateur va cocher le bouton d affichage de l anniversaire personnel
+     Then l utilisateur  "active" l'option "JS_Check_Box_AnniversairePersonnel_Rh"
      And wait 3000
      And l utilisateur clique sur "Bouton_Autres_Parametres_Enregistrer"
      And wait 3000
@@ -37,13 +38,15 @@ Feature: Anniversaire Personnel
 
     And l utilisateur clique sur "Core_RH"
     And l utilisateur clique sur "Gestion_du_personnel"
-    And wait 3000
+    And wait 7000
     And l utilisateur saisit "Gaston Boutot" dans le champs "Rechercher_Employe"
+    And wait 7000
     And l utilisateur modifie la date de l anniversaire
-   And wait 3000
-   And l utilisateur clique sur "Bouton_Enregistrer_Modification"
-   And verifier que la date d anniv perso a ete modifie
-   And wait 3000
+    And wait 7000
+    And l utilisateur clique sur "Bouton_Enregistrer_Modification"
+    And wait 3000
+    And verifier que la date d anniv perso a ete modifie
+    And wait 3000
 
     #Etape4 : Le collaborateur va se connecter et cocher le bouton d'affichage de l anniversaire personnel
 
@@ -55,7 +58,8 @@ Feature: Anniversaire Personnel
     And wait 3000
     And l utilisateur clique sur "Bouton_Afficher_AnniversairePersonnel"
     And wait 3000
-    Then l utilisateur va cocher le bouton d affichage d anniversaire personnel
+    #l utilisateur va cocher le bouton d affichage d anniversaire personnel
+    Then l utilisateur  "active" l'option "JS_Bouton_Collaborateur_Anniversaire_Personnel"
     When l utilisateur clique sur "Bouton_Configuration"
     And l utilisateur clique sur "Icone_Nom_Utilisateur"
     And wait 3000

@@ -23,15 +23,7 @@ public class AnniversaireProfessionnelDifferentDuPersonnel {
     public static String date_embauche_l;
     private Throwable NoSuchElementException;
     private static final Logger logger = Logger.getLogger(GenerateurDriver.class);
-    @Then("l administrateur va cocher le bouton d affichage de l anniversaire professionnel")
-    public void lAdministrateurVaCocherLeBoutonDAffichageDeLAnniversaireProfessionnel() {
 
-        boolean test = driver.findElement(By.xpath(AnniversaireLocators.Check_Box_AnniversaireProfessionnel_Rh)).isSelected();
-        if(!test){
-            driver.findElement(By.xpath(AnniversaireLocators.Check_Box_AnniversaireProfessionnel_Rh_Click)).click();
-        }
-
-    }
 
     @And("l utilisateur verifie la date d'anniversaire professionnel")
     public void lUtilisateurVerifieLaDateDAnniversaireProfessionnel() throws Throwable {

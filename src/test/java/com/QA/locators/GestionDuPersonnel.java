@@ -66,7 +66,7 @@ public class GestionDuPersonnel {
     public static final String Valider_salaire_collaborateur = "//button[@class='btn btn-info']";
     public static final String Rechercher_Employe = "/html/body/app-root/app-layout/div/section/div/ng-component/header/div/div/input";
     public static final String DateDeNaissance_DossierIndividuel = "//*[@id=\"individuel\"]/div/acc-core-rh-employee-individual-file-page/acc-core-rh-employee-identity-form/section/div[2]/div/div[3]/div[1]/acc-date-picker/my-date-picker/div/div/input";
-    public static final String DateDentree = "//*[@id=\"administrative\"]/div/acc-core-rh-employee-administrative-file-page/acc-core-rh-employee-hiring-exit-form/acc-table/section/div[2]/div/div/div/div/table/tbody/tr/td[1]/span";
+    public static final String DateDentree = "/html/body/app-root/app-layout/div/section/div/ng-component/div[1]/div/acc-core-rh-employee-form/form/div[2]/div[2]/div/acc-core-rh-employee-administrative-file-page/div[2]/acc-hiring-exit-list/div/p-datatable/div/div[1]/table/tbody/tr/td[1]";
     public static final String Date_Sortie_Collaborateur = "//*[@id=\"administrative\"]/div/acc-core-rh-employee-administrative-file-page/acc-core-rh-employee-hiring-exit-form/acc-table/section/div[2]/div/div/div/div/table/tbody/tr/td[4]";
     public static final String Bouton_Enregistrer_Modification = "//*[@id=\"data-view \"]/acc-core-rh-employee-form/form/acc-core-rh-referential-update-revert-actions/i[2]";
     public static final String DateDentree_DossierIndividuel = "//*[@id=\"administrative\"]/div/acc-core-rh-employee-administrative-file-page/acc-core-rh-employee-hiring-exit-form/acc-table/section/div[2]/div/form/div[1]/acc-table-form/div[1]/div[1]/acc-date-picker/my-date-picker/div/div/input";
