@@ -13,6 +13,7 @@ public class AnniversaireLocators {
   public static final String Bouton_Anniversaire_Portal="/html/body/app-root/app-layout/div/section/div/acc-global-container/acc-portal-container/div/div/div[3]/acc-right-side-container/div/div[4]/acc-right-side-tabs/ul/li[3]/a";
   public static final String Liste_Anniversaire="a[class*='media p mt0 list-group-item']";
   public static final String Bouton_Enregistrer_Modification="i[title='Enregistrer']";
+  public static final String Bouton_Acceuil = "//img[@class='img-responsive']";
 
 }
 

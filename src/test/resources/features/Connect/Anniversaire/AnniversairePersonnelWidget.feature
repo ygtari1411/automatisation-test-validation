@@ -68,7 +68,7 @@ Feature: Anniversaire Personnel
 
 #    And l utilisateur se deconnecte
 #    And l'utilisateur "responsable@yopmail.com" est connecté
-    And l utilisateur clique sur "Bouton_Portal"
+    And l utilisateur clique sur "Bouton_Acceuil"
     And l utilisateur clique sur "Bouton_Anniversaire_Portal"
     And wait 3000
     Then verifier que l anniversaire personnel de l utilisateur est affiche
