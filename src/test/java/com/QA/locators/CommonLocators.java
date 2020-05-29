@@ -11,7 +11,7 @@ public class CommonLocators {
     public static final String Notification_Simple = "div[class='sn-content']";
     public static final String Core_RH = "/html/body/app-root/app-layout/div/app-sidebar/nav/ul/li[3]";
     public static final String Bouton_Annonce="/html/body/app-root/app-layout/div/app-sidebar/nav/ul/li[6]/ul/li[6]/a";
-    public static final String Bouton_Portal = "div[class='brand-logo-collapsed']";
+    public static final String Bouton_Portal = "//em[@class='icons8 icons8-transfer-between-users']";
     public static final String Option_Liste_Profil_Tag = "li[class='ql-mention-list-item selected']";
     public static final String Mon_Equipe ="/html/body/app-root/app-layout/div/section/div/acc-global-container/acc-portal-container/div/div/div[1]/acc-left-side-container/div/acc-user-widget/div/div[3]/ul/li[2]";
     public static final String Icone_Nom_Utilisateur="/html/body/app-root/app-layout/div/section/div/acc-global-container/acc-portal-container/div/div/div[1]/acc-left-side-container/div/acc-user-widget/div/div[2]/span/span";

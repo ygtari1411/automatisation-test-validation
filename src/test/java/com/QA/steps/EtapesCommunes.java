@@ -499,7 +499,7 @@ public class EtapesCommunes {
 
 
     @And("l utilisateur vérifie que {string} a la valeur {string}")
-    public void lUtilisateurVérifieQueALaValeur(String emplacement, String valeur) throws IllegalAccessException {
+    public void lUtilisateurVérifieQueALaValeur(String emplacement, String valeur) throws Exception {
 
         String locator = "vide";
         for (List<Field> f : ListeGlobaleLocators) {
@@ -513,24 +513,11 @@ public class EtapesCommunes {
                 break;
             }
         }
-        if (driver.findElement(By.xpath(locator)).isDisplayed() && valeur.equals("Non")) {
-            driver.findElement(By.xpath(locator)).click();
-            String emplacement2 = "Sauvegarde_" + emplacement;
-            locator = "vide";
-            for (List<Field> f : ListeGlobaleLocators) {
-                for (Field x : f) {
-                    if (x.getName().equals(emplacement2)) {
-                        locator = (String) x.get(x);
-                        break;
-                    }
-                }
-                if (!locator.equals("vide")) {
-                    break;
-                }
-            }
-            driver.findElement(By.xpath(locator)).click();
+        try {
+            Boolean modules = (new WebDriverWait(driver, 20))
+                    .until(ExpectedConditions.attributeContains(driver.findElement(By.xpath(locator)), "innerText", valeur));
         }
-
+        catch (TimeoutException ignored){ throw new Exception ("La durée de la demande d'absence n'est pas correcte");}
     }
 
     @And("l'utilisateur rafraichit la page")

@@ -120,7 +120,7 @@ public class AbcencesLocators {
     public static final String Motif_Absence_Visible = "//div//div//div//div[2]//acc-select-cr[1]//ng-select[1]//div[1]//input[1]";
     public static final String Motif_Absence_Visible_IL = "//div//div//div//div[2]//acc-select-cr[1]//ng-select[1]//div[1]//input[1]";
     public static final String Motif_Absence_Visible_CL = "//ul[@class='ui-select-choices dropdown-menu']//li";
-
+    public static final String Champ_Durée_Absence = "//tr[1]//td[8]//span[2]";
 
 
 

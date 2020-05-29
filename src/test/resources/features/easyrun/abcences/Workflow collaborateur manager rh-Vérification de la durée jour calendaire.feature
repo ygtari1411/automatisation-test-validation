@@ -5,10 +5,10 @@
 # Date de modification: 26/05/2020 - Wael Boufaden
 
 
-#@ACCRETIO2
-#@ACCRETIO2-EASYRUN
-#@ACCRETIO2-ABSENCES
-#@ACCRETIO2-ABSENCES-0010
+@ACCRETIO2
+@ACCRETIO2-EASYRUN
+@ACCRETIO2-ABSENCES
+@ACCRETIO2-ABSENCES-0010
 
 Feature: Absences
 
@@ -30,7 +30,7 @@ Feature: Absences
     And wait 2000
     And vérifier que le statut de la demande devient En cours
     # Vérification de la durée
-    And Vérifier que le champ Durée a la valeur 3 jour(s)
+    And l utilisateur vérifie que "Champ_Durée_Absence" a la valeur "3 jour(s)"
     And l utilisateur se deconnecte
 
     #Etape 2 : Profil manager-Validation de demande d'absence
@@ -46,9 +46,9 @@ Feature: Absences
     And vérifier que le titre du modal est "Confirmation de la validation" et le texte du corps du modal est "Voulez vous vraiment valider cette demande ?"
     And l utilisateur clique sur "JS_Bouton_Valider_Acceptation"
     And vérifier que le message "Opération effectuée avec succès" s affiche
-    And wait 3000
+    And wait 6000
     # Vérification de la durée
-    And Vérifier que le champ Durée a la valeur 3 jour(s)
+    And l utilisateur vérifie que "Champ_Durée_Absence" a la valeur "3 jour(s)"
     And l utilisateur se deconnecte
 
     #Etape 3 : Profil rh-Validation de demande d'absence
@@ -68,6 +68,6 @@ Feature: Absences
     And l utilisateur clique sur "JS_Bouton_Valider_Acceptation"
     And vérifier que le message "Opération effectuée avec succès" s affiche
     And Vérifier que la demande d'absence est déplacée au niveau de la rubrique Historique et que son statut devient Validée
-       # Vérification de la durée
-    Then Vérifier que le champ Durée a la valeur 3 jour(s)
-    And l utilisateur se deconnecte
+    And wait 6000
+         # Vérification de la durée
+    And l utilisateur vérifie que "Champ_Durée_Absence" a la valeur "3 jour(s)"

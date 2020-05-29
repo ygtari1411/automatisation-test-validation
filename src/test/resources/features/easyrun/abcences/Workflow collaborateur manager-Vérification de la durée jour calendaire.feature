@@ -5,10 +5,10 @@
 # Date de modification: 26/05/2020 - Wael Boufaden
 
 
-#@ACCRETIO2
-#@ACCRETIO2-EASYRUN
-#@ACCRETIO2-ABSENCES
-#@ACCRETIO2-ABSENCES-0008
+@ACCRETIO2
+@ACCRETIO2-EASYRUN
+@ACCRETIO2-ABSENCES
+@ACCRETIO2-ABSENCES-0008
 
 Feature: Absences
 
@@ -30,7 +30,7 @@ Feature: Absences
     And wait 2000
     And vérifier que le statut de la demande devient En cours
     # Vérification de la durée
-    And Vérifier que le champ Durée a la valeur 3 jour(s)
+    And l utilisateur vérifie que "Champ_Durée_Absence" a la valeur "3 jour(s)"
     And l utilisateur se deconnecte
 
     #Etape 2 : Profil manager-Validation de demande d'absence
@@ -48,8 +48,7 @@ Feature: Absences
     And vérifier que le message "Opération effectuée avec succès" s affiche
     And Vérifier que la demande d'absence est déplacée au niveau de la rubrique Historique et que son statut devient Validée
       # Vérification de la durée
-    And Vérifier que le champ Durée a la valeur 3 jour(s)
-    And l utilisateur se deconnecte
+    And l utilisateur vérifie que "Champ_Durée_Absence" a la valeur "3 jour(s)"
 
 
 

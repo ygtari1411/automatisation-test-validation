@@ -93,6 +93,59 @@ public class CollaborateurManagerValidationAbsence {
         logger.info("Journée libre trouvée: " + DateJourAbsence);
     }
 
+    @And("l utilisateur selectionne un vendredi libre dans le calendrier")
+    public void lUtilisateurSelectionneUnVendrediLibreDansLeCalendrier() throws InterruptedException {
+
+        logger.info("Recherche d'une journée libre");
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        String etat = "Pas encore";
+        int semaine;
+        String locator;
+        String locator1;
+        String locator2;
+        WebElement jourabsence = null;
+        WebElement jourabsence1 = null;
+
+        while (etat.equals("Pas encore")) {
+            action.pause(driver, 10000);
+            for (semaine = 1; semaine < 7; semaine++) {
+                locator = (".fc-week:nth-child(" + semaine + ") > .fc-bg .fc-day:not([style]):nth-child(5)");
+                locator1 = (".fc-week:nth-child(" + semaine + ") > .fc-bg .fc-day:not([style]):nth-child(5) .absence-wrapper");
+                try {
+                    action.pause(driver, 1700);
+                    jourabsence = driver.findElement(By.cssSelector(locator));
+                    jourabsence1 = driver.findElement(By.cssSelector(locator1));
+                } catch (NoSuchElementException | InterruptedException ignore) {
+                }
+                if (!(jourabsence == null)) {
+                    if (jourabsence1 == null) {
+                        locator2 = ".fc-row:nth-child(" + semaine + ") > .fc-content-skeleton .fc-fri";
+                        Jourlibre = locator1;
+                        DateJourAbsence = jourabsence.getAttribute("data-date");
+                        actions.moveToElement(driver.findElement(By.cssSelector(locator2))).clickAndHold().perform();
+                        driver.findElement(By.cssSelector(".fc-highlight")).click();
+                        WebElement modules1 = (new WebDriverWait(driver, 10))
+                                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(AbcencesLocators.Popup_Ajout_Absences_Header)));
+                        etat = "Jour trouvé";
+                        break;
+                    }
+                    jourabsence1 = null;
+                    jourabsence = null;
+                }
+            }
+            if (etat.equals("Pas encore")) {
+                driver.findElement(By.xpath(AbcencesLocators.Bouton_Avance_Mois_Calendrier_Ajout_Abcence)).click();
+            } else {
+                break;
+            }
+
+        }
+        driver.manage().timeouts().implicitlyWait(Long.parseLong(streams.readers().getProperty("Implicitwait")), TimeUnit.SECONDS);
+        logger.info("Journée libre trouvée: " + DateJourAbsence);
+    }
+
+
+
     @And("l'utilisateur upload un justificatif")
     public void lUtilisateurUploadUnJustificatif() throws InterruptedException {
         logger.info("Uplaod d'un justificatif");
