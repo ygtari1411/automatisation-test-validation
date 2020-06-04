@@ -54,6 +54,7 @@ Feature: Anniversaire Personnel
     And l utilisateur se deconnecte
     And l'utilisateur "gaston.boutot@yopmail.com" est connecté
     And l utilisateur clique sur "Bouton_Configuration"
+    And wait 3000
     And l utilisateur clique sur "Bouton_Profil"
     And wait 3000
     And l utilisateur clique sur "Bouton_Afficher_AnniversairePersonnel"
@@ -66,8 +67,6 @@ Feature: Anniversaire Personnel
 
     #Etape5 : Verifier que l'anniversaire personnel de l'utilisateur est afficher dans le widget
 
-#    And l utilisateur se deconnecte
-#    And l'utilisateur "responsable@yopmail.com" est connecté
     And l utilisateur clique sur "Bouton_Acceuil"
     And l utilisateur clique sur "Bouton_Anniversaire_Portal"
     And wait 3000

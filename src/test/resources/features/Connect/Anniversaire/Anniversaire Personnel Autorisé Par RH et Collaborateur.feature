@@ -38,6 +38,7 @@ Feature: Anniversaire
     And l utilisateur se deconnecte
     And l'utilisateur "gaston.boutot@yopmail.com" est connecté
     And l utilisateur clique sur "Bouton_Configuration"
+    And wait 3000
     And l utilisateur clique sur "Bouton_Profil"
     And wait 3000
     And l utilisateur clique sur "Bouton_Afficher_AnniversairePersonnel"
@@ -45,6 +46,7 @@ Feature: Anniversaire
     #Then l utilisateur va cocher le bouton d affichage d anniversaire personnel
     And l utilisateur  "active" l'option "JS_Bouton_Collaborateur_Anniversaire_Personnel"
     When l utilisateur clique sur "Bouton_Configuration"
+    And wait 3000
     And l utilisateur clique sur "Icone_Nom_Utilisateur"
     And wait 3000
 

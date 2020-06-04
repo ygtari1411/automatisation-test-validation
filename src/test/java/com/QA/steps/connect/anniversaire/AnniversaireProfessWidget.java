@@ -36,18 +36,12 @@ public class AnniversaireProfessWidget {
     @And("l utilisateur modifie la date de l anniversaire professionnel")
     public void lUtilisateurModifieLaDateDeLAnniversaireProfessionnel() throws InterruptedException {
 
-        Calendar calendar = Calendar.getInstance();
-        calendar.add(Calendar.DATE, 249);
-        date_pro = calendar.getTime();
-        formatter = new SimpleDateFormat("dd/MM/yyyy");
-        demain_date_pro= formatter.format(date_pro);
-        date_anniversaire_pro=demain_date_pro.substring(0, 5)+annee_anniversaire;
-        System.out.println(date_anniversaire_pro);
-        action.pause(driver, 1000);
         driver.findElement(By.xpath(GestionDuPersonnel.DateDentree_DossierIndividuel)).clear();
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.YEAR, -3);
+        SimpleDateFormat format1 = new SimpleDateFormat("dd/MM/yyyy");
+        date_anniversaire_pro = format1.format(cal.getTime());
         driver.findElement(By.xpath(GestionDuPersonnel.DateDentree_DossierIndividuel)).sendKeys(date_anniversaire_pro);
-        action.pause(driver, 8000);
-
 
     }
 
@@ -66,15 +60,15 @@ public class AnniversaireProfessWidget {
         int emplacement=0;
         String nom= ActionsCommunes.DataProvider("Rechercher_Employe");
 
-        if (demain_date_pro.charAt(0)=='0')
+        if (date_anniversaire_pro.charAt(0)=='0')
         {
-            jour_anniversaire_pro= String.valueOf(demain_date_pro.charAt(1));
+            jour_anniversaire_pro= String.valueOf(date_anniversaire_pro.charAt(1));
         }
         else
         {
-            jour_anniversaire_pro = demain_date_pro.substring(0,2);
+            jour_anniversaire_pro = date_anniversaire_pro.substring(0,2);
         }
-        mois_anniversaire_pro = demain_date_pro.substring(3, 5);
+        mois_anniversaire_pro = date_anniversaire_pro.substring(3, 5);
         switch (mois_anniversaire_pro) {
             case "01":
                 mois_anniversaire_pro_l = "Jan";
@@ -121,14 +115,11 @@ public class AnniversaireProfessWidget {
 
         date_anniversaire_portal=jour_anniversaire_pro + " " + mois_anniversaire_pro_l;
 
-        System.out.println("DATE PRO "+date_anniversaire_portal);
         List<WebElement> listeannivpro = driver.findElements(By.cssSelector(AnniversaireLocators.Liste_Anniversaire));
         for  (WebElement elntliste:listeannivpro)
         {
-            System.out.println(listeannivpro.size());
             actions.moveToElement(elntliste).perform();
             str=elntliste.getAttribute("innerText");
-            System.out.println("LA DATE ET LE NOM DE L'UTILISATEUR"+str);
 
             if (str.contains(nom) && str.contains(date_anniversaire_portal))
             {
@@ -147,7 +138,7 @@ public class AnniversaireProfessWidget {
 
     @And("verifier que la date d anniv pro a ete modifie")
     public void verifierQueLaDateDAnnivProAEteModifie() {
-        WebElement modules = (new WebDriverWait(driver, 100))
+        WebElement modules = (new WebDriverWait(driver, 500))
                 .until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(CommonLocators.Notification_Simple)));
         Assert.assertTrue(driver.findElement(By.cssSelector(CommonLocators.Notification_Simple)).getText().contains("succès"));
         Assert.assertEquals(driver.findElement(By.xpath(GestionDuPersonnel.Fiche_User_Date_Entree)).getAttribute("innerText"),date_anniversaire_pro);

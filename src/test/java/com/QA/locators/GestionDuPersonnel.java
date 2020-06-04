@@ -69,9 +69,9 @@ public class GestionDuPersonnel {
     public static final String DateDentree = "/html/body/app-root/app-layout/div/section/div/ng-component/div[1]/div/acc-core-rh-employee-form/form/div[2]/div[2]/div/acc-core-rh-employee-administrative-file-page/div[2]/acc-hiring-exit-list/div/p-datatable/div/div[1]/table/tbody/tr/td[1]";
     public static final String Date_Sortie_Collaborateur = "//*[@id=\"administrative\"]/div/acc-core-rh-employee-administrative-file-page/acc-core-rh-employee-hiring-exit-form/acc-table/section/div[2]/div/div/div/div/table/tbody/tr/td[4]";
     public static final String Bouton_Enregistrer_Modification = "//*[@id=\"data-view \"]/acc-core-rh-employee-form/form/acc-core-rh-referential-update-revert-actions/i[2]";
-    public static final String DateDentree_DossierIndividuel = "//*[@id=\"administrative\"]/div/acc-core-rh-employee-administrative-file-page/acc-core-rh-employee-hiring-exit-form/acc-table/section/div[2]/div/form/div[1]/acc-table-form/div[1]/div[1]/acc-date-picker/my-date-picker/div/div/input";
-    public static final String Bouton_Modifier_Entree_Sortie = "//*[@id=\"administrative\"]/div/acc-core-rh-employee-administrative-file-page/acc-core-rh-employee-hiring-exit-form/acc-table/section/div[2]/div/div/div/div/table/tbody/tr/td[6]/i";
-    public static final String Bouton_Valider_Modification_Entree_Sortie = "//*[@id=\"administrative\"]/div/acc-core-rh-employee-administrative-file-page/acc-core-rh-employee-hiring-exit-form/acc-table/section/div[2]/div/form/div[2]/button[2]";
+    public static final String DateDentree_DossierIndividuel = "/html/body/ngb-modal-window/div/div/acc-hiring-exit-form/div/div[2]/section/form/div[1]/div[1]/acc-date-picker/my-date-picker/div/div/input";
+    public static final String Bouton_Modifier_Entree_Sortie = "/html/body/app-root/app-layout/div/section/div/ng-component/div[1]/div/acc-core-rh-employee-form/form/div[2]/div[2]/div/acc-core-rh-employee-administrative-file-page/div[4]/acc-affectation-list/div/p-datatable/div/div[1]/table/tbody/tr/td[6]/span[2]/span/i";
+    public static final String Bouton_Valider_Modification_Entree_Sortie = "/html/body/ngb-modal-window/div/div/acc-hiring-exit-form/div/div[3]/button[2]";
     public static final String Date_entree_texte = "//*[@id=\"administrative\"]/div/acc-core-rh-employee-administrative-file-page/acc-core-rh-employee-hiring-exit-form/acc-table/section/div[2]/div/div/div/div/table/tbody/tr/td[1]/span";
     public static final String NomUser = "//*[@id=\"cover\"]/div/h3";
     public static final String Fiche_User_Date_Entree = "//*[@id=\"cover\"]/ul[2]/li[3]/span/time";
@@ -91,7 +91,7 @@ public class GestionDuPersonnel {
     public static final String Date_Debut_Affectation = "//acc-date-picker[@name='affectationEffectiveDate']//my-date-picker//div//div//input";
     public static final String Entité_Affectation = "/html[1]/body[1]/ngb-modal-window[1]/div[1]/div[1]/acc-affectation-add[1]/div[1]/div[2]/section[1]/form[1]/div[2]/div[1]/acc-select-list[1]/ng-select[1]/div[1]/div[2]/span[1]";
     public static final String Entité_Affectation_IL = "/html[1]/body[1]/ngb-modal-window[1]/div[1]/div[1]/acc-affectation-add[1]/div[1]/div[2]/section[1]/form[1]/div[2]/div[1]/acc-select-list[1]/ng-select[1]/div[1]/input[1]";
-        public static final String Entité_Affectation_CL = "//body//ngb-modal-window//li";
+    public static final String Entité_Affectation_CL = "//body//ngb-modal-window//li";
     public static final String Poste_Affectation = "/html[1]/body[1]/ngb-modal-window[1]/div[1]/div[1]/acc-affectation-add[1]/div[1]/div[2]/section[1]/form[1]/div[2]/div[3]/acc-select-list[1]/ng-select[1]/div[1]/div[2]/span[1]";
     public static final String Poste_Affectation_IL = "/html[1]/body[1]/ngb-modal-window[1]/div[1]/div[1]/acc-affectation-add[1]/div[1]/div[2]/section[1]/form[1]/div[2]/div[3]/acc-select-list[1]/ng-select[1]/div[1]/input[1]";
     public static final String Poste_Affectation_CL = "//body//ngb-modal-window//li";

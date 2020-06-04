@@ -3,6 +3,7 @@ package com.QA.steps.connect.anniversaire;
 import com.QA.locators.AnniversaireLocators;
 import com.QA.locators.CommonLocators;
 import com.QA.locators.GestionDuPersonnel;
+import com.QA.steps.ActionsCommunes;
 import com.QA.steps.GenerateurDriver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -11,6 +12,7 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import java.util.Date;
 import java.util.List;
@@ -18,25 +20,29 @@ import java.util.List;
 public class WidgetAnniversairePersonnelAutoriséRH {
 
     private final WebDriver driver = GenerateurDriver.driver;
-    private static String Nom_User;
-    private static String Date_Anniv_Perso_User;
+    private static String Nom_User="Gaston Boutot";
+    private static String Date_Anniv_Perso_User="31/01/1992";
     private Throwable NoSuchElementException;
     private static final Logger logger = Logger.getLogger(GenerateurDriver.class);
+    public Actions actions = new Actions(driver);
+
+
+
     @Then("verifier que la date n est pas affichée dans le widget")
     public void verifierQueLaDateNEstPasAffichéeDansLeWidget() throws Throwable {
         String jour_birthday_perso;
         String mois_birthday_perso;
         String date_birthday_perso_widget;
-        System.out.println("LE NOM DU USER EST"+Nom_User+"LA DATE DU USER EST"+ Date_Anniv_Perso_User);
+
         if (Date_Anniv_Perso_User.charAt(0)=='0')
-        {
+         {
             jour_birthday_perso= String.valueOf(Date_Anniv_Perso_User.charAt(1));
 
-        }
+         }
         else
-        {
+         {
             jour_birthday_perso = Date_Anniv_Perso_User.substring(0,2);
-        }
+         }
         mois_birthday_perso = Date_Anniv_Perso_User.substring(3, 5);
         switch (mois_birthday_perso) {
             case "01":
@@ -84,22 +90,28 @@ public class WidgetAnniversairePersonnelAutoriséRH {
         boolean exist=false;
         for (WebElement lap :listeannivperso)
         {
+            actions.moveToElement(lap).perform();
             String str=lap.getAttribute("innerText");
+
             if (str.contains(Nom_User)&& str.contains(date_birthday_perso_widget))
             {
                 exist=true;
                 break;
             }
         }
+
         Assert.assertFalse(exist);
+
+
     }
 
     @And("l utilisateur verifie le nom et la date personnel du collaborateur")
     public void lUtilisateurVerifieLeNomEtLaDatePersonnelDuCollaborateur() {
 
-
         Nom_User=driver.findElement(By.xpath(GestionDuPersonnel.NomUser)).getAttribute("innerText");
         Date_Anniv_Perso_User=driver.findElement(By.xpath(GestionDuPersonnel.DateDeNaissance_DossierIndividuel)).getAttribute("value");
 
     }
+
+
 }
