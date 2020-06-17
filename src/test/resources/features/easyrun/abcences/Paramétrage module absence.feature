@@ -150,7 +150,7 @@ Feature: Absences
     And l utilisateur selectionne "Role utilisateur" dans la liste deroulante "Utilisé_par_Ajout_Motif_Abcences"
     And l utilisateur selectionne "Validation N+1" dans la liste deroulante "Processus_de_validation_Ajout_Motif_Abcences"
     # Case Visible à cocher
-    And l utilisateur selectionne "Employé" dans la liste deroulante "Motif_Absence_Visible"
+    And l utilisateur selectionne "Rôle utilisateur" dans la liste deroulante "Motif_Absence_Visible"
     And l utilisateur clique sur "Bouton_Ajouter_Motif_Abcences"
     And wait 3000
     And l utilisateur clique sur "Bouton_Affectation_Population"
@@ -173,7 +173,7 @@ Feature: Absences
     And l utilisateur selectionne "Groupement par défaut" dans la liste deroulante "Groupement_de_motifs_Ajout_Motif_Abcences"
     And l utilisateur selectionne "Validation N+1 et Rh" dans la liste deroulante "Processus_de_validation_Ajout_Motif_Abcences"
      # Case Visible à cocher
-    And l utilisateur selectionne "Employé" dans la liste deroulante "Motif_Absence_Visible"
+    And l utilisateur selectionne "Rôle utilisateur" dans la liste deroulante "Motif_Absence_Visible"
     And l utilisateur clique sur "Bouton_Ajouter_Motif_Abcences"
     And wait 3000
     And l utilisateur clique sur "Bouton_Affectation_Population"
