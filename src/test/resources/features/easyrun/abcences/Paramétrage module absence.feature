@@ -147,7 +147,7 @@ Feature: Absences
     And l utilisateur saisit "TestCongés Payés Workflow1" dans le champs "Libellé_Ajout_Motif_Abcences"
     And l utilisateur selectionne "Groupement par défaut" dans la liste deroulante "Groupement_de_motifs_Ajout_Motif_Abcences"
     And l utilisateur selectionne "Règle" dans la liste deroulante "Type_Ajout_Motif_Abcences"
-    And l utilisateur selectionne "Role utilisateur" dans la liste deroulante "Utilisé_par_Ajout_Motif_Abcences"
+    And l utilisateur selectionne "Rôle utilisateur" dans la liste deroulante "Utilisé_par_Ajout_Motif_Abcences"
     And l utilisateur selectionne "Validation N+1" dans la liste deroulante "Processus_de_validation_Ajout_Motif_Abcences"
     # Case Visible à cocher
     And l utilisateur selectionne "Rôle utilisateur" dans la liste deroulante "Motif_Absence_Visible"
@@ -169,7 +169,7 @@ Feature: Absences
     And l utilisateur saisit "TCPW2" dans le champs "Code_Ajout_Motif_Abcences"
     And l utilisateur saisit "TestCongés Payés Workflow2" dans le champs "Libellé_Ajout_Motif_Abcences"
     And l utilisateur selectionne "Règle" dans la liste deroulante "Type_Ajout_Motif_Abcences"
-    And l utilisateur selectionne "Role utilisateur" dans la liste deroulante "Utilisé_par_Ajout_Motif_Abcences"
+    And l utilisateur selectionne "Rôle utilisateur" dans la liste deroulante "Utilisé_par_Ajout_Motif_Abcences"
     And l utilisateur selectionne "Groupement par défaut" dans la liste deroulante "Groupement_de_motifs_Ajout_Motif_Abcences"
     And l utilisateur selectionne "Validation N+1 et Rh" dans la liste deroulante "Processus_de_validation_Ajout_Motif_Abcences"
      # Case Visible à cocher

@@ -28,10 +28,11 @@ Feature: Gestion du personnel
     And l utilisateur clique sur "Filtre_Recherche_Collaborateur"
     And l utilisateur selectionne "Inactif" dans la liste deroulante "Statut_Filtre_Collaborateur"
     And l utilisateur clique sur "Recherche_Filtre_Collaborateur"
-    And l utilisateur saisit "Collaborateur Inactif" dans le champs "Recherche_Collaborateur"
-    And wait 2000
+    And wait 4000
     And l utilisateur selectionne "Collaborateur Inactif" dans la liste "Liste_Collaborateurs"
+    And wait 2000
     And  l utilisateur clique sur "Onglet_Dossier_Administratif"
+    And wait 2000
     And  l utilisateur clique sur "Icone_Modifier_Entrées_Sorties"
     And  l utilisateur clique sur "Icone_Suppression_Date_Sortie"
     And  l utilisateur clique sur "JS_Icone_Suppression_Motif_Sortie"
