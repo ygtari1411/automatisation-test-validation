@@ -16,7 +16,7 @@ Feature: Configuration-Talent
     #Etape 001: Connexion RH_Evaluation
     Given   le navigateur est ouvert et la page d'acceuil est affichée
       And   l'utilisateur "Dubois.Christian@yopmail.com" est connecté
-     Then   le nom de l utilisateur "Dubois Christian" est affiche en haut a gauche
+     Then   le nom de l utilisateur "Christian Dubois" est affiche en haut a gauche
 
     #Etape 002: Acceder  au sous module configuration
 
