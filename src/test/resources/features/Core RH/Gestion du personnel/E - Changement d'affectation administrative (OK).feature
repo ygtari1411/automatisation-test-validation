@@ -53,10 +53,9 @@ Feature: Gestion du personnel
 
   # Etape 4 : Changement d'affectation
     And l utilisateur saisit "Collaborateur Affectation_OK" dans le champs "Recherche_Collaborateur"
-    And wait 2000
-    And l utilisateur selectionne "Collaborateur Affectation_OK" dans la liste "Liste_Collaborateurs"
-    And wait 2000
+    And wait 4000
     And  l utilisateur clique sur "Onglet_Dossier_Administratif"
+    And wait 2000
     And l utilisateur clique sur "Bouton_Ajouter_Affectation"
     And l utilisateur saisit "05/03/2020" dans le champs "Date_Debut_Affectation"
     And l utilisateur selectionne "DFG_Atelier France" dans la liste deroulante "Entité_Affectation"

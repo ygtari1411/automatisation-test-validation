@@ -25,9 +25,9 @@ Feature: Gestion du personnel
 
     # Etape 3 : Acèes au tableau Entrées/Sorties
     And l utilisateur saisit "Collaborateur Inactif" dans le champs "Recherche_Collaborateur"
-    And wait 2000
-    And l utilisateur selectionne "Collaborateur Inactif" dans la liste "Liste_Collaborateurs"
+    And wait 4000
     And  l utilisateur clique sur "Onglet_Dossier_Administratif"
+    And wait 2000
     And  l utilisateur clique sur "Icone_Modifier_Entrées_Sorties"
 
     # Etape 4 : Vérifier l affichage du message d erreur  sous le champs Date de sortie
