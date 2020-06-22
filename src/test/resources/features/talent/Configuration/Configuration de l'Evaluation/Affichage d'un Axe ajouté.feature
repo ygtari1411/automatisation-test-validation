@@ -36,6 +36,6 @@ Feature: Configuration-Talent
        Then   vérifier que le message "Opération effectuée avec succès" s affiche
         And   verifier que le dernier libelle "Axe test 1"
   
-    #Etape 003: Modification du libellé de l'Axe
+    #Etape 003: Affichage de l'Axe
        When   l utilisateur clique sur "Afficher_option_conf_Axe"
        Then   vérifier que le champs "Libellé_Ajout_Axe" est "Axe test Affichage"
