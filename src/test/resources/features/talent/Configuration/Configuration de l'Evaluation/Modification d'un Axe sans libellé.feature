@@ -38,7 +38,8 @@ Feature: Configuration-Talent
 
     #Etape 004: Modification de l'axe
 
-       When   l utilisateur clique sur "Modifier_option_conf_Axe"
+       When   l utilisateur clique sur "Option_conf_Axe"
+        And   l utilisateur clique sur "Modifier_option_conf_Axe"
         And   l utilisateur saisit " " dans le champs "Libellé_Ajout_Axe"
         And   l utilisateur clique sur "Valider_Ajout_Axe"
        Then   verifier que le champs libelle est encadre en rouge
