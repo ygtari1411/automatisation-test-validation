@@ -30,7 +30,6 @@ public class AjoutDunAxeAvecSucces {
         //récuperer le nombre d'element
 
         int pos1 = str1.indexOf("de") + 3;
-        System.out.println("premier postion " + pos1);
         int pos2 = str1.indexOf("Entrées") - 1;
 
         //recuperer le nombre de page
