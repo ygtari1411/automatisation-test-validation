@@ -30,7 +30,7 @@ Feature: Configuration-Talent
     #Etape 003: Ajout de l'Axe
 
      And   l utilisateur clique sur "Ajouter_Axe_Evaluation"
-     And   l utilisateur saisit " " dans le champs "Libelle_Ajout_Axe"
+     And   l utilisateur saisit "  " dans le champs "Libelle_Ajout_Axe"
      #And   l utilisateur clique sur "Valider_Ajout_Axe"
      And   wait 3000
      Then   verifier que le champs libelle est encadre en rouge
