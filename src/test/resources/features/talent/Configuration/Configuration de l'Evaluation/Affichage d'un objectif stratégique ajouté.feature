@@ -40,6 +40,7 @@ Feature: Configuration-Talent
 
     #Etape 004: Affichage de l'objectif stratégique
 
-       When   l utilisateur clique sur "Afficher_option_conf_Obj_strategique"
+       When   l utilisateur clique sur "Option_conf_Obj_strategique"
+        And   l utilisateur clique sur "Afficher_option_conf_Obj_strategique"
        Then   verifier que le champs "Libellé_Ajout_Obj_strategique" est "Obj test 2"
         And   verifier que le champs "Description_Ajout_Obj_strategique" est "Obj test 2"
