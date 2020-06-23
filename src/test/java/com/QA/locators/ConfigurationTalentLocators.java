@@ -35,7 +35,7 @@ public class ConfigurationTalentLocators {
    public static final String Bouton_Evaluation_Talent="/html/body/app-root/app-layout/div/section/div/acc-hr-talent-component/acc-hr-talent-configuration/div[2]/div[1]/acc-evaluation-configuration-selection-list/ngb-accordion/div/div/a";
    public static final String Bouton_Evaluation_Axe_Talent="span[title='Axes']";
    public static final String Ajouter_Axe_Evaluation="/html/body/app-root/app-layout/div/section/div/acc-hr-talent-component/acc-hr-talent-configuration/div[2]/div[2]/section/acc-evaluation-configuration-axis/div[2]/div/section/div[2]/acc-tab-header/header/ul/li[2]/a";
-   public static final String Libelle_Ajout_Axe="input[class='form-control input-sm ng-untouched ng-pristine ng-invalid']";
+   public static final String Libelle_Ajout_Axe="/html/body/app-root/app-layout/div/section/div/acc-hr-talent-component/acc-hr-talent-configuration/div[2]/div[2]/section/acc-evaluation-configuration-axis/div[2]/div/section/div[2]/div/div[2]/acc-evaluation-configuration-axis-form/div/form/div[1]/div/input";
    public static final String Valider_Ajout_Axe="button[class='mb-sm btn btn-info btn-outline']";
    public static final String Sauvegarder_Ajout_Axe="i[class='action-buttons icons8 icons8-save-as pull-right clickable']";
    public static final String Liste_Nombre_Axe_Afficher="small[class='text-muted inline']";
