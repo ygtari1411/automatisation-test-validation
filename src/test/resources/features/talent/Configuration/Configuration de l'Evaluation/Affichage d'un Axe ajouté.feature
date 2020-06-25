@@ -41,4 +41,5 @@ Feature: Configuration-Talent
 
        And wait 5000
        When   l utilisateur clique sur Afficher_option_conf_Axe du dernier axe ajouter
-       #Then   vérifier que le champs "Libelle_Ajout_Axe" est "Axe test Affichage"
+       And wait 2000
+       Then   vérifier que le champs Libelle_Ajout_Axe_Option est "Axe test Affichage"

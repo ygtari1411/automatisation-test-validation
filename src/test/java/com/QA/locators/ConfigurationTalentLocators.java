@@ -40,7 +40,7 @@ public class ConfigurationTalentLocators {
    public static final String Sauvegarder_Ajout_Axe="i[class='action-buttons icons8 icons8-save-as pull-right clickable']";
    public static final String Liste_Nombre_Axe_Afficher="small[class='text-muted inline']";
    public static final String Liste_Axe_Talent="/html/body/app-root/app-layout/div/section/div/acc-hr-talent-component/acc-hr-talent-configuration/div[2]/div[2]/section/acc-evaluation-configuration-axis/div[2]/div/section/div[2]/div/div[1]/acc-evaluation-configuration-axis-table/table/tbody/tr";
-
+   public static final String Libelle_Ajout_Axe_Option="/html/body/app-root/app-layout/div/section/div/acc-hr-talent-component/acc-hr-talent-configuration/div[2]/div[2]/section/acc-evaluation-configuration-axis/div[2]/div/section/div[2]/div/div[2]/acc-evaluation-configuration-axis-form/div/form/div[1]/div/input";
 
 
 
