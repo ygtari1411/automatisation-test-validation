@@ -41,7 +41,15 @@ public class ConfigurationTalentLocators {
    public static final String Liste_Nombre_Axe_Afficher="small[class='text-muted inline']";
    public static final String Liste_Axe_Talent="/html/body/app-root/app-layout/div/section/div/acc-hr-talent-component/acc-hr-talent-configuration/div[2]/div[2]/section/acc-evaluation-configuration-axis/div[2]/div/section/div[2]/div/div[1]/acc-evaluation-configuration-axis-table/table/tbody/tr";
    public static final String Libelle_Ajout_Axe_Option="/html/body/app-root/app-layout/div/section/div/acc-hr-talent-component/acc-hr-talent-configuration/div[2]/div[2]/section/acc-evaluation-configuration-axis/div[2]/div/section/div[2]/div/div[2]/acc-evaluation-configuration-axis-form/div/form/div[1]/div/input";
-
+   public static final String Bouton_Evaluation_Obj_Strategique_Talent="span[title='Objectifs stratégiques']";
+   public static final String Ajouter_Obj_Strategique_Evaluation="a[class='buttonAdd']";
+   public static final String Libelle_Ajout_Obj_strategique="/html/body/app-root/app-layout/div/section/div/acc-hr-talent-component/acc-hr-talent-configuration/div[2]/div[2]/section/acc-evaluation-configuration-strategictarget/div[2]/section/div[2]/div/div[2]/acc-evaluation-configuration-strategictarget-form/div/form/div[1]/div[1]/input";
+   public static final String Description_Ajout_Obj_strategique="/html/body/app-root/app-layout/div/section/div/acc-hr-talent-component/acc-hr-talent-configuration/div[2]/div[2]/section/acc-evaluation-configuration-strategictarget/div[2]/section/div[2]/div/div[2]/acc-evaluation-configuration-strategictarget-form/div/form/div[1]/div[2]/input";
+   public static final String Valider_Ajout_Obj_strategique="/html/body/app-root/app-layout/div/section/div/acc-hr-talent-component/acc-hr-talent-configuration/div[2]/div[2]/section/acc-evaluation-configuration-strategictarget/div[2]/section/div[2]/div/div[2]/acc-evaluation-configuration-strategictarget-form/div/form/div[2]/button[2]";
+   public static final String Sauvegarder_Ajout_Obj_strategique="/html/body/app-root/app-layout/div/section/div/acc-hr-talent-component/acc-hr-talent-configuration/div[2]/div[2]/section/acc-evaluation-configuration-strategictarget/div[2]/acc-header-revert-save/div/a[1]/i";
+   public static final String Liste_Nombre_ObjectifStrategique_Afficher="/html/body/app-root/app-layout/div/section/div/acc-hr-talent-component/acc-hr-talent-configuration/div[2]/div[2]/section/acc-evaluation-configuration-strategictarget/div[2]/section/div[2]/div/div[1]/acc-evaluation-configuration-strategictarget-table/footer/div/div/small";
+   public static final String Bouton_Pagination_Objectif_Strategique="a[aria-label='»']";
+   public static final String List_Objectif_Stategique="/html/body/app-root/app-layout/div/section/div/acc-hr-talent-component/acc-hr-talent-configuration/div[2]/div[2]/section/acc-evaluation-configuration-strategictarget/div[2]/section/div[2]/div/div[1]/acc-evaluation-configuration-strategictarget-table/table/tbody/tr";
 
 
 }
