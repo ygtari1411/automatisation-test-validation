@@ -71,7 +71,7 @@ Feature: Gestion du personnel
     And l utilisateur clique sur "Bouton_Valider_Affecatation_Véhicule"
     And wait 3000
     And l utilisateur clique sur "Bouton_Enregistrer_Modification"
-    And vérifier que le message "Le véhicule est affecté à cette date" s affiche
+    And vérifier que le message "Le même véhicule est pris dans des périodes qui se chevauchent" s affiche
 
 
 

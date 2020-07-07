@@ -224,7 +224,7 @@ public class ReferentielsLocators {
     public static final String Importance_langue_emploi_IL = "/html/body/ngb-modal-window/div/div/acc-language-add/div[2]/section/form/div/div[3]/acc-select-cr/ng-select/div/input";
     public static final String Importance_langue_emploi_CL = "/html/body/ngb-modal-window/div/div/acc-language-add/div[2]/section/form/div/div[3]/acc-select-cr/ng-select/div/ul/li";
     public static final String Valider_langue_Emploi = "/html/body/ngb-modal-window/div/div/acc-language-add/div[3]/button[2]";
-    public static final String Ajouter_habilitation_Emploi = "//div[@id='requirements']//div[4]//button[2]";
+    public static final String Ajouter_habilitation_Emploi = "//div[6]//button[2]";
     public static final String Type_habilitation_emploi = "/html/body/ngb-modal-window/div/div/acc-auth-add/div[2]/section/form/div/div[1]/acc-select-cr/ng-select/div/div[2]/span";
     public static final String Type_habilitation_emploi_IL = "/html/body/ngb-modal-window/div/div/acc-auth-add/div[2]/section/form/div/div[1]/acc-select-cr/ng-select/div/input";
     public static final String Type_habilitation_emploi_CL = "/html/body/ngb-modal-window/div/div/acc-auth-add/div[2]/section/form/div/div[1]/acc-select-cr/ng-select/div/ul/li";
@@ -235,7 +235,7 @@ public class ReferentielsLocators {
     public static final String Importance_habilitation_emploi_IL = "/html/body/ngb-modal-window/div/div/acc-auth-add/div[2]/section/form/div/div[3]/acc-select-cr/ng-select/div/input";
     public static final String Importance_habilitation_emploi_CL = "/html/body/ngb-modal-window/div/div/acc-auth-add/div[2]/section/form/div/div[3]/acc-select-cr/ng-select/div/ul/li";
     public static final String Valider_habilitation_Emploi = "/html/body/ngb-modal-window/div/div/acc-auth-add/div[3]/button[2]";
-    public static final String Ajouter_diplome_Emploi = "//div[6]//button[2]";
+    public static final String Ajouter_diplome_Emploi = "//div[8]//button[2]";
     public static final String Diplôme_emploi = "/html/body/ngb-modal-window/div/div/acc-diplome-add/div[2]/section/form/div/div[1]/acc-select-cr/ng-select/div/div[2]/span";
     public static final String Diplôme_emploi_IL = "/html/body/ngb-modal-window/div/div/acc-diplome-add/div[2]/section/form/div/div[1]/acc-select-cr/ng-select/div/input";
     public static final String Diplôme_emploi_CL = "/html/body/ngb-modal-window/div/div/acc-diplome-add/div[2]/section/form/div/div[1]/acc-select-cr/ng-select/div/ul/li";
@@ -246,7 +246,7 @@ public class ReferentielsLocators {
     public static final String Importance_diplôme_emploi_IL = "/html/body/ngb-modal-window/div/div/acc-diplome-add/div[2]/section/form/div/div[3]/acc-select-cr/ng-select/div/input";
     public static final String Importance_diplôme_emploi_CL = "/html/body/ngb-modal-window/div/div/acc-diplome-add/div[2]/section/form/div/div[3]/acc-select-cr/ng-select/div/ul/li";
     public static final String Valider_diplome_Emploi = "/html/body/ngb-modal-window/div/div/acc-diplome-add/div[3]/button[2]";
-    public static final String Ajouter_experience_Emploi = "//div[8]//button[2]";
+    public static final String Ajouter_experience_Emploi = "//div[10]//button[2]";
     public static final String Emploi_expérience = "/html/body/ngb-modal-window/div/div/acc-experience-add/div[2]/section/form/div/div[1]/input";
     public static final String Secteur_expérience_emploi = "/html/body/ngb-modal-window/div/div/acc-experience-add/div[2]/section/form/div/div[2]/acc-select-cr/ng-select/div/div[2]/span";
     public static final String Secteur_expérience_emploi_IL = "/html/body/ngb-modal-window/div/div/acc-experience-add/div[2]/section/form/div/div[2]/acc-select-cr/ng-select/div/input";
