@@ -27,7 +27,7 @@ public class AnniversiarePersonnelAutoriseParRhEtCollaborateur {
     @Then("verifier que la date d anniversaire personnel est la meme dans la gestion du personnel")
     public void verifierQueLaDateDAnniversairePersonnelEstLaMemeDansLaGestionDuPersonnel() {
 
-        Assert.assertEquals("03/02/1992",driver.findElement(By.xpath(GestionDuPersonnel.DateDeNaissance_DossierIndividuel)).getAttribute("value"));
+        Assert.assertEquals("06/03/1992",driver.findElement(By.xpath(GestionDuPersonnel.DateDeNaissance_DossierIndividuel)).getAttribute("value"));
 
     }
 
