@@ -213,7 +213,7 @@ public class ReferentielsLocators {
     public static final String Importance_compétence_emploi_IL = "/html/body/ngb-modal-window/div/div/acc-skills-add/div[2]/section/form/div/div[3]/acc-select-cr/ng-select/div/input";
     public static final String Importance_compétence_emploi_CL = "/html/body/ngb-modal-window/div/div/acc-skills-add/div[2]/section/form/div/div[3]/acc-select-cr/ng-select/div/ul/li";
     public static final String Valider_competence_Emploi = "/html/body/ngb-modal-window/div/div/acc-skills-add/div[3]/button[2]";
-    public static final String Ajouter_langue_Emploi = "//div[@id='requirements']//div[2]//button[2]";
+    public static final String Ajouter_langue_Emploi = "//div[@id='requirements']//div[4]//button[2]";
     public static final String Langue_emploi = "/html/body/ngb-modal-window/div/div/acc-language-add/div[2]/section/form/div/div[1]/acc-select-cr/ng-select/div/div[2]/span";
     public static final String Langue_emploi_IL = "/html/body/ngb-modal-window/div/div/acc-language-add/div[2]/section/form/div/div[1]/acc-select-cr/ng-select/div/input";
     public static final String Langue_emploi_CL = "/html/body/ngb-modal-window/div/div/acc-language-add/div[2]/section/form/div/div[1]/acc-select-cr/ng-select/div/ul/li";
