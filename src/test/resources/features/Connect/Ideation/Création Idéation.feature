@@ -36,5 +36,5 @@ Feature: Ideation
 
     #Etape 3 : Vérification de la création de l'idée
 
-    Then vérifier que le message "idée ajoutée avec succès" s affiche
+    Then vérifier que le message "Opération effectuée avec succès" s affiche
     Then vérifier que l idée est crée

@@ -40,7 +40,7 @@
       When l utilisateur clique sur "JS_Bouton_Supprimer_Ideation"
       And wait 2000
       And l utilisateur clique sur "Confirmer_Suppression_Ideation"
-      Then vérifier que le message "idée supprimée avec succès" s affiche
+      Then vérifier que le message "Opération effectuée avec succès" s affiche
 
       #Etape 4 : Confirmer que l'idée est supprimer
 
