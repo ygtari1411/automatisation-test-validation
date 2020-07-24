@@ -32,7 +32,7 @@
       And l utilisateur selectionne "Tous les utilisateurs Connect" dans la liste deroulante "Liste_Deroulante_Timeline_Creation_Ideation"
       And l utilisateur saisit "Ceci est la description de l'idée pour la suppression" dans le champs "Description_Creation_Idee"
       And l utilisateur clique sur "Bouton_Sauvegarde_Creation_Ideation"
-      Then vérifier que le message "idée ajoutée avec succès" s affiche
+      Then vérifier que le message "Opération effectuée avec succès" s affiche
       Then vérifier que l idée est crée
 
       #Etape 3 : Supprimer l'idée

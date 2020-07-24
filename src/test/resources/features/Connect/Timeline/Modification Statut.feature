@@ -31,7 +31,7 @@ Feature: Timeline
 
     And l utilisateur clique sur "Bouton_Menu_Modif_Supp_Statut"
     And l utilisateur clique sur "Bouton_Modif_Statut"
-    And l utilisateur saisit "Modification statut" dans le champs "Champ_Input_Modification_Statut"
+    And l utilisateur modifie "Modification statut" dans le champs "Champ_Input_Modification_Statut"
     And l utilisateur clique sur "Bouton_Publier_Statut"
 
       #Etape 4 : Verification modification statut
