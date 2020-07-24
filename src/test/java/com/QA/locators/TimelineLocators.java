@@ -18,8 +18,8 @@ public class TimelineLocators {
     public static final String Premiere_Publication_Timeline = "//*[@id=\"post-holder\"]/acc-timeline-post/div/div[3]";
     public static final String Bouton_Menu_Modif_Supp_Statut = "//*[@id=\"post-holder\"]/acc-timeline-post/div/div[2]" ;
     public static final String Bouton_Modif_Statut = "//*[@id=\"post-holder\"]/acc-timeline-post/div/div[2]/ul/li[1]";
-    public static final String Champ_Input_Modification_Statut ="/html/body/ngb-modal-window/div/div/acc-edit-post-modal/div/div[1]/fieldset/acc-mention-per-timelines/quill-editor/div/div[1]";
-    public static final String Bouton_Publier_Statut = "/html/body/ngb-modal-window/div/div/acc-edit-post-modal/div/div[1]/fieldset/button[1]";
+    public static final String Champ_Input_Modification_Statut ="//div[@class='ql-editor']";
+    public static final String Bouton_Publier_Statut = "//button[@class='btn btn-primary pull-right share-button btn-edit']";
     public static final String Bouton_Supprimer_Statut = "//*[@id=\"post-holder\"]/acc-timeline-post/div/div[2]/ul/li[2]";
     public static final String Bouton_Valider_Suppression_Statut = ".mb-sm:nth-child(2)";
     public static final String Champs_Input_Commentaire = "//*[@id=\"post-holder\"]/acc-timeline-post/div/acc-timeline-post-comments/div/div/div/form/div/acc-mention-per-timelines/quill-editor/div/div[1]";
