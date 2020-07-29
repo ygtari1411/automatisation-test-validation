@@ -1,17 +1,17 @@
 # Auteur: Ons MANSOURI
 # Feature: Configuration
-# Scénario: Ajout d'une Evaluation sans Libellé
+# Scénario: Ajout d'une Evaluation sans Question
 # Date de création: 27/07/2020
 
 
 #@ACCRETIO2
 #@ACCRETIO2-TALENT
 #@ACCRETIO2-CONFIGURATIONTALENT
-#@ACCRETIO2-CONFIGURATIONTALENT-0031
+#@ACCRETIO2-CONFIGURATIONTALENT-0032
 
 Feature: Configuration-Talent
 
-  Scenario: Ajout d'une Evaluation avec succès
+  Scenario: Ajout d'une Evaluation sans Question
 
     #Etape 001: Connexion RH_Evaluation
       Given   le navigateur est ouvert et la page d'acceuil est affichée
@@ -30,8 +30,8 @@ Feature: Configuration-Talent
     #Etape 003: Ajout de l'Evaluation
 
         And   l utilisateur clique sur "Ajouter_Eval_Evaluation"
-        And   l utilisateur saisit " " dans le champs "Libellé_Ajout_Eval"
-        And   l utilisateur saisit "Description 1" dans le champs "Description_Ajout_Eval"
-        And   l utilisateur saisit "Question 1" dans le champs "Question_Ajout_Eval"
+        And   l utilisateur saisit "Libellé 3" dans le champs "Libellé_Ajout_Eval"
+        And   l utilisateur saisit "Description 3" dans le champs "Description_Ajout_Eval"
+        And   l utilisateur saisit " " dans le champs "Question_Ajout_Eval"
         And   l utilisateur clique sur "Valider_Ajout_Eval"
-       Then   vérifier que le champs "Libellé_Ajout_Eval" est encadre en rouge
+       Then   vérifier que le champs "Question_Ajout_Eval" est encadre en rouge
