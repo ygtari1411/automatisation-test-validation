@@ -126,7 +126,6 @@ public class AnniversaireProfessWidget {
                 emplacement = i;
                 break;
             }
-            System.out.println(i);
             i++;
         }
         actual_css=before_css+emplacement+after_css;
