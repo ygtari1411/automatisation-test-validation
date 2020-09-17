@@ -41,7 +41,7 @@ public class AbcencesLocators {
     public static final String Backup_Ajout_Demande_Absence_Collaborateur_IL = "//*[@id=\"popup-add-absence\"]/div/section/div[4]/div/ss-multiselect-dropdown/div/ul/li[1]/div/input";
     public static final String Backup_Ajout_Demande_Absence_Collaborateur_CL = "";
     public static final String Upload_Justificatif_Ajout_Demande_Absence = "image-edit";
-    public static final String Bouton_Envoyer_Ajout_Demande_Absence_Collaborateur = "//*[@id=\"popup-add-absence\"]/div/div/button[2]";
+    public static final String Bouton_Envoyer_Ajout_Demande_Absence_Collaborateur = "//button[@class='mb-sm btn btn-info btn-outline']";
     public static final String Profil_Initiateur_Absence_Liste_Absence = "/html/body/app-root/app-layout/div/section/div/acc-global-container/ng-component/ng-component/ng-component/div[2]/div[3]/acc-absences-history/div/div[2]/form/p-datatable/div/div[1]/table/tbody/tr[1]/td[2]/span[2]/div";
     public static final String Profil_Backup_Absence_Liste_Absence = "/html/body/app-root/app-layout/div/section/div/acc-global-container/ng-component/ng-component/ng-component/div[2]/div[3]/acc-absences-history/div/div[2]/form/p-datatable/div/div[1]/table/tbody/tr[1]/td[3]/span[2]/div";
     public static final String Statut_Nouvelle_Demande_Absence = "/html/body/app-root/app-layout/div/section/div/acc-global-container/ng-component/ng-component/ng-component/div[2]/div[3]/acc-absences-history/div/div[2]/form/p-datatable/div/div[1]/table/tbody/tr[1]/td[10]/span[2]/span";
