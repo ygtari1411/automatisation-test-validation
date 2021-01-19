@@ -33,6 +33,7 @@ Feature: Gestion du personnel
     And l utilisateur selectionne "Inactif(ve)" dans la liste deroulante "Statut_Filtre_Collaborateur"
     And l utilisateur clique sur "Recherche_Filtre_Collaborateur"
     And l utilisateur saisit "Collaborateur Inactif" dans le champs "Recherche_Collaborateur"
+    And wait 3000
     Then verifier la présence de "Collaborateur Inactif" dans la liste "Liste_Collaborateurs"
 
 
