@@ -37,7 +37,7 @@ Feature: Gestion du personnel
     And l utilisateur saisit "01/01/2020" dans le champs "DateObtention_Equipier_Premiere_Intervention"
     And l utilisateur clique sur "JS_Occuper_Poste_Equipier_Premiere_Intervention"
     And wait 2000
-    And l utilisateur saisit "01/12/2020" dans le champs "DateRecyclage_Equipier_Premiere_Intervention"
+    And l utilisateur saisit "01/12/2021" dans le champs "DateRecyclage_Equipier_Premiere_Intervention"
     And l utilisateur clique sur "Valider_Equipier_Premiere_Intervention"
     And l utilisateur clique sur "Bouton_Enregistrer_Modification"
     And vérifier que le message "Opération effectuée avec succès" s affiche

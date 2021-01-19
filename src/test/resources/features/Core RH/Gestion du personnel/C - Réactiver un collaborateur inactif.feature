@@ -26,7 +26,7 @@ Feature: Gestion du personnel
 
     # Etape 3 : Réactiver le collaborateur inactif
     And l utilisateur clique sur "Filtre_Recherche_Collaborateur"
-    And l utilisateur selectionne "Inactif" dans la liste deroulante "Statut_Filtre_Collaborateur"
+    And l utilisateur selectionne "Inactif(ve)" dans la liste deroulante "Statut_Filtre_Collaborateur"
     And l utilisateur clique sur "Recherche_Filtre_Collaborateur"
     And wait 4000
     And l utilisateur selectionne "Collaborateur Inactif" dans la liste "Liste_Collaborateurs"

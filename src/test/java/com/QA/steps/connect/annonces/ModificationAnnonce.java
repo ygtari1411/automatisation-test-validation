@@ -21,11 +21,11 @@ public class ModificationAnnonce {
     public void vérifierLaModificationDeLAnnonce() {
 
 
-        Boolean modules = (new WebDriverWait(driver, 10))
-                .until(ExpectedConditions.attributeContains(By.xpath(AnnoncesLocators.Premiere_Annonce),"innerText",ActionsCommunes.DataProvider("Input_Texte_Annonces_Creation")+ActionsCommunes.DataProvider("Input_Texte_Annonces_Modification")));
+        Boolean modules = (new WebDriverWait(driver, 40))
+                .until(ExpectedConditions.attributeContains(By.xpath(AnnoncesLocators.Premiere_Annonce),"innerText",ActionsCommunes.DataProvider("Input_Texte_Annonces_Modification")+ActionsCommunes.DataProvider("Input_Texte_Annonces_Creation")));
 
 
-         Assert.assertEquals(ActionsCommunes.DataProvider("Input_Texte_Annonces_Creation")+ActionsCommunes.DataProvider("Input_Texte_Annonces_Modification"),driver.findElement(By.xpath(AnnoncesLocators.Premiere_Annonce)).getAttribute("innerText"));
+         Assert.assertEquals(ActionsCommunes.DataProvider("Input_Texte_Annonces_Modification")+ActionsCommunes.DataProvider("Input_Texte_Annonces_Creation"),driver.findElement(By.xpath(AnnoncesLocators.Premiere_Annonce)).getAttribute("innerText"));
 
 
 

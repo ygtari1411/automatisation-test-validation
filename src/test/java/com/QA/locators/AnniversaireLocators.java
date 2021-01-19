@@ -2,7 +2,7 @@ package com.QA.locators;
 
 public class AnniversaireLocators {
 
-  public static final String Bouton_Autres_Parametres_Enregistrer="/html/body/app-root/app-layout/div/section/div/acc-core-config-container/div/div[2]/echelon-config/div/div[2]/div/form/div/table/tbody/tr[20]/td/div/button[2]";
+  public static final String Bouton_Autres_Parametres_Enregistrer_Anniv=".btn-outline[type=submit]";
   public static final String JS_Check_Box_AnniversairePersonnel_Rh="/html/body/app-root/app-layout/div/section/div/acc-core-config-container/div/div[2]/echelon-config/div/div[2]/div/form/div/table/tbody/tr[9]/td[2]/acc-switch/div/label/input";
   public static final String Bouton_Afficher_AnniversairePersonnel="div[data-target='#bithPerso']";
   public static final String JS_Bouton_Collaborateur_Anniversaire_Personnel="/html/body/app-root/app-layout/div/app-offsidebar/div/div[2]/div/div[3]/acc-profile-configuration/div/div[3]/div[2]/div/acc-switch/div/label/input";

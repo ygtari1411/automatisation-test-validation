@@ -30,7 +30,7 @@ public class CommenterNewsAvecTag {
             if (element.getAttribute("outerText").contains(ActionsCommunes.DataProvider("Champ_Input_Titre_News")))
             {
                 element.click();
-                Boolean modules = (new WebDriverWait(driver, 6))
+                Boolean modules = (new WebDriverWait(driver, 30))
                         .until(ExpectedConditions.attributeContains(By.xpath(NewsLocators.News_Active_Carroussel),"innerText",ActionsCommunes.DataProvider("Champ_Input_Titre_News")));
                 action.pause(driver,500);
                 driver.findElement(By.xpath(NewsLocators.News_Active_Carroussel2)).click();

@@ -21,7 +21,7 @@ public class CreationAnnonce {
     @Then("vérifier la création de la nouvelle annonce")
     public void vérifierLaCréationDeLaNouvelleAnnonce() {
 
-        Boolean modules = (new WebDriverWait(driver, 10))
+        Boolean modules = (new WebDriverWait(driver, 40))
                 .until(ExpectedConditions.attributeToBe(By.xpath(AnnoncesLocators.Premiere_Annonce), "innerText", ActionsCommunes.DataProvider("Input_Texte_Annonces_Creation")));
 
         Assert.assertEquals(ActionsCommunes.DataProvider("Input_Texte_Annonces_Creation"), driver.findElement(By.xpath(AnnoncesLocators.Premiere_Annonce)).getText());

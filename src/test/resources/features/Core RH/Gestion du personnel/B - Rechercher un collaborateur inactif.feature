@@ -30,7 +30,7 @@ Feature: Gestion du personnel
 
   # Etape 4 : Vérifier l'affichage du collaborateur dans la liste ( filtre incatif)
     And l utilisateur clique sur "Filtre_Recherche_Collaborateur"
-    And l utilisateur selectionne "Inactif" dans la liste deroulante "Statut_Filtre_Collaborateur"
+    And l utilisateur selectionne "Inactif(ve)" dans la liste deroulante "Statut_Filtre_Collaborateur"
     And l utilisateur clique sur "Recherche_Filtre_Collaborateur"
     And l utilisateur saisit "Collaborateur Inactif" dans le champs "Recherche_Collaborateur"
     Then verifier la présence de "Collaborateur Inactif" dans la liste "Liste_Collaborateurs"

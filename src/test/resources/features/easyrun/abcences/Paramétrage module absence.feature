@@ -88,22 +88,19 @@ Feature: Absences
     And l utilisateur clique sur "Rubrique_Configuration"
     And wait 6000
     And l utilisateur  "désactive" l'option "JS_Champ_Notification_N_1_après_décision_RH"
-    And l utilisateur clique sur "Bouton_Sauvegarde_Parametres_Config_Absence1"
     And wait 1000
     And l utilisateur  "active" l'option "JS_Champ_Demande_d_absence_par_le_manager"
-    And l utilisateur clique sur "Bouton_Sauvegarde_Parametres_Config_Absence2"
     And wait 1000
     And l utilisateur  "désactive" l'option "JS_Champ_Le_backup_est_obligatoire"
-    And l utilisateur clique sur "Bouton_Sauvegarde_Parametres_Config_Absence3"
     And wait 1000
     And l utilisateur  "désactive" l'option "JS_Champ_Ajout_du_champs_backup"
-    And l utilisateur clique sur "Bouton_Sauvegarde_Parametres_Config_Absence4"
     And wait 1000
     And l utilisateur  "active" l'option "JS_Champ_Affichage_de_tous_les_managers"
-    And l utilisateur clique sur "Bouton_Sauvegarde_Parametres_Config_Absence5"
     And wait 1000
     And l utilisateur  "active" l'option "JS_Champ_Validation_de_la_demande_d_absence_par_la_RH"
-    And l utilisateur clique sur "Bouton_Sauvegarde_Parametres_Config_Absence6"
+    And wait 1000
+    And l utilisateur clique sur "Bouton_Enregistrer_Parametrage_Absence"
+    And wait 2000
     And l'utilisateur rafraichit la page
 
       #Etape 3 : Profil Rh-Création de règle d'acquisition

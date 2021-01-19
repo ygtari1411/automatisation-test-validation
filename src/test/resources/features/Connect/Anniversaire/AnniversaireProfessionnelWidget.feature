@@ -30,7 +30,7 @@ Feature: Anniversaire Professionnel
     And wait 5000
     # l administrateur va cocher le bouton d affichage de l anniversaire professionnel
     Then l utilisateur  "active" l'option "JS_Check_Box_AnniversaireProfessionnel_Rh"
-    And l utilisateur clique sur "Bouton_Autres_Parametres_Enregistrer"
+    And l utilisateur clique sur "Bouton_Autres_Parametres_Enregistrer_Anniv"
 
      #Etape3 : Configurer l'anniversaire professionnel de l'utilisateur
 

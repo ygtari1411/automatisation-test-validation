@@ -85,7 +85,7 @@ public class AbcencesLocators {
     public static final String Mise_à_disposition_Ajout_Règle = "//*[@id=\"acquisition\"]/div[2]/div[2]/acc-select-cr/ng-select/div/div[2]/span";
     public static final String Mise_à_disposition_Ajout_Règle_IL = "//*[@id=\"acquisition\"]/div[2]/div[2]/acc-select-cr/ng-select/div/div[2]/span";
     public static final String Mise_à_disposition_Ajout_Règle_CL = "//*[@id=\"acquisition\"]/div[2]/div[2]/acc-select-cr/ng-select/div/ul/li";
-    public static final String Première_consommation_après_mois_Ajout_Règle = "//*[@id=\"consommation\"]/div[2]/div[2]/input";
+    public static final String Première_consommation_après_mois_Ajout_Règle = "[formcontrolname=firstConsumption]";
     public static final String Voisinage_Ajout_Règle = "//*[@id=\"acquisition\"]/fieldset/div/div[1]/div/acc-select-cr/ng-select/div/div[2]/span";
     public static final String Voisinage_Ajout_Règle_IL = "//*[@id=\"acquisition\"]/fieldset/div/div[1]/div/acc-select-cr/ng-select/div/input";
     public static final String Voisinage_Ajout_Règle_CL = "//*[@id=\"acquisition\"]/fieldset/div/div[1]/div/acc-select-cr/ng-select/div/ul/li";
@@ -96,12 +96,7 @@ public class AbcencesLocators {
     public static final String Jour_Calendrier_Absences = "/html/body/app-root/app-layout/div/section/div/acc-global-container/ng-component/ng-component/ng-component/div[2]/div[4]/acc-absences-calendar/div/p-schedule/div/div[2]/div/table/tbody/tr/td/div/div/div[2]/div[1]/table/tbody/tr/td[1]";
     public static final String Popup_Ajout_Absences_Header = "//*[@id=\"popup-add-absence\"]/header";
     public static final String JS_Champ_Notification_N_1_après_décision_RH = "/html/body/app-root/app-layout/div/section/div/ng-component/div/div/absence-setting-component/acc-absence-parametres-config-container/div/div/absence-config-list/div/div/p-datatable/div/div[1]/div/div[2]/div/table/tbody/tr[1]/td[2]/span[2]/acc-switch/div/label/input";
-    public static final String Bouton_Sauvegarde_Parametres_Config_Absence1 = ".ui-datatable-even:nth-child(1) .action-icons";
-    public static final String Bouton_Sauvegarde_Parametres_Config_Absence2 = ".ui-datatable-odd:nth-child(2) .action-icons";
-    public static final String Bouton_Sauvegarde_Parametres_Config_Absence3 = ".ui-datatable-even:nth-child(3) .action-icons";
-    public static final String Bouton_Sauvegarde_Parametres_Config_Absence4 = ".ui-datatable-odd:nth-child(4) .action-icons";
-    public static final String Bouton_Sauvegarde_Parametres_Config_Absence5 = ".ui-datatable-even:nth-child(5) .action-icons";
-    public static final String Bouton_Sauvegarde_Parametres_Config_Absence6 = ".ui-datatable-odd:nth-child(6) .action-icons";
+    public static final String Bouton_Enregistrer_Parametrage_Absence = ".clearfix .btn-save";
     public static final String Onglet_Consommation_Ajout_Règle = "/html/body/ngb-modal-window/div/div/acc-rules-add-popup/form/div[2]/div[2]/div/header/ul/li[2]";
     public static final String Consommable_Apres_Ajout_Regle = "//*[@id=\"consommation\"]/div[2]/div[1]/acc-select-cr/ng-select/div/div[2]/span/span";
     public static final String Consommable_Apres_Ajout_Regle_IL = "//*[@id=\"consommation\"]/div[2]/div[1]/acc-select-cr/ng-select/div/input";

@@ -34,7 +34,7 @@ Feature: Gestion du personnel
     And l utilisateur selectionne "Diplôme d'études supérieures spécialisées" dans la liste deroulante "Diplome_Sauveteur_Secouriste"
     And l utilisateur saisit "01/01/2020" dans le champs "Date_Obtention_Sauveteur_Secouriste"
     And wait 5000
-    And l utilisateur saisit "01/12/2020" dans le champs "Date_Recyclage_Sauveteur_Secouriste"
+    And l utilisateur saisit "01/12/2021" dans le champs "Date_Recyclage_Sauveteur_Secouriste"
     And l utilisateur clique sur "JS_Occuper_Poste_Saveuteur_Secouriste"
     And l utilisateur clique sur "Valider_Saveuteur_Secouriste"
     And l utilisateur clique sur "Bouton_Enregistrer_Modification"

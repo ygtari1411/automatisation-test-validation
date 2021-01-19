@@ -31,7 +31,7 @@ Feature: Anniversaire
     # l administrateur va decocher le bouton d affichage de l anniversaire personnel
     And l utilisateur  "désactive" l'option "JS_Check_Box_AnniversairePersonnel_Rh"
     And wait 5000
-    And l utilisateur clique sur "Bouton_Autres_Parametres_Enregistrer"
+    And l utilisateur clique sur "Bouton_Autres_Parametres_Enregistrer_Anniv"
     And wait 3000
 
     #Etape3 : L utilisateur va se connecter et cocher le bouton d'affichage de l anniversaire personnel

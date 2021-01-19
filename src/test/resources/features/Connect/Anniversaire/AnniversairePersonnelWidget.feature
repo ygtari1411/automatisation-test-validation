@@ -31,7 +31,7 @@ Feature: Anniversaire Personnel
      #Then l administrateur va cocher le bouton d affichage de l anniversaire personnel
      Then l utilisateur  "active" l'option "JS_Check_Box_AnniversairePersonnel_Rh"
      And wait 3000
-     And l utilisateur clique sur "Bouton_Autres_Parametres_Enregistrer"
+     And l utilisateur clique sur "Bouton_Autres_Parametres_Enregistrer_Anniv"
      And wait 3000
 
      #Etape3 : Configurer l'anniversaire personnel de l'utilisateur
