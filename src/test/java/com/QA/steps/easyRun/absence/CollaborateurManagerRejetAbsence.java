@@ -30,7 +30,7 @@ public class CollaborateurManagerRejetAbsence {
 
         logger.info("Vérification du déplacement de la demande vers l'historique et du changement de son statut vers rejetée");
         driver.findElement(By.cssSelector(AbcencesLocators.Bouton_Historique_Demandes_Absences)).click();
-        action.pause(driver, 2000);
+        action.pause(driver, 12000);
         WebElement modules = (new WebDriverWait(driver, 40)).until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(AbcencesLocators.Statut_Première_Absence_Liste_Historique)));
         Assert.assertEquals("Rejetée", driver.findElement(By.cssSelector(AbcencesLocators.Statut_Première_Absence_Liste_Historique)).getAttribute("innerText"));
 

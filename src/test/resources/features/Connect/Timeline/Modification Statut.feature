@@ -25,7 +25,7 @@ Feature: Timeline
     And l utilisateur selectionne "Tous les utilisateurs Connect" dans la liste deroulante "Liste_Deroulante_Timeline"
     #Timeline qui contient tous les utilisateurs du module connect
     And l utilisateur clique sur "Bouton_Publication_Statut"
-    And wait 3000
+    And wait 4000
 
       #Etape 3 : Modification statut
 

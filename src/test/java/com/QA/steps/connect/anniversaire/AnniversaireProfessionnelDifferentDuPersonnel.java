@@ -89,7 +89,7 @@ public class AnniversaireProfessionnelDifferentDuPersonnel {
     @Then("verifier que la date danniversaire professionnel est la meme")
     public void verifierQueLaDateDanniversaireProfessionnelEstLaMeme() {
      String  str1= driver.findElement(By.xpath(AnniversaireLocators.Anniversaire_Professionnel_Profil_Enrichi)).getAttribute("innerText");
-        Assert.assertEquals(str1, date_embauche_l);
+        Assert.assertEquals(date_embauche_l,str1);
 
 
     }
