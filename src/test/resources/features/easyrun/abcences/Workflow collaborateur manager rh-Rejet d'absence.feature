@@ -64,7 +64,7 @@ Feature: Absences
     And l utilisateur saisit "Rejet" dans le champs "Commentaire_Rejet_Absence"
     And l utilisateur clique sur "Bouton_Valider_rejet_Absence"
     And vérifier que le message "Opération effectuée avec succès" s affiche
-    And Vérifier que la demande d'absence est déplacée au niveau de la rubrique Historique et que son statut devient Rejetée
+#    And Vérifier que la demande d'absence est déplacée au niveau de la rubrique Historique et que son statut devient Rejetée
     And l utilisateur se deconnecte
 
    #Etape 4 : Profil collaborateur-Vérification du rejet de la demande d'absence

@@ -47,7 +47,7 @@ Feature: Absences
     And vérifier que le titre du modal est "Confirmation de rejet" et le texte du corps du modal est "Voulez vous vraiment rejeter cette demande ?"
     And l utilisateur saisit "Rejet" dans le champs "Commentaire_Rejet_Absence"
     And l utilisateur clique sur "Bouton_Valider_rejet_Absence"
-    And vérifier que le message "Opération effectuée avec succès" s affiche
+#    And vérifier que le message "Opération effectuée avec succès" s affiche
     And wait 1500
     And Vérifier que la demande d'absence est déplacée au niveau de la rubrique Historique et que son statut devient Rejetée
     And l utilisateur se deconnecte
