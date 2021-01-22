@@ -42,10 +42,11 @@ public class CollaborateurManagerRejetAbsence {
 
         driver.findElement(By.xpath(CommonLocators.Bouton_Notifications_Portal)).click();
         WebElement modules = (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath(CommonLocators.Première_Notification_Portal)));
+        action.pause(driver, 6000);
         Assert.assertTrue(driver.findElement(By.xpath(CommonLocators.Première_Notification_Portal)).getAttribute("innerText").contains(textenotif));
         action.pause(driver, 2000);
         driver.findElement(By.xpath(AbcencesLocators.Bouton_Mes_Absences)).click();
-        action.pause(driver, 4000);
+        action.pause(driver, 6000);
         Assert.assertEquals("Rejetée", driver.findElement(By.xpath(AbcencesLocators.Statut_Première_Absence_Mes_Absences)).getAttribute("innerText"));
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         List<WebElement> wb = driver.findElements(By.cssSelector(CollaborateurManagerValidationAbsence.Jourlibre));
