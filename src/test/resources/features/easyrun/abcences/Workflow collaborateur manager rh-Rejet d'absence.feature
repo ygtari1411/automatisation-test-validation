@@ -34,17 +34,19 @@ Feature: Absences
    #Etape 2 : Profil manager-Validation de demande d'absence
 
     And l'utilisateur "marcil.valentine@yopmail.com" est connecté
+    And wait 4000
     And l utilisateur reçoit une notification "a envoyé une demande d'absence"
-    And wait 2000
+    And wait 5000
     And l utilisateur clique sur "Mon_Equipe"
     And wait 2000
     And l utilisateur clique sur "Bouton_Absences"
-    And wait 8000
+    And wait 15000
     And l utilisateur clique sur "Bouton_Accepter_Demande_Absence_Manager"
     And vérifier que le titre du modal est "Confirmation de la validation" et le texte du corps du modal est "Voulez vous vraiment valider cette demande ?"
+    And wait 5000
     And l utilisateur clique sur "JS_Bouton_Valider_Acceptation"
     And vérifier que le message "Opération effectuée avec succès" s affiche
-    And wait 3000
+    And wait 5000
     And l utilisateur se deconnecte
 
     #Etape 3 : Profil rh-Rejet de demande d'absence
@@ -60,11 +62,15 @@ Feature: Absences
     # Choisir la première demande absence de liste
     And wait 8000
     And l utilisateur clique sur "Bouton_Rejeter_Demande_Absence"
+    And wait 4000
     And vérifier que le titre du modal est "Confirmation de rejet" et le texte du corps du modal est "Voulez vous vraiment rejeter cette demande ?"
+    And wait 4000
     And l utilisateur saisit "Rejet" dans le champs "Commentaire_Rejet_Absence"
+    And wait 3000
     And l utilisateur clique sur "Bouton_Valider_rejet_Absence"
     And vérifier que le message "Opération effectuée avec succès" s affiche
-#    And Vérifier que la demande d'absence est déplacée au niveau de la rubrique Historique et que son statut devient Rejetée
+    And wait 12000
+    And Vérifier que la demande d'absence est déplacée au niveau de la rubrique Historique et que son statut devient Rejetée
     And l utilisateur se deconnecte
 
    #Etape 4 : Profil collaborateur-Vérification du rejet de la demande d'absence
