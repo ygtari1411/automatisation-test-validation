@@ -40,10 +40,10 @@ public class LancerSondage {
 
 
         Boolean modules3 = (new WebDriverWait(driver, 10))
-                .until(ExpectedConditions.attributeToBe(By.xpath(SondageLocators.Sondage_Reponse1_Afficher), "innerText", ActionsCommunes.DataProvider("Reponse_1_sondage")));
+                .until(ExpectedConditions.attributeToBe(By.xpath(SondageLocators.Sondage_Reponse1_Afficher), "innerText", " "+ActionsCommunes.DataProvider("Reponse_1_sondage")));
 
         Boolean modules4 = (new WebDriverWait(driver, 10))
-                .until(ExpectedConditions.attributeToBe(By.xpath(SondageLocators.Sondage_Reponse2_Afficher), "innerText", ActionsCommunes.DataProvider("Reponse_2_sondage")));
+                .until(ExpectedConditions.attributeToBe(By.xpath(SondageLocators.Sondage_Reponse2_Afficher), "innerText", " "+ActionsCommunes.DataProvider("Reponse_2_sondage")));
 
         String str2 = driver.findElement(By.xpath(SondageLocators.Nom_Sondage_Afficher)).getAttribute("innerText");
 
@@ -51,8 +51,8 @@ public class LancerSondage {
 
         String str3 = driver.findElement(By.xpath(SondageLocators.Sondage_Reponse1_Afficher)).getAttribute("innerText");
         String str4 = driver.findElement(By.xpath(SondageLocators.Sondage_Reponse2_Afficher)).getAttribute("innerText");
-        Assert.assertEquals(str3, ActionsCommunes.DataProvider("Reponse_1_sondage"));
-        Assert.assertEquals(str4, ActionsCommunes.DataProvider("Reponse_2_sondage"));
+        Assert.assertEquals(str3, " "+ActionsCommunes.DataProvider("Reponse_1_sondage"));
+        Assert.assertEquals(str4, " "+ActionsCommunes.DataProvider("Reponse_2_sondage"));
 
 
     }
