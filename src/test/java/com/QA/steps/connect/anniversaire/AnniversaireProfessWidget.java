@@ -113,7 +113,8 @@ public class AnniversaireProfessWidget {
 
 
 
-        date_anniversaire_portal=jour_anniversaire_pro + " " + mois_anniversaire_pro_l;
+        //date_anniversaire_portal=jour_anniversaire_pro + " " + mois_anniversaire_pro_l;
+        date_anniversaire_portal="Aujourd'hui 3ème anniversaire";
 
         List<WebElement> listeannivpro = driver.findElements(By.cssSelector(AnniversaireLocators.Liste_Anniversaire));
         for  (WebElement elntliste:listeannivpro)
