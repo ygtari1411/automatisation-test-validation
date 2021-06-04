@@ -25,7 +25,7 @@
       And l utilisateur selectionne "Tous les utilisateurs Connect" dans la liste deroulante "Liste_Deroulante_Timeline_Video"
       And l utilisateur saisit "Test automatisé publication video" dans le champs "Champ_Input_Statut_Video"
       And l utilisateur clique sur "Bouton_Publication_Video"
-      And wait 3000
+      And wait 20000
 
       #Etape 3 : Vérification de la publication
 
