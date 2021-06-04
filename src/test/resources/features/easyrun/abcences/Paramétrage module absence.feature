@@ -119,7 +119,7 @@ Feature: Absences
     #And wait 1500
     #And l utilisateur selectionne "01" dans la liste "Début_d_acquisition_Mois_Ajout_Règle"
     #And wait 1500
-    And l utilisateur selectionne "Jour" dans la liste deroulante "Type_Ajout_Règle_Unité_d_acquisition"
+    And l utilisateur selectionne "jour(s)" dans la liste deroulante "Type_Ajout_Règle_Unité_d_acquisition"
     And l utilisateur saisit "22" dans le champs "Acquis_de_base_Ajout_Règle"
     And l utilisateur selectionne "Mensuel" dans la liste deroulante "Type_d_acquisition_Ajout_Règle"
     And l utilisateur selectionne "Fin de période" dans la liste deroulante "Mise_à_disposition_Ajout_Règle"
