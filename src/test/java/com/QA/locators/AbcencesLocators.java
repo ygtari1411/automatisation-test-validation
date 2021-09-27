@@ -44,15 +44,15 @@ public class AbcencesLocators {
     public static final String Bouton_Envoyer_Ajout_Demande_Absence_Collaborateur = "//button[@class='mb-sm btn btn-info btn-outline']";
     public static final String Profil_Initiateur_Absence_Liste_Absence = "/html/body/app-root/app-layout/div/section/div/acc-global-container/ng-component/ng-component/ng-component/div[2]/div[3]/acc-absences-history/div/div[2]/form/p-datatable/div/div[1]/table/tbody/tr[1]/td[2]/span[2]/div";
     public static final String Profil_Backup_Absence_Liste_Absence = "/html/body/app-root/app-layout/div/section/div/acc-global-container/ng-component/ng-component/ng-component/div[2]/div[3]/acc-absences-history/div/div[2]/form/p-datatable/div/div[1]/table/tbody/tr[1]/td[3]/span[2]/div";
-    public static final String Statut_Nouvelle_Demande_Absence = "/html/body/app-root/app-layout/div/section/div/acc-global-container/ng-component/ng-component/ng-component/div[2]/div[3]/acc-absences-history/div/div[2]/form/p-datatable/div/div[1]/table/tbody/tr[1]/td[10]/span[2]/span";
+    public static final String Statut_Nouvelle_Demande_Absence = "/html/body/app-root/app-layout/div/section/div/acc-global-container/ng-component/ng-component/ng-component/div[2]/div[2]/div[3]/acc-absences-history/div/div[2]/form/p-datatable/div/div[1]/table/tbody/tr[1]/td[10]/span[2]/span";
     public static final String Bouton_Absences = "/html/body/app-root/app-layout/div/section/div/acc-global-container/acc-portal-container/div/div/div[1]/acc-left-side-container/div/acc-user-widget/div/div[3]/div/div[2]/ul/li[1]";
     public static final String Bouton_Accepter_Demande_Absence_Manager = "i[class*=icons8-like-it][title=Accepter]";
-    public static final String JS_Bouton_Valider_Acceptation = "//button[@class='mb-sm btn btn-info btn-outline']";
+    public static final String JS_Bouton_Valider_Acceptation = "/html/body/ngb-modal-window/div/div/acc-confirmation-modal-easyrun/div[3]/button[1]";
     public static final String Onglet_Suivi_des_absences = "/html/body/app-root/app-layout/div/section/div/ng-component/div/ul/li[1]";
     public static final String Bouton_Accepter_Demande_Absence_Rh = "//i[contains(@class,'cursor text-success a')]";
     public static final String Bouton_Historique_Demandes_Absences = "a[class=cursor]";
     public static final String Statut_Première_Absence_Liste_Historique = ".ui-datatable-even .label";
-    public static final String Statut_Première_Absence_Mes_Absences = "/html/body/app-root/app-layout/div/section/div/acc-global-container/ng-component/ng-component/ng-component/div[2]/div[3]/acc-absences-history/div/div[2]/form/p-datatable/div/div[1]/table/tbody/tr[1]/td[10]/span[2]/span";
+    public static final String Statut_Première_Absence_Mes_Absences = "/html/body/app-root/app-layout/div/section/div/acc-global-container/ng-component/ng-component/ng-component/div[2]/div[2]/div[3]/acc-absences-history/div/div[2]/form/p-datatable/div/div[1]/table/tbody/tr[1]/td[10]/span[2]/span";
     public static final String Rubrique_Configuration = "/html/body/app-root/app-layout/div/section/div/ng-component/div/div/absence-setting-component/ul/li[5]";
     public static final String JS_Champ_Demande_d_absence_par_le_manager = "/html/body/app-root/app-layout/div/section/div/ng-component/div/div/absence-setting-component/acc-absence-parametres-config-container/div/div/absence-config-list/div/div/p-datatable/div/div[1]/div/div[2]/div/table/tbody/tr[2]/td[2]/span[2]/acc-switch/div/label/input";
     public static final String JS_Champ_Le_backup_est_obligatoire = "/html/body/app-root/app-layout/div/section/div/ng-component/div/div/absence-setting-component/acc-absence-parametres-config-container/div/div/absence-config-list/div/div/p-datatable/div/div[1]/div/div[2]/div/table/tbody/tr[3]/td[2]/span[2]/acc-switch/div/label/input";
@@ -106,7 +106,7 @@ public class AbcencesLocators {
     public static final String Commentaire_Rejet_Absence = "textarea-input";
     public static final String Bouton_Valider_rejet_Absence = "//button[contains(@class,'mb-sm btn btn-info btn-outline')]";
     public static final String Bouton_Annuler_Demande_Absence = "//i[@class='fa fa-remove cursor icon-red']";
-    public static final String JS_Bouton_Valider_Annulation_Absence = "//button[@class='mb-sm btn btn-info btn-outline']";
+    public static final String JS_Bouton_Valider_Annulation_Absence = "/html/body/ngb-modal-window/div/div/acc-confirmation-modal/div[3]/button[1]";
     public static final String Bouton_Accepter_Demande_Annulation = "//i[contains(@class,'cursor text-success a')]";
     public static final String Bouton_Confirmation_Validation_Demande_Annulation = "//button[contains(@class,'mb-sm btn btn-info btn-outline')]";
     public static final String Bouton_Rejeter_Demande_Annulation = "//em[contains(@class,'cursor text-danger')]";

@@ -29,7 +29,7 @@ Feature: Absences
     And l utilisateur clique sur "Bouton_Envoyer_Ajout_Demande_Absence_Collaborateur"
     And vérifier que le message "Opération effectuée avec succès" s affiche
     And wait 2000
-    And vérifier que le statut de la demande devient En cours
+    #And vérifier que le statut de la demande devient En cours
     And l utilisateur se deconnecte
 
     #Etape 2 : Profil manager-Validation de demande d'absence
