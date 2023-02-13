@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.advyteam.accretio2</groupId>
+    <groupId>com.be-softilys.ivs</groupId>
     <artifactId>automatisation-test-validation</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
@@ -15,7 +15,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <browser>chrome</browser>
-        <startPageURL>https://accretio-2-tnr.advyteam.com/</startPageURL>
+        <startPageURL>https://www.google.com/</startPageURL>
         <cucumber.options></cucumber.options>
         <RemoteInDocker>false</RemoteInDocker>
         <tags>@no-tag-specified</tags>
@@ -242,7 +242,7 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <projectName>Accretio - Tests de validation</projectName>
+                            <projectName>INCAP - Tests de validation</projectName>
                             <outputDirectory>${project.build.directory}/reports/HTMLreports</outputDirectory>
                             <!-- this parameter is deprecated, use jsonFiles instead -->
                             <cucumberOutput>${project.build.directory}/reports/cucumber.json</cucumberOutput>
@@ -275,7 +275,7 @@
                     <logLevel>minimal</logLevel>
                     <customParameters>
                         <Titre_>Rapport récapitulatif des tests de validation fonctionnelle</Titre_>
-                        <Plateforme_de_test>https://accretio-2-tnr.advyteam.com</Plateforme_de_test>
+                        <Plateforme_de_test>https://www.google.com/</Plateforme_de_test>
                     </customParameters>
                 </configuration>
             </plugin>
