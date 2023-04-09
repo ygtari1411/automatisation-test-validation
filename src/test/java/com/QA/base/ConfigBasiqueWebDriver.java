@@ -55,6 +55,8 @@ public class ConfigBasiqueWebDriver {
         optionsC.addArguments("--disable-browser-side-navigation");
         optionsC.addArguments("--disable-gpu");
         optionsC.setExperimentalOption("prefs", prefs);
+        optionsC.addArguments("--disable-gpu");
+        optionsC.setAcceptInsecureCerts(true);
 
 
 

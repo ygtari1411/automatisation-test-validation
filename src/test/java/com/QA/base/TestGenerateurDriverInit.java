@@ -25,6 +25,7 @@ import java.util.stream.Collectors;
 @CucumberOptions(
         features = {"src/test/resources/features/"},
         plugin = {"json:target/reports/cucumber.json"},
+       // tags="@TEST1",
         monochrome = true,
         glue = {"com.QA.steps"}
 )
