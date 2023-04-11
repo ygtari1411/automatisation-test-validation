@@ -24,7 +24,7 @@ public class MyStepdefs {
 
         driver.findElement(By.xpath("/html/body/div/section[1]/div/div/form/div[3]/input")).click();
 
-        action.pause(driver, 50000);
+        action.pause(driver, 500);
 
 
         WebElement l = driver.findElement(By.xpath("/html/body/app-root/div[4]/app-spa-host/div/incap-root/app-benefit/div/div/as-split/as-split-area[1]/div/div[3]/app-salary-maintenance/div/div/div[2]/div/div/div[2]/div[2]/div/div[2]/button"));
