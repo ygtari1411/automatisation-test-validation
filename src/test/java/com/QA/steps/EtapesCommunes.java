@@ -57,7 +57,7 @@ public class EtapesCommunes {
         driver.findElement(By.id(CommonLocators.Login_Champ_password)).sendKeys((utilities.findUser(utilisateur).getPassword()));
         action.pause(driver, 500);
         driver.findElement(By.xpath(CommonLocators.Login_Bouton_connexion)).click();
-        Assert.assertTrue(driver.findElements(By.cssSelector("a[class='list-group-item'][routerlink='/logout']")).size() != 0);
+        Assert.assertTrue(driver.findElements(By.xpath("//header/div[1]/nav[1]/ul[1]/li[1]/div[1]/div[1]")).size() != 0);
 
     }
 

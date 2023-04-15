@@ -164,4 +164,15 @@
         <username>berger.cosette@yopmail.com</username>
         <password>cosette*11</password>
     </user>
+
+    <user>
+        <username>cbaudot</username>
+        <password>Pdmdp2021!</password>
+    </user>
+
+    <user>
+        <username>cbaudo</username>
+        <password>Pdmdp2021!</password>
+    </user>
+
 </users>

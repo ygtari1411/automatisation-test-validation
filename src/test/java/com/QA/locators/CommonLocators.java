@@ -4,7 +4,54 @@ public class CommonLocators {
 
     public static final String Login_Champ_Username = "username";
     public static final String Login_Champ_password = "password";
-    public static final String Login_Bouton_connexion = "/html/body/app-root/ng-component/div/div/div/div/div/acc-login-authentication/div/div/form/button";
+    public static final String Login_Bouton_connexion = "//input[@id='kc-login']";
+    public static final String New_Access_Bouton= "//button[contains(text(),'Accès rapide')]";
+    public static final String login_denied_message="//span[contains(text(),'Invalid username or password.')]";
+    public static final String Bouton_Access_rapide ="//button[contains(text(),'Accès rapide')]";
+    public static final String Bouton_Nouvelle_Survenance ="//header/div[1]/nav[1]/ul[1]/li[1]/div[1]/div[1]/ul[1]/li[2]/div[1]";
+    public static final String Bouton_Declarant="//app-declarant[1]/section[1]/div[1]/button[1]";
+    public static final String Champ_Input_Nom_Declarant ="//beys-search[1]/div[1]/input[1]";
+    public static final String Bouton_Rechercher_Declarant="//button[@id='beys-search-trigger']";
+    public static final String Declarant_User_Name="//tbody/tr[1]/td[1]";
+    public static final String Ajouter_Declarant="//beys-modal[1]/div[1]/div[1]/div[3]/div[2]/button[1]";
+    public static final String Bouton_Sinistre="//body/app-root[1]/div[4]/app-spa-host[1]/div[1]/ds-root[1]/app-occurrence[1]/div[1]/div[1]/as-split[1]/as-split-area[1]/div[2]/div[1]/app-sinistre[1]/section[1]/div[1]/button[1]/span[1]/i[1]";
+    public static final String Champ_Input_Nom_sinistre="//div[1]/div[2]/beys-search[1]/div[1]/input[1]";
+    public static final String Bouton_Rechercher_Sinistre="//button[@id='beys-search-trigger']//i[@id='beys-icon']";
+    public static final String Sinistre_User_Name="//div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[2]";
+    public static final String Ajouter_Sinistre="//beys-modal[1]/div[1]/div[1]/div[3]/div[2]/button[1]";
+    public static final String Champ_Input_DATE_DECLARATION="//div[1]/div[1]/beys-form-field[1]/div[1]/div[1]/input[1]";
+    public static final String  Champ_Input_DATE_SURVENANCE="//div[2]/beys-form-field[1]/div[1]/div[1]/input[1]";
+    public static final String  Champ_Input_DATE_FAIT_GENERATUER="//div[2]/div[1]/beys-form-field[1]/div[1]/div[1]/input[1]";
+    public static final String  Valider_sinistre="//span[contains(text(),'Valider')]";
+    public static final String  confirmer_validation="//button[contains(text(),'Oui')]";
+    public static final String  Bouton_sinistre="//tbody/tr[1]/td[9]/div[1]/div[3]/button[1]";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public static final String Bouton_Role_RH = "/html/body/app-root/app-layout/div/app-header/nav/div[2]/ul[1]/li[2]/a/em";
     public static final String Bouton_Menu_Etendu = "/html/body/app-root/app-layout/div/app-header/nav/div[2]/ul[1]/li[1]/a[1]/em";
     public static final String Bouton_Module_Connect = "/html/body/app-root/app-layout/div/app-sidebar/nav/ul/li[6]/a";
