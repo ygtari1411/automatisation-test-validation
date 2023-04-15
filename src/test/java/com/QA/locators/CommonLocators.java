@@ -25,7 +25,8 @@ public class CommonLocators {
     public static final String  Valider_sinistre="//span[contains(text(),'Valider')]";
     public static final String  confirmer_validation="//button[contains(text(),'Oui')]";
     public static final String  Bouton_sinistre="//tbody/tr[1]/td[9]/div[1]/div[3]/button[1]";
-
+    public static final String  Bouton_valider_sinistre="//body/app-root[1]/div[4]/app-spa-host[1]/div[1]/ds-root[1]/app-sinistre-interface[1]/div[1]/div[1]/as-split[1]/as-split-area[1]/app-new-occurrence-bar[1]/section[1]/div[1]/div[1]/button[5]";
+    public static final String  Bouton_garantie_incap="//tbody/tr[1]/td[9]/div[1]/button[2]";
 
 
 

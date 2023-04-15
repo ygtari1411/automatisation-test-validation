@@ -89,7 +89,12 @@ Feature: BasicsScenrios
 
 
 
+  #Etape 11:Valider le sinitre et choisir la garantie incapcité temporaire de travail
 
-
-
+    And l utilisateur clique sur "Bouton_valider_sinistre"
+    And wait 20000
+    And l utilisateur clique sur "confirmer_validation"
+    And wait 10000
+    And l utilisateur clique sur "Bouton_garantie_incap"
+    And wait 20000
 
