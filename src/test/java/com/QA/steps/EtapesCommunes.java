@@ -61,15 +61,7 @@ public class EtapesCommunes {
 
     }
 
-    @When("l'utilisateur clique sur espace-RH")
-    public void lUtilisateurCliqueSurEspaceRH() throws InterruptedException {
 
-        logger.info("Changement de role vers espace-RH");
-        driver.findElement(By.xpath(CommonLocators.Bouton_Role_RH)).click();
-        action.pause(driver, 200);
-        driver.findElement(By.xpath(CommonLocators.Bouton_Menu_Etendu)).click();
-
-    }
 
     @And("l'utilisateur clique sur le module Connect")
     public void lUtilisateurCliqueSurLeModuleConnect() throws InterruptedException {
